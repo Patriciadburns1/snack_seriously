@@ -4,9 +4,7 @@ const PORT = process.env.PORT || 3000;
 
 module.exports = {
     entry: [
-        //'react-hot-loader/patch',
         'webpack-dev-server/client?http://localhost:' + PORT,
-        //'webpack/hot/only-dev-server',
         './index.js'
     ],
     output: {
@@ -35,7 +33,6 @@ module.exports = {
         ]
     },
     plugins: [
-        //new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin()
     ]
 };
