@@ -3,5 +3,8 @@
     "env",
     "stage-2",
     "react"
+  ],
+  "plugins": [
+    "syntax-async-functions"
   ]
 }

@@ -4,6 +4,7 @@ const PORT = process.env.PORT || 3000;
 
 module.exports = {
     entry: [
+        'babel-polyfill',
         'webpack-dev-server/client?http://localhost:' + PORT,
         './index.js'
     ],

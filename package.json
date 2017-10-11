@@ -15,6 +15,7 @@
     "url": "https://github.com/Learning-Fuze/react_starter.git"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
@@ -23,6 +24,7 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
