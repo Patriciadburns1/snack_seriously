@@ -1,12 +1,40 @@
+@font-face {
+    font-family: october;
+    src: url(../assets/fonts/zombie.ttf);
+}
+
+body {
+    margin: 0;
+}
+
 .app {
     background-color: #000;
     color: #fff;
+    font-family: october;
+    font-size: 25px;
     padding: 50px;
     text-align: center;
 }
 
-.app img {
-    height: 100px;
+.app .webs-l,
+.app .webs-r {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.app .webs-l {
+    left: 0;
+    transform: rotateY(180deg);
+}
+
+.app .logo {
+    height: 150px;
+}
+
+.app h1 {
+    letter-spacing: 4px;
+    font-size: 2.4em;
 }
 
 .rotate {

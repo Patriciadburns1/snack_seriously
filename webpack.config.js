@@ -28,12 +28,17 @@ module.exports = {
             },
             {
                 test: /\.(gif|png|jpe?g|svg)$/i,
-                use: [ 'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+                use: [ 'file-loader?hash=sha512&digest=hex&name=assets/imgs/[hash].[ext]',
                     'image-webpack-loader?bypassOnDebug' ]
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
-                use: [ 'file-loader' ]
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        outputPath: 'assets/fonts/'
+                    }
+                }
             }
         ]
     },
