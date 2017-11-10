@@ -1,0 +1,34 @@
+@font-face {
+    font-family: blocky;
+    src: url(../fonts/blocky.ttf);
+}
+
+body {
+    margin: 0;
+}
+
+.app {
+    background-color: #000;
+    color: #fff;
+    font-family: blocky;
+    font-size: 25px;
+    padding: 50px;
+    text-align: center;
+}
+
+.app .logo {
+    height: 200px;
+}
+
+.rotate {
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
