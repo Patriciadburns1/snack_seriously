@@ -8,69 +8,25 @@ body {
 }
 
 .app {
-    background-color: #73c454;
+    background-color: #000;
     color: #fff;
     font-family: blocky;
-    font-size: 25px;
+    font-size: 30px;
     padding: 50px;
     text-align: center;
-    height: 350px;
 }
 
 .app .logo {
     height: 200px;
 }
 
-.title-container {
-    position: relative;
-}
-
-.title-container h1 {
-    position: absolute;
-    z-index: 10;
-    text-align: center;
-    width: 100%;
-    text-shadow: 2px 2px 3px #1e6106
-}
-
-.clover {
-    position: absolute;
-    height: 150px;
-}
-
-.clover.left {
-    left: 12%;
-}
-
-.clover.right {
-    right: 12%;
-}
-
-.gold {
-    position: absolute;
-    top: 325px;
-    z-index: 5
-}
-
-.gold.left {
-    left: 0;
-    transform: rotateY(180deg);
-}
-
-.gold.right {
-    right: 0;
+.app h1 {
+    text-shadow: 0 0 28px #61DAFB;
+    letter-spacing: 5px;
 }
 
 .rotate {
     animation: spin 10s linear infinite;
-}
-
-.rotate3d-right {
-    animation: spin3d-right 10s linear infinite;
-}
-
-.rotate3d-left {
-    animation: spin3d-left 10s linear infinite;
 }
 
 @keyframes spin {
@@ -79,23 +35,5 @@ body {
     }
     to {
         transform: rotate(360deg);
-    }
-}
-
-@keyframes spin3d-right {
-    from {
-        transform: rotate(0deg) rotateY(-360deg);
-    }
-    to {
-        transform: rotate(360deg) rotateY(0deg);
-    }
-}
-
-@keyframes spin3d-left {
-    from {
-        transform: rotate(0deg) rotateY(360deg);
-    }
-    to {
-        transform: rotate(-360deg) rotateY(0deg);
     }
 }
