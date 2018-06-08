@@ -1,6 +1,6 @@
 @font-face {
-    font-family: blocky;
-    src: url(../fonts/blocky.ttf);
+    font-family: quest;
+    src: url(../fonts/quest.ttf);
 }
 
 body {
@@ -9,20 +9,24 @@ body {
 
 .app {
     background-color: #000;
-    color: #fff;
-    font-family: blocky;
+    color: #FFF;
+    font-family: quest;
     font-size: 30px;
     padding: 50px;
     text-align: center;
 }
 
 .app .logo {
-    height: 200px;
+    height: 220px;
+    filter: drop-shadow(2px 2px 0px #FFF);
 }
 
 .app h1 {
-    text-shadow: 0 0 28px #61DAFB;
+    color: #61DAFB;
+    font-size: 5em;
     letter-spacing: 5px;
+    margin: 0.16em;
+    text-shadow: 2px 2px 0 #FFF;
 }
 
 .rotate {
