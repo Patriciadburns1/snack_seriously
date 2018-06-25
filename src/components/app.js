@@ -6,6 +6,7 @@ import Search from './searchbar';
 import '../assets/css/searchbar.css';
 import Categories from './categoriespage';
 import SavorySweet from './savorysweet';
+import Intro from './intro_snack_quiz';
 
 
 const App = () => (
@@ -14,7 +15,7 @@ const App = () => (
         <AllergenPage/> 
         {/*<Search/>*/}
         {/* <Categories /> */}
-        {/* <SavorySweet /> */}
+             {/*<Intro/>*/}
         <Home />
         <SavorySweet />
     </div>
