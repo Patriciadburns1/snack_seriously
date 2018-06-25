@@ -4,6 +4,7 @@ import Search from './searchbar';
 import '../assets/css/searchbar.css';
 import Categories from './categoriespage';
 import SavorySweet from './savorysweet';
+import Intro from './intro_snack_quiz';
 
 
 const App = () => (
@@ -11,7 +12,8 @@ const App = () => (
         <Nav />
 {/*//         <Search/>*/}
         {/* <Categories /> */}
-             <SavorySweet />
+             {/*<SavorySweet />*/}
+             {/*<Intro/>*/}
     </div>
 );
 

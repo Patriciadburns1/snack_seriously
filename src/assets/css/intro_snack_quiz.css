@@ -1,0 +1,31 @@
+.introSnackQuizContainer {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.introSnackQuizInstructions {
+    display: flex;
+    flex-direction: column;
+}
+
+.introSnackQuizHeader {
+    text-align: center;
+}
+
+.introSnackQuizInstructions ol {
+    display: flex;
+    flex-direction: column;
+}
+
+.introSnackQuizStepOne, .introSnackQuizStepTwo, .introSnackQuizStepThree {
+    margin: 20px auto;
+    border: 5px solid #FF8C2D;
+    padding: 0 10px;
+    box-shadow: 5px 10px 15px 0 rgba(234,107,2,0.61);
+}
+
+.introSnackQuizBtnContainer {
+    align-self: center;
+}
