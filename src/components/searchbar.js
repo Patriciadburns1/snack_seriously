@@ -15,7 +15,7 @@ class Search extends Component {
     render() {
         return (
             <div>
-                <h3>Search by brand or type of snack<img src={snackvending}/></h3>
+                <h3 className="searchTitle">Search by brand or type of snack<img src={snackvending}/></h3>
 
                 <div className="searchBar">
                 <input className="searchArea"
@@ -25,7 +25,7 @@ class Search extends Component {
                 />
                 <p>{this.state.query}</p>
 
-                    <button className="button" onClick={this.handleInputChange}>Submit</button>
+                    <button className="buttonSearch" onClick={this.handleInputChange}>Submit</button>
 
             </div>
             </div>

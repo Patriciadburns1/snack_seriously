@@ -42,8 +42,6 @@ class Categories extends Component {
                         <img className='categoryImage' src={candychocolate}/>
                         <p className='categoryLabel'>Candy &amp; Chocolate</p>
                     </div>
-                    {/* <a href='snackquiz.html'><div type='button' className='btnStyle btnNormal '>Back</div></a>
-                    <a href="home_page.html"><div type='button' className='btnStyle btnNormal'>Home</div></a> */}
                 </div>
                 <div className='footerButtons'>
                     <a href='snackquiz.html'><div type='button' className='btnStyle btnNormal '>Back</div></a>

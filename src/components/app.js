@@ -1,5 +1,7 @@
 import React from 'react';
+import AllergenPage from './allergenPage.js'
 import Nav from './nav';
+import Home from './home';
 import Search from './searchbar';
 import '../assets/css/searchbar.css';
 import Categories from './categoriespage';
@@ -10,10 +12,12 @@ import Intro from './intro_snack_quiz';
 const App = () => (
     <div>
         <Nav />
-{/*//         <Search/>*/}
+        <AllergenPage/> 
+        {/*<Search/>*/}
         {/* <Categories /> */}
-             {/*<SavorySweet />*/}
              {/*<Intro/>*/}
+        <Home />
+        <SavorySweet />
     </div>
 );
 

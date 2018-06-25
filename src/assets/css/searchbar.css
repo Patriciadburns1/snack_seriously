@@ -16,7 +16,7 @@ input.searchArea {
     border-bottom: 1px solid black;
 }
 
-h3{
+.searchTitle{
     display: flex;
     justify-content: center;
     width: 100vw;
@@ -25,7 +25,7 @@ h3{
     top: 33%;
 }
 
-.button {
+.buttonSearch {
     background-color: #FF8C2D;
     border: none;
     color: white;
@@ -41,7 +41,7 @@ h3{
     border-radius: 8px;
 }
 
-.button:hover {
+.buttonSearch:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
