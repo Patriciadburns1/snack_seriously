@@ -9,9 +9,9 @@ import SavorySweet from './savorysweet';
 const App = () => (
     <div>
         <Nav />
-//         <Search/>
+{/*//         <Search/>*/}
         {/* <Categories /> */}
-//         <SavorySweet />
+             <SavorySweet />
     </div>
 );
 
