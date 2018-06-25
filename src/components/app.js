@@ -7,17 +7,19 @@ import '../assets/css/searchbar.css';
 import Categories from './categoriespage';
 import SavorySweet from './savorysweet';
 import Intro from './intro_snack_quiz';
+import Menu from './menu';
 
 
 const App = () => (
     <div>
-        <Nav />
-        <AllergenPage/> 
+        {/* <Nav /> */}
+        {/* <AllergenPage/>  */}
         {/*<Search/>*/}
         {/* <Categories /> */}
-             {/*<Intro/>*/}
-        <Home />
-        <SavorySweet />
+        {/*<Intro/>*/}
+        {/* <Home /> */}
+        {/* <SavorySweet /> */}
+        <Menu />
     </div>
 );
 
