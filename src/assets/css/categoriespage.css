@@ -1,0 +1,50 @@
+/**************** Category Layout ***************/
+.categoryPageContainer {
+    height: 100%;
+}
+
+.categoryTitle{
+    display: flex;
+    justify-content: center;
+}
+
+.categoryContainer{
+    display: grid;
+    height: 70vh;
+    width: 80vw;
+    grid-template-columns: auto auto;
+    grid-row-gap: 3vh;
+    grid-column-gap: 3vw;
+    position: relative;
+    margin: 0 auto;
+}
+
+.categoryItem{
+    margin: 0;
+    height: 21vh;
+    width: 37vw;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    position: relative;
+}
+
+.categoryImage{
+    display: block;
+    height: auto;
+    max-width: 35vw;
+    max-height: 15vh;
+    margin: 0 auto;
+}
+
+.categoryLabel{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    margin: 0;
+}
