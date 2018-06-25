@@ -1,11 +1,13 @@
 import React from 'react';
-// import '../assets/css/app.css';
-import logo from '../assets/images/logo.svg';
+import AllergenPage from './allergenPage.js'
+
+
 import Nav from './nav';
 
 const App = () => (
     <div>
         <Nav />
+        <AllergenPage/> 
     </div>
 );
 

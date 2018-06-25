@@ -1,0 +1,62 @@
+
+.mainAllergenDiv{
+    height: 70vh; 
+}
+
+
+.grid-container{
+    height: 60vh; 
+    width: 80%; 
+    display:grid; 
+    grid-template-columns: auto auto auto;
+    margin: auto; 
+}
+
+.allergyImage{
+    display: flex; 
+    align-items: center; 
+    width:100%; 
+}
+
+.allergyImage>img{
+    display: flex; 
+    align-items: center; 
+    width: 100%; 
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    font-family:'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+
+.btnStyle{
+    margin: 15px;
+    height: 45px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF8C2D;
+    -webkit-box-shadow: 5px 10px 15px 0px rgba(234,107,2,0.61);
+    -moz-box-shadow: 5px 10px 15px 0px rgba(234,107,2,0.61);
+    box-shadow: 5px 10px 15px 0px rgba(234,107,2,0.61);
+    color: #ffffff;
+    cursor: pointer;
+    /* https://www.cssmatic.com/box-shadow */
+}
+
+.btnStyle:hover {
+    background-color: #FFB87E;
+}
+
+.btnNormal{
+    width: 140px;
+}
+
+.footerButtons{
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-end; 
+    /* height: vh;  */
+}
