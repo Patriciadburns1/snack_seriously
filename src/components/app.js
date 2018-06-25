@@ -1,11 +1,13 @@
 import React from 'react';
 // import '../assets/css/app.css';
-import logo from '../assets/images/logo.svg';
 import Nav from './nav';
+import Search from './searchbar';
+import '../assets/css/searchbar.css';
 
 const App = () => (
     <div>
         <Nav />
+        <Search/>
     </div>
 );
 
