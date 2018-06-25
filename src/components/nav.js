@@ -1,6 +1,7 @@
 import React from 'react';
 import '../assets/css/stylesheet.css';
 import '../assets/css/nav.css';
+import '../assets/css/buttons.css'
 import hamburger from '../assets/images/hamburger.png';
 
 export default () => {

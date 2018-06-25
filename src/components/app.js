@@ -1,11 +1,14 @@
 import React from 'react';
 // import '../assets/css/app.css';
-import logo from '../assets/images/logo.svg';
+// import './buttons.css';
 import Nav from './nav';
+import Categories from './categoriespage';
+
 
 const App = () => (
     <div>
         <Nav />
+        {/* <Categories /> */}
     </div>
 );
 
