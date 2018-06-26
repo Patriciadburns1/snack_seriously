@@ -1,7 +1,7 @@
 import React, {Component} from 'react'; 
 import Egg from '../assets/images/egg.png'; 
 import Noeggs from '../assets/images/no-eggs.png'; 
-import './allergenPage.css'; 
+import './allergenpage.css'; 
 import Preservatives from '../assets/images/preservatives.png'; 
 import Transfat from '../assets/images/transfat.png'; 
 import Wheat from '../assets/images/wheat.png'; 
@@ -11,8 +11,7 @@ import Nuts from '../assets/images/nuts.png';
 import Corn from '../assets/images/corn.png'; 
 import Peanuts from '../assets/images/peanuts.png'; 
 import ArtificialColors from '../assets/images/artificialColors.png'; 
-
-
+import { Link } from 'react-router-dom';
 
 
 class Allergen extends Component{
@@ -41,8 +40,8 @@ class Allergen extends Component{
         const { egg } = this.state.allergies;
 
         return(
-            <div className="mainAllergenDiv"> <h1 className="header"> Allergen page </h1> 
-               <div className="grid-container">
+            <div className="mainAllergenDiv"> <h1 className="allergenHeader"> Allergen page </h1> 
+               <div className="allergenGridContainer">
                    <div onClick={ this.addStrikethrough } className={egg ? "allergyImage strikethrough" : "allergyImage"}>
                        <img src={Egg}/> 
                    </div> 
@@ -70,12 +69,10 @@ class Allergen extends Component{
                    <div className="allergyImage">
                         <img src={ArtificialColors}/>
                    </div>
-                   <div className="allergyImage">
-                   </div>
                </div>
                <div className="footerButtons">
-               <div type='button' className='btnStyle btnNormal'>Home</div>
-               <div type='button' className='btnStyle btnNormal'>Next</div>
+               <div type='button' className='btnStyle btnNormal'> < Link to='/'> Home </Link></div>
+               <div type='button' className='btnStyle btnNormal'> <Link to='/Categories'>  Next </Link> </div>
                </div> 
             </div>    
         )
