@@ -10,17 +10,21 @@ export default () => {
     <div>
         <h1 className='savorySweetTitle'>Pick One</h1>
         <div className='pickChoicesContainer'>
-            <div className='pickChoices'>
-                <img src={sweet}/>
-            </div>
-            <h1>OR</h1>
-            <div className='pickChoices'>
-                <img src={savory}/>
-            </div>
+                <Link to='/MultipleResult'>
+                    <div className='pickChoices'>
+                        <img src={sweet}/>
+                    </div>
+                </Link>
+                <h1>OR</h1>
+                <Link to='/MultipleResult'>
+                    <div className='pickChoices'>
+                        <img src={savory}/>
+                    </div>
+                </Link>
         </div>
         <div className='footerButtons'>
-            <div type='button' className='btnStyle btnNormal'> <Link to='/'> Back </Link> </div>
-            <div type='button' className='btnStyle btnNormal'>Next</div>
+            <div type='button' className='btnStyle btnNormal'> <Link to='/'> &#8592; Back </Link> </div>
+            <div type='button' className='btnStyle btnNormal'>Next &#8594;</div>
         </div> 
     </div>
   )

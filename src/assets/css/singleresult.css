@@ -10,7 +10,10 @@
     justify-content: center;
 }
 
-.resultButtons {
+#resultButtons {
     margin-top: 10%;
     margin-bottom: 5%;
+    background-color: #ffffff;
+    color: #FF8C2D;
+    border: 1px solid #FF8C2D;
 }
