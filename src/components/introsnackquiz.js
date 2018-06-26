@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/css/intro_snack_quiz.css';
+import '../assets/css/introsnackquiz.css';
 
 export default (props) => {
     return (
