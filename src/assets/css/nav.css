@@ -2,8 +2,7 @@
 
 .navBar{
     margin: 0px;
-    /* height: 50px; */
-    height: 7vh;
+    height: 9vh;
     display: flex;
     justify-content: space-between;
     align-items: center;

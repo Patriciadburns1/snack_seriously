@@ -1,7 +1,6 @@
 .searchBar{
     display: flex;
     justify-content: center;
-    height: 6vh;
     width: 100vw;
     align-items: center;
     position: absolute;
@@ -9,7 +8,6 @@
 }
 
 input.searchArea {
-    height: 6vh;
     width: 38vw;
     border: 0;
     outline: 0;
@@ -19,9 +17,7 @@ input.searchArea {
 .searchTitle{
     display: flex;
     justify-content: center;
-    width: 100vw;
-    align-items: center;
-    margin-top: 42%;
+    margin-top: 35%;
 }
 
 .vendingMachineDiv{

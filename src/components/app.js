@@ -13,13 +13,14 @@ import Menu from './menu';
 const App = () => (
   
         <div>
-            <Nav />
+            <Nav/>
             <Route exact path='/' component= {Home}/>
             <Route path='/Search' component={Search}/>
             <Route path='/AllergenPage' component={AllergenPage}/> 
             <Route path='/Categories' component={Categories}/>
-            <Route path='/SavorySweet'component={SavorySweet}/>
-//             <Menu />
+            <Route path='/SavorySweet'component={SavorySweet}/> 
+            <Route path='/IntroSnackQuiz'component={Intro}/> 
+
         </div>
 
 );
