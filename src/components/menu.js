@@ -1,22 +1,21 @@
 import React from 'react';
 import '../assets/css/menu.css';
-import line from '../assets/images/menuline.png';
 
 export default () => {
     return(
-        <div class='menuContainer'>
-            <a href="#"class="menuLinks">X</a>
-            <div class='menuSpacing'>
-                <a href="home_page.html" class='menuLinks'>Home</a>
+        <div className='menuContainer'>
+            <a href="#"className="menuLinks">X</a>
+            <div className='menuSpacing'>
+                <a href="home_page.html" className='menuLinks'>Home</a>
             </div>
-            <div class='menuSpacing'>
-                <a href="snackquiz.html" class='menuLinks'>Snack Finder Quiz</a>
+            <div className='menuSpacing'>
+                <a href="snackquiz.html" className='menuLinks'>Snack Finder Quiz</a>
             </div>
-            <div class='menuSpacing'>
-                <a href="#" class='menuLinks'>Snack Blind Pick</a>
+            <div className='menuSpacing'>
+                <a href="#" className='menuLinks'>Snack Blind Pick</a>
             </div>
-            <div class='menuSpacing'>
-                <a href="#" class='menuLinks'>Snack Search</a>
+            <div className='menuSpacing'>
+                <a href="#" className='menuLinks'>Snack Search</a>
             </div>
         </div>
     )
