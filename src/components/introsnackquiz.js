@@ -9,7 +9,7 @@ export default (props) => {
                 <h2 className="introSnackQuizHeader">Snack-It-Off Tips</h2>
                 <div className="introSnackQuizInstructions">
                     <div className="introSnackQuizStepOne">
-                        <h3>Select Ingredients To Avoid</h3>
+                        <h3 className="introInstructionHeader">Select Ingredients To Avoid</h3>
                         <ul>
                             <li>allergies</li>
                             <li>yucky stuff</li>
@@ -17,7 +17,7 @@ export default (props) => {
                         </ul>
                     </div>
                     <div className="introSnackQuizStepTwo">
-                        <h3>Select Snack Type</h3>
+                        <h3 className="introInstructionHeader">Select A Snack Cateogry</h3>
                         <ul>
                             <li>popcorn</li>
                             <li>jerky</li>
@@ -25,14 +25,14 @@ export default (props) => {
                         </ul>
                     </div>
                     <div className="introSnackQuizStepThree">
-                        <h3>Choose Your Snack</h3>
+                        <h3 className="introInstructionHeader">Choose Your Snack</h3>
                         <ul>
                             <li>Select your favorite</li>
                         </ul>
                     </div>
                     <div className='footerButtons'>
-                        <div type='button' className='btnStyle btnNormal'> <Link to='/'> Back </Link> </div>
-                        <div type='button' className='btnStyle btnNormal'> <Link to="/AllergenPage"> Next </Link> </div>
+                        <Link to='/'><div type='button' className='btnStyle btnNormal'>&#8592; Back</div></Link>
+                        <Link to="/AllergenPage"><div type='button' className='btnStyle btnNormal'>Next &#8594;</div></Link>
                     </div>
                 </div>
             </div>
