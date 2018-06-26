@@ -4,7 +4,7 @@
 }
 
 
-.grid-container{
+.allergenGridContainer{
     height: 60vh; 
     width: 80%; 
     display:grid; 
@@ -24,7 +24,7 @@
     width: 100%; 
 }
 
-.header{
+.allergenHeader{
     display: flex;
     justify-content: center;
     font-family:'Montserrat', Arial, Helvetica, sans-serif;

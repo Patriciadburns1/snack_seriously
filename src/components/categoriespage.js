@@ -6,6 +6,8 @@ import chipscrackers from '../assets/images/categoriesicons/chipscrackers.png';
 import bar from '../assets/images/categoriesicons/bar.png';
 import nutsdriedfruit from '../assets/images/categoriesicons/nutsdriedfruit.png';
 import candychocolate from '../assets/images/categoriesicons/candychocolate.png';
+import { Link } from 'react-router-dom';
+
 
 class Categories extends Component {
     constructor(props) {
@@ -44,8 +46,8 @@ class Categories extends Component {
                     </div>
                 </div>
                 <div className='footerButtons'>
-                    <a href='snackquiz.html'><div type='button' className='btnStyle btnNormal '>Back</div></a>
-                    <a href="home_page.html"><div type='button' className='btnStyle btnNormal'>Home</div></a>
+                    <div type='button' className='btnStyle btnNormal'> <Link to='/AllergenPage'> Back </Link> </div>
+                    <div type='button' className='btnStyle btnNormal'> <Link to='/'> Home </Link> </div>
                 </div>
             </div>
         )
