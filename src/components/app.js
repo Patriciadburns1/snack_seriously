@@ -6,18 +6,20 @@ import Search from './searchbar';
 import '../assets/css/searchbar.css';
 import Categories from './categoriespage';
 import SavorySweet from './savorysweet';
-import Intro from './intro_snack_quiz';
+import Intro from './introsnackquiz';
+import Searchresults from './multipleresultspage';
 
 
 const App = () => (
     <div>
         <Nav />
-        <AllergenPage/> 
+        <Searchresults/>
+        {/*<AllergenPage/> */}
         {/*<Search/>*/}
         {/* <Categories /> */}
              {/*<Intro/>*/}
-        <Home />
-        <SavorySweet />
+        {/*<Home />*/}
+        {/*<SavorySweet />*/}
     </div>
 );
 
