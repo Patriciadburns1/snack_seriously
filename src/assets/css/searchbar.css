@@ -5,7 +5,7 @@
     width: 100vw;
     align-items: center;
     position: absolute;
-    top: 50%;
+    top: 55%;
 }
 
 input.searchArea {
@@ -21,8 +21,12 @@ input.searchArea {
     justify-content: center;
     width: 100vw;
     align-items: center;
-    position: absolute;
-    top: 33%;
+    margin-top: 42%;
+}
+
+.vendingMachineDiv{
+    display: flex; 
+    justify-content: center; 
 }
 
 .buttonSearch {
