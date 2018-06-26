@@ -1,24 +1,22 @@
 import React, {Component} from 'react'; 
-import Egg from '../assets/images/egg.png'; 
-import Noeggs from '../assets/images/no-eggs.png'; 
+import Egg from '../assets/images/allergenicons/egg.png'; 
 import './allergenpage.css'; 
-import Preservatives from '../assets/images/preservatives.png'; 
-import Transfat from '../assets/images/transfat.png'; 
-import Wheat from '../assets/images/wheat.png'; 
-import Soy from '../assets/images/soy.png'; 
-import Sugar from '../assets/images/sugar.png'; 
-import Nuts from '../assets/images/nuts.png'; 
-import Corn from '../assets/images/corn.png'; 
-import Peanuts from '../assets/images/peanuts.png'; 
-import ArtificialColors from '../assets/images/artificialColors.png'; 
+import Preservatives from '../assets/images/allergenicons/preservatives.png'; 
+import Transfat from '../assets/images/allergenicons/transfat.png'; 
+import Wheat from '../assets/images/allergenicons/wheat.png'; 
+import Soy from '../assets/images/allergenicons/soy.png'; 
+import Sugar from '../assets/images/allergenicons/sugar.png'; 
+import Corn from '../assets/images/allergenicons/corn.png'; 
+import Peanuts from '../assets/images/allergenicons/peanuts.png'; 
+import ArtificialColors from '../assets/images/allergenicons/artificialColors.png'; 
 import { Link } from 'react-router-dom';
+// import Strikethrough from '../assets/images/allergenicons/strikethrough.png'; 
 
 
 class Allergen extends Component{
     constructor(props){
         super(props);
         this.state={
-            image: '',
             allergies: {
                 egg: false
             }

@@ -17,7 +17,7 @@ class Search extends Component {
     render() {
         return (
             <div>
-                <h3>Search by brand or type of snack</h3>
+                <h3 className="searchTitle"> Search by brand or type of snack </h3>
                 <div className="vendingMachineDiv"> <img src={snackvending}/> </div> 
                 <div className="searchBar">
                 <input className="searchArea"

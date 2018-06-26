@@ -17,12 +17,14 @@ import SingleResult from './singleresult';
 const App = () => (
   
         <div>
-            <Nav />
-            {/* <Route exact path='/' component= {Home}/> */}
+            <Nav/>
+            <Route exact path='/' component= {Home}/>
             <Route path='/Search' component={Search}/>
             <Route path='/AllergenPage' component={AllergenPage}/> 
             <Route path='/Categories' component={Categories}/>
-            <Route path='/SavorySweet'component={SavorySweet}/>
+            <Route path='/SavorySweet'component={SavorySweet}/> 
+            <Route path='/IntroSnackQuiz'component={Intro}/> 
+
         </div>
 
 );

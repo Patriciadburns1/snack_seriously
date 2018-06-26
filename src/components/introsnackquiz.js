@@ -1,5 +1,6 @@
 import React from 'react';
 import '../assets/css/introsnackquiz.css';
+import { Link } from 'react-router-dom';
 
 export default (props) => {
     return (
@@ -7,7 +8,6 @@ export default (props) => {
             <div className="introSnackQuizContainerTop">
                 <h2 className="introSnackQuizHeader">Snack-It-Off Tips</h2>
                 <div className="introSnackQuizInstructions">
-
                     <div className="introSnackQuizStepOne">
                         <h3>Select Ingredients To Avoid</h3>
                         <ul>
@@ -30,9 +30,9 @@ export default (props) => {
                             <li>Select your favorite</li>
                         </ul>
                     </div>
-                    <div className='introSnackQuizBtnContainer'>
-                        <a href='#'><div type='button' className='btnStyle btnNormal '>Back</div></a>
-                        <a href="#"><div type='button' className='btnStyle btnNormal'>Next</div></a>
+                    <div className='footerButtons'>
+                        <div type='button' className='btnStyle btnNormal'> <Link to='/'> Back </Link> </div>
+                        <div type='button' className='btnStyle btnNormal'> <Link to="/AllergenPage"> Next </Link> </div>
                     </div>
                 </div>
             </div>
