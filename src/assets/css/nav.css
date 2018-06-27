@@ -6,6 +6,7 @@
     width: 100%;
     margin: 0px;
     height: 7vh;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;

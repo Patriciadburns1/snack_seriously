@@ -7,7 +7,7 @@ export default () => {
     return(
         <div>
             <div className='heroImage'>
-                <img src={hero} height="300"/>
+                <img src={hero} height="100"/>
             </div>
             <div className="btnHomeContainer">
                 <Link to='/IntroSnackQuiz'><div type='button' className='btnStyle' id='btnHomepage'>Snack Finder Quiz</div></Link>
