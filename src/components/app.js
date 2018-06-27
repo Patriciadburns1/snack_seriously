@@ -10,23 +10,29 @@ import { Route } from 'react-router-dom';
 import Menu from './menu';
 import MultipleResult from './multipleresultspage';
 import SingleResult from './singleresult';
+import Nutritionalfacts from './nutritionalfacts';
+
+
+
 
 const App = () => (
   
         <div>
             <Nav/>
-            <Homepage />
+            {/*<Route exact path='/' component= {Home}/>*/}
             {/* <Homepage /> */}
-
             {/* <Route exact path='/' component= {Home}/>
             <Route path='/Search' component={Search}/>
             <Route path='/AllergenPage' component={AllergenPage}/> 
             <Route path='/Categories' component={Categories}/>
             <Route path='/SavorySweet'component={SavorySweet}/> 
             <Route path='/IntroSnackQuiz'component={Intro}/> 
+            {/*<SingleResult/>*/}
+            <Nutritionalfacts/>
             <Route path='/MultipleResult' component={MultipleResult}/>
             <Route path='/SingleResult' component={SingleResult}/>
             <Route path='/Menu' component={Menu}/> */}
+            
         </div>
 
 );

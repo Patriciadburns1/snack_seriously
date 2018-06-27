@@ -1,6 +1,6 @@
 import React, {Component} from 'react'; 
 import Egg from '../assets/images/allergenicons/egg.png'; 
-import './allergenpage.css'; 
+import '../assets/css/allergenPage.css';
 import Preservatives from '../assets/images/allergenicons/preservatives.png'; 
 import Transfat from '../assets/images/allergenicons/transfat.png'; 
 import Wheat from '../assets/images/allergenicons/wheat.png'; 
