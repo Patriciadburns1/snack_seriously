@@ -15,7 +15,10 @@ const App = () => (
   
         <div>
             <Nav/>
-            <Route exact path='/' component= {Home}/>
+            <Home />
+            <Home />
+
+            {/* <Route exact path='/' component= {Home}/>
             <Route path='/Search' component={Search}/>
             <Route path='/AllergenPage' component={AllergenPage}/> 
             <Route path='/Categories' component={Categories}/>
@@ -23,7 +26,7 @@ const App = () => (
             <Route path='/IntroSnackQuiz'component={Intro}/> 
             <Route path='/MultipleResult' component={MultipleResult}/>
             <Route path='/SingleResult' component={SingleResult}/>
-            <Route path='/Menu' component={Menu}/>
+            <Route path='/Menu' component={Menu}/> */}
         </div>
 
 );

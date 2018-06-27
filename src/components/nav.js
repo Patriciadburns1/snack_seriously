@@ -8,11 +8,9 @@ import {Link} from 'react-router-dom';
 export default () => {
     return (
         <div className="navBar">
-            {/* <Link to='/Menu'> */}
-                <div className='hamburgerMenu'>
-                    <img src={hamburger}/>
-                </div>
-            {/* </Link> */}
+            <div className='hamburgerMenu'>
+                <img src={hamburger}/>
+            </div>
             <div className="logo">
                 Logo
             </div>

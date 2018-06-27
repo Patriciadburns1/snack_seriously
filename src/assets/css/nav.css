@@ -1,8 +1,11 @@
 /**************** Nav Bar Style ***************/
 
 .navBar{
+    position: fixed;
+    top: 0;
+    width: 100%;
     margin: 0px;
-    height: 9vh;
+    height: 7vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
