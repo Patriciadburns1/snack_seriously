@@ -1,7 +1,7 @@
 import React from 'react';
 import AllergenPage from './allergenpage.js'
 import Nav from './nav';
-import Home from './home';
+import Homepage from './homepage';
 import Search from './searchbar';
 import Categories from './categoriespage';
 import SavorySweet from './savorysweet';
@@ -15,8 +15,8 @@ const App = () => (
   
         <div>
             <Nav/>
-            <Home />
-            <Home />
+            <Homepage />
+            {/* <Homepage /> */}
 
             {/* <Route exact path='/' component= {Home}/>
             <Route path='/Search' component={Search}/>
