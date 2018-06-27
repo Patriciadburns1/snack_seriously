@@ -69,8 +69,8 @@ class Allergen extends Component{
                    </div>
                </div>
                <div className="footerButtons">
-               <div type='button' className='btnStyle btnNormal'> < Link to='/'> Home </Link></div>
-               <div type='button' className='btnStyle btnNormal'> <Link to='/Categories'>  Next </Link> </div>
+               <Link to='/IntroSnackQuiz'><div type='button' className='btnStyle btnNormal'>&#8592; Back</div></Link>
+               <Link to='/Categories'><div type='button' className='btnStyle btnNormal'>Next &#8594;</div></Link>
                </div> 
             </div>    
         )

@@ -3,6 +3,7 @@ import '../assets/css/stylesheet.css';
 import '../assets/css/nav.css';
 import '../assets/css/buttons.css'
 import hamburger from '../assets/images/hamburger.png';
+import {Link} from 'react-router-dom';
 
 export default () => {
     return (

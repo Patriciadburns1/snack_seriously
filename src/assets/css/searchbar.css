@@ -1,4 +1,4 @@
-.searchBar{
+/* #searchBar{
     display: flex;
     justify-content: center;
     width: 100vw;
@@ -7,7 +7,7 @@
     top: 55%;
 }
 
-input.searchArea {
+#input.searchArea {
     width: 38vw;
     border: 0;
     outline: 0;
@@ -37,11 +37,11 @@ input.searchArea {
     margin: 4px 2px;
     cursor: pointer;
     -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
+    /* transition-duration: 0.4s;
     border-radius: 8px;
-}
+} */
 
-.buttonSearch:hover {
+/* .buttonSearch:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
+}  */
 
