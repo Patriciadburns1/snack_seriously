@@ -4,6 +4,15 @@ import '../assets/css/nutritionalfacts.css';
 
 
 class Nutritionalfacts extends Component{
+    constructor(props){
+        super(props);
+
+
+    }
+
+
+
+
     render(){
         return(
       <div className="nutritionContainer">
@@ -135,7 +144,7 @@ class Nutritionalfacts extends Component{
                   </tr>
                   </tbody>
               </table>
-
+                {/*maybe delete from here*/}
               <p className="smallInfo">* Percent Daily Values are based on a 2,000 calorie diet. Your daily
                   values may be higher or lower depending on your calorie needs:</p>
 
