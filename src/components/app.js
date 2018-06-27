@@ -10,7 +10,7 @@ import Searchresults from './multipleresultspage';
 import { Route } from 'react-router-dom'; 
 import Menu from './menu';
 import SingleResult from './singleresult';
-
+import Nutritionalfacts from './nutritionalfacts';
 
 
 
@@ -18,13 +18,14 @@ const App = () => (
   
         <div>
             <Nav/>
-            <Route exact path='/' component= {Home}/>
+            {/*<Route exact path='/' component= {Home}/>*/}
             <Route path='/Search' component={Search}/>
             <Route path='/AllergenPage' component={AllergenPage}/> 
             <Route path='/Categories' component={Categories}/>
             <Route path='/SavorySweet'component={SavorySweet}/> 
             <Route path='/IntroSnackQuiz'component={Intro}/> 
-
+            {/*<SingleResult/>*/}
+            <Nutritionalfacts/>
         </div>
 
 );
