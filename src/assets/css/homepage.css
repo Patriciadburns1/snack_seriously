@@ -25,12 +25,12 @@ input.searchArea {
     display: flex;
     justify-content: center;
     text-align: center;
-    width: 30vw;
+    width: 50vw;
     height: 5vh;
     align-items: center;
     position: absolute;
     top: 55%;
-    left: 30%;
+    left: 20%;
 }
 
 .btnSearch {

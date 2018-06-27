@@ -6,33 +6,39 @@ import data from '../../server/wizardDummyData.json';
 class Homepage extends Component {
     constructor(props) {
         super(props);
-        this.state = ''
+        this.state = {
+            userInput: ''
+        }
     }
 
-    handleInputChange = () => {
+    handleInputChange = (event) => {
+        let value = event.target.value;
         this.setState({
-            query: this.search.value
+            userInput: value
         })
+        
     }
 
     async getSnackData () {
         this.setState({
             data: data
         })
-        console.log(data);
+        console.log("The data is: ", data);
     }
     render() {
+        const {userInput} = this.state;
+        console.log(this.state);
         return(
             <div>
                 <div className='heroImage'>
                     <img src={hero} width="200"/>
                 </div>
                 <div className="searchBar">
-                    <input className="searchArea" placeholder="Search by brand or type of snack" ref={input => this.search = input} onChange={this.handleInputChange}/>
+                    <input className="searchArea" value={userInput} placeholder="Search by brand or type of snack" onChange={this.handleInputChange.bind(this)}/>
                     <div className="btnSearch" onClick={this.getSnackData.bind(this)}>&#x1F50D;</div>
                 </div>
                 <div className="btnStyle btnRandomSnack">
-                    Random Snack!
+                    Pick a Random Snack!
                 </div>
             </div>
         )
