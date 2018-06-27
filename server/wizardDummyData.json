@@ -1,70 +1,72 @@
 {
 	"success": true,
-	"items": [{
+	"items": [
+		{
 			"name": "SHRIMP CHIPS BAKED",
 			"manu": "CALBEE NORTH AMERICA, LLC",
 			"ingredients": "WHEAT FLOUR, PALM OIL, SHRIMP, CORN STARCH, TAPIOCA STARCH, SUGAR, SALT, AND LEAVENING (SODIUM CARBONATE, SODIUM BICARBONATE, POTASSIUM BITARTRATE, AMMONIUM SULFATE, AMMONIUM BICARBONATE, MONOSODIUM GLUTAMATE, CORN STARCH).",
-			"nutrition": [{
-				"name": "energy",
-				"value": 130,
-				"unit": "kcal"
-			}, {
-				"name": "protein",
-				"value": 2,
-				"unit": "g"
-			}, {
-				"name": "total_fat",
-				"value": 5,
-				"unit": "g"
-			}, {
-				"name": "carbohydrate",
-				"value": 20,
-				"unit": "g"
-			}, {
-				"name": "total_fiber",
-				"value": 1,
-				"unit": "g"
-			}, {
-				"name": "total_sugar",
-				"value": 1,
-				"unit": "g"
-			}, {
-				"name": "calcium",
-				"value": 20,
-				"unit": "mg"
-			}, {
-				"name": "iron",
-				"value": 0,
-				"unit": "mg"
-			}, {
-				"name": "potassium",
-				"value": 25,
-				"unit": "mg"
-			}, {
-				"name": "sodium",
-				"value": 230,
-				"unit": "mg"
-			}, {
-				"name": "vitamin_c",
-				"value": 0,
-				"unit": "mg"
-			}, {
-				"name": "vitamin a",
-				"value": 0,
-				"unit": "mg"
-			}, {
-				"name": "total saturated_fatty_acids",
-				"value": 2.5,
-				"unit": "g"
-			}, {
-				"name": "total_trans_fatty_acids",
-				"value": 0,
-				"unit": "g"
-			}, {
-				"name": "cholesterol",
-				"value": 0,
-				"unit": "mg"
-			}],
+			"nutrition": {
+				"energy": {
+					"value": 130,
+					"unit": "kcal"
+				},
+				"protein": {
+					"value": 2,
+					"unit": "g"
+				},
+				"total_fat": {
+					"value": 5,
+					"unit": "g"
+				},
+				"carbohydrate": {
+					"value": 20,
+					"unit": "g"
+				},
+				"total_fiber": {
+					"value": 1,
+					"unit": "g"
+				},
+				"total_sugar": {
+					"value": 1,
+					"unit": "g"
+				},
+				"calcium": {
+					"value": 20,
+					"unit": "mg"
+				},
+				"iron": {
+					"value": 0,
+					"unit": "mg"
+				},
+				"potassium": {
+					"value": 25,
+					"unit": "mg"
+				},
+				"sodium": {
+					"value": 230,
+					"unit": "mg"
+				},
+				"vitamin_c": {
+					"value": 0,
+					"unit": "mg"
+				},
+				"vitamin_a": {
+					"value": 0,
+					"unit": "mg"
+				},
+				"total_saturated_fatty_acids": {
+					"value": 2.5,
+					"unit": "g"
+				},
+				"total_trans_fatty_acids": {
+					"value": 0,
+					"unit": "g"
+				},
+				"cholesterol": {
+					"value": 0,
+					"unit": "mg"
+				}
+			},
 			"imgURL": "http://az439100.vo.msecnd.net/200/cN5sI_Pyx0uIgsg4uRQPhQ_200.jpg",
 			"description": "Baked to a golden crispy crunch. A baked light snack, with a touch of shrimp",
 			"serving": {
@@ -72,71 +74,73 @@
 				"measurement": "oz"
 			},
 			"amazonURL": "https://www.amazon.com/Calbee-Shrimp-Chips-8-oz/dp/B0012OWO48/ref=sr_1_1_a_it?ie=UTF8&qid=1530033892&sr=8-1&keywords=071146010154"
-		},{
+		},
+		{
 			"name": "Food Should Taste Good Brand Kettle Cooked Sweet Potato Chips Barbeque",
 			"manu": "GENERAL MILLS SALES INC",
 			"ingredients": "SWEET POTATOES, SUNFLOWER OIL, MALTODEXTRIN, CANE SUGAR, MOLASSES, SEA SALT, SPICE, YEAST EXTRACT, TOMATO POWDER, ONION POWDER, VINEGAR, CITRIC ACID, ASCORBIC ACID, GARLIC POWDER, NATURAL SMOKE FLAVOR.",
-			"nutrition": [{
-				"name": "energy",
-				"value": 140,
-				"unit": "kcal"
-			}, {
-				"name": "protein",
-				"value": 1,
-				"unit": "g"
-			}, {
-				"name": "total_fat",
-				"value": 8,
-				"unit": "g"
-			}, {
-				"name": "carbohydrate",
-				"value": 18,
-				"unit": "g"
-			}, {
-				"name": "total_fiber",
-				"value": 3,
-				"unit": "g"
-			}, {
-				"name": "total_sugar",
-				"value": 4,
-				"unit": "g"
-			}, {
-				"name": "calcium",
-				"value": 20,
-				"unit": "mg"
-			}, {
-				"name": "iron",
-				"value": 0.36,
-				"unit": "mg"
-			}, {
-				"name": "potassium",
-				"value": 210,
-				"unit": "mg"
-			}, {
-				"name": "sodium",
-				"value": 100,
-				"unit": "mg"
-			}, {
-				"name": "vitamin_c",
-				"value": 9,
-				"unit": "mg"
-			}, {
-				"name": "vitamin a",
-				"value": 4000,
-				"unit": "mg"
-			}, {
-				"name": "total saturated_fatty_acids",
-				"value": 1,
-				"unit": "g"
-			}, {
-				"name": "total_trans_fatty_acids",
-				"value": 0,
-				"unit": "g"
-			}, {
-				"name": "cholesterol",
-				"value": 0,
-				"unit": "mg"
-			}],
+			"nutrition": {
+				"energy": {
+					"value": 140,
+					"unit": "kcal"
+				},
+				"protein": {
+					"value": 1,
+					"unit": "g"
+				},
+				"total_fat": {
+					"value": 8,
+					"unit": "g"
+				},
+				"carbohydrate": {
+					"value": 18,
+					"unit": "g"
+				},
+				"total_fiber": {
+					"value": 3,
+					"unit": "g"
+				},
+				"total_sugar": {
+					"value": 4,
+					"unit": "g"
+				},
+				"calcium": {
+					"value": 20,
+					"unit": "mg"
+				},
+				"iron": {
+					"value": 0.36,
+					"unit": "mg"
+				},
+				"potassium": {
+					"value": 210,
+					"unit": "mg"
+				},
+				"sodium": {
+					"value": 100,
+					"unit": "mg"
+				},
+				"vitamin_c": {
+					"value": 9,
+					"unit": "mg"
+				},
+				"vitamin_a": {
+					"value": 4000,
+					"unit": "mg"
+				},
+				"total_saturated_fatty_acids": {
+					"value": 1,
+					"unit": "g"
+				},
+				"total_trans_fatty_acids": {
+					"value": 0,
+					"unit": "g"
+				},
+				"cholesterol": {
+					"value": 0,
+					"unit": "mg"
+				}
+			},
 			"imgURL": "http://az439100.vo.msecnd.net/200/gcpoUzByqUiNeLHyZi7wgw_200.jpg",
 			"description": "Seasoned with molasses, tomato, onion, vinegar & garlic with a touch of sea saltAll naturalCholesterol free",
 			"serving": {
@@ -144,143 +148,147 @@
 				"measurement": "oz"
 			},
 			"amazonURL": "https://www.amazon.com/Food-Should-Taste-Good-Barbeque/dp/B00BUAETHO"
-		},{
+		},
+		{
 			"name": "Lay's Barbecue Flavored Potato Chips Family Size!",
 			"manu": "Frito-Lay Company",
 			"ingredients": "POTATOES, VEGETABLE OIL (SUNFLOWER, CORN, AND/OR CANOLA OIL), BARBECUE SEASONING (SUGAR, AND LESS THAN 2% OF THE FOLLOWING: DEXTROSE, SALT, MALTED BARLEY FLOUR, MALTODEXTRIN [MADE FROM CORN], MOLASSES, TORULA YEAST, ONION POWDER, SPICES, TOMATO POWDER, PAPRIKA, NATURAL FLAVORS [INCLUDING NATURAL SMOKE FLAVOR], CORN STARCH, CARAMEL COLOR, YEAST EXTRACT, PAPRIKA EXTRACT, GARLIC POWDER, AND MUSTARD SEED OIL).",
-			"nutrition": [{
-				"name": "energy",
-				"value": 160,
-				"unit": "kcal"
-			}, {
-				"name": "protein",
-				"value": 2,
-				"unit": "g"
-			}, {
-				"name": "total_fat",
-				"value": 10,
-				"unit": "g"
-			}, {
-				"name": "carbohydrate",
-				"value": 15,
-				"unit": "g"
-			}, {
-				"name": "total_fiber",
-				"value": 1,
-				"unit": "g"
-			}, {
-				"name": "total_sugar",
-				"value": 2,
-				"unit": "g"
-			}, {
-				"name": "calcium",
-				"value": 0,
-				"unit": "mg"
-			}, {
-				"name": "iron",
-				"value": 0.36,
-				"unit": "mg"
-			}, {
-				"name": "potassium",
-				"value": 320,
-				"unit": "mg"
-			}, {
-				"name": "sodium",
-				"value": 150,
-				"unit": "mg"
-			}, {
-				"name": "vitamin_c",
-				"value": 6,
-				"unit": "mg"
-			}, {
-				"name": "vitamin a",
-				"value": 0,
-				"unit": "mg"
-			}, {
-				"name": "total saturated_fatty_acids",
-				"value": 1.501,
-				"unit": "g"
-			}, {
-				"name": "total_trans_fatty_acids",
-				"value": 0,
-				"unit": "g"
-			}, {
-				"name": "cholesterol",
-				"value": 0,
-				"unit": "mg"
-			}],
+			"nutrition": {
+				"energy": {
+					"value": 160,
+					"unit": "kcal"
+				},
+				"protein": {
+					"value": 2,
+					"unit": "g"
+				},
+				"total_fat": {
+					"value": 10,
+					"unit": "g"
+				},
+				"carbohydrate": {
+					"value": 15,
+					"unit": "g"
+				},
+				"total_fiber": {
+					"value": 1,
+					"unit": "g"
+				},
+				"total_sugar": {
+					"value": 2,
+					"unit": "g"
+				},
+				"calcium": {
+					"value": 0,
+					"unit": "mg"
+				},
+				"iron": {
+					"value": 0.36,
+					"unit": "mg"
+				},
+				"potassium": {
+					"value": 320,
+					"unit": "mg"
+				},
+				"sodium": {
+					"value": 150,
+					"unit": "mg"
+				},
+				"vitamin_c": {
+					"value": 6,
+					"unit": "mg"
+				},
+				"vitamin_a": {
+					"value": 0,
+					"unit": "mg"
+				},
+				"total_saturated_fatty_acids": {
+					"value": 1.501,
+					"unit": "g"
+				},
+				"total_trans_fatty_acids": {
+					"value": 0,
+					"unit": "g"
+				},
+				"cholesterol": {
+					"value": 0,
+					"unit": "mg"
+				}
+			},
 			"imgURL": "http://az439100.vo.msecnd.net/200/Zzo2uG3_s0GKNDwC6YLGAg_200.jpg",
-			"description":  "Barbecue seasoning adds even more flavor to the Lays chips you loveGreat snack for friends and family to enjoy",
+			"description": "Barbecue seasoning adds even more flavor to the Lays chips you loveGreat snack for friends and family to enjoy",
 			"serving": {
 				"size": 9.75,
 				"measurement": "oz"
 			},
 			"amazonURL": "https://www.amazon.com/Lays-Barbecue-Potato-Chips-Ounce/dp/B019KE3BUM/ref=sr_1_1_s_it?s=grocery&ie=UTF8&qid=1530040040&sr=1-1&keywords=028400598118"
-		},{
+		},
+		{
 			"name": "Doritos Cool Ranch Party Size",
 			"manu": "Frito-Lay Company",
 			"ingredients": "CORN, VEGETABLE OIL (CORN, CANOLA, AND/OR SUNFLOWER OIL), MALTODEXTRIN (MADE FROM CORN), SALT, TOMATO POWDER, CORN STARCH, LACTOSE, WHEY, SKIM MILK, CORN SYRUP SOLIDS, ONION POWDER, SUGAR, GARLIC POWDER, MONOSODIUM GLUTAMATE, CHEDDAR CHEESE (MILK, CHEESE CULTURES, SALT, ENZYMES), DEXTROSE, MALIC ACID, BUTTERMILK, NATURAL AND ARTIFICIAL FLAVORS, SODIUM ACETATE, ARTIFICIAL COLOR (INCLUDING RED 40, BLUE 1, YELLOW 5), SODIUM CASEINATE, SPICE, CITRIC ACID, DISODIUM INOSINATE AND DISODIUM GUANYLATE.",
-			"nutrition": [{
-				"name": "energy",
-				"value": 150,
-				"unit": "kcal"
-			}, {
-				"name": "protein",
-				"value": 2,
-				"unit": "g"
-			}, {
-				"name": "total_fat",
-				"value": 8,
-				"unit": "g"
-			}, {
-				"name": "carbohydrate",
-				"value": 18,
-				"unit": "g"
-			}, {
-				"name": "total_fiber",
-				"value": 2,
-				"unit": "g"
-			}, {
-				"name": "total_sugar",
-				"value": 1,
-				"unit": "g"
-			}, {
-				"name": "calcium",
-				"value": 20,
-				"unit": "mg"
-			}, {
-				"name": "iron",
-				"value": 0,
-				"unit": "mg"
-			}, {
-				"name": "potassium",
-				"value": 0,
-				"unit": "mg"
-			}, {
-				"name": "sodium",
-				"value": 180,
-				"unit": "mg"
-			}, {
-				"name": "vitamin_c",
-				"value": 0,
-				"unit": "mg"
-			}, {
-				"name": "vitamin a",
-				"value": 0,
-				"unit": "mg"
-			}, {
-				"name": "total saturated_fatty_acids",
-				"value": 1,
-				"unit": "g"
-			}, {
-				"name": "total_trans_fatty_acids",
-				"value": 0,
-				"unit": "g"
-			}, {
-				"name": "cholesterol",
-				"value": 0,
-				"unit": "mg"
-			}],
+			"nutrition": {
+				"energy": {
+					"value": 150,
+					"unit": "kcal"
+				},
+				"protein": {
+					"value": 2,
+					"unit": "g"
+				},
+				"total_fat": {
+					"value": 8,
+					"unit": "g"
+				},
+				"carbohydrate": {
+					"value": 18,
+					"unit": "g"
+				},
+				"total_fiber": {
+					"value": 2,
+					"unit": "g"
+				},
+				"total_sugar": {
+					"value": 1,
+					"unit": "g"
+				},
+				"calcium": {
+					"value": 20,
+					"unit": "mg"
+				},
+				"iron": {
+					"value": 0,
+					"unit": "mg"
+				},
+				"potassium": {
+					"value": 0,
+					"unit": "mg"
+				},
+				"sodium": {
+					"value": 180,
+					"unit": "mg"
+				},
+				"vitamin_c": {
+					"value": 0,
+					"unit": "mg"
+				},
+				"vitamin_a": {
+					"value": 0,
+					"unit": "mg"
+				},
+				"total_saturated_fatty_acids": {
+					"value": 1,
+					"unit": "g"
+				},
+				"total_trans_fatty_acids": {
+					"value": 0,
+					"unit": "g"
+				},
+				"cholesterol": {
+					"value": 0,
+					"unit": "mg"
+				}
+			},
 			"imgURL": "http://az439100.vo.msecnd.net/200/_zjRPU-AMkerOUM_q0CTpw_200.jpg",
 			"description": "Bold and zesty flavor make this a tasty snackCrunchy delicious Doritos chips are a bold snackCrunchy chips",
 			"serving": {
@@ -288,71 +296,73 @@
 				"measurement": "oz"
 			},
 			"amazonURL": "https://www.amazon.com/Doritos-Flavored-Tortilla-Chips-Party/dp/B01JOK9DTK/ref=sr_1_1_s_it?s=grocery&ie=UTF8&qid=1530042945&sr=1-1&keywords=028400337304"
-		},{
+		},
+		{
 			"name": "Doritos Tortilla Chips Party Size! Nacho Cheese",
 			"manu": "Frito-Lay Company",
 			"ingredients": "CORN, VEGETABLE OIL (SUNFLOWER, CANOLA, AND/OR CORN OIL), MALTODEXTRIN (MADE FROM CORN), SALT, CHEDDAR CHEESE (MILK, CHEESE CULTURES, SALT, ENZYMES), WHEY, MONOSODIUM GLUTAMATE, BUTTERMILK, ROMANO CHEESE (PART- SKIM COW'S MILK, CHEESE CULTURES, SALT, ENZYMES), WHEY PROTEIN CONCENTRATE, ONION POWDER, CORN FLOUR, NATURAL AND ARTIFICIAL FLAVOR, DEXTROSE, TOMATO POWDER, LACTOSE, SPICES, ARTIFICIAL COLOR (INCLUDING YELLOW 6, YELLOW 5, AND RED 40), LACTIC ACID, CITRIC ACID, SUGAR, GARLIC POWDER, SKIM MILK, RED AND GREEN BELL PEPPER POWDER, DISODIUM INOSINATE, AND DISODIUM GUANYLATE",
-			"nutrition": [{
-				"name": "energy",
-				"value": 140,
-				"unit": "kcal"
-			}, {
-				"name": "protein",
-				"value": 2,
-				"unit": "g"
-			}, {
-				"name": "total_fat",
-				"value": 8,
-				"unit": "g"
-			}, {
-				"name": "carbohydrate",
-				"value": 16,
-				"unit": "g"
-			}, {
-				"name": "total_fiber",
-				"value": 1,
-				"unit": "g"
-			}, {
-				"name": "total_sugar",
-				"value": 0,
-				"unit": "g"
-			}, {
-				"name": "calcium",
-				"value": 0,
-				"unit": "mg"
-			}, {
-				"name": "iron",
-				"value": 0,
-				"unit": "mg"
-			}, {
-				"name": "potassium",
-				"value": 0,
-				"unit": "mg"
-			}, {
-				"name": "sodium",
-				"value": 210,
-				"unit": "mg"
-			}, {
-				"name": "vitamin_c",
-				"value": 0,
-				"unit": "mg"
-			}, {
-				"name": "vitamin a",
-				"value": 100,
-				"unit": "mg"
-			}, {
-				"name": "total saturated_fatty_acids",
-				"value": 1,
-				"unit": "g"
-			}, {
-				"name": "total_trans_fatty_acids",
-				"value": 0,
-				"unit": "g"
-			}, {
-				"name": "cholesterol",
-				"value": 0,
-				"unit": "mg"
-			}],
+			"nutrition": {
+				"energy": {
+					"value": 140,
+					"unit": "kcal"
+				},
+				"protein": {
+					"value": 2,
+					"unit": "g"
+				},
+				"total_fat": {
+					"value": 8,
+					"unit": "g"
+				},
+				"carbohydrate": {
+					"value": 16,
+					"unit": "g"
+				},
+				"total_fiber": {
+					"value": 1,
+					"unit": "g"
+				},
+				"total_sugar": {
+					"value": 0,
+					"unit": "g"
+				},
+				"calcium": {
+					"value": 0,
+					"unit": "mg"
+				},
+				"iron": {
+					"value": 0,
+					"unit": "mg"
+				},
+				"potassium": {
+					"value": 0,
+					"unit": "mg"
+				},
+				"sodium": {
+					"value": 210,
+					"unit": "mg"
+				},
+				"vitamin_c": {
+					"value": 0,
+					"unit": "mg"
+				},
+				"vitamin_a": {
+					"value": 100,
+					"unit": "mg"
+				},
+				"total_saturated_fatty_acids": {
+					"value": 1,
+					"unit": "g"
+				},
+				"total_trans_fatty_acids": {
+					"value": 0,
+					"unit": "g"
+				},
+				"cholesterol": {
+					"value": 0,
+					"unit": "mg"
+				}
+			},
 			"imgURL": "http://az439100.vo.msecnd.net/200/3R84XHvIOUqbo_cRbD_4WQ_200.jpg",
 			"description": "Your favorite bold nacho cheese flavored tortilla chipsPerfect snack for sharing with friendsCrunchy chips",
 			"serving": {
@@ -361,6 +371,5 @@
 			},
 			"amazonURL": "https://www.amazon.com/Doritos-Tortilla-15-5oz-Choose-Flavors/dp/B00UWFRNIU/ref=sr_1_1_s_it?s=grocery&ie=UTF8&qid=1530043312&sr=1-1&keywords=028400343671&th=1"
 		}
-
 	]
 }
