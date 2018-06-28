@@ -8,7 +8,8 @@ class Homepage extends Component {
         super(props);
         this.state = {
             userInput: ''
-        }
+        };
+        this.base_url = '';
     }
 
     handleInputChange = (event) => {
@@ -25,6 +26,17 @@ class Homepage extends Component {
         })
         console.log("The data is: ", data);
     }
+
+    // async getResultData() {
+    //     try {
+    //         const resp = await axios.get(`${this.base_url}/todos${this.api_key}`);
+    //         this.setState({
+    //             list: resp
+    //         });
+    //     } catch (err) {
+    //         console.log('Get Data Error:', err.message);
+    //     }
+    // }
     render() {
         const {userInput} = this.state;
         console.log(this.state);
