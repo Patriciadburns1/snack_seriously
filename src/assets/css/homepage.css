@@ -1,38 +1,36 @@
 .heroImage {
-    position: absolute;
-    top: 25%;
-    left: 25%;
+    position: relative;
+    margin-top: 30%;
+    display: flex;
+    justify-content: center;
 }
 
 .searchBar{
     display: flex;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     align-items: center;
-    position: absolute;
-    top: 45%;
+    position: relative;
+    margin-top: 10%;
 }
 
 input.searchArea {
-    width: 65vw;
+    width: 65%;
     border: 0;
     outline: 0;
     border-bottom: 1px solid black;
     font-size: 16px;
 }
 
+.btnSearch {
+    cursor: pointer;
+}
+
 .btnRandomSnack {
     display: flex;
     justify-content: center;
     text-align: center;
-    width: 50vw;
-    height: 5vh;
-    align-items: center;
-    position: absolute;
-    top: 55%;
-    left: 20%;
+    width: 50%;
+    margin: 20% auto;
 }
 
-.btnSearch {
-    cursor: pointer;
-}
