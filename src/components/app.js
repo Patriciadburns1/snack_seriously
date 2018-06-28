@@ -1,28 +1,25 @@
 import React from 'react';
-import AllergenPage from './allergenpage.js'
-import Nav from './nav';
+import { Route } from 'react-router-dom'; 
+import Nav from './nav/nav';
 import Homepage from './homepage';
+import AllergenPage from './allergenpage.js'
 import Search from './searchbar';
 import Categories from './categoriespage';
 import SavorySweet from './savorysweet';
 import Intro from './introsnackquiz';
-import { Route } from 'react-router-dom'; 
-import Menu from './menu';
 import MultipleResult from './multipleresultspage';
 import SingleResult from './singleresult';
 import Nutritionalfacts from './nutritionalfacts';
-import Test from './testmenucontainer';
 
 
 
 const App = () => (
   
         <div>
-            {/* <Nav/> */}
-            <Test />
+            <Nav/>
             {/*<Route exact path='/' component= {Home}/>*/}
             {/* <Menu /> */}
-            {/* <Homepage /> */}
+            <Homepage />
             {/* <Route exact path='/' component= {Home}/>
             <Route path='/Search' component={Search}/>
             <Route path='/AllergenPage' component={AllergenPage}/> 
