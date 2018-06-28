@@ -3,10 +3,10 @@ import '../../assets/css/stylesheet.css';
 import './nav.css';
 import '../../assets/css/buttons.css'
 import {Link} from 'react-router-dom';
-import MenuButton from './navbutton';
+import MenuButton from './menubutton';
 import Menu from './menu';
 
-class Homepage extends Component {
+class Nav extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -43,4 +43,4 @@ class Homepage extends Component {
     }
 }
 
-export default Homepage;
+export default Nav;
