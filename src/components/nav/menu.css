@@ -21,7 +21,7 @@
    
   #menuContainer h2 a {
     color: #333;
-    margin-left: 15px;
+    margin-left: 5%;
     text-decoration: none;
   }
    
@@ -36,9 +36,10 @@
   }
 
   .menuStyle {
-      margin-top: 10vh;
-      margin-left: 5vw;
+      margin-top: 10%;
+      margin-left: 5%;
       font-size: 30px;
       border-bottom: 1px solid white;
-      padding-bottom: 2vh;
+      padding-bottom: 3%;
+      width: 80%;
   }

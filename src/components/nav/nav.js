@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../../assets/css/stylesheet.css';
 import './nav.css';
-// import '../assets/css/buttons.css'
+import '../../assets/css/buttons.css'
 import {Link} from 'react-router-dom';
 import MenuButton from './navbutton';
 import Menu from './menu';
@@ -12,14 +12,13 @@ class Homepage extends Component {
         this.state = {
             visible: false
         }
-        this.handleMouseDown = this.handleMouseDown.bind(this);
+        this.handleMenuClick = this.handleMenuClick.bind(this);
         this.toggleMenu = this.toggleMenu.bind(this);
 
     }
     
-    handleMouseDown(event) {
+    handleMenuClick(event) {
         this.toggleMenu();
-        console.log("clicked");
         event.stopPropagation();
       } 
 
@@ -32,11 +31,11 @@ class Homepage extends Component {
 
     render(){
         const {visible} = this.state;
-        console.log(visible)
+        // console.log(visible)
         return (
             <div className="navBar">
-                <MenuButton handleMouseDown={this.handleMouseDown}/>
-                <Menu handleMouseDown={this.handleMouseDown}
+                <MenuButton handleMenuClick={this.handleMenuClick}/>
+                <Menu handleMenuClick={this.handleMenuClick}
                     visible={visible}/>
                 <div className="logo">Logo</div>
             </div>
