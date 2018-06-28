@@ -20,6 +20,7 @@ const App = () => (
         <div>
             <Nav/>
             {/*<Route exact path='/' component= {Home}/>*/}
+            <Menu />
             {/* <Homepage /> */}
             {/* <Route exact path='/' component= {Home}/>
             <Route path='/Search' component={Search}/>
@@ -28,10 +29,10 @@ const App = () => (
             <Route path='/SavorySweet'component={SavorySweet}/> 
             <Route path='/IntroSnackQuiz'component={Intro}/> 
             {/*<SingleResult/>*/}
-            <Nutritionalfacts/>
-            <Route path='/MultipleResult' component={MultipleResult}/>
+            {/* <Nutritionalfacts/> */}
+            {/* <Route path='/MultipleResult' component={MultipleResult}/>
             <Route path='/SingleResult' component={SingleResult}/>
-            <Route path='/Menu' component={Menu}/> */}
+            <Route path='/Menu' component={Menu}/> */} */}
             
         </div>
 
