@@ -1,5 +1,3 @@
-/**************** Nav Bar Style ***************/
-
 .navBar{
     position: fixed;
     top: 0;
@@ -29,4 +27,35 @@
     justify-content: center;
     height: 53%;
     width: 100%;
+}
+
+.menuIconContainer {
+    z-index: 2;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 2%;
+}
+
+.topBar, .midBar, .botBar {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.animateBar .topBar {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.animateBar .midBar {opacity: 0;}
+
+.animateBar .botBar {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.menuSlide {
+    left: 0;
 }
