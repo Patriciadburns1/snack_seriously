@@ -16,6 +16,17 @@ class Searchresults extends Component {
     render() {
         return (
             <div className="multipleResultsContainer">
+                <div className="multipleResultsFilter">
+                    <button>Filters</button>
+                </div>
+                <div className="multipleResultsBtnContainer">
+                    <div className="search">
+                        <input type="text" className="searchTerm" placeholder="Search snacks"/>
+                        <button type="submit" className="searchButton">
+                            <i className="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
                 <div className="multipleResultsItemsContainer">
                     <Link to='/SingleResult'>
                         <div className="multipleResultsItem">
