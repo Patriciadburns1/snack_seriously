@@ -11,16 +11,17 @@ import Menu from './menu';
 import MultipleResult from './multipleresultspage';
 import SingleResult from './singleresult';
 import Nutritionalfacts from './nutritionalfacts';
-
+import Test from './testmenucontainer';
 
 
 
 const App = () => (
   
         <div>
-            <Nav/>
+            {/* <Nav/> */}
+            <Test />
             {/*<Route exact path='/' component= {Home}/>*/}
-            <Menu />
+            {/* <Menu /> */}
             {/* <Homepage /> */}
             {/* <Route exact path='/' component= {Home}/>
             <Route path='/Search' component={Search}/>
@@ -32,7 +33,7 @@ const App = () => (
             {/* <Nutritionalfacts/> */}
             {/* <Route path='/MultipleResult' component={MultipleResult}/>
             <Route path='/SingleResult' component={SingleResult}/>
-            <Route path='/Menu' component={Menu}/> */} */}
+            <Route path='/Menu' component={Menu}/> */}
             
         </div>
 
