@@ -1,7 +1,4 @@
 import React from 'react';
-
-import AllergenPage from './allergenpage.js'
-import Nav from './nav';
 import { Route } from 'react-router-dom'; 
 import Nav from './nav/nav';
 import Homepage from './homepage';
@@ -23,7 +20,8 @@ const App = () => (
 
             {/*<Route exact path='/' component= {Home}/>*/}
             {/* <Menu /> */}
-            <Homepage />
+            {/* <Homepage /> */}
+            <MultipleResult />
             {/* <Route exact path='/' component= {Home}/>
             <Route path='/Search' component={Search}/>
             <Route path='/AllergenPage' component={AllergenPage}/> 
