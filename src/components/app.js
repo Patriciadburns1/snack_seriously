@@ -10,14 +10,15 @@ import { Route } from 'react-router-dom';
 import Menu from './menu';
 import MultipleResult from './multipleresultspage';
 import SingleResult from './singleresult';
+import Ingredient from './ingredient'; 
 
 const App = () => (
-  
+        <div> 
         <div>
-            <Nav/>
-            <Homepage />
+            {/* <Nav/> */}
             {/* <Homepage /> */}
-
+            {/* <Homepage /> */}
+            
             {/* <Route exact path='/' component= {Home}/>
             <Route path='/Search' component={Search}/>
             <Route path='/AllergenPage' component={AllergenPage}/> 
@@ -27,7 +28,12 @@ const App = () => (
             <Route path='/MultipleResult' component={MultipleResult}/>
             <Route path='/SingleResult' component={SingleResult}/>
             <Route path='/Menu' component={Menu}/> */}
+            
         </div>
+            <div> 
+            <Ingredient/> 
+            </div>
+        </div> 
 
 );
 
