@@ -370,6 +370,80 @@
 				"measurement": "oz"
 			},
 			"amazonURL": "https://www.amazon.com/Doritos-Tortilla-15-5oz-Choose-Flavors/dp/B00UWFRNIU/ref=sr_1_1_s_it?s=grocery&ie=UTF8&qid=1530043312&sr=1-1&keywords=028400343671&th=1"
+		},
+		{
+			"name": "Doritos Tortilla Chips Party Size! Nacho Cheese",
+			"manu": "Frito-Lay Company",
+			"ingredients": "CORN, VEGETABLE OIL (SUNFLOWER, CANOLA, AND/OR CORN OIL), MALTODEXTRIN (MADE FROM CORN), SALT, CHEDDAR CHEESE (MILK, CHEESE CULTURES, SALT, ENZYMES), WHEY, MONOSODIUM GLUTAMATE, BUTTERMILK, ROMANO CHEESE (PART- SKIM COW'S MILK, CHEESE CULTURES, SALT, ENZYMES), WHEY PROTEIN CONCENTRATE, ONION POWDER, CORN FLOUR, NATURAL AND ARTIFICIAL FLAVOR, DEXTROSE, TOMATO POWDER, LACTOSE, SPICES, ARTIFICIAL COLOR (INCLUDING YELLOW 6, YELLOW 5, AND RED 40), LACTIC ACID, CITRIC ACID, SUGAR, GARLIC POWDER, SKIM MILK, RED AND GREEN BELL PEPPER POWDER, DISODIUM INOSINATE, AND DISODIUM GUANYLATE",
+			"nutrition": {
+				"energy": {
+					"value": 140,
+					"unit": "kcal"
+				},
+				"protein": {
+					"value": 2,
+					"unit": "g"
+				},
+				"total_fat": {
+					"value": 8,
+					"unit": "g"
+				},
+				"carbohydrate": {
+					"value": 16,
+					"unit": "g"
+				},
+				"total_fiber": {
+					"value": 1,
+					"unit": "g"
+				},
+				"total_sugar": {
+					"value": 0,
+					"unit": "g"
+				},
+				"calcium": {
+					"value": 0,
+					"unit": "mg"
+				},
+				"iron": {
+					"value": 0,
+					"unit": "mg"
+				},
+				"potassium": {
+					"value": 0,
+					"unit": "mg"
+				},
+				"sodium": {
+					"value": 210,
+					"unit": "mg"
+				},
+				"vitamin_c": {
+					"value": 0,
+					"unit": "mg"
+				},
+				"vitamin_a": {
+					"value": 100,
+					"unit": "mg"
+				},
+				"total_saturated_fatty_acids": {
+					"value": 1,
+					"unit": "g"
+				},
+				"total_trans_fatty_acids": {
+					"value": 0,
+					"unit": "g"
+				},
+				"cholesterol": {
+					"value": 0,
+					"unit": "mg"
+				}
+			},
+			"imgURL": "http://az439100.vo.msecnd.net/200/3R84XHvIOUqbo_cRbD_4WQ_200.jpg",
+			"description": "Your favorite bold nacho cheese flavored tortilla chipsPerfect snack for sharing with friendsCrunchy chips",
+			"serving": {
+				"size": 15.5,
+				"measurement": "oz"
+			},
+			"amazonURL": "https://www.amazon.com/Doritos-Tortilla-15-5oz-Choose-Flavors/dp/B00UWFRNIU/ref=sr_1_1_s_it?s=grocery&ie=UTF8&qid=1530043312&sr=1-1&keywords=028400343671&th=1"
 		}
 	]
 }
