@@ -29,14 +29,14 @@
     text-decoration: underline;
   }
 
-  .xStyle{
+  /* .xStyle{
     margin-left: 5%;
     margin-top: 3%;
     font-size: 30px;
-  }
+  } */
 
   .menuStyle {
-      margin-top: 10%;
+      margin-top: 15%;
       margin-left: 5%;
       font-size: 30px;
       border-bottom: 1px solid white;

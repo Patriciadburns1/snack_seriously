@@ -34,7 +34,7 @@ class Nav extends Component {
         // console.log(visible)
         return (
             <div className="navBar">
-                <MenuButton handleMenuClick={this.handleMenuClick}/>
+                <MenuButton handleMenuClick={this.handleMenuClick} visible={visible}/>
                 <Menu handleMenuClick={this.handleMenuClick}
                     visible={visible}/>
                 <div className="logo">Logo</div>

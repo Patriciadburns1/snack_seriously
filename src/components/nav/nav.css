@@ -20,7 +20,7 @@
 }
 
 .hamburgerMenu {
-    margin-left: 5%;
+    margin-left: 7%;
     position: absolute;
 }
 
@@ -31,8 +31,8 @@
     width: 100%;
 }
 
-.menuIconContainer {
-    z-index: 2;
+#menuIconContainer {
+    z-index: 3;
     display: inline-block;
     cursor: pointer;
     margin-left: 2%;
