@@ -20,7 +20,7 @@
 }
 
 .hamburgerMenu {
-    margin-left: 5%;
+    margin-left: 7%;
     position: absolute;
 }
 
@@ -30,9 +30,9 @@
     height: 50%;
     width: 100%;
 }
-
-.menuIconContainer {
-    z-index: 2;
+/* Menu Button */
+#menuIconContainer {
+    z-index: 3;
     display: inline-block;
     cursor: pointer;
     margin-left: 2%;
@@ -40,7 +40,7 @@
 
 .topBar, .midBar, .botBar {
     width: 35px;
-    height: 5px;
+    height: 2px;
     background-color: white;
     margin: 6px 0;
     transition: 0.4s;
@@ -48,13 +48,13 @@
 
 .animateBar .topBar {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-4px, 6px);
 }
 
 .animateBar .midBar {opacity: 0;}
 
 .animateBar .botBar {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-4px, -9px);
 }
 
