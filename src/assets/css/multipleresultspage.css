@@ -50,7 +50,7 @@
     font-size: small;
 }
 
-.search {
+.multipleResultsPageSearch {
     width: 100%;
     position: relative;
 }
@@ -67,7 +67,7 @@
 }
 
 .searchTerm:focus {
-    color: #00b4cc;
+    color: black;
 }
 
 .searchButton {
@@ -93,10 +93,11 @@
     transform: translate(-50%, -50%);
 }
 
-.multipleResultsBtnContainer > button {
+.multipleResultsFilter > div {
     position: absolute;
     top: -7%;
-    height: 5vh;
+    height: 5%;
+    width: 25%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -106,5 +107,5 @@
     box-shadow: 5px 10px 15px 0px rgba(234,107,2,0.61);
     color: #FFFFFF;
     cursor: pointer;
-    border: 0;
+    border-radius: 5px;
 }
