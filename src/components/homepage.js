@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import '../assets/css/homepage.css';
+import {Link} from 'react-router-dom';
 import hero from '../assets/images/hero.png';
 import data from '../../server/wizardDummyData.json';
+
 
 class Homepage extends Component {
     constructor(props) {
@@ -20,23 +22,7 @@ class Homepage extends Component {
         
     }
 
-    async getSnackData () {
-        this.setState({
-            data: data
-        })
-        console.log("The data is: ", data);
-    }
 
-    // async getResultData() {
-    //     try {
-    //         const resp = await axios.get(`${this.base_url}/todos${this.api_key}`);
-    //         this.setState({
-    //             list: resp
-    //         });
-    //     } catch (err) {
-    //         console.log('Get Data Error:', err.message);
-    //     }
-    // }
     render() {
         const {userInput} = this.state;
         console.log(this.state);
@@ -47,11 +33,9 @@ class Homepage extends Component {
                 </div>
                 <div className="searchBar">
                     <input className="searchArea" value={userInput} placeholder="Search by brand or type of snack" onChange={this.handleInputChange.bind(this)}/>
-                    <div className="btnSearch" onClick={this.getSnackData.bind(this)}>&#x1F50D;</div>
+                    <Link to='MultipleResults'><div className="btnSearch">&#x1F50D;</div></Link>
                 </div>
-                <div className="btnStyle btnRandomSnack">
-                    Pick a Random Snack!
-                </div>
+                <Link to='MultipleResults'><div className="btnStyle btnRandomSnack">Pick a Random Snack</div></Link>
             </div>
         )
     }
