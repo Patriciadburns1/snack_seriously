@@ -29,14 +29,8 @@
     text-decoration: underline;
   }
 
-  /* .xStyle{
-    margin-left: 5%;
-    margin-top: 3%;
-    font-size: 30px;
-  } */
-
-  .menuStyle {
-      margin-top: 15%;
+  .menuLinkStyle {
+      margin-top: 15vh;
       margin-left: 5%;
       font-size: 30px;
       border-bottom: 1px solid white;

@@ -31,7 +31,6 @@ class Nav extends Component {
 
     render(){
         const {visible} = this.state;
-        // console.log(visible)
         return (
             <div className="navBar">
                 <MenuButton handleMenuClick={this.handleMenuClick} visible={visible}/>
