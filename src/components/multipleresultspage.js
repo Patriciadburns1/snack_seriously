@@ -66,9 +66,9 @@ class Searchresults extends Component {
                 </div>
                 <div className="multipleResultsBtnContainer">
                     <div className="multipleResultsPageSearch">
-                        <input type="text" className="searchTerm" placeholder="Search snacks"/>
-                        <button type="submit" className="searchButton">
-                            <i className="fa fa-search"></i>
+                        <input type="text" className="multipleResultsPageSearchTerm" placeholder="Search snacks"/>
+                        <button type="submit" className="multipleResultsPageSearchButton">
+                            <i>&#x1F50D;</i>
                         </button>
                     </div>
                 </div>
