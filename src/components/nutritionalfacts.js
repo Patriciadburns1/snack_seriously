@@ -14,7 +14,8 @@ class Nutritionalfacts extends Component{
 
 
     render(){
-      const {calories, }  = this.props.nutrition; 
+      const {energy, total_fat, total_saturated_fatty_acids, total_trans_fatty_acids, sugar, total_sugar,}  = this.props.nutrition;
+
         return(
       <div className="nutritionContainer">
           <section className="performanceFacts">
@@ -34,7 +35,7 @@ class Nutritionalfacts extends Component{
                   <tbody>
                   <tr>
                       <th colSpan="2">
-                          <b>Calories</b> 200
+                          <b>Calories</b> {energy.value}
                       </th>
                       <td>
                           Calories from Fat 130
