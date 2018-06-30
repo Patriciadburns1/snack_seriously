@@ -4,6 +4,7 @@ import picture from '../assets/images/dummypics/boxglutenfree.png';
 import {Link} from 'react-router-dom';
 import Nutritionalfacts from './nutritionalfacts';
 import Ingredient from './ingredient'; 
+import SingleItem from './singleitem'
 
 class SingleResult extends Component {
     constructor(props) {
@@ -15,11 +16,11 @@ class SingleResult extends Component {
     }
 
     render() {
-        const { nutrition, ingredients, imgURL } = this.props.location.state;
+        const { nutrition, ingredients, imgURL, name, manu } = this.props.location.state;
         console.log("these are our things", nutrition, ingredients, imgURL);
         return(
             <div className="singleResultContainer">
-                    <img src={imgURL} className="singleResultImage"/>
+                <SingleItem name={name} manu={manu} img={imgURL}/>
                 <Nutritionalfacts nutrition={nutrition} />
                 <Ingredient ingredients={ingredients} /> 
                 <div className='footerButtons'>
