@@ -14,6 +14,7 @@ class Nutritionalfacts extends Component{
 
 
     render(){
+      const {calories, }  = this.props.nutrition; 
         return(
       <div className="nutritionContainer">
           <section className="performanceFacts">

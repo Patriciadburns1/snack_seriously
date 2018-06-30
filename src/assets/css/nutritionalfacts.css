@@ -12,9 +12,11 @@
 
 .performanceFacts {
     border: 1px solid black;
-    margin: 20px;
-    float: left;
-    width: 290px;
+    /* margin: 20px; */
+    margin: auto; 
+    /* float: left; */
+    /* width: 290px; */
+    width:67%; 
     padding: 10%;
 }
 .performanceFacts table {
@@ -101,4 +103,13 @@
 
 .thin-end {
     border-bottom: 1px solid black;
+}
+
+.ingredientContainer{
+    width: 71%;
+    margin: auto;
+    padding: 8%; 
+    border: 1px solid black;
+    word-break: break-all;
+    hyphens: auto;
 }

@@ -1,13 +1,12 @@
 import React, {Component} from 'react'; 
 import Data from '../../server/wizardDummyData'; 
 
-const ingredients = () => {
+const Ingredient = (props) => {
     return(
-        <div> 
-        <div>  </div>
-        </div>
+      
+        <div className="ingredientContainer"> Ingredients: {props.ingredients} </div>
     )
 }
 
 
-export default Ingredients; 
+export default Ingredient; 
