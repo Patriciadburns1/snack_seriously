@@ -33,9 +33,9 @@ class Homepage extends Component {
                 </div>
                 <div className="searchBar">
                     <input className="searchArea" value={userInput} placeholder="Search by brand or type of snack" onChange={this.handleInputChange.bind(this)}/>
-                    <Link to='MultipleResults'><div className="btnSearch">&#x1F50D;</div></Link>
+                    <Link to='MultipleResult'><div className="btnSearch">&#x1F50D;</div></Link>
                 </div>
-                <Link to='MultipleResults'><div className="btnStyle btnRandomSnack">Pick a Random Snack</div></Link>
+                <Link to='MultipleResult'><div className="btnStyle btnRandomSnack">Pick a Random Snack</div></Link>
             </div>
         )
     }
