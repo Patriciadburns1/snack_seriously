@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 import Nutritionalfacts from './nutritionalfacts';
 import Ingredient from './ingredient'; 
 import SingleItem from './singleitem'
+import Search from "./searchbar";
 
 class SingleResult extends Component {
     constructor(props) {
@@ -20,6 +21,7 @@ class SingleResult extends Component {
         console.log("these are our things", nutrition, ingredients, imgURL);
         return(
             <div className="singleResultContainer">
+                <Search/>
                 <SingleItem name={name} manu={manu} img={imgURL}/>
                 <Nutritionalfacts nutrition={nutrition} />
                 <Ingredient ingredients={ingredients} /> 
