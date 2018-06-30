@@ -31,12 +31,24 @@
     position: relative;
 }
 
+/* Andy is thinking */
+.multipleResultsItem span {
+    opacity: 0;
+    position: absolute;
+}
+
+.multipleResultsItem:hover span {
+    opacity: 1;
+}
+
+
 .multipleResultsImage {
     display: block;
     height: auto;
     max-width: 35vw;
     max-height: 15vh;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin: auto;
 }
 
 .multipleResultsLabel {
