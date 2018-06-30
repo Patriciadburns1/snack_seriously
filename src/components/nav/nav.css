@@ -19,10 +19,10 @@
     /* https://www.cssmatic.com/box-shadow */
 }
 
-.hamburgerMenu {
+/* .hamburgerMenu {
     margin-left: 7%;
     position: absolute;
-}
+} */
 
 .logo{
     display: flex;
@@ -36,6 +36,7 @@
     display: inline-block;
     cursor: pointer;
     margin-left: 2%;
+    position: absolute;
 }
 
 .topBar, .midBar, .botBar {
