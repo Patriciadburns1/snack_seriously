@@ -62,52 +62,6 @@
     font-size: small;
 }
 
-.multipleResultsPageSearch {
-    width: 100%;
-    position: relative;
-}
-
-.multipleResultsPageSearchTerm {
-    float: left;
-    width: 100%;
-    border: 3px solid #FF8C2D;
-    padding: 5px;
-    height: 20px;
-    border-radius: 5px;
-    outline: none;
-    color: #9dbfaf;
-}
-
-.multipleResultsPageSearchTerm:focus {
-    color: black;
-}
-
-.multipleResultsPageSearchButton {
-    position: absolute;
-    right: -50px;
-    width: 40px;
-    height: 36px;
-    border: 1px solid #FF8C2D;
-    background: #FF8C2D;
-    text-align: center;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.multipleResultsBtnContainer {
-    width: 30%;
-    position: absolute;
-    top: -4%;
-    right: 5%;
-    transform: translate(-50%, -50%);
-}
-
-.multipleResultsPageSearchButton i {
-    font-style: normal;
-}
-
 .multipleResultsFilter > div {
     position: absolute;
     top: -7%;
