@@ -1,0 +1,11 @@
+.singleitemContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 10vh auto 0;
+}
+
+.singleitemContainer h2 {
+    text-align: center;
+}
