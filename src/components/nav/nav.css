@@ -1,0 +1,61 @@
+/* Nav Bar */
+.navBar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    margin: 0px;
+    height: 7vh;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF8C2D;
+    -webkit-box-shadow: 5px 10px 15px 0px rgba(234,107,2,0.61);
+    -moz-box-shadow: 5px 10px 15px 0px rgba(234,107,2,0.61);
+    box-shadow: 5px 10px 15px 0px rgba(234,107,2,0.61);
+    color: #ffffff;
+    cursor: pointer;
+    /* https://www.cssmatic.com/box-shadow */
+}
+
+/* .hamburgerMenu {
+    margin-left: 7%;
+    position: absolute;
+} */
+
+.logo{
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    width: 100%;
+}
+/* Menu Button */
+#menuIconContainer {
+    z-index: 3;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 2%;
+    position: absolute;
+}
+
+.topBar, .midBar, .botBar {
+    width: 35px;
+    height: 2px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.animateBar .topBar {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-4px, 6px);
+}
+
+.animateBar .midBar {opacity: 0;}
+
+.animateBar .botBar {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-4px, -9px);
+}
+
