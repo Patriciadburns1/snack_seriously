@@ -14,8 +14,9 @@ class Nutritionalfacts extends Component{
 
 
     render(){
-      const {energy, total_fat, total_saturated_fatty_acids, total_trans_fatty_acids, sugar, total_sugar,}  = this.props.nutrition;
 
+
+      const {energy, total_fat, total_saturated_fatty_acids, total_trans_fatty_acids, cholesterol, iron, vitamin_a, vitamin_c, sodium, carbohydrate, protein, total_fiber, total_sugar, calcium  }  = this.props.nutrition; 
         return(
       <div className="nutritionContainer">
           <section className="performanceFacts">
@@ -28,17 +29,19 @@ class Nutritionalfacts extends Component{
                   <thead>
                   <tr>
                       <th colSpan="3" className="smallInfo">
-                          Amount Per Serving
+                          Amount Per Serving {}
                       </th>
                   </tr>
                   </thead>
                   <tbody>
                   <tr>
                       <th colSpan="2">
+
                           <b>Calories</b> {energy.value}
+
                       </th>
                       <td>
-                          Calories from Fat 130
+                          {/* Calories from Fat 130 */}
                       </td>
                   </tr>
                   <tr className="thickRow">
@@ -48,79 +51,82 @@ class Nutritionalfacts extends Component{
                   </tr>
                   <tr>
                       <th colSpan="2">
-                          <b>Total Fat</b> 14g
+                          <b>Total Fat</b> {total_fat.value}{total_fat.unit}
                       </th>
                       <td>
-                          <b>22%</b>
+                            {Math.ceil((total_fat.value/65) * 100)} %
                       </td>
                   </tr>
                   <tr>
                       <td className="blankCell">
                       </td>
                       <th>
-                          Saturated Fat 9g
+                          Saturated Fat {total_saturated_fatty_acids.value}{total_saturated_fatty_acids.unit}
                       </th>
                       <td>
-                          <b>22%</b>
+                         {Math.ceil((total_saturated_fatty_acids.value/20) * 100)} %
                       </td>
                   </tr>
                   <tr>
                       <td className="blankCell">
                       </td>
                       <th>
-                          Trans Fat 0g
+                          Trans Fat {total_trans_fatty_acids.value}{total_trans_fatty_acids.unit}
                       </th>
                       <td>
+                        {Math.ceil((total_trans_fatty_acids.value/20) * 100)} %
                       </td>
                   </tr>
                   <tr>
                       <th colSpan="2">
-                          <b>Cholesterol</b> 55mg
+                          <b>Cholesterol </b> {cholesterol.value}{cholesterol.unit}
                       </th>
                       <td>
-                          <b>18%</b>
+                          <b>{Math.ceil((cholesterol.value/300) * 100)} %</b>
                       </td>
                   </tr>
                   <tr>
                       <th colSpan="2">
-                          <b>Sodium</b> 40mg
+                          <b>Sodium</b> {sodium.value}{sodium.unit}
                       </th>
                       <td>
-                          <b>2%</b>
+                          <b>{Math.ceil((sodium.value/2400) * 100)} %</b>
                       </td>
                   </tr>
                   <tr>
                       <th colSpan="2">
-                          <b>Total Carbohydrate</b> 17g
+                          <b>Total Carbohydrate</b> {carbohydrate.value}{carbohydrate.unit}
                       </th>
                       <td>
-                          <b>6%</b>
+                          <b>{Math.ceil((carbohydrate.value/300) * 100)} %</b>
                       </td>
                   </tr>
                   <tr>
                       <td className="blankCell">
                       </td>
                       <th>
-                          Dietary Fiber 1g
+                          Dietary Fiber {total_fiber.value}{total_fiber.unit}
                       </th>
                       <td>
-                          <b>4%</b>
+                          <b> {Math.ceil((total_fiber.value/25) * 100)} %</b>
                       </td>
                   </tr>
                   <tr>
                       <td className="blankCell">
                       </td>
                       <th>
-                          Sugars 14g
+                          Sugars {total_sugar.value}{total_sugar.unit}
                       </th>
                       <td>
+                         {Math.ceil((total_sugar.value/50) * 100)} %
                       </td>
                   </tr>
                   <tr className="thickEnd">
                       <th colSpan="2">
-                          <b>Protein</b> 3g
+                          <b>Protein</b> {protein.value}{protein.unit}
                       </th>
                       <td>
+                         {Math.ceil((protein.value/56) * 100)} %  
                       </td>
                   </tr>
                   </tbody>
@@ -130,18 +136,18 @@ class Nutritionalfacts extends Component{
                   <tbody>
                   <tr>
                       <td colSpan="2">
-                          Vitamin A 10%
+                          Vitamin A {vitamin_a.value}%
                       </td>
                       <td>
-                          Vitamin C 0%
+                          Vitamin C {vitamin_c.value}%
                       </td>
                   </tr>
                   <tr className="thinEnd">
                       <td colSpan="2">
-                          Calcium 10%
+                          Calcium {calcium.value}%
                       </td>
                       <td>
-                          Iron 6%
+                          Iron {iron.value}%
                       </td>
                   </tr>
                   </tbody>

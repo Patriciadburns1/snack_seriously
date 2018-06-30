@@ -8,7 +8,8 @@ import glutenfreethree from '../assets/images/multipleresultsimages/glutenfreeth
 import glutenfreefour from '../assets/images/multipleresultsimages/glutenfreefour.png'
 import glutenfreefive from '../assets/images/multipleresultsimages/glutenfreefive.png'
 import glutenfreesix from '../assets/images/multipleresultsimages/glutenfreesix.png'
-import Data from '../../server/wizardDummyData'; 
+import Data from '../../server/wizardDummyData';
+
 
 class Searchresults extends Component {
     constructor(props) {
@@ -66,9 +67,9 @@ class Searchresults extends Component {
                 </div>
                 <div className="multipleResultsBtnContainer">
                     <div className="multipleResultsPageSearch">
-                        <input type="text" className="searchTerm" placeholder="Search snacks"/>
-                        <button type="submit" className="searchButton">
-                            <i className="fa fa-search"></i>
+                        <input type="text" className="multipleResultsPageSearchTerm" placeholder="Search snacks"/>
+                        <button type="submit" className="multipleResultsPageSearchButton">
+                            <i>&#x1F50D;</i>
                         </button>
                     </div>
                 </div>
@@ -76,7 +77,7 @@ class Searchresults extends Component {
                     { displayedSnack }
                 </div>
                 <div className='footerButtons'>
-                    <Link to='/Categories'><div type='button' className='btnStyle btnNormal'>&#8592; Back</div></Link>
+                    <Link to='/'><div type='button' className='btnStyle btnNormal'>&#8592; Back</div></Link>
                     <Link to='/'><div type='button' className='btnStyle btnNormal'>Home &#8594;</div></Link>
                 </div>
             </div>
