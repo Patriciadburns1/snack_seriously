@@ -67,7 +67,7 @@
     position: relative;
 }
 
-.searchTerm {
+.multipleResultsPageSearchTerm {
     float: left;
     width: 100%;
     border: 3px solid #FF8C2D;
@@ -78,11 +78,11 @@
     color: #9dbfaf;
 }
 
-.searchTerm:focus {
+.multipleResultsPageSearchTerm:focus {
     color: black;
 }
 
-.searchButton {
+.multipleResultsPageSearchButton {
     position: absolute;
     right: -50px;
     width: 40px;
@@ -96,20 +96,24 @@
     font-size: 20px;
 }
 
-/*Resize the wrap to see the search bar change!*/
 .multipleResultsBtnContainer {
     width: 30%;
     position: absolute;
     top: -4%;
-    right: 0;
+    right: 5%;
     transform: translate(-50%, -50%);
+}
+
+.multipleResultsPageSearchButton i {
+    font-style: normal;
 }
 
 .multipleResultsFilter > div {
     position: absolute;
     top: -7%;
+    left: 8%;
     height: 5%;
-    width: 25%;
+    width: 30%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
