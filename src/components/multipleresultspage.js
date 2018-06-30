@@ -2,12 +2,6 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import '../assets/css/multipleresultspage.css';
 import axios from 'axios';
-// import glutenfreeone from '../assets/images/multipleresultsimages/glutenfreeone.png';
-import glutenfreetwo from '../assets/images/multipleresultsimages/glutenfreetwo.png'
-import glutenfreethree from '../assets/images/multipleresultsimages/glutenfreethree.png'
-import glutenfreefour from '../assets/images/multipleresultsimages/glutenfreefour.png'
-import glutenfreefive from '../assets/images/multipleresultsimages/glutenfreefive.png'
-import glutenfreesix from '../assets/images/multipleresultsimages/glutenfreesix.png'
 import Data from '../../server/wizardDummyData';
 import Search from "./searchbar";
 
@@ -70,9 +64,9 @@ class Searchresults extends Component {
                 <div className="multipleResultsItemsContainer">
                     { displayedSnack }
                 </div>
-                <div className='footerButtons'>
-                    <Link to='/'><div type='button' className='btnStyle btnNormal'>&#8592; Back</div></Link>
-                    <Link to='/'><div type='button' className='btnStyle btnNormal'>Home &#8594;</div></Link>
+                <div className="footerButtons">
+                    <Link to="/"><div type="button" className="btnStyle btnNormal">&#8592; Back</div></Link>
+                    <Link to="/"><div type="button" className="btnStyle btnNormal">Home &#8594;</div></Link>
                 </div>
             </div>
         )

@@ -10,10 +10,10 @@ import About from './about';
 const App = () => (
         <div>
             <Nav/>
-            <Route exact path='/' component= {Homepage}/>
-            <Route path='/MultipleResult' component={MultipleResult}/>
-            <Route path='/SingleResult' component={SingleResult}/>
-            <Route path='/about' component={About}/>
+            <Route exact path="/" component= {Homepage}/>
+            <Route path="/MultipleResult" component={MultipleResult}/>
+            <Route path="/SingleResult" component={SingleResult}/>
+            <Route path="/about" component={About}/>
         </div> 
 
 );
