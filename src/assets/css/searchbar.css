@@ -29,12 +29,3 @@
 .searchBarComp button i {
     font-style: normal;
 }
-
-.multipleResultsContainer .searchBarComp {
-    margin: 0;
-    justify-content: flex-end;
-}
-
-.multipleResultsContainer .searchBarComp input {
-    width: 32%;
-}

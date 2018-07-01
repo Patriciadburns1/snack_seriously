@@ -7,13 +7,11 @@ import { Link } from 'react-router-dom';
 class Search extends Component {
     render(){
         return (
-            <div>
-                <div className="searchBarComp">
-                    <input type="text" placeholder="Search snacks"/>
-                    <button type="submit">
-                        <i>&#x1F50D;</i>
-                    </button>
-                </div>
+            <div className="searchBarComp">
+                <input type="text" placeholder="Search snacks"/>
+                <button type="submit">
+                    <i>&#x1F50D;</i>
+                </button>
             </div>
         )
     }

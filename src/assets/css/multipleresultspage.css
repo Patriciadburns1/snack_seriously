@@ -63,19 +63,31 @@
 }
 
 .multipleResultsFilter > div {
-    position: absolute;
-    top: -7%;
-    left: 8%;
-    height: 5%;
-    width: 30%;
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: #FF8C2D;
-    -webkit-box-shadow: 5px 10px 15px 0px rgba(234,107,2,0.61);
-    -moz-box-shadow: 5px 10px 15px 0px rgba(234,107,2,0.61);
     box-shadow: 5px 10px 15px 0px rgba(234,107,2,0.61);
     color: #FFFFFF;
     cursor: pointer;
     border-radius: 5px;
+    height: 100%;
+}
+
+.multipleResultsContainer .searchBarFilter {
+    display: flex;
+}
+
+.multipleResultsContainer .searchBarFilter .multipleResultsFilter {
+    flex-grow: 1;
+}
+
+.multipleResultsContainer .searchBarComp {
+    margin: 0;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.multipleResultsContainer .searchBarComp input {
+    /*width: 32%;*/
 }
