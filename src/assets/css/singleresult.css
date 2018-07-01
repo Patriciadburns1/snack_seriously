@@ -1,0 +1,24 @@
+.singleResultImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+.singleResultButtonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#resultButtons {
+    margin-top: 10%;
+    margin-bottom: 5%;
+    background-color: #ffffff;
+    color: #FF8C2D;
+    border: 1px solid #FF8C2D;
+}
+
+.singleResultContainer {
+    position: absolute;
+    top: 7%;
+}

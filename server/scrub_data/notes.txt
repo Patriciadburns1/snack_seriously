@@ -1,0 +1,25 @@
+nutrients[index].name
+nutrients
+
+nutrients.ingredients
+ingredients
+//need to clean up the list by stripping:  *, **, ], )
+//replace [, ( with ,
+
+
+parsing file:  wholFoodsData0.json
+Saved file wfoodData0_clean.json
+Found 85 many null nutrients and removed them
+Saved file removed_records.json
+
+$ node histogram_ing.js wfoodData0_clean.json wfoodData0.log
+parsing file:  wfoodData0_clean.json
+Saved file wfoodData0.log
+Total words: 6638
+different ingredients:  1722
+
+from wholFoodsData0.json
+using remove_null_nutrients.js
+	wfoodData0_clean.json has null ingredients removed(85) to removed_records.json and converted ingredients to CAPS
+using histogram_ing.js
+	wfoodData0.log has the histogram of the ingredients(1722) "phrases" and not just words
