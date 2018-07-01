@@ -11,6 +11,8 @@ const App = () => (
         <div>
             <Nav/>
             <Route exact path='/' component= {Homepage}/>
+            <Route path='/search/:term?' component= {Homepage}/>
+            {/* <Route path='/search:term/MultipleResults/:ids?' component={MultipleResults}/>  */}
             <Route path='/MultipleResults' component={MultipleResults}/>
             <Route path='/SingleResult' component={SingleResult}/>
         </div> 
