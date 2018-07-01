@@ -57,10 +57,12 @@ class Searchresults extends Component {
     // const{ name}= this.state; 
         return (
             <div className="multipleResultsContainer">
-                <div className="multipleResultsFilter">
-                    <div type="button">Filters</div>
+                <div className="searchBarFilter">
+                    <div className="multipleResultsFilter">
+                        <div type="button">Filters</div>
+                    </div>
+                    <Search/>
                 </div>
-                <Search/>
                 <div className="multipleResultsItemsContainer">
                     { displayedSnack }
                 </div>
