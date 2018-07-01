@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import '../../assets/css/stylesheet.css';
 import './nav.css';
 import '../../assets/css/buttons.css'
-import {Link} from 'react-router-dom';
 import MenuButton from './menubutton';
 import Menu from './menu';
 

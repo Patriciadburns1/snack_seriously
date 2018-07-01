@@ -8,6 +8,7 @@
     transition: transform .3s cubic-bezier(0, .52, 0, 1);
     overflow: scroll;
     z-index: 2;
+    cursor: pointer;
   }
    
   #menuContainer.hide {
@@ -18,16 +19,6 @@
     transform: translate3d(0vw, 0, 0);
     overflow: hidden;
   }
-   
-  #menuContainer h2 a {
-    color: #333;
-    margin-left: 5%;
-    text-decoration: none;
-  }
-   
-  #menuContainer h2 a:hover {
-    text-decoration: underline;
-  }
 
   .menuLinkStyle {
       margin-top: 15vh;
@@ -36,4 +27,6 @@
       border-bottom: 1px solid white;
       padding-bottom: 3%;
       width: 80%;
+      color: #FFF;
+      text-decoration: none;
   }
