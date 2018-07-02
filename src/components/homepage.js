@@ -20,32 +20,31 @@ class Homepage extends Component {
 
     handleInputChange = (event) => {
         let value = event.target.value;
-        // this.props.history.push('/search/' + value); 
+        this.props.history.push('/search/' + value); 
         this.setState({
             userInput: value,
             autocompleteEntries: ''
         })   
     }
 
-      componentDidUpdate(){
+      componentDidUpdate(event){
          console.log("input changed"); 
       }
 
       async ajaxCalltoServerUponUserInput(props){  
-        const{params}= this.props.match.params; 
-        // // this.props.history.push(`${this.props.match.params.term}/search/${searchIDs.join(',')}`)
-        // this.props.history.push('/search/' + value); 
-        const response =  await axios.get('http://danielpaschal.com/patricia.php', {params:{ term:{params}}}).then( function(){
-                  console.log(response);
-               })
-          }
+        const params = this.props.match.params.term; 
+        console.log(params); 
+        console.log(this); 
+        const response = await axios.get('http://danielpaschal.com/patricia.php', {params:{ term:{params}}}); 
+        console.log(response);  
+    }
+
 
 
 
     render() {
-        const {userInput} = this.state;
         const {searchTerm} = this.props.match.params.term || ''; 
-        console.log("user input:", userInput);
+       
         return(
             <div>
                 <div className='heroImage'>

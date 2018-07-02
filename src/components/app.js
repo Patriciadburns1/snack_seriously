@@ -12,7 +12,7 @@ const App = () => (
             <Nav/>
             <Route exact path='/' component= {Homepage}/>
             <Route path='/search/:term?' component= {Homepage}/>
-            {/* <Route path='/search:term/MultipleResults/:ids?' component={MultipleResults}/>  */}
+            {/* <Route path='/search:term/MultipleResults/:ids?' component={MultipleResults}/> DONT ERASE FOR WHEN SERVER IS UP  */}
             <Route path='/MultipleResults' component={MultipleResults}/>
             <Route path='/SingleResult' component={SingleResult}/>
         </div> 
