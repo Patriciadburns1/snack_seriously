@@ -1,5 +1,5 @@
 import React,{Component}from 'react';
-import '../assets/css/nutritionalfacts.css';
+import '../../assets/css/nutritionalfacts.css';
 
 
 

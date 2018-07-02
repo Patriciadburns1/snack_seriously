@@ -1,5 +1,5 @@
 import React, {Component} from 'react'; 
-import Data from '../../server/wizardDummyData'; 
+import Data from '../../../server/wizardDummyData'; 
 
 const Ingredient = (props) => {
     return(
