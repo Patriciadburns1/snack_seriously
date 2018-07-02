@@ -20,9 +20,10 @@ fs.readFile(fileName, 'utf8', function (err, data) {
 
         let keyName = fileData[index].ingredients;
 
-        let regexp = keyName.replace(/[\[\(]/gi,`, `);
-        regexp = regexp.replace(/[\[\]\*\).]/gi,``);
-        const splitArr = regexp.split(",");
+        //let regexp = keyName.replace(/[\[\(]/gi,`, `);
+        //regexp = regexp.replace(/[\[\]\*\).]/gi,``);
+        //const splitArr = regexp.split(",");
+        const splitArr = keyName.split(",");
         for (let words =0; words < splitArr.length; words++){
             splitArr[words] = splitArr[words].trim();
 
@@ -47,7 +48,8 @@ fs.readFile(fileName, 'utf8', function (err, data) {
     fs.writeFile(process.argv[3], JSON.stringify(outlog), function (err) {
         if (err) throw err;
         console.log(`Saved file ${process.argv[3]}`);
-        console.log('wordcount', wordcount);
+        console.log('Total words:', wordcount);
+        console.log('different ingredients: ', outlog.length);
     });
 
 });

@@ -50,16 +50,18 @@ class Searchresults extends Component {
     const{ name}= this.state; 
         return (
             <div className="multipleResultsContainer">
-                <div className="multipleResultsFilter">
-                    <div type="button">Filters</div>
+                <div className="searchBarFilter">
+                    <div className="multipleResultsFilter">
+                        <div type="button">Filters</div>
+                    </div>
+                    <Search/>
                 </div>
-                <Search/>
                 <div className="multipleResultsItemsContainer">
                     { displayedSnack }
                 </div>
-                <div className='footerButtons'>
-                    <Link to='/'><div type='button' className='btnStyle btnNormal'>&#8592; Back</div></Link>
-                    <Link to='/'><div type='button' className='btnStyle btnNormal'>Home &#8594;</div></Link>
+                <div className="footerButtons">
+                    <Link to="/"><div type="button" className="btnStyle btnNormal">&#8592; Back</div></Link>
+                    <Link to="/"><div type="button" className="btnStyle btnNormal">Home &#8594;</div></Link>
                 </div>
             </div>
         )
