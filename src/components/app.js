@@ -2,9 +2,9 @@ import React from 'react';
 import { Route } from 'react-router-dom'; 
 import Nav from './nav/nav';
 import Homepage from './homepage';
-import MultipleResults from './multipleresultspage';
+import MultipleResult from './multipleresultspage';
 import SingleResult from './singleresult';
- 
+import About from './about';
 
 
 const App = () => (
@@ -15,6 +15,7 @@ const App = () => (
             {/* <Route path='/search:term/MultipleResults/:ids?' component={MultipleResults}/> DONT ERASE FOR WHEN SERVER IS UP  */}
             <Route path='/MultipleResults' component={MultipleResults}/>
             <Route path='/SingleResult' component={SingleResult}/>
+            <Route path="/about" component={About}/>
         </div> 
 
 );

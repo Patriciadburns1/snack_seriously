@@ -2,53 +2,41 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import '../assets/css/multipleresultspage.css';
 import axios from 'axios';
-// import glutenfreeone from '../assets/images/multipleresultsimages/glutenfreeone.png';
-import glutenfreetwo from '../assets/images/multipleresultsimages/glutenfreetwo.png'
-import glutenfreethree from '../assets/images/multipleresultsimages/glutenfreethree.png'
-import glutenfreefour from '../assets/images/multipleresultsimages/glutenfreefour.png'
-import glutenfreefive from '../assets/images/multipleresultsimages/glutenfreefive.png'
-import glutenfreesix from '../assets/images/multipleresultsimages/glutenfreesix.png'
-import Data from '../../server/wizardDummyData'; 
+// import Data from '../../server/wizardDummyData';
+import Search from "./searchbar";
 
 class Searchresults extends Component {
     constructor(props) {
         super(props);
 
-        // this.state = {
-        //     snackData: null
-        // }
+        this.state = {
+            snackData: null
+        }
     }
 
-    // make axios call to server 
-    // we take that data and set in this.setState
-    // be able to be able to access each object in the data array ( so each image/ name / description would be in an)
-    // then we take thar in the render function 
-  
-   
-    // componentDidMount() {
-    //     debugger;
-    //     console.log("This is the current directory", __dirname);
-    //     getSnackData();
-    // }
+    componentDidMount() {
+        // console.log("This is the current directory", __dirname);
+        this.getSnackData();
+    };
 
-    // async getSnackData() {
-    //     const snackData = await axios.get('/api/php/getSnackData.php').then(function(data) {
-    //         console.log("Logging our data from potential wizard query", data);
+    async getSnackData() {
+        try {
+        const snackData = await axios.get('http://danielpaschal.com/patricia.php');
+        this.setState({
+            snackData: snackData.data.items
+        }); 
+    } catch (err) {
+        console.log('Get Data Error:', err.message);
+        }   
+    };
 
-    //     });
-
-    //     this.setState({
-    //         snackData: snackData
-    //     });
-    // }
 
     render(){
-    console.log(Data); 
-        // const { snackData } = this.state;
+        const { snackData } = this.state;
+        console.log(snackData); 
 
-        const displayedSnack = Data.items.map(function(item, index) {
-        // const displayedSnack = snackData.map(function(item, index) {
-
+        // const displayedSnack = Data.items.map(function(item, index) {
+        const displayedSnack = snackData && snackData.map(function(item, index) {
             return (
                 <Link key={index} to ={{pathname: '/SingleResult', state: item}}>
                     <div className="multipleResultsItem">
@@ -57,27 +45,23 @@ class Searchresults extends Component {
                     </div>
                 </Link>
             )
-        })
-    // const{ name}= this.state; 
+        
+        });
+    const{ name}= this.state; 
         return (
             <div className="multipleResultsContainer">
-                <div className="multipleResultsFilter">
-                    <div type="button">Filters</div>
-                </div>
-                <div className="multipleResultsBtnContainer">
-                    <div className="multipleResultsPageSearch">
-                        <input type="text" className="multipleResultsPageSearchTerm" placeholder="Search snacks"/>
-                        <button type="submit" className="multipleResultsPageSearchButton">
-                            <i>&#x1F50D;</i>
-                        </button>
+                <div className="searchBarFilter">
+                    <div className="multipleResultsFilter">
+                        <div type="button">Filters</div>
                     </div>
+                    <Search/>
                 </div>
                 <div className="multipleResultsItemsContainer">
                     { displayedSnack }
                 </div>
-                <div className='footerButtons'>
-                    <Link to='/Categories'><div type='button' className='btnStyle btnNormal'>&#8592; Back</div></Link>
-                    <Link to='/'><div type='button' className='btnStyle btnNormal'>Home &#8594;</div></Link>
+                <div className="footerButtons">
+                    <Link to="/"><div type="button" className="btnStyle btnNormal">&#8592; Back</div></Link>
+                    <Link to="/"><div type="button" className="btnStyle btnNormal">Home &#8594;</div></Link>
                 </div>
             </div>
         )
@@ -85,42 +69,3 @@ class Searchresults extends Component {
 }
 
 export default Searchresults;
-
-
-
-// <Link to='/SingleResult'>
-//                         <div className="multipleResultsItem"> {Data.items["0"].name}
-//                             <img className="multipleResultsImage"  /> 
-//                             <p className="multipleResultsLabel">  </p>
-//                         </div>
-//                     </Link>
-//                     <Link to='/SingleResult'>
-//                         <div className="multipleResultsItem"> {Data.items["1"].name}
-//                             <img className="multipleResultsImage" src={glutenfreetwo} alt=""/>
-//                             <p className="multipleResultsLabel">Lorem ipsum dolor sit amet, consectetur.</p>
-//                         </div>
-//                     </Link>
-//                     <Link to='/SingleResult'>
-//                         <div className="multipleResultsItem"> {Data.items["2"].name}
-//                             <img className="multipleResultsImage" src={glutenfreethree} alt=""/>
-//                             <p className="multipleResultsLabel">Lorem ipsum dolor sit amet, consectetur.</p>
-//                         </div>
-//                     </Link>
-//                     <Link to='/SingleResult'>
-//                         <div className="multipleResultsItem"> {Data.items["3"].name}
-//                             <img className="multipleResultsImage" src={glutenfreefour} alt=""/>
-//                             <p className="multipleResultsLabel">Lorem ipsum dolor sit amet, consectetur.</p>
-//                         </div>
-//                     </Link>
-//                     <Link to='/SingleResult'>
-//                         <div className="multipleResultsItem">
-//                             <img className="multipleResultsImage" src={glutenfreefive} alt=""/>
-//                             <p className="multipleResultsLabel">Lorem ipsum dolor sit amet, consectetur.</p>
-//                         </div>
-//                     </Link>
-//                     <Link to='/SingleResult'>
-//                         <div className="multipleResultsItem">
-//                             <img className="multipleResultsImage" src={glutenfreesix} alt=""/>
-//                             <p className="multipleResultsLabel">Lorem ipsum dolor sit amet, consectetur.</p>
-//                         </div>
-//                     </Link>

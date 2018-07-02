@@ -1,0 +1,15 @@
+peanuts 54
+dairy 16; milk 142
+eggs 26
+corn 60
+*"gluten free" 111
+tree nuts 52
+soy 105
+wheat 84
+
+didn't find
+transfat 0
+preservatives 0
+
+not sure about artificial coloring because many of the color results are natural coloring
+color 10
