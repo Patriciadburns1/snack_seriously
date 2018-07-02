@@ -16,7 +16,8 @@ fs.readFile(fileName, 'utf8', function (err, data) {
     let regex = new RegExp(process.argv[4],"gi");
     fileData = JSON.parse(data);
     for (let index = 0; index < fileData.length; index++) {
-        if(regex.test(fileData[index][0])){
+        if(regex.test(fileData[index][`ingredients`])){
+            //console.log(`debug`,(fileData[index][`ingredients`]));
             wordcount++;
             outlog.push(fileData[index]);
         }
