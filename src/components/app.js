@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom'; 
 import Nav from './nav/nav';
 import Homepage from './homepage';
-import MultipleResult from './multipleresultspage';
+import MultipleResults from './multipleresultspage';
 import SingleResult from './singleresult';
 import About from './about';
 

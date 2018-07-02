@@ -39,15 +39,11 @@ class Homepage extends Component {
         console.log(response);  
     }
 
-            userInput: value
-        })
-    };
-
 
 
     render() {
+        const userInput= this.state.userInput;  
         const {searchTerm} = this.props.match.params.term || ''; 
-       
         return(
             <div>
                 <div className="heroImage">
@@ -56,10 +52,10 @@ class Homepage extends Component {
                 <div className="searchBar">
                     <input className="searchArea" value={searchTerm} placeholder="Search by brand or type of snack" onChange={this.handleInputChange.bind(this)}/>
                     <Link to='MultipleResults'><button onClick={this.ajaxCalltoServerUponUserInput} className="btnSearch">&#x1F50D;</button></Link>
-                    <input className="searchArea" value={userInput} placeholder="Search by brand or type of snack" onChange={this.handleInputChange.bind(this)}/>
-                    <Link to="MultipleResult"><div className="btnSearch">&#x1F50D;</div></Link>
+                    {/* <input className="searchArea" value={userInput} placeholder="Search by brand or type of snack" onChange={this.handleInputChange.bind(this)}/> */}
+                    {/* <Link to="MultipleResults"><div className="btnSearch">&#x1F50D;</div></Link> */}
                 </div>
-                <Link to="MultipleResult"><div className="btnStyle btnRandomSnack">Pick a Random Snack</div></Link>
+                <Link to="/MultipleResults"><div className="btnStyle btnRandomSnack">Pick a Random Snack</div></Link>
             </div>
         )
     }
