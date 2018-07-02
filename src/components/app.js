@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import Nav from './nav/nav';
 import Homepage from './homepage';
 import MultipleResults from './multipleresultspage';
-import SingleResult from './singleresult';
+import SingleResult from './singleresultpage/singleresult';
 import About from './about';
 
 

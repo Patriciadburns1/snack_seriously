@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import '../assets/css/singleresult.css'
+import '../../assets/css/singleresult.css'
 import {Link} from 'react-router-dom';
 import Nutritionalfacts from './nutritionalfacts';
 import Ingredient from './ingredient'; 
 import SingleItem from './singleitem'
-import Search from './searchbar';
+import Search from '../searchbar';
 
 class SingleResult extends Component {
     constructor(props) {

@@ -1,5 +1,5 @@
 import React from 'react'; 
-import '../assets/css/singleitem.css';
+import '../../assets/css/singleitem.css';
 
 export default (props) => {
  return(
