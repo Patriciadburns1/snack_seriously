@@ -1,5 +1,5 @@
 #menuContainer {
-    width: 100vw;
+    width: 85vw;
     height: 100vh;
     background-color: #707070;
     position: fixed;
@@ -13,6 +13,7 @@
    
   #menuContainer.hide {
     transform: translate3d(-100vw, 0, 0);
+
   }
    
   #menuContainer.show {
@@ -29,4 +30,11 @@
       width: 80%;
       color: #FFF;
       text-decoration: none;
+  }
+
+  .invisibleMenuContainer{
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+
   }
