@@ -48,6 +48,7 @@ class Homepage extends Component {
 
     autocompleteFromUser = debounce( ()=>{
       const params = this.props.match.params.term; 
+      console.log(params)
       //let autoResponse = () => { lodash.debounce(this.dummyMethod.bind(this), 1000)}; 
         console.log('hello?');
     //     if (this.setTimer ===null){
