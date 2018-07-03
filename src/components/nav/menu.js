@@ -8,7 +8,7 @@ class Menu extends Component {
         return(
             <div className={this.props.visible ? "show" : "hide"} id="menuContainer" onClick={this.props.handleMenuClick}>
                 <Link to="/"><div className="menuLinkStyle">Home</div></Link>
-                <Link to="MultipleResult"><div className='menuLinkStyle'>Random Snack</div></Link>
+                <Link to="MultipleResults"><div className='menuLinkStyle'>Random Snack</div></Link>
                 <Link to="About"><div className="menuLinkStyle">About</div></Link>
             </div>
         )
