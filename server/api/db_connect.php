@@ -1,5 +1,5 @@
 <?php
-require_once('../../config/snack_db.php');
+require_once('../config/snack_db.php');
 
 $conn = mysqli_connect($db_cred['host'],$db_cred['user'],$db_cred['password'],$db_cred['database']);
 
