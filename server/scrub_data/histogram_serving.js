@@ -21,7 +21,7 @@ fs.readFile(fileName, 'utf8', function (err, data) {
 
     for (let index = 0; index < fileData.length; index++) {
 
-        let key = fileData[index].category;
+        let key = fileData[index].brand;
             if (!sortedServing[key]){
                 sortedServing[key] = true;
                 wordcount++

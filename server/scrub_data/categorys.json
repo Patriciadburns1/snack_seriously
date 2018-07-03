@@ -1,40 +1,40 @@
-{ "Chips & Puffs": true,
-    "Salty Snacks": true,
-    "Non-Grocery": true,
-    "Snacks": true,
-    "Popcorn": true,
-    "Processed Vegetables": true,
-    "Crackers": true,
-    "Dried Vegetables": true,
-    "Raw Fruits": true,
-    "Nut Mixes & Trail Mix": true,
-    "Canned Vegetables": true,
-    "Cookies": true,
-    "Nuts & Seeds": true,
-    "Pretzels": true,
-    "Prepared Appetizers & Snacks": true,
-    "Chocolate": true,
-    "Cake & Cookie Dough Mix": true,
-    "Sweet Snacks": true,
-    "Candy ": true,
-    "Snack Bars": true,
-    "Muffins & Scones": true,
-    "Lotions": true,
-    "Freeze-Dried Food": true,
-    "Healthy Snacks": true,
-    "Condensed Soup, Soup Mixes, Broth": true,
-    "Dried Fruits": true,
-    "Almonds": true,
-    "Raw Vegetables": true,
-    "Fruit Flavored Snacks": true,
-    "Cheese": true,
-    "Snack Cakes, Pies": true,
-    "Nuts and Seeds": true,
-    "Processed Fruits": true,
-    "Fruits": true,
-    "Spices, Seasonings & Rubs": true,
-    "Cakes & Pies": true,
-    "Categories": true,
-    "Uncategorized": true,
-    "Breakfast": true 
+{ "Chips & Puffs": true, //Chips_Crisps
+    "Salty Snacks": true, //chip
+    "Non-Grocery": true, //chip
+    "Snacks": true,  //its a crap shoot
+    "Popcorn": true, //popcorn/prezels
+    "Processed Vegetables": true, //chip
+    "Crackers": true, //chip
+    "Dried Vegetables": true, //chip
+    "Raw Fruits": true, //chip and raw fruits.....
+    "Nut Mixes & Trail Mix": true, //Nuts/seeds/Dried fruit
+    "Canned Vegetables": true, //chip
+    "Cookies": true, //cookies
+    "Nuts & Seeds": true, //Nuts/seeds/Dried fruit
+    "Pretzels": true, //popcorn/prezels
+    "Prepared Appetizers & Snacks": true, //popcorn/pretzels
+    "Chocolate": true, //chocolate
+    "Cake & Cookie Dough Mix": true, //cookie
+    "Sweet Snacks": true, //chocolate and candy
+    "Candy ": true, //chocolate
+    "Snack Bars": true, //bars
+    "Muffins & Scones": true, //chocolate
+    "Lotions": true, //chocolate
+    "Freeze-Dried Food": true, //chocolate - clean out pineapple.
+    "Healthy Snacks": true, //chocolate & chips
+    "Condensed Soup, Soup Mixes, Broth": true, //cookies
+    "Dried Fruits": true, //Nuts/seeds/Dried fruit
+    "Almonds": true, //Nuts/seeds/Dried fruit
+    "Raw Vegetables": true, //Nuts/seeds/Dried fruit
+    "Fruit Flavored Snacks": true, //Nuts/seeds/Dried fruit
+    "Cheese": true, // chip
+    "Snack Cakes, Pies": true, //chips
+    "Nuts and Seeds": true, //Nuts/seeds/Dried fruit
+    "Processed Fruits": true, //Nuts/seeds/Dried fruit
+    "Fruits": true, //Nuts/seeds/Dried fruit BUT take out olives.
+    "Spices, Seasonings & Rubs": true, //Nuts/seeds/Dried fruit
+    "Cakes & Pies": true, //Nuts/seeds/Dried fruit
+    "Categories": true, //Nuts/seeds/Dried fruit
+    "Uncategorized": true, //chip
+    "Breakfast": true //Nuts/seeds/Dried fruit
 }
