@@ -5,7 +5,7 @@ import axios from 'axios';
 // import Data from '../../server/wizardDummyData';
 import Search from "./searchbar";
 
-class Searchresults extends Component {
+class SearchResults extends Component {
     constructor(props) {
         super(props);
 
@@ -15,8 +15,21 @@ class Searchresults extends Component {
     }
 
     componentDidMount() {
-        // console.log("This is the current directory", __dirname);
-        this.getSnackData();
+        debugger;
+        let term = this.props.match.params.term; 
+        console.log("term is equal", term); 
+        let URL = 'http://danielpaschal.com/patricia.php?term=';
+        if (!term){
+            //make axios call and display random 
+            URL += "random";
+        }
+        else {
+            //display data from homepage with passed params 
+            URL += term;
+        }
+        // axios.get(URL);
+        this.getSnackData(URL);
+
     };
 
     async getSnackData() {
@@ -33,7 +46,7 @@ class Searchresults extends Component {
 
     render(){
         const { snackData } = this.state;
-        console.log(snackData); 
+        // console.log(snackData); 
 
         // const displayedSnack = Data.items.map(function(item, index) {
         const displayedSnack = snackData && snackData.map(function(item, index) {
@@ -68,4 +81,4 @@ class Searchresults extends Component {
     }
 }
 
-export default Searchresults;
+export default SearchResults;
