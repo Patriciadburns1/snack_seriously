@@ -25,7 +25,7 @@ class SingleResult extends Component {
                 <Nutritionalfacts nutrition={nutrition} />
                 <Ingredient ingredients={ingredients} /> 
                 <div className="footerButtons">
-                    <Link to="/MultipleResult"><div type="button" className="btnStyle btnNormal">&#8592; Back</div></Link>
+                    <Link to="/MultipleResults"><div type="button" className="btnStyle btnNormal">&#8592; Back</div></Link>
                     <Link to="/"><div type="button" className="btnStyle btnNormal">Home &#8962;</div></Link>
                 </div>
             </div>
