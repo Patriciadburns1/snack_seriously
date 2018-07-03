@@ -19,6 +19,12 @@ class Homepage extends Component {
         this.autocompleteFromUser=this.autocompleteFromUser.bind(this); 
     }
 
+    async componentDidMount(){
+        const resp = await axios.get('/api/test.php');
+
+        console.log('Test Response:', resp);
+    }
+
     handleInputChange = (event) => {
         let value = event.target.value;
         this.props.history.push('/search/' + value); 

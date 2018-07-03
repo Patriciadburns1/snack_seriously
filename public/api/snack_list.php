@@ -7,7 +7,7 @@ $output = [
     'success' => false
 ];
 
-require_once('db_connect.php');
+require_once('../../server/db_connect.php');
 
 $method = $_SERVER['REQUEST_METHOD'];
 $action = $_GET['action'];
