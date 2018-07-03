@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Snackfinder app using REACTJS",
   "main": "index.js",
+  "proxy": {
+    "/api/": {
+      "target":  "http://localhost:8000"
+    }
+  },
   "scripts": {
     "start": "node dev_server.js",
     "bundle": "webpack --config webpack.prod.js --progress",
