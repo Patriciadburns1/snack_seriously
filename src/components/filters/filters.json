@@ -1,0 +1,42 @@
+{
+    "success": true,
+    "filters": [
+        {
+            "allergens": {
+                "egg": {
+                    "image": "./allergenicons/egg.png",
+                    "value": "egg"
+                },
+                "corn": {
+                    "image": "./allergenicons/corn.png",
+                    "value": "corn"
+                },
+                "dairy": {
+                    "image": "./allergenicons/dairy.png",
+                    "value": "dairy"
+                },
+                "nuts": {
+                    "image": "./allergenicons/nuts.png",
+                    "value": "nuts"
+                },
+                "peanuts": {
+                    "image": "./allergenicons/peanuts.png",
+                    "value": "peanuts"
+                },
+                "soy": {
+                    "image": "./allergenicon/soy.png",
+                    "value": "soy"
+                },
+                "sugar": {
+                    "image": "./allergenicons/sugar.png",
+                    "value": "sugar"
+                },
+                "wheat": {
+                    "image": "./allergenicons/wheat.png",
+                    "value": "wheat"
+                }
+            }
+        }
+
+    ]
+}
