@@ -5,7 +5,7 @@
   "main": "index.js",
   "proxy": {
     "/api/": {
-      "target":  "http://localhost:8000"
+      "target": "http://localhost:8000"
     }
   },
   "scripts": {
