@@ -41,10 +41,13 @@ class Homepage extends Component {
     //      console.log("input changed"); 
     //   }
 
-      async ajaxCalltoServerUponUserInput(props){  
+      async ajaxCalltoServerUponUserInput(props){
+        try{
         const params = this.props.match.params.term; 
-        const response = await axios.get('http://danielpaschal.com/patricia.php', {params:{ term:{params}}}); 
-        console.log(response);  
+        const response = await axios.get('http://danielpaschal.com/patricia.php', {params:{ term:{params}}});
+        } catch (err){
+            console.log(response);
+        }
     }
 
 
