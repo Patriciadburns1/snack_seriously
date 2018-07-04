@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 class Menu extends Component {
     render() {
         return(
-            <div className="invisibleMenuContainer" onClick={this.props.handleMenuClick}>
+            <div className={this.props.visible ? "invisibleMenuContainer show" : "invisibleMenuContainer hide"} onClick={this.props.handleMenuClick}>
                 <div className={this.props.visible ? "show" : "hide"} id="menuContainer" onClick={this.props.handleMenuClick}>
                     <Link to="/"><div className="menuLinkStyle">Home</div></Link>
                     <Link to="MultipleResults"><div className='menuLinkStyle'>Random Snack</div></Link>

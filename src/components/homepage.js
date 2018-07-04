@@ -31,20 +31,16 @@ class Homepage extends Component {
         this.setState({
             userInput: value,
         })   
-
     }
 
 
-      async ajaxCalltoServerUponUserInput(props){  
+      async ajaxCalltoServerUponUserInput(props){
         const params = this.props.match.params.term; 
         //once server is running this is what it would look like
         //const response = await axios.get('http://danielpaschal.com/patricia.php', {action:{ autocomplete:{params}}}); 
-        const response = await axios.get('http://danielpaschal.com/patricia.php', {params:{ term:{params}}}); 
+        const response = await axios.get('http://danielpaschal.com/atricia.php', {params:{ term:{params}}}); 
         console.log(response);  
     }
-
-
-
 
     autocompleteFromUser = debounce( ()=>{
     //   const params = this.props.match.params.term; 
