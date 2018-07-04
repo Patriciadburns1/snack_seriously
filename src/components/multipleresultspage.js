@@ -5,7 +5,7 @@ import axios from 'axios';
 // import Data from '../../server/wizardDummyData';
 import Search from "./searchbar";
 
-class SearchResults extends Component {
+class MultipleResults extends Component {
     constructor(props) {
         super(props);
 
@@ -105,4 +105,4 @@ class SearchResults extends Component {
     }
 }
 
-export default SearchResults;
+export default MultipleResults;
