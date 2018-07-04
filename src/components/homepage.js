@@ -19,30 +19,26 @@ class Homepage extends Component {
         this.autocompleteFromUser=this.autocompleteFromUser.bind(this); 
     }
 
-    async componentDidMount(){
-        const resp = await axios.get('/api/test.php');
+    // async componentDidMount(){
+    //     const resp = await axios.get('/api/test.php');
 
-        console.log('Test Response:', resp);
-    }
+    //     console.log('Test Response:', resp);
+    // }
 
     handleInputChange = (event) => {
         let value = event.target.value;
         // this.props.history.push('/search/' + value); 
         this.setState({
             userInput: value,
-            // autocompleteEntries: ''
         })   
 
-        //this.autocompleteFromUser();
-
     }
-    
-    //   componentDidUpdate(event){
-    //      console.log("input changed"); 
-    //   }
+
 
       async ajaxCalltoServerUponUserInput(props){  
         const params = this.props.match.params.term; 
+        //once server is running this is what it would look like
+        //const response = await axios.get('http://danielpaschal.com/patricia.php', {action:{ autocomplete:{params}}}); 
         const response = await axios.get('http://danielpaschal.com/patricia.php', {params:{ term:{params}}}); 
         console.log(response);  
     }
@@ -59,11 +55,6 @@ class Homepage extends Component {
         const response = axios.get('http://danielpaschal.com/patricia.php', {params:{ term:{userInput}}}).then(function(){
             console.log("server response", response); 
         });
-
-    //     if (this.setTimer ===null){
-    //         setTimeout(this.ajaxCalltoServerUponUserInput, 3000, params) 
-    //     }
-    //    clearTimeout(this.) 
     },500);
     
 
