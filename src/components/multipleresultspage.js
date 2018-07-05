@@ -50,16 +50,13 @@ class MultipleResults extends Component {
 
 
     handleOnScroll() {
-        console.log('scroll is working'); 
                         /// this is returns the root element between html tags                     // this returns a number 0 
                        // Get the number of pixels the content of a <div> element is scrolled horizontally and vertically:
         let scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-       
         // scroll height is equal to how tall your browser window is 
         let scrollHeight = (document.documentElement && document.documentElement.scrollHeight) || document.body.scrollHeight;
         let clientHeight = document.documentElement.clientHeight || window.innerHeight;
-        let scrolledToBottom = Math.ceil(scrollTop + clientHeight) >= scrollHeight;
-
+        let scrolledToBottom = (parseInt(scrollTop + clientHeight)) >= scrollHeight;
         if (scrolledToBottom) {
             this.getSnackData();
         }

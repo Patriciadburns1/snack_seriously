@@ -19,15 +19,10 @@ class Homepage extends Component {
         this.autocompleteFromUser=this.autocompleteFromUser.bind(this); 
     }
 
-    // async componentDidMount(){
-    //     const resp = await axios.get('/api/test.php');
-
-    //     console.log('Test Response:', resp);
-    // }
 
     handleInputChange = (event) => {
         let value = event.target.value;
-        // this.props.history.push('/search/' + value); 
+        this.props.history.push( '/search/'+value );
         this.setState({
             userInput: value,
         })   
@@ -38,7 +33,7 @@ class Homepage extends Component {
         const params = this.props.match.params.term; 
         //once server is running this is what it would look like
         //const response = await axios.get('http://danielpaschal.com/patricia.php', {action:{ autocomplete:{params}}}); 
-        const response = await axios.get('http://danielpaschal.com/atricia.php', {params:{ term:{params}}}); 
+        const response = await axios.get('http://danielpaschal.com/patricia.php', {params:{ term:{params}}}); 
         console.log(response);  
     }
 
@@ -46,7 +41,6 @@ class Homepage extends Component {
     //   const params = this.props.match.params.term; 
     //   console.log(params)
       const {userInput}=this.state; 
-      //let autoResponse = () => { lodash.debounce(this.dummyMethod.bind(this), 1000)}; 
         console.log('hello?');
         const response = axios.get('http://danielpaschal.com/patricia.php', {params:{ term:{userInput}}}).then(function(){
             console.log("server response", response); 
@@ -56,7 +50,7 @@ class Homepage extends Component {
 
     render() {
         const userInput= this.state.userInput;  
-        // const {searchTerm} = this.props.match.params.term || ''; 
+        const searchTerm = this.props.match.params.term || ''; 
         // const params = this.props.match.params.term;
         return(
             <div>
@@ -64,7 +58,7 @@ class Homepage extends Component {
                     <img src={hero} width="200"/>
                 </div>
                 <div className="searchBar">
-                    <input className="searchArea" value={userInput} placeholder="Search by brand or type of snack" onKeyUp={this.autocompleteFromUser} onChange={this.handleInputChange}/>
+                    <input className="searchArea" value={searchTerm} placeholder="Search by brand or type of snack" onKeyUp={this.autocompleteFromUser} onChange={this.handleInputChange}/>
                     <Link to = {`/MultipleResults/${userInput}`} ><button onClick={this.ajaxCalltoServerUponUserInput} className="btnSearch">&#x1F50D;</button></Link>
                 </div>
                 <Link to="/MultipleResults"><div className="btnStyle btnRandomSnack">Pick a Random Snack</div></Link>
