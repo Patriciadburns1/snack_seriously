@@ -1,18 +1,8 @@
 <?php
-header('Access-Control-Allow-Origin: *');
-require_once('../../server/config/snack_db.php');
-$conn = mysqli_connect($db_cred['host'],$db_cred['user'],$db_cred['password'],$db_cred['database']);
-$query = "SELECT `ID`,`name` FROM `products` WHERE `name` LIKE '%pop%' LIMIT 6";
+http://localhost:8000/public/api/snackapi.php?action=getrandom
+$randomQuery = "SELECT `details`.`product_id`,`products`.`name`,`details`.`img_url` FROM `products` JOIN `details` ON `details`.`product_id` = `products`.`id` ORDER BY RAND() LIMIT 5";
 
-//print("query = $query");
-
-$result = mysqli_query($conn, $query);
-
-$output = [
-    'success' => false,
-    'data' => [],
-    'error' => []
-];
+$result = mysqli_query($conn, $randomQuery);
 
 if ($result){
     //the query successfully ran
@@ -34,8 +24,3 @@ if ($result){
     //the query failed
     $output['error'][] = mysqli_error($conn);
 }
-
-$output_json = json_encode($output);
-
-print($output_json);
-?>
