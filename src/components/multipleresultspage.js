@@ -93,10 +93,6 @@ class MultipleResults extends Component {
                 <div className="multipleResultsItemsContainer">
                     {displayedSnack}
                 </div>
-                <div className="footerButtons">
-                    <Link to="/"><div type="button" className="btnStyle btnNormal">&#8592; Back</div></Link>
-                    <Link to="/"><div type="button" className="btnStyle btnNormal">Home &#8594;</div></Link>
-                </div>
             </div>
         )
     }
