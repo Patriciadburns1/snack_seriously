@@ -1,0 +1,12 @@
+SELECT `products`.`ID`, `products`.`name`, `details`.`img_url` FROM `products` JOIN `details` ON `details`.`product_id` = `products`.`ID` WHERE `products`.`category_id` = 1 ORDER BY `products`.`ID` ASC LIMIT 12 OFFSET 0
+
+SELECT `p`.`ID`, `p`.`name`, `d`.`img_url` FROM `products` AS `p` JOIN `details` AS `d` ON `d`.`product_id` = `p`.`ID` WHERE `p`.`category_id` = 1 ORDER BY `p`.`ID` ASC LIMIT 12 OFFSET 0
+
+$sql = "SELECT `products`.`ID`, `products`.`name`, `details`.`img_url` FROM `products` JOIN `details` ON `details`.`product_id` = `products`.`ID` WHERE `products`.`category_id` = 1 ORDER BY `products`.`ID` ASC LIMIT 12 OFFSET 0";
+
+$sql = "SELECT `products`.`ID`, `products`.`name`, `details`.`img_url`\n"
+    . "	FROM `products` JOIN `details` ON `details`.`product_id` = `products`.`ID`\n"
+    . " WHERE `products`.`category_id` = 1\n"
+    . " ORDER BY `products`.`ID` ASC\n"
+    . " LIMIT 12\n"
+    . " OFFSET 0";
