@@ -8,6 +8,7 @@
     border: 3px solid #FF8C2D;
     padding: 5px;
     height: 20px;
+    width: 80vw;
     border-radius: 5px 0 0 5px;
     outline: none;
     color: #9dbfaf;
@@ -29,3 +30,4 @@
 .searchBarComp button i {
     font-style: normal;
 }
+
