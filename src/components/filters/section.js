@@ -18,6 +18,7 @@ import Sugar from './allergenicons/sugar.png';
 import Strikethrough from './allergenicons/strikethrough.png'; 
 import Item from './item';
 
+
 class Section extends Component {
     constructor(props){
         super(props);
@@ -48,7 +49,6 @@ class Section extends Component {
         //     return <Item key={index} image={item} label={item} />
         // })
 
-        debugger; 
 
 
         // const {allergens} = FilterIcons.filters;
@@ -57,9 +57,9 @@ class Section extends Component {
         // });
         return (
             <Fragment>
-                <div className={visible ? "filterMenu " : "filterMenu active"} onClick={this.toggleMenu}>{this.props.currentSection }</div>
+                {/* <div className={visible ? "filterMenu " : "filterMenu active"} onClick={this.toggleMenu}>{this.props.currentSection }</div>
                 <div className={visible ? "filterPanel active" : "filterPanel"}>
-        
+         */}
         {/* ALLERGENS */}
                 {/* <div className="allergyPageContainer"> 
                     <h4 className="allergyTitle"> Select all allergens to avoid </h4> 
@@ -92,9 +92,9 @@ class Section extends Component {
                 </div>  */}
 
         {/* CATEGORIES */}
-                <div className='categoryPageContainer'>
+                {/* <div className='categoryPageContainer'>
                     <h4 className='categoryTitle'>Pick a snack category</h4>
-                    <div className='categoryContainer'>
+                    <div className='categoryContainer'> */}
                         {/* { Items } */}
                         {/* <div className='categoryItem'>
                             <img className='categoryImage' src={popcornpretzel}/>
@@ -120,11 +120,11 @@ class Section extends Component {
                             <img className='categoryImage' src={candychocolate}/>
                             <p className='categoryLabel'>Candy &amp; Chocolate</p>
                         </div> */}
-                    </div>
-                </div>
+                    {/* </div> */}
+                {/* </div>
         
-                    <div className="plus"></div>
-                </div>
+                    <div className="plus"></div> */}
+                {/* </div> */}
             </Fragment>
         )
     }
