@@ -162,3 +162,53 @@
     bottom: 0;
     margin: 0;
 }
+
+/********** Nutrients **********/
+
+.nutrientsPageContainer {
+    height: 38vh;
+}
+
+.nutrientsTitle{
+    display: flex;
+    justify-content: center;
+}
+
+.nutrientsContainer{
+    /* display: grid; */
+    height: 30vh;
+    width: 80vw;
+    /* grid-template-columns: auto auto auto auto; */
+    /* grid-row-gap: 1vh; */
+    /* grid-column-gap: 1vw; */
+    /* position: relative; */
+    margin: auto;
+}
+
+.nutrientsLabel {
+    display: inline-block;
+}
+
+.nutrientsContainer input {
+    border: 1px solid black;
+    float:right;
+    vertical-align: text-bottom;
+    margin: 0;
+}
+
+/* .nutrientsItem{
+    margin: 0;
+    height: 10vh;
+    width: 20vw;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+} */
+
+/* .nutrientsImage {
+    display: block;
+    height: auto;
+    max-width: 20vw;
+    max-height: 10vh;
+    margin: 0 auto;
+} */
