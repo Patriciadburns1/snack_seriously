@@ -4,38 +4,65 @@
         {
             "allergens": {
                 "egg": {
-                    "image": "./allergenicons/egg.png",
-                    "value": "egg"
-                },
-                "corn": {
-                    "image": "./allergenicons/corn.png",
-                    "value": "corn"
-                },
-                "dairy": {
-                    "image": "./allergenicons/dairy.png",
-                    "value": "dairy"
-                },
-                "nuts": {
-                    "image": "./allergenicons/nuts.png",
-                    "value": "nuts"
-                },
-                "peanuts": {
                     "image": "./allergenicons/peanuts.png",
                     "value": "peanuts"
                 },
+                "corn": {
+                    "image": "./allergenicons/dairy.png",
+                    "value": "dairy"
+                },
+                "dairy": {
+                    "image": "./allergenicons/egg.png",
+                    "value": "eggs"
+                },
+                "nuts": {
+                    "image": "./allergenicons/corn.png",
+                    "value": "corn"
+                },
+                "peanuts": {
+                    "image": "./allergenicons/nuts.png",
+                    "value": "tree nuts"
+                },
                 "soy": {
-                    "image": "./allergenicon/soy.png",
+                    "image": "./allergenicons/soy.png",
                     "value": "soy"
                 },
                 "sugar": {
-                    "image": "./allergenicons/sugar.png",
-                    "value": "sugar"
-                },
-                "wheat": {
                     "image": "./allergenicons/wheat.png",
                     "value": "wheat"
+                },
+                "wheat": {
+                    "image": "./allergenicons/sugar.png",
+                    "value": "gluten free"
                 }
-            }
+            },
+            "categories": {
+                "popcorn_pretzels": {
+                     "image": "./categoriesicons/popcornpretzel.png",
+                     "value": "Popcorn_Pretzels"
+                },
+                "chips_crisps": {
+                     "image": "./categoriesicons/chipscrackers.png",
+                     "value": "Chips_Crisps"
+                },
+                "nuts_seeds_dried fruit": {
+                    "image": "./categoriesicons/nutsdriedfruit.png",
+                    "value": "Nuts_Seeds_Dried fruit"
+                 },
+                 "bars": {
+                    "image": "./categoriesicons/bar.png",
+                    "value": "Bars"
+                 },
+                 "cookies": {
+                    "image": "./categoriesicons/meat.png",
+                    "value": "Cookies"
+                 },
+                 "chocolate": {
+                    "image": "./categoriesicons/candychocolate.png",
+                    "value": "Chocolate"
+                 }
+             }
+            
         }
 
     ]

@@ -18,10 +18,7 @@
     margin-right: 3vw;
 }
 
-/* .filterPanelContainer {
-    margin: 10vh 10vw;
-} */
-/********** Accordian Menu **********/
+/********** Filter Body Menu **********/
 
 .filterMenu {
     background-color: #eee;
@@ -30,6 +27,7 @@
     padding: 18px;
     width: 100%;
     text-align: left;
+    border-bottom: 1px solid  #ffffff;
 }
 
 .active:hover {
@@ -38,7 +36,7 @@
 
 .filterPanel {
     padding: 0 18px;
-    background-color: white;
+    background-color: #ffffff;
     max-height: 0;            
     overflow-y: hidden;
     -webkit-transition: max-height 0.5s ease-in-out;
@@ -50,7 +48,7 @@
 .active {
     display: block;
     transition: 0.5s ease-out;
-    max-height: 10vh ; 
+    max-height: 45vh ; 
 }
 
 .plus {
@@ -59,8 +57,108 @@
     color: #ffffff;
     float: right;
     margin-left: 5px;
+    z-index: 3;
 }
 
 .minus {
     content: "\2796";
+    float: right;
+    font-size: 13px;
+    color: #ffffff;
+    z-index: 3;
+}
+
+/********** Allergens Grid **********/
+
+.allergyPageContainer {
+    height: 30vh;
+}
+
+.allergyTitle{
+    display: flex;
+    justify-content: center;
+}
+
+.allergyContainer{
+    display: grid;
+    height: 25vh;
+    width: 80vw;
+    grid-template-columns: auto auto auto auto;
+    grid-row-gap: 1vh;
+    grid-column-gap: 1vw;
+    position: relative;
+    margin: 0 auto;
+}
+
+.allergyItem{
+    margin: 0;
+    height: 10vh;
+    width: 20vw;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+}
+
+.allergyImage, .strikethrough{
+    display: block;
+    height: auto;
+    max-width: 20vw;
+    max-height: 10vh;
+    margin: 0 auto;
+}
+
+/* .strikethrough {
+    display: block;
+    z-index: 4;
+} */
+
+/********** Categories Grid **********/
+
+.categoryPageContainer {
+    height: 45vh;
+}
+
+.categoryTitle{
+    display: flex;
+    justify-content: center;
+}
+
+.categoryContainer{
+    display: grid;
+    height: 40vh;
+    width: 80vw;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 1vh;
+    grid-column-gap: 1vw;
+    position: relative;
+    margin: 0 auto;
+}
+
+.categoryItem{
+    margin: 0;
+    height: 15vh;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+}
+
+.categoryImage{
+    display: block;
+    height: auto;
+    max-width: 20vw;
+    max-height: 10vh;
+    margin: 0 auto;
+}
+
+.categoryLabel{
+    width: 100%;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    margin: 0;
 }
