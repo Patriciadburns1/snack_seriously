@@ -19,23 +19,30 @@ class MultipleResults extends Component {
     componentDidMount() {
         let term = this.props.match.params.term;
         console.log("term is equal", term);
-        let URL = 'http://danielpaschal.com/patricia.php?term=';
         if (!term) {
-            //make axios call and display random 
-            URL += "random";
+            axios.get('http://52.8.24.199/snackapi.php?action=getrandom').then(function(response){
+                console.log(response); 
+            })
         }
         else {
-            //display data from homepage with passed params 
-            URL += term;
+        axios.get(`http://52.8.24.199/snackapi.php?action=getname&search=${term}`).then(function(response){
+            console.log(response); 
+        })
+     
         }
-        // axios.get(URL);
-        this.getSnackData(URL);
+        // this.getSnackData(URL);
         window.addEventListener('scroll', this.handleOnScroll);
     };
 
+
+
     async getSnackData() {
+        let term = this.props.match.params.term;
+        console.log("term is equal", term);
+
+        let URL = `http://52.8.24.199/snackapi.php?action=getname&search=${term}`;
         try {
-            const snackData = await axios.get('http://danielpaschal.com/patricia.php');
+            const snackData = await axios.get(URL);
             this.setState({
                 snackData: [...this.state.snackData, ...snackData.data.items, ...snackData.data.items]
             });
@@ -57,9 +64,9 @@ class MultipleResults extends Component {
         let scrollHeight = (document.documentElement && document.documentElement.scrollHeight) || document.body.scrollHeight;
         let clientHeight = document.documentElement.clientHeight || window.innerHeight;
         let scrolledToBottom = (parseInt(scrollTop + clientHeight)) >= scrollHeight;
-        if (scrolledToBottom) {
-            this.getSnackData();
-        }
+        // if (scrolledToBottom) {
+        //     // this.getSnackData();
+        // }
     
     }
 
