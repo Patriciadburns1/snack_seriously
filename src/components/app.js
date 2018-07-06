@@ -5,14 +5,15 @@ import Homepage from './homepage';
 import MultipleResults from './multipleresultspage';
 import SingleResult from './singleresultpage/singleresult';
 import About from './about';
-
+import Filters from './filters';
 
 const App = () => (
         <div>
+            {/* <Filters /> */}
             <Nav/>
             <Route exact path='/' component= {Homepage}/>
             <Route path='/search/:term?' component= {Homepage}/>
-            {/* <Route path='/search/:term/MultipleResults/?' component={MultipleResults}/> */}
+            <Route path='/search/:term/MultipleResults/?' component={MultipleResults}/>
             <Route path='/MultipleResults/:term?' component={MultipleResults}/>
             <Route path='/SingleResult' component={SingleResult}/>
             <Route path="/about" component={About}/>
