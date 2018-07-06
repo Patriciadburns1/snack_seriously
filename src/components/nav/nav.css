@@ -10,9 +10,9 @@
     justify-content: space-between;
     align-items: center;
     background-color: #FF8C2D;
-    -webkit-box-shadow: 5px 10px 15px 0px rgba(234,107,2,0.61);
+    /* -webkit-box-shadow: 5px 10px 15px 0px rgba(234,107,2,0.61);
     -moz-box-shadow: 5px 10px 15px 0px rgba(234,107,2,0.61);
-    box-shadow: 5px 10px 15px 0px rgba(234,107,2,0.61);
+    box-shadow: 5px 10px 15px 0px rgba(234,107,2,0.61); */
     color: #ffffff;
     cursor: pointer;
     /* https://www.cssmatic.com/box-shadow */
