@@ -9,7 +9,10 @@ class Filters extends Component {
         super(props);
         this.state = {
             // visible: false
-            filters: ['Allergens', 'Categories', 'Nutrients'],
+            allergens: {
+                name: 'Allergens',
+                filterItems: ['cat', 'dog', 'mouse']
+            }
             // filterData: null
         }
     }
@@ -18,7 +21,8 @@ class Filters extends Component {
         const { filters } = this.state;
         // console.log(FilterIcons);
         const sections = filters.map(function(section, index) {
-            return <Section key={index} currentSection={section} />
+            debugger;
+            return <Section key={index} currentSection={{...section}} />
         });
 
         return (
@@ -29,7 +33,7 @@ class Filters extends Component {
                     <div>Search</div>
                 </div>
 
-                <div className="filterPanelContainer">
+                <div >
                     {sections}
                 </div>
             </div>
