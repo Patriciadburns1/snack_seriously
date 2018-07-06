@@ -1,4 +1,5 @@
 #menuButtonContainer {
+    top: 15px;
     z-index: 3;
     display: inline-block;
     cursor: pointer;
