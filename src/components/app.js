@@ -9,14 +9,14 @@ import Filters from './filters';
 
 const App = () => (
         <div>
-            <Filters />
-            {/* <Nav/>
+            {/* <Filters /> */}
+            <Nav/>
             <Route exact path='/' component= {Homepage}/>
             <Route path='/search/:term?' component= {Homepage}/>
             <Route path='/search/:term/MultipleResults/?' component={MultipleResults}/>
             <Route path='/MultipleResults/:term?' component={MultipleResults}/>
             <Route path='/SingleResult' component={SingleResult}/>
-            <Route path="/about" component={About}/> */}
+            <Route path="/about" component={About}/>
         </div> 
 
 );
