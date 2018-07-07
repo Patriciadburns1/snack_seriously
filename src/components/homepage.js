@@ -22,8 +22,15 @@ class Homepage extends Component {
 
     handleInputChange = (event) => {
         let value = event.target.value;
-        this.props.history.push( '/search/'+ value );
-       
+        // if (event.target.value === undefined){
+        //     console.log('no history to push')
+        // }
+        // else{
+        //     this.props.history.push( '/search/'+ value);  
+        // }
+
+        this.props.history.push('/search/' + value); 
+        // this.props.history.push( '/search/'+ value);
         this.setState({
             userInput: value,
 
@@ -48,7 +55,7 @@ class Homepage extends Component {
     render() {
         const userInput= this.state.userInput;  
         // const searchTerm = this.props.match.params.term || ''; 
-        const params = this.props.match.params.term;
+        const params = this.props.match.params.term || '';
         return(
             <div>
                  <div className="searchBarComp">
