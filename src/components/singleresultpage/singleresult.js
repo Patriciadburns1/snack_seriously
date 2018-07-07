@@ -5,6 +5,7 @@ import Nutritionalfacts from './nutritionalfacts';
 import Ingredient from './ingredient';
 import SingleItem from './singleitem'
 import Search from '../searchbar';
+import axios from 'axios';
 
 class SingleResult extends Component {
     constructor(props) {
@@ -13,6 +14,7 @@ class SingleResult extends Component {
 
     componentDidMount() {
         console.log("This is when our component first hits the page", this.props.location.state);
+        axios.get(`http://52.8.24.199/snackapi.php?action=getproduct&product_id=${itemID}`);
     }
 
     render() {

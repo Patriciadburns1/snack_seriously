@@ -26,6 +26,7 @@ class Homepage extends Component {
        
         this.setState({
             userInput: value,
+
         })   
     }
 

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/css/multipleresultspage.css';
 import axios from 'axios';
-// import Data from '../../server/wizardDummyData';
 import Search from "./searchbar";
 
 class MultipleResults extends Component {
@@ -14,14 +13,23 @@ class MultipleResults extends Component {
         }
 
         this.handleOnScroll = this.handleOnScroll.bind(this);
+        this.handleItemClicked = this.handleItemClicked.bind(this);
     }
 
     componentDidMount() {
+        // debugger;
         let term = this.props.match.params.term;
         console.log("term is equal", term);
         if (!term) {
-            axios.get('http://52.8.24.199/snackapi.php?action=getrandom').then(function(response){
-                console.log(response); 
+                axios.get('http://52.8.24.199/snackapi.php?action=getrandom').then((response) => {
+                // console.log(response);
+                const snackData = response.data;
+
+                this.setState({
+                    snackData: snackData
+                })
+                    console.log('This is from axios:', snackData);
+
             })
         }
         else {
@@ -56,6 +64,7 @@ class MultipleResults extends Component {
     }
 
 
+
     handleOnScroll() {
                         /// this is returns the root element between html tags                     // this returns a number 0 
                        // Get the number of pixels the content of a <div> element is scrolled horizontally and vertically:
@@ -69,20 +78,23 @@ class MultipleResults extends Component {
         // }
     
     }
+    handleItemClicked(event){
+        console.log('this is the event;', event);
+    }
 
 
 
     render() {
         const { snackData } = this.state;
-        // console.log(snackData); 
+        console.log('The state:', snackData);
 
         // const displayedSnack = Data.items.map(function(item, index) {
-        const displayedSnack = snackData && snackData.map(function (item, index) {
+        const displayedSnack = snackData.data && snackData.data.map((item, product_id) => {
             return (
-                <Link key={index} to={{ pathname: '/SingleResult', state: item }}>
-                    <div className="multipleResultsItem">
+                <Link productid ={product_id} key={product_id} to={{ pathname: '/SingleResult', state: item }}>
+                    <div onClick={this.handleItemClicked} className="multipleResultsItem">
                         <span>{item.name}</span>
-                        <img className="multipleResultsImage" src={`${item.imgURL}`} />
+                        <img className="multipleResultsImage" src={`${item.img_url}`} />
                     </div>
                 </Link>
             )
@@ -102,7 +114,6 @@ class MultipleResults extends Component {
                     <div className="multipleResultsFilter">
                         {/* <div type="button">Filters</div> */}
                     </div>
-                    {/* <Search /> */}
                 </div>
                 <div className="multipleResultsItemsContainer">
                     {displayedSnack}
