@@ -23,6 +23,7 @@ class Homepage extends Component {
         this.props.history.push( '/search/'+ value );
         this.setState({
             userInput: value,
+
         })   
     }
 

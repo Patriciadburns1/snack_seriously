@@ -3,7 +3,7 @@
 }
 
 .multipleResultsContainer {
-    top: 15%;
+    top: 20%;
     left: 10%;
     position: absolute;
 }
@@ -13,8 +13,8 @@
     height: 70vh;
     width: 80vw;
     grid-template-columns: auto auto;
-    grid-row-gap: 3vh;
-    grid-column-gap: 3vw;
+    grid-row-gap: 3%;
+    grid-column-gap: 3%;
     position: relative;
     margin: 0 auto;
 }

@@ -7,6 +7,9 @@ class Nutritionalfacts extends Component{
     constructor(props){
         super(props);
 
+            this.state={
+                snackItem: []
+        }
 
     }
 
@@ -16,7 +19,7 @@ class Nutritionalfacts extends Component{
     render(){
 
 
-      const {energy, total_fat, total_saturated_fatty_acids, total_trans_fatty_acids, cholesterol, iron, vitamin_a, vitamin_c, sodium, carbohydrate, protein, total_fiber, total_sugar, calcium  }  = this.props.nutrition; 
+      const {energy, total_fat, total_saturated_fatty_acids, total_trans_fatty_acids, cholesterol, iron, vitamin_a, vitamin_c, sodium, carbohydrate, protein, total_fiber, total_sugar, calcium  }  = this.props.nutrition;
         return(
       <div className="nutritionContainer">
           <section className="performanceFacts">
