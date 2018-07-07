@@ -33,8 +33,12 @@ class MultipleResults extends Component {
             })
         }
         else {
-        axios.get(`http://52.8.24.199/snackapi.php?action=getname&search=${term}`).then(function(response){
+        axios.get(`http://52.8.24.199/snackapi.php?action=getname&search=${term}`).then((response)=>{
             console.log(response); 
+            const snackData = response.data;
+            this.setState({
+                snackData: snackData
+            })
         })
      
         }
