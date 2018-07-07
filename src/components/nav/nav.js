@@ -4,7 +4,7 @@ import './nav.css';
 import '../../assets/css/buttons.css';
 import MenuButton from './menubutton';
 import Menu from './menu';
-import Search from '../searchbar';
+// import Search from '../searchbar';
 import SnackSeriouslyLogo from '../../assets/images/logo/snackSeriouslyLogo.png';
 import {Link} from 'react-router-dom';
 
@@ -34,18 +34,20 @@ class Nav extends Component {
     render(){
         const {visible} = this.state;
         return (
+            <div> 
+                <div>  
+                    <MenuButton handleMenuClick={this.handleMenuClick} visible={visible}/>
+                    <Menu handleMenuClick={this.handleMenuClick} visible={visible}/> 
+                </div> 
             <div className="navBar">
-                <MenuButton handleMenuClick={this.handleMenuClick} visible={visible}/>
-                <Menu handleMenuClick={this.handleMenuClick}
-                    visible={visible}/>
                 <div className="navSearch">
                 {/*<div className="logo">Logo</div>*/}
                     <div className="navImage">
                         <Link to="/"><div type="button"><img className="snackImage" src={SnackSeriouslyLogo}/></div></Link>
-                    </div>
-                    <Search/>
+                    </div>  
                 </div>
             </div>
+            </div> 
         )
     }
 }

@@ -1,9 +1,3 @@
-/* .heroImage {
-    position: relative;
-    margin-top: 30%;
-    display: flex;
-    justify-content: center;
-} */
 
 .searchBar{
     display: flex;
@@ -26,11 +20,7 @@ input.searchArea {
     cursor: pointer;
 }
 
-.btnRandomSnack {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 50%;
-    margin: 20% auto;
+.icon{
+    z-index: 2;
+    position: relative;
 }
-

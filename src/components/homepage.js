@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 import '../assets/css/homepage.css';
 import {Link} from 'react-router-dom';
 import axios from 'axios'; 
-import debounce from 'lodash/debounce'; 
+import debounce from 'lodash/debounce';
+import '../assets/css/searchbar.css'; 
+import Nav from './nav/nav';
 
 
 class Homepage extends Component {
@@ -21,11 +23,11 @@ class Homepage extends Component {
     handleInputChange = (event) => {
         let value = event.target.value;
         this.props.history.push( '/search/'+ value );
+       
         this.setState({
             userInput: value,
         })   
     }
-
 
     //   async ajaxCalltoServerUponUserInput(props){
     //     const params = this.props.match.params.term; 
@@ -42,17 +44,15 @@ class Homepage extends Component {
         },500);
 
 
-
-
     render() {
         const userInput= this.state.userInput;  
         // const searchTerm = this.props.match.params.term || ''; 
-        // const params = this.props.match.params.term;
+        const params = this.props.match.params.term;
         return(
             <div>
-                <div className="searchBar">
-                    <input className="searchArea" value={userInput} placeholder="Search by brand or type of snack" onKeyUp={this.autocompleteFromUser} onChange={this.handleInputChange}/>
-                    <Link to = {`/MultipleResults/${userInput}`} ><button onClick={this.ajaxCalltoServerUponUserInput} className="btnSearch">&#x1F50D;</button></Link>
+                 <div className="searchBarComp">
+                <input type="text" value={userInput} onKeyUp={this.autocompleteFromUser}  onChange={this.handleInputChange} placeholder="Search snacks"/>
+               <Link to = {`/MultipleResults/${params}`}> <div className="icon"> <i>&#x1F50D;</i> </div> </Link>    
                 </div>
             </div>
         )
