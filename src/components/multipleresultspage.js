@@ -102,17 +102,24 @@ class MultipleResults extends Component {
         });
         const { name } = this.state;
         return (
+            <div> 
+                 <div>
+                 <div className="searchBarComp">
+                <input type="text"  placeholder="Search snacks"/>
+               <div className="icon"> <i>&#x1F50D;</i> </div> 
+                </div>
+            </div>
             <div className="multipleResultsContainer">
                 <div className="searchBarFilter">
                     <div className="multipleResultsFilter">
-                        <div type="button">Filters</div>
+                        {/* <div type="button">Filters</div> */}
                     </div>
-                    {/*<Search />*/}
                 </div>
                 <div className="multipleResultsItemsContainer">
                     {displayedSnack}
                 </div>
             </div>
+            </div> 
         )
     }
 }

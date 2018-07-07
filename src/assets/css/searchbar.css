@@ -1,17 +1,19 @@
 .searchBarComp {
     justify-content: center;
     display: flex;
-    margin-top: 4%;
+    margin-top: 35%;
+    background-color: #FF8C2D; 
 }
 
 .searchBarComp input {
     border: 3px solid #FF8C2D;
     padding: 5px;
     height: 20px;
-    width: 80vw;
+    width: 80%;
     border-radius: 5px 0 0 5px;
-    outline: none;
+    /* outline: none; */
     color: #9dbfaf;
+    z-index: 1;
 }
 
 .searchBarComp input:focus {
@@ -27,7 +29,4 @@
     font-size: 20px;
 }
 
-.searchBarComp button i {
-    font-style: normal;
-}
 

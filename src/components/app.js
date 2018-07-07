@@ -9,7 +9,6 @@ import Filters from './filters';
 
 const App = () => (
         <div>
-            {/* <Filters /> */}
             <Nav/>
             <Route exact path='/' component= {Homepage}/>
             <Route path='/search/:term?' component= {Homepage}/>
