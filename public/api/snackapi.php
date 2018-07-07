@@ -39,6 +39,8 @@ if($method = 'GET'){
 //     $output['error'] = "unknown action: $action";
 // }
 
+mysqli_close($conn);
+
 print json_encode($output, JSON_UNESCAPED_SLASHES);
 
 
