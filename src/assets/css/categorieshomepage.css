@@ -1,0 +1,49 @@
+.categoryHomepageContainer {
+    margin-top: 50%;
+    position: absolute;
+}
+
+.categoryHomepageTitle{
+    display: flex;
+    justify-content: center;
+}
+
+.categoryHomepageContainer{
+    display: grid;
+    height: 40vh;
+    width: 80vw;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 1vh;
+    grid-column-gap: 1vw;
+    position: relative;
+    margin: 0 auto;
+}
+
+.categoryHomepageItem{
+    margin: 0;
+    height: 15vh;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+}
+
+.categoryHomepageImage{
+    display: block;
+    height: auto;
+    max-width: 20vw;
+    max-height: 10vh;
+    margin: 0 auto;
+}
+
+.categoryLabel{
+    width: 100%;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    margin: 0;
+}
