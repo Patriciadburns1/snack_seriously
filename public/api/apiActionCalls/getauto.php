@@ -3,7 +3,7 @@
 $search = $_GET['search'];
 if( strlen($search) < 125){
 
-    $query = "SELECT `ID`,`name` FROM `products` WHERE `name` LIKE '%$search%' LIMIT 6";
+    $query = "SELECT `ID`,`name` FROM `products` WHERE `name` LIKE '%$search%' LIMIT 12";
 
     $result = mysqli_query($conn, $query);
 
