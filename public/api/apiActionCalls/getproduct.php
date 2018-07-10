@@ -35,7 +35,7 @@ if(empty($_GET['product_id'])){
             if(mysqli_num_rows($result)>0){
                     $output['success'] = true;
                 while($row = mysqli_fetch_assoc($result)){
-                    $output['data']['nutrients'][] = $row;
+                    $output['data']['nutrients'][$row['name']] = $row['qty'];
                 }
 
             }else{

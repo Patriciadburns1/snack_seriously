@@ -10,31 +10,29 @@ import Nav from './nav/nav';
 class Homepage extends Component {
     constructor(props) {
         super(props); 
+
+        const {term} = props.match.params;
+
         this.setTimer=null; 
         this.state = {
-            userInput: ''
+            userInput: term || ''
         };
         this.handleInputChange=this.handleInputChange.bind(this); 
         // this.ajaxCalltoServerUponUserInput=this.ajaxCalltoServerUponUserInput.bind(this); 
-        this.autocompleteFromUser=this.autocompleteFromUser.bind(this); 
+        this.autocompleteFromUser=debounce(this.autocompleteFromUser, 1000).bind(this); 
+
+
     }
 
 
     handleInputChange = (event) => {
-        let value = event.target.value;
-        // if (event.target.value === undefined){
-        //     console.log('no history to push')
-        // }
-        // else{
-        //     this.props.history.push( '/search/'+ value);  
-        // }
-
-        this.props.history.push('/search/' + value); 
-        // this.props.history.push( '/search/'+ value);
+        const value = event.target.value;
         this.setState({
             userInput: value,
 
-        })   
+        })  
+        this.props.history.push('/search/' + value); 
+         
     }
 
     //   async ajaxCalltoServerUponUserInput(props){
@@ -43,23 +41,23 @@ class Homepage extends Component {
     //     console.log(response); 
     // }
 
-    autocompleteFromUser = debounce( ()=>{
-        //   const params = this.props.match.params.term; 
-          const {userInput}=this.state; 
-          axios.get(`http://52.8.24.199/snackapi.php?action=getauto&search=${userInput}`).then(function(response){
-                console.log("server response for autocomplete", response); 
-            });
-        },500);
+    autocompleteFromUser(){
+            //   const params = this.props.match.params.term; 
+        const {userInput}=this.state;
+
+        axios.get(`http://52.8.24.199/snackapi.php?action=getauto&search=${userInput}`).then(function(response){
+            console.log("server response for autocomplete", response); 
+        });
+    }
 
 
     render() {
         const userInput= this.state.userInput;  
-        // const searchTerm = this.props.match.params.term || ''; 
         const params = this.props.match.params.term || '';
         return(
             <div>
                  <div className="searchBarComp">
-                <input type="text" value={userInput} onKeyUp={this.autocompleteFromUser}  onChange={this.handleInputChange} placeholder="Search snacks"/>
+                <input autoFocus type="text" value={userInput} onKeyUp={this.autocompleteFromUser}  onChange={this.handleInputChange} placeholder="Search snacks"/>
                <Link to = {`/MultipleResults/${params}`}> <div className="icon"> <i>&#x1F50D;</i> </div> </Link>    
                 </div>
             </div>

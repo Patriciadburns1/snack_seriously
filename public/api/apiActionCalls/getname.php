@@ -4,7 +4,7 @@ $search = $_GET['search'];
 
 if( strlen($search) < 125){
 
-    $query = "SELECT `p`.`ID`,`p`.`name`,`d`.`img_url` FROM `products` AS `p` JOIN `details` AS `d` ON `d`.`product_id` = `p`.`ID` WHERE `name` LIKE '%$search%' LIMIT 6";
+    $query = "SELECT `p`.`ID`,`p`.`name`,`d`.`img_url` FROM `products` AS `p` JOIN `details` AS `d` ON `d`.`product_id` = `p`.`ID` WHERE `name` LIKE '%$search%' LIMIT 12";
 
     $result = mysqli_query($conn, $query);
 
