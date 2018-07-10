@@ -37,12 +37,18 @@ class MultipleResults extends Component {
     async getSnackData() {
         let URL = 'http://api.snackseriously.com/snackapi.php?action=';
         let term = this.props.match.params.term; // '' || name || undefined
+        console.log(this.props);
         let querystring = null;
         let offset= this.state.offset; 
+        const regex=/[1-6]/gm;
         console.log("term is equal", term);
         if (!term) {
             querystring = "getrandom";
-        } else {
+        } else if (regex) {
+            querystring = `getcategory&categoryid=${term}&limit=12&offset=${offset}`;
+            console.log(querystring);
+        }
+        else {
             querystring = `getname&search=${term}&offset=${offset}`;
         }
         URL += querystring;

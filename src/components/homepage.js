@@ -5,6 +5,7 @@ import axios from 'axios';
 import debounce from 'lodash/debounce';
 import '../assets/css/searchbar.css'; 
 import Nav from './nav/nav';
+import CategoryHome from './categoryhome';
 
 
 
@@ -48,7 +49,8 @@ class Homepage extends Component {
             <div className="searchBarContainer">
                  <div className="searchBarComp">
                 <input autoFocus type="text" value={userInput} onKeyUp={this.autocompleteFromUser}  onChange={this.handleInputChange} placeholder="Search snacks"/>
-               <Link to = {`/MultipleResults/${params}`}> <span className="icon"> <i>&#x1F50D;</i> </span> </Link>    
+               <Link to = {`/MultipleResults/${params}`}> <span className="icon"> <i>&#x1F50D;</i> </span> </Link>   
+               <CategoryHome /> 
                 </div>
             </div>
         )
