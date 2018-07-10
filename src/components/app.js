@@ -12,13 +12,13 @@ const App = () => (
         <div>
             {/* <Filters /> */}
             <Nav/>
-            <CategoryHome />
-            {/* <Route exact path='/' component= {Homepage}/>
+            {/* <CategoryHome /> */}
+            <Route exact path='/' component= {Homepage}/>
             <Route path='/search/:term?' component= {Homepage}/>
             <Route path='/search/:term/MultipleResults/?' component={MultipleResults}/>
             <Route path='/MultipleResults/:term?' component={MultipleResults}/>
             <Route path='/SingleResult' component={SingleResult}/>
-            <Route path="/about" component={About}/> */}
+            <Route path="/about" component={About}/>
         </div> 
 
 );

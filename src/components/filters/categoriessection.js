@@ -38,7 +38,7 @@ class Categories extends Component {
 
         const nameArray = ["Popcorn & Pretzels,", "Jerky & Rinds", "Snack Bars", "Nuts & Dried Fruit", "Candy & Chocolate"]
         const imageArray = ["popcornpretzel", "meat", "chipscrackers", "bar", "nutsdriedfruit", "candychocolate"];
-        const Items = imageArray.map(function(item, index) {
+        const Items = imageArray.map((item, index) => {
             return (
                 <div key={index} className="categoryItem">
                     <img  src={require(`./categoriesicons/${item}.png`)} className="categoryImage" />
