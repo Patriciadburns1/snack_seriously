@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 // import Section from './section';
 import '../../assets/css/filters.css';
-import FilterIcons from './filters.json';
 import Allergens from './allergenssection';
 import Categories from './categoriessection';
 import Nutrients from './nutrientssection';
@@ -17,6 +16,7 @@ class Filters extends Component {
             //     filterItems: ['cat', 'dog', 'mouse']
             // }
             // filterData: null
+            
         }
     }
 

@@ -1,6 +1,5 @@
 import React, {Component, Fragment} from 'react';
 import '../../assets/css/filters.css';
-import FilterIcons from './filters.json';
 import popcornpretzel from './categoriesicons/popcornpretzel.png';
 import meat from './categoriesicons/meat.png';
 import chipscrackers from './categoriesicons/chipscrackers.png';
