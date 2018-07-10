@@ -1,6 +1,6 @@
 <?php
 //http://localhost:8000/public/api/snackapi.php?action=getrandom
-$randomQuery = "SELECT `details`.`product_id`,`products`.`name`,`details`.`img_url` FROM `products` JOIN `details` ON `details`.`product_id` = `products`.`id` ORDER BY RAND() LIMIT 12";
+$randomQuery = "SELECT `products`.`ID`,`products`.`name`,`details`.`img_url` FROM `products` JOIN `details` ON `details`.`product_id` = `products`.`id` ORDER BY RAND() LIMIT 12";
 $result = mysqli_query($conn, $randomQuery);
 
 if ($result){
