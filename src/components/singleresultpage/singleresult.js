@@ -10,22 +10,38 @@ import axios from 'axios';
 class SingleResult extends Component {
     constructor(props) {
         super(props);
+        this.state={
+            userInput: ''
+        }
+        this.handleInputChange=this.handleInputChange.bind(this); 
     }
 
     componentDidMount() {
         console.log("This is when our component first hits the page", this.props.location.state);
-        axios.get(`http://52.8.24.199/snackapi.php?action=getproduct&product_id=${itemID}`);
+        // axios.get(`http://52.8.24.199/snackapi.php?action=getproduct&product_id=${itemID}`);
     }
+
+    
+    handleInputChange = (event) => {
+        const value = event.target.value;
+        this.setState({
+            userInput: value,
+
+        })  
+        this.props.history.push('/search/' + value);   
+    }
+    
 
     render() {
         // const { nutrition, ingredients, imgURL, name, manu } = this.props.location.state;
         // console.log("these are our things", nutrition, ingredients, imgURL);
+        const params = this.props.match.params.term || '';
         return (
                 <div>
                     <div>
                         <div className="searchBarComp">
-                            <input type="text" placeholder="Search snacks"/>
-                            <div className="icon"> <i>&#x1F50D;</i> </div>
+                            <input type="text" placeholder="Search snacks" onChange={this.handleInputChange}/>
+                            <Link to = {`/MultipleResults/${params}`}> <div className="icon"> <i>&#x1F50D;</i> </div> </Link> 
                         </div>
                     </div>
 

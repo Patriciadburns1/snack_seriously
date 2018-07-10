@@ -18,9 +18,7 @@ class Homepage extends Component {
             userInput: term || ''
         };
         this.handleInputChange=this.handleInputChange.bind(this); 
-        // this.ajaxCalltoServerUponUserInput=this.ajaxCalltoServerUponUserInput.bind(this); 
         this.autocompleteFromUser=debounce(this.autocompleteFromUser, 1000).bind(this); 
-
 
     }
 
@@ -34,18 +32,9 @@ class Homepage extends Component {
         this.props.history.push('/search/' + value); 
          
     }
-
-    //   async ajaxCalltoServerUponUserInput(props){
-    //     const params = this.props.match.params.term; 
-    //     const response = await axios.get(`http://52.8.24.199/snackapi.php?action=getname&search=${params}`); 
-    //     console.log(response); 
-    // }
-
     autocompleteFromUser(){
-            //   const params = this.props.match.params.term; 
         const {userInput}=this.state;
-
-        axios.get(`http://52.8.24.199/snackapi.php?action=getauto&search=${userInput}`).then(function(response){
+        axios.get(`http://api.snackseriously.com/snackapi.php?action=getauto&search=${userInput}`).then(function(response){
             console.log("server response for autocomplete", response); 
         });
     }
