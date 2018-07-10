@@ -4,7 +4,7 @@
     display: inline-block;
     cursor: pointer;
     margin-left: 2%;
-    position: absolute;
+    position: fixed;
 }
 
 .topBar, .midBar, .botBar {
