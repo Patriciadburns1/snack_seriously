@@ -61,8 +61,8 @@ class SingleResult extends Component {
                     </div>
 
                     <div className="singleResultContainer">
-                <SingleItem name={name} manu={manu} img={img_url} per_container={per_container} size={size} unit={unit} weight={weight}/>
-                {/* <Nutritionalfacts nutrition={nutrients} /> */}
+                <SingleItem name={name} manu={manu} img={img_url}/>
+                 <Nutritionalfacts nutrition={nutrients} per_container={per_container} size={size} unit={unit} weight={weight}/>
                 <Ingredient ingredients={ingredients} />
                     </div>
                 </div>
