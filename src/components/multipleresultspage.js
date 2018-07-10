@@ -9,54 +9,37 @@ class MultipleResults extends Component {
         super(props);
 
         this.state = {
-            snackData: null
+            snackData: [],
+            offset: 0
         }
 
         this.handleOnScroll = this.handleOnScroll.bind(this);
     }
 
     componentDidMount() {
-        // debugger;
-        let term = this.props.match.params.term;
-        console.log("term is equal", term);
-        if (!term) {
-                axios.get('http://api.snackseriously.com/snackapi.php?action=getrandom').then((response) => {
-                // console.log(response);
-                const snackData = response.data;
-
-                this.setState({
-                    snackData: snackData
-                })
-                    console.log('This is from axios:', snackData);
-
-            })
-        }
-        else {
-        axios.get(`http://api.snackseriously.com/snackapi.php?action=getname&search=${term}`).then(function(response){
-
-            console.log(response); 
-            const snackData = response.data;
-            this.setState({
-                snackData: snackData
-            })
-        })
-     
-        }
-        // this.getSnackData(URL);
         window.addEventListener('scroll', this.handleOnScroll);
+        this.getSnackData();
     };
 
 
 
     async getSnackData() {
-        let term = this.props.match.params.term;
+        let URL = 'http://api.snackseriously.com/snackapi.php?action=';
+        let term = this.props.match.params.term; // '' || name || undefined
+        let querystring = null;
+        let offset= this.state.offset; 
         console.log("term is equal", term);
-
-        let URL = `http://api.snackseriously.com/snackapi.php?action=getname&search=${term}`;
+        if (!term) {
+            querystring = "getrandom";
+        } else {
+            querystring = `getname&search=${term}&offset=${offset}`;
+        }
+        URL += querystring;
         try {
             const snackData = await axios.get(URL);
             this.setState({
-                snackData: [...this.state.snackData, ...snackData.data.items, ...snackData.data.items]
+                snackData: [...this.state.snackData, ...snackData.data.data],
+                offset: offset+12
             });
         } catch (err) {
             console.log('Get Data Error:', err.message);
@@ -70,25 +53,18 @@ class MultipleResults extends Component {
 
 
     handleOnScroll() {
-                        /// this is returns the root element between html tags                     // this returns a number 0 
-                       // Get the number of pixels the content of a <div> element is scrolled horizontally and vertically:
         let scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-        // scroll height is equal to how tall your browser window is 
         let scrollHeight = (document.documentElement && document.documentElement.scrollHeight) || document.body.scrollHeight;
         let clientHeight = document.documentElement.clientHeight || window.innerHeight;
         let scrolledToBottom = (parseInt(scrollTop + clientHeight)) >= scrollHeight;
-        // if (scrolledToBottom) {
-        //     // this.getSnackData();
-        // }
-    
+        if (scrolledToBottom) {
+            this.getSnackData();
+        }
     }
+
 
     render() {
         const { snackData } = this.state;
-        console.log('The state:', snackData);
-
-
-        // const displayedSnack = Data.items.map(function(item, index) {
         if (snackData) {
             var displayedSnack = snackData.data.map((item, index) => {
                 return (
@@ -103,7 +79,6 @@ class MultipleResults extends Component {
 
             });
         }
-
         const { name } = this.state;
         return (
             <div> 
@@ -116,7 +91,6 @@ class MultipleResults extends Component {
             <div className="multipleResultsContainer">
                 <div className="searchBarFilter">
                     <div className="multipleResultsFilter">
-                        {/* <div type="button">Filters</div> */}
                     </div>
                 </div>
                 <div className="multipleResultsItemsContainer">
