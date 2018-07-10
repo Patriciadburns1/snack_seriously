@@ -17,7 +17,7 @@ class Nutritionalfacts extends Component{
 
 
     render(){
-
+    console.log(this.props);
 
       const {energy, total_fat, total_saturated_fatty_acids, total_trans_fatty_acids, cholesterol, iron, vitamin_a, vitamin_c, sodium, carbohydrate, protein, total_fiber, total_sugar, calcium  }  = this.props.nutrition;
         return(
@@ -120,17 +120,17 @@ class Nutritionalfacts extends Component{
                       <th>
                           Sugars {total_sugar.value}{total_sugar.unit}
                       </th>
-                      <td>
-                         {Math.ceil((total_sugar.value/50) * 100)} %
-                      </td>
+                      {/*<td>*/}
+                         {/*{Math.ceil((total_sugar.value/50) * 100)} %*/}
+                      {/*</td>*/}
                   </tr>
                   <tr className="thickEnd">
                       <th colSpan="2">
                           <b>Protein</b> {protein.value}{protein.unit}
                       </th>
-                      <td>
-                         {Math.ceil((protein.value/56) * 100)} %  
-                      </td>
+                      {/*<td>*/}
+                         {/*{Math.ceil((protein.value/56) * 100)} %  */}
+                      {/*</td>*/}
                   </tr>
                   </tbody>
               </table>

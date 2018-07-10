@@ -9,11 +9,10 @@ class MultipleResults extends Component {
         super(props);
 
         this.state = {
-            snackData: []
+            snackData: null
         }
 
         this.handleOnScroll = this.handleOnScroll.bind(this);
-        this.handleItemClicked = this.handleItemClicked.bind(this);
     }
 
     componentDidMount() {
@@ -21,7 +20,7 @@ class MultipleResults extends Component {
         let term = this.props.match.params.term;
         console.log("term is equal", term);
         if (!term) {
-                axios.get('http://52.8.24.199/snackapi.php?action=getrandom').then((response) => {
+                axios.get('http://api.snackseriously.com/snackapi.php?action=getrandom').then((response) => {
                 // console.log(response);
                 const snackData = response.data;
 
@@ -33,7 +32,8 @@ class MultipleResults extends Component {
             })
         }
         else {
-        axios.get(`http://52.8.24.199/snackapi.php?action=getname&search=${term}`).then((response)=>{
+        axios.get(`http://api.snackseriously.com/snackapi.php?action=getname&search=${term}`).then(function(response){
+
             console.log(response); 
             const snackData = response.data;
             this.setState({
@@ -52,7 +52,7 @@ class MultipleResults extends Component {
         let term = this.props.match.params.term;
         console.log("term is equal", term);
 
-        let URL = `http://52.8.24.199/snackapi.php?action=getname&search=${term}`;
+        let URL = `http://api.snackseriously.com/snackapi.php?action=getname&search=${term}`;
         try {
             const snackData = await axios.get(URL);
             this.setState({
@@ -82,28 +82,28 @@ class MultipleResults extends Component {
         // }
     
     }
-    handleItemClicked(event){
-        console.log('this is the event;', event);
-    }
-
-
 
     render() {
         const { snackData } = this.state;
         console.log('The state:', snackData);
 
-        // const displayedSnack = Data.items.map(function(item, index) {
-        const displayedSnack = snackData.data && snackData.data.map((item, product_id) => {
-            return (
-                <Link productid ={product_id} key={product_id} to={{ pathname: '/SingleResult', state: item }}>
-                    <div onClick={this.handleItemClicked} className="multipleResultsItem">
-                        <span>{item.name}</span>
-                        <img className="multipleResultsImage" src={`${item.img_url}`} />
-                    </div>
-                </Link>
-            )
 
-        });
+        // const displayedSnack = Data.items.map(function(item, index) {
+        if (snackData) {
+            var displayedSnack = snackData.data.map((item, index) => {
+                return (
+                    <Link key={index} to={`/singleresult/${item.product_id}`}>
+                        <div className="multipleResultsItem">
+                            <span>{item.name}</span>
+                            <img className="multipleResultsImage" src={`${item.img_url}`} />
+                        </div>
+                    </Link>
+                )
+
+
+            });
+        }
+
         const { name } = this.state;
         return (
             <div> 
@@ -120,7 +120,7 @@ class MultipleResults extends Component {
                     </div>
                 </div>
                 <div className="multipleResultsItemsContainer">
-                    {displayedSnack}
+                    { displayedSnack }
                 </div>
             </div>
             </div> 
