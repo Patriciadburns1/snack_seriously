@@ -7,6 +7,7 @@ import '../assets/css/searchbar.css';
 import Nav from './nav/nav';
 
 
+
 class Homepage extends Component {
     constructor(props) {
         super(props); 
@@ -29,9 +30,9 @@ class Homepage extends Component {
             userInput: value,
 
         })  
-        this.props.history.push('/search/' + value); 
-         
+        this.props.history.push('/search/' + value);     
     }
+
     autocompleteFromUser(){
         const {userInput}=this.state;
         axios.get(`http://api.snackseriously.com/snackapi.php?action=getauto&search=${userInput}`).then(function(response){
@@ -44,10 +45,10 @@ class Homepage extends Component {
         const userInput= this.state.userInput;  
         const params = this.props.match.params.term || '';
         return(
-            <div>
+            <div className="searchBarContainer">
                  <div className="searchBarComp">
                 <input autoFocus type="text" value={userInput} onKeyUp={this.autocompleteFromUser}  onChange={this.handleInputChange} placeholder="Search snacks"/>
-               <Link to = {`/MultipleResults/${params}`}> <div className="icon"> <i>&#x1F50D;</i> </div> </Link>    
+               <Link to = {`/MultipleResults/${params}`}> <span className="icon"> <i>&#x1F50D;</i> </span> </Link>    
                 </div>
             </div>
         )

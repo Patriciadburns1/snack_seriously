@@ -47,7 +47,6 @@
     height: auto;
     max-width: 35vw;
     max-height: 15vh;
-    /* margin: 0 auto; */
     margin: auto;
 }
 
@@ -86,8 +85,4 @@
     margin: 0;
     justify-content: center;
     flex-grow: 1;
-}
-
-.multipleResultsContainer .searchBarComp input {
-    /*width: 32%;*/
 }
