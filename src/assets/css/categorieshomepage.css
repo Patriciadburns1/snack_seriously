@@ -1,6 +1,6 @@
 .categoryHomepageContainer {
-    margin-top: 50%;
-    position: relative;
+    position: absolute;
+    margin-top: 10%;
 }
 
 .categoryHomepageTitle{
@@ -8,10 +8,10 @@
     justify-content: center;
 }
 
-.categoryHomepageContainer{
+.categoryHomepageGrid{
     display: grid;
-    height: 40vh;
-    width: 80vw;
+    height: 35%;
+    width: 100%;
     grid-template-columns: auto auto auto;
     grid-row-gap: 1vh;
     grid-column-gap: 1vw;
@@ -21,7 +21,7 @@
 
 .categoryHomepageItem{
     margin: 0;
-    height: 15vh;
+    height: 13vh;
     width: 25vw;
     display: flex;
     flex-direction: column;
@@ -32,14 +32,13 @@
 .categoryHomepageImage{
     display: block;
     height: auto;
-    max-width: 20vw;
-    max-height: 10vh;
+    max-height: 8vh;
     margin: 0 auto;
 }
 
-.categoryLabel{
+.categoryHomepageItem p{
     width: 100%;
-    font-size: 12px;
+    font-size: 10px;
     display: flex;
     justify-content: space-evenly;
     position: absolute;

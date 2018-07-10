@@ -1,5 +1,5 @@
 #menuContainer {
-    width: 80vw;
+    width: 90vw;
     height: 100vh;
     background-color: #707070;
     position: fixed;
@@ -7,7 +7,7 @@
     left: 0;
     transition: transform .3s cubic-bezier(0, .52, 0, 1);
     overflow: scroll;
-    z-index: 2;
+    z-index: 3;
     cursor: pointer;
   }
    
@@ -38,7 +38,7 @@
       top: 0;
       left: 0;
       position: fixed;
-
+      z-index: 2;
   }
 
   

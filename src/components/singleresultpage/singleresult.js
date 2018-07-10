@@ -47,7 +47,7 @@ class SingleResult extends Component {
         console.log(this.state);
         console.log('this is single item:', this.state.singleItem);
         //this.state.singleItem.data.ingredients
-        const {nutrients, ingredients, img_url, name, manu, per_container, size, unit, weight}=this.state.singleItem; 
+        const {nutrients, ingredients, img_url, name, manu, per_container, size, unit, weight}=this.state.singleItem.data; 
         console.log(ingredients);
         // console.log("these are our things", nutrition, ingredients, imgURL);
         const params = this.props.match.params.term || '';
@@ -61,12 +61,9 @@ class SingleResult extends Component {
                     </div>
 
                     <div className="singleResultContainer">
-                {/* <SingleItem name={name} manu={manu} img={img_url} per_container={per_container} size={size} unit={unit} weight={weight}/>
-                <Nutritionalfacts nutrition={nutrients} />
-                <Ingredient ingredients={ingredients} /> */}
-                        {/*<div className="footerButtons">*/}
-                        {/*<Link to="/MultipleResults"><div type="button" className="btnStyle btnNormal">&#8592; Back</div></Link>*/}
-                        {/*</div>*/}
+                <SingleItem name={name} manu={manu} img={img_url} per_container={per_container} size={size} unit={unit} weight={weight}/>
+                {/* <Nutritionalfacts nutrition={nutrients} /> */}
+                <Ingredient ingredients={ingredients} />
                     </div>
                 </div>
                 )
