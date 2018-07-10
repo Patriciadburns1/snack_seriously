@@ -54,7 +54,7 @@ class SingleResult extends Component {
                     <div className="singleResultContainer">
                          <Search/>
                 <SingleItem name={name} manu={manu} img={img_url} per_container={per_container} size={size} unit={unit} weight={weight}/>
-                {/*<Nutritionalfacts nutrition={nutrients} />*/}
+                <Nutritionalfacts nutrition={nutrients} />
                 <Ingredient ingredients={ingredients} />
                         {/*<div className="footerButtons">*/}
                         {/*<Link to="/MultipleResults"><div type="button" className="btnStyle btnNormal">&#8592; Back</div></Link>*/}
