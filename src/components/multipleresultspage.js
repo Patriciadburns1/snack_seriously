@@ -40,13 +40,13 @@ class MultipleResults extends Component {
         console.log(this.props);
         let querystring = null;
         let offset= this.state.offset; 
-        const regex= /^[0-9]+$/;
+        const regex= /^[1-6]+$/;
         console.log("term is equal", term);
         if (!term) {
             querystring = "getrandom";
-        } else if (!regex) {
+        } else if (regex.test(term)) {
             querystring = `getcategory&categoryid=${term}&limit=12&offset=${offset}`;
-            console.log(querystring);
+            // console.log(querystring);
         }
         else {
             querystring = `getname&search=${term}&offset=${offset}`;
