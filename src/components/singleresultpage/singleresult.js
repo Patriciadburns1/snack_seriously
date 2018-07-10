@@ -47,7 +47,7 @@ class SingleResult extends Component {
         console.log(this.state);
         console.log('this is single item:', this.state.singleItem);
         //this.state.singleItem.data.ingredients
-        const {nutrients, ingredients, img_url, name, manu, per_container, size, unit, weight}=this.state.singleItem.data;
+        const {nutrients, ingredients, img_url, name, manu, per_container, size, unit, weight}=this.state.singleItem; 
         console.log(ingredients);
         // console.log("these are our things", nutrition, ingredients, imgURL);
         const params = this.props.match.params.term || '';
@@ -56,18 +56,16 @@ class SingleResult extends Component {
                     <div>
                         <div className="searchBarComp">
                             <input type="text" placeholder="Search snacks" onChange={this.handleInputChange}/>
-                            <Link to = {`/MultipleResults/${params}`}> <div className="icon"> <i>&#x1F50D;</i> </div> </Link> 
+                            <Link to = {`/MultipleResults/${params}`}> <span className="icon"> <i>&#x1F50D;</i> </span> </Link> 
                         </div>
                     </div>
 
                     <div className="singleResultContainer">
-                         <Search/>
-                <SingleItem name={name} manu={manu} img={img_url} per_container={per_container} size={size} unit={unit} weight={weight}/>
+                {/* <SingleItem name={name} manu={manu} img={img_url} per_container={per_container} size={size} unit={unit} weight={weight}/>
                 <Nutritionalfacts nutrition={nutrients} />
-                <Ingredient ingredients={ingredients} />
+                <Ingredient ingredients={ingredients} /> */}
                         {/*<div className="footerButtons">*/}
                         {/*<Link to="/MultipleResults"><div type="button" className="btnStyle btnNormal">&#8592; Back</div></Link>*/}
-                        <Link to="/"><div type="button" className="btnStyle btnNormal">Home &#8962;</div></Link>
                         {/*</div>*/}
                     </div>
                 </div>

@@ -14,13 +14,24 @@ class MultipleResults extends Component {
         }
 
         this.handleOnScroll = this.handleOnScroll.bind(this);
+        this.handleInputChange=this.handleInputChange.bind(this); 
+        this.getSnackData=this.getSnackData.bind(this); 
     }
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleOnScroll);
         this.getSnackData();
     };
+    
 
+    handleInputChange = (event) => {
+        const value = event.target.value;
+        this.setState({
+            userInput: value,
+
+        })  
+        this.props.history.push('/search/' + value);      
+     }
 
 
     async getSnackData() {
@@ -64,9 +75,10 @@ class MultipleResults extends Component {
 
 
     render() {
-        const { snackData } = this.state;
+        const snackData = this.state.snackData;
+        console.log(snackData); 
         if (snackData) {
-            var displayedSnack = snackData.data.map((item, index) => {
+            var displayedSnack = snackData.map((item, index) => {
                 return (
                     <Link key={index} to={`/singleresult/${item.product_id}`}>
                         <div className="multipleResultsItem">
@@ -80,12 +92,15 @@ class MultipleResults extends Component {
             });
         }
         const { name } = this.state;
+        const userInput= this.state.userInput;  
+        const params = this.props.match.params.term || '';
+
         return (
             <div> 
                  <div>
                  <div className="searchBarComp">
-                <input type="text"  placeholder="Search snacks"/>
-               <div className="icon"> <i>&#x1F50D;</i> </div> 
+                <input autoFocus type="text" value={userInput}  onChange={this.handleInputChange} placeholder="Search snacks"/>
+              <Link to= {`/MultipleResults/${params}`} > <span className="icon" onClick={this.getSnackData}> <i>&#x1F50D;</i> </span> </Link>
                 </div>
             </div>
             <div className="multipleResultsContainer">
