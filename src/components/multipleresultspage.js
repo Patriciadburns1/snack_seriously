@@ -14,7 +14,6 @@ class MultipleResults extends Component {
         }
 
         this.handleOnScroll = this.handleOnScroll.bind(this);
-        this.handleItemClicked = this.handleItemClicked.bind(this);
     }
 
     componentDidMount() {
@@ -36,8 +35,6 @@ class MultipleResults extends Component {
             querystring = `getname&search=${term}&offset=${offset}`;
         }
         URL += querystring;
-
-
         try {
             const snackData = await axios.get(URL);
             this.setState({
@@ -68,16 +65,20 @@ class MultipleResults extends Component {
 
     render() {
         const { snackData } = this.state;
-        const displayedSnack = snackData.map((item, product_id) => {
-            return (
-                <Link productid ={product_id} key={product_id} to={{ pathname: '/SingleResult', state: item }}>
-                    <div onClick={this.handleItemClicked} className="multipleResultsItem">
-                        <span>{item.name}</span>
-                        <img className="multipleResultsImage" src={`${item.img_url}`} />
-                    </div>
-                </Link>
-            )
-        });
+        if (snackData) {
+            var displayedSnack = snackData.data.map((item, index) => {
+                return (
+                    <Link key={index} to={`/singleresult/${item.product_id}`}>
+                        <div className="multipleResultsItem">
+                            <span>{item.name}</span>
+                            <img className="multipleResultsImage" src={`${item.img_url}`} />
+                        </div>
+                    </Link>
+                )
+
+
+            });
+        }
         const { name } = this.state;
         return (
             <div> 
@@ -93,7 +94,7 @@ class MultipleResults extends Component {
                     </div>
                 </div>
                 <div className="multipleResultsItemsContainer">
-                    {displayedSnack}
+                    { displayedSnack }
                 </div>
             </div>
             </div> 

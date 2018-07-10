@@ -17,9 +17,14 @@ class Nutritionalfacts extends Component{
 
 
     render(){
+    console.log(this.props);
 
-
-      const {energy, total_fat, total_saturated_fatty_acids, total_trans_fatty_acids, cholesterol, iron, vitamin_a, vitamin_c, sodium, carbohydrate, protein, total_fiber, total_sugar, calcium  }  = this.props.nutrition;
+      // const {Calcium, Calories, Calories from Fat, Carbohydrates, Cholesterol, Dietary fiber, Fat, Iron, Protein, Saturated Fat, Sodium, Sugar, Trans fatty acids, Vitamin A, Vitamin C}  = this.props.nutrients;
+      // const calories_from_fat = this.props.nutrients["Calories from Fat"];
+      // const dietary_fiber = this.props.nutrients["Dietary Fiber"];
+      // const saturated_fat = this.props.nutrients["Saturated Fat"];
+      // const trans_fatty_acids =
+      const nutrients = this.props.nutrition;
         return(
       <div className="nutritionContainer">
           <section className="performanceFacts">
@@ -40,7 +45,7 @@ class Nutritionalfacts extends Component{
                   <tr>
                       <th colSpan="2">
 
-                          <b>Calories</b> {energy.value}
+                          <b>Calories</b> {nutrients['Calories']}
 
                       </th>
                       <td>
@@ -54,83 +59,83 @@ class Nutritionalfacts extends Component{
                   </tr>
                   <tr>
                       <th colSpan="2">
-                          <b>Total Fat</b> {total_fat.value}{total_fat.unit}
+                          <b>Total Fat</b> {nutrients['Fat']}g
                       </th>
                       <td>
-                            {Math.ceil((total_fat.value/65) * 100)} %
+                            {Math.ceil((nutrients['Fat']/65) * 100)} %
                       </td>
                   </tr>
                   <tr>
                       <td className="blankCell">
                       </td>
                       <th>
-                          Saturated Fat {total_saturated_fatty_acids.value}{total_saturated_fatty_acids.unit}
+                          Saturated Fat {nutrients['Saturated Fat']}g
                       </th>
                       <td>
-                         {Math.ceil((total_saturated_fatty_acids.value/20) * 100)} %
+                         {Math.ceil((nutrients['Saturated Fat']/20) * 100)} %
                       </td>
                   </tr>
                   <tr>
                       <td className="blankCell">
                       </td>
                       <th>
-                          Trans Fat {total_trans_fatty_acids.value}{total_trans_fatty_acids.unit}
+                          Trans Fat {nutrients['Trans fatty acids']}g
                       </th>
                       <td>
-                        {Math.ceil((total_trans_fatty_acids.value/20) * 100)} %
+                        {Math.ceil((nutrients['Trans fatty acids']/20) * 100)} %
                       </td>
                   </tr>
                   <tr>
                       <th colSpan="2">
-                          <b>Cholesterol </b> {cholesterol.value}{cholesterol.unit}
+                          <b>Cholesterol </b> {nutrients['Cholesterol']}mg
                       </th>
                       <td>
-                          <b>{Math.ceil((cholesterol.value/300) * 100)} %</b>
+                          <b>{Math.ceil((nutrients['Cholesterol']/300) * 100)} %</b>
                       </td>
                   </tr>
                   <tr>
                       <th colSpan="2">
-                          <b>Sodium</b> {sodium.value}{sodium.unit}
+                          <b>Sodium</b> {nutrients['Sodium']}mg
                       </th>
                       <td>
-                          <b>{Math.ceil((sodium.value/2400) * 100)} %</b>
+                          <b>{Math.ceil((nutrients['Sodium']/2400) * 100)} %</b>
                       </td>
                   </tr>
                   <tr>
                       <th colSpan="2">
-                          <b>Total Carbohydrate</b> {carbohydrate.value}{carbohydrate.unit}
+                          <b>Total Carbohydrate</b> {nutrients['Carbohydrates']}g
                       </th>
                       <td>
-                          <b>{Math.ceil((carbohydrate.value/300) * 100)} %</b>
+                          <b>{Math.ceil((nutrients['Carbohydrates']/300) * 100)} %</b>
                       </td>
                   </tr>
                   <tr>
                       <td className="blankCell">
                       </td>
                       <th>
-                          Dietary Fiber {total_fiber.value}{total_fiber.unit}
+                          Dietary Fiber {nutrients['Dietary Fiber']}g
                       </th>
                       <td>
-                          <b> {Math.ceil((total_fiber.value/25) * 100)} %</b>
+                          <b> {Math.ceil((nutrients['Dietary Fiber']/25) * 100)} %</b>
                       </td>
                   </tr>
                   <tr>
                       <td className="blankCell">
                       </td>
                       <th>
-                          Sugars {total_sugar.value}{total_sugar.unit}
+                          Sugars {nutrients['Sugar']}g
                       </th>
-                      <td>
-                         {Math.ceil((total_sugar.value/50) * 100)} %
-                      </td>
+                      {/*<td>*/}
+                         {/*{Math.ceil((total_sugar.value/50) * 100)} %*/}
+                      {/*</td>*/}
                   </tr>
                   <tr className="thickEnd">
                       <th colSpan="2">
-                          <b>Protein</b> {protein.value}{protein.unit}
+                          <b>Protein</b> {nutrients['Protein']}g
                       </th>
-                      <td>
-                         {Math.ceil((protein.value/56) * 100)} %  
-                      </td>
+                      {/*<td>*/}
+                         {/*{Math.ceil((protein.value/56) * 100)} %  */}
+                      {/*</td>*/}
                   </tr>
                   </tbody>
               </table>
@@ -139,18 +144,18 @@ class Nutritionalfacts extends Component{
                   <tbody>
                   <tr>
                       <td colSpan="2">
-                          Vitamin A {vitamin_a.value}%
+                          Vitamin A {nutrients['Vitamin A']}%
                       </td>
                       <td>
-                          Vitamin C {vitamin_c.value}%
+                          Vitamin C {nutrients['Vitamin C']}%
                       </td>
                   </tr>
                   <tr className="thinEnd">
                       <td colSpan="2">
-                          Calcium {calcium.value}%
+                          Calcium {nutrients['Calcium']}%
                       </td>
                       <td>
-                          Iron {iron.value}%
+                          Iron {nutrients['Iron']}%
                       </td>
                   </tr>
                   </tbody>

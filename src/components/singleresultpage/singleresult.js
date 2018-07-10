@@ -11,29 +11,44 @@ class SingleResult extends Component {
     constructor(props) {
         super(props);
         this.state={
-            userInput: ''
+            userInput: '',
+            singleItem: null
         }
         this.handleInputChange=this.handleInputChange.bind(this); 
     }
-
+  
     componentDidMount() {
-        console.log("This is when our component first hits the page", this.props.location.state);
-        // axios.get(`http://52.8.24.199/snackapi.php?action=getproduct&product_id=${itemID}`);
+        this.getSingleResult();
     }
-
     
     handleInputChange = (event) => {
         const value = event.target.value;
         this.setState({
             userInput: value,
-
         })  
         this.props.history.push('/search/' + value);   
     }
+
+    async getSingleResult() {
+        const { product_id } = this.props.match.params;
+        console.log(product_id);
+        const response = await axios.get(`http://api.snackseriously.com/snackapi.php?action=getproduct&product_id=${product_id}`);
+        this.setState({
+            singleItem: response.data
+        });
+     }
     
 
     render() {
-        // const { nutrition, ingredients, imgURL, name, manu } = this.props.location.state;
+        const {singleItem} = this.state;
+        if(!singleItem){
+            return <h1>Loading...</h1>;
+        }
+        console.log(this.state);
+        console.log('this is single item:', this.state.singleItem);
+        //this.state.singleItem.data.ingredients
+        const {nutrients, ingredients, img_url, name, manu, per_container, size, unit, weight}=this.state.singleItem.data;
+        console.log(ingredients);
         // console.log("these are our things", nutrition, ingredients, imgURL);
         const params = this.props.match.params.term || '';
         return (
@@ -46,10 +61,10 @@ class SingleResult extends Component {
                     </div>
 
                     <div className="singleResultContainer">
-                        {/* <Search/>
-                <SingleItem name={name} manu={manu} img={imgURL}/>
-                <Nutritionalfacts nutrition={nutrition} />
-                <Ingredient ingredients={ingredients} />  */}
+                         <Search/>
+                <SingleItem name={name} manu={manu} img={img_url} per_container={per_container} size={size} unit={unit} weight={weight}/>
+                <Nutritionalfacts nutrition={nutrients} />
+                <Ingredient ingredients={ingredients} />
                         {/*<div className="footerButtons">*/}
                         {/*<Link to="/MultipleResults"><div type="button" className="btnStyle btnNormal">&#8592; Back</div></Link>*/}
                         <Link to="/"><div type="button" className="btnStyle btnNormal">Home &#8962;</div></Link>
