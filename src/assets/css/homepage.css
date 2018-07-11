@@ -24,3 +24,14 @@ input.searchArea {
     z-index: 2;
     position: relative;
 }
+
+.pageNotFound{
+   margin-top: 95%;
+   display: flex;
+   justify-content: center;  
+}
+
+.returnHomePage{
+    display: flex;
+    justify-content: center; 
+}
