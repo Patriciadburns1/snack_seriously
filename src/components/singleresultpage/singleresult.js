@@ -73,12 +73,10 @@ class SingleResult extends Component {
                                 <Link to = {`/MultipleResults/${params}`}> <span className="icon"> <i>&#x1F50D;</i> </span> </Link> 
                             </div>
                         </div>
-
-                        <div className="singleResultContainer">
-                    <SingleItem name={name} manu={manu} img={img_url} per_container={per_container} size={size} unit={unit} weight={weight}/>
-                    {/* <Nutritionalfacts nutrition={nutrients} /> */}
-                    <Ingredient ingredients={ingredients} />
-                        </div>
+                    <div className="singleResultContainer">
+                <SingleItem name={name} manu={manu} img={img_url}/>
+                 <Nutritionalfacts nutrition={nutrients} per_container={per_container} size={size} unit={unit} weight={weight}/>
+                <Ingredient ingredients={ingredients} />
                     </div>
                     )
         }
