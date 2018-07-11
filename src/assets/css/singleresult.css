@@ -1,0 +1,17 @@
+.singleResultImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+/* .singleResultButtonContainer {
+    display: flex;
+    justify-content: center;
+} */
+
+
+.singleResultContainer {
+    position: absolute;
+    top: 20%;
+}

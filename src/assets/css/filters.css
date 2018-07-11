@@ -1,0 +1,220 @@
+.filtersContainer {
+    height: 100vh;
+    background-color: #d0d0d0;
+}
+
+.filtersHeaderContainer {
+    height: 8vh;
+    width: 100vw;
+    background-color: #FF8C2D;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.filtersHeaderContainer div {
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+/********** Filter Body Menu **********/
+
+.filterMenu {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid  #ffffff;
+}
+
+.active:hover {
+    background-color: #ccc;
+}
+
+.filterPanel {
+    padding: 0 18px;
+    background-color: #ffffff;
+    max-height: 0;            
+    overflow-y: hidden;
+    -webkit-transition: max-height 0.5s ease-in-out;
+    -moz-transition: max-height 0.5s ease-in-out;
+    -o-transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.active {
+    display: block;
+    transition: 0.5s ease-out;
+    max-height: 45vh ; 
+}
+
+.plus {
+    content: '\02795'; 
+    font-size: 13px;
+    color: #ffffff;
+    float: right;
+    margin-left: 5px;
+    z-index: 3;
+}
+
+.minus {
+    content: "\2796";
+    float: right;
+    font-size: 13px;
+    color: #ffffff;
+    z-index: 3;
+}
+
+/********** Allergens Grid **********/
+
+.allergyPageContainer {
+    height: 30vh;
+}
+
+.allergyTitle{
+    display: flex;
+    justify-content: center;
+}
+
+.allergyContainer{
+    display: grid;
+    height: 25vh;
+    width: 80vw;
+    grid-template-columns: auto auto auto auto;
+    grid-row-gap: 1vh;
+    grid-column-gap: 1vw;
+    position: relative;
+    margin: 0 auto;
+}
+
+.allergyItem{
+    margin: 0;
+    height: 10vh;
+    width: 20vw;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+}
+
+.allergyImage{
+    display: block;
+    height: auto;
+    max-width: 20vw;
+    max-height: 10vh;
+    margin: 0 auto;
+}
+
+.strike{
+    background-color: transparent;
+    background-image: gradient(linear, 19.1% -7.9%, 81% 107.9%, color-stop(0, transparent), color-stop(.48, transparent), color-stop(.5, #000), color-stop(.52, transparent), color-stop(1, transparent));
+    background-image: repeating-linear-gradient(163deg, transparent 0%, transparent 48%, #fff 50%, transparent 52%, transparent 100%);
+}
+
+/* .strikethrough {
+    display: block;
+    z-index: 4;
+} */
+
+/********** Categories Grid **********/
+
+.categoryPageContainer {
+    height: 45vh;
+}
+
+.categoryTitle{
+    display: flex;
+    justify-content: center;
+}
+
+.categoryContainer{
+    display: grid;
+    height: 40vh;
+    width: 80vw;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 1vh;
+    grid-column-gap: 1vw;
+    position: relative;
+    margin: 0 auto;
+}
+
+.categoryItem{
+    margin: 0;
+    height: 15vh;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+}
+
+.categoryImage{
+    display: block;
+    height: auto;
+    max-width: 20vw;
+    max-height: 10vh;
+    margin: 0 auto;
+}
+
+.categoryLabel{
+    width: 100%;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    margin: 0;
+}
+
+/********** Nutrients **********/
+
+.nutrientsPageContainer {
+    height: 38vh;
+}
+
+.nutrientsTitle{
+    display: flex;
+    justify-content: center;
+}
+
+.nutrientsContainer{
+    /* display: grid; */
+    height: 30vh;
+    width: 80vw;
+    /* grid-template-columns: auto auto auto auto; */
+    /* grid-row-gap: 1vh; */
+    /* grid-column-gap: 1vw; */
+    /* position: relative; */
+    margin: auto;
+}
+
+.nutrientsLabel {
+    display: inline-block;
+}
+
+.nutrientsContainer input {
+    border: 1px solid black;
+    float:right;
+    vertical-align: text-bottom;
+    margin: 0;
+}
+
+/* .nutrientsItem{
+    margin: 0;
+    height: 10vh;
+    width: 20vw;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+} */
+
+/* .nutrientsImage {
+    display: block;
+    height: auto;
+    max-width: 20vw;
+    max-height: 10vh;
+    margin: 0 auto;
+} */

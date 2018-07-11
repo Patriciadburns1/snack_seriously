@@ -1,0 +1,37 @@
+.navBar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 0px;
+    height: 25%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #FF8C2D;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    height: 18%;
+    margin-right: 10%;
+}
+
+
+
+.snackImage {
+    height: 11vh;
+    width: 32vw;
+    display: flex;
+    justify-content: center;
+    margin-right: 10%;
+}
+
+.navImage{
+    display: flex;
+    justify-content: center;
+    margin-right: 10%;
+}
