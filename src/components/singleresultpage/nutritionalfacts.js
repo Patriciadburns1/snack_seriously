@@ -13,13 +13,8 @@ class Nutritionalfacts extends Component{
 
     }
 
-
-
-
     render(){
-
       // const {Calcium, Calories, Calories from Fat, Carbohydrates, Cholesterol, Dietary fiber, Fat, Iron, Protein, Saturated Fat, Sodium, Sugar, Trans fatty acids, Vitamin A, Vitamin C}  = this.props.nutrients;
-
       const nutrients = this.props.nutrition;
       const servingSize = this.props.size;
       const unit = this.props.unit;
@@ -33,7 +28,7 @@ class Nutritionalfacts extends Component{
           <section className="performanceFacts">
               <header className="performanceFactsHeader">
                   <h1 className="performanceFactsTitle">Nutrition Facts</h1>
-                  <p className="nutritionalText">Serving Size {servingSize}{unit}</p>
+                  <p className="nutritionalText">Serving Size {servingSize} {unit}</p>
                   <p className="nutritionalText">Serving Per Container {perContainer}</p>
                   <p className="nutritionalText">Weight {weight}</p>
               </header>
@@ -53,7 +48,7 @@ class Nutritionalfacts extends Component{
 
                       </th>
                       <td>
-                          {/* Calories from Fat 130 */}
+                          <b>Calories from Fat </b>{nutrients.hasOwnProperty('Calories') ? nutrients['Calories from Fat'] : 0} g
                       </td>
                   </tr>
                   <tr className="thickRow">
@@ -66,7 +61,7 @@ class Nutritionalfacts extends Component{
                           <b>Total Fat</b> {nutrients.hasOwnProperty('Fat') ? nutrients['Fat'] : 0}g
                       </th>
                       <td>
-                            {Math.ceil((nutrients.hasOwnProperty('Fat') ? nutrients['Fat'] : 0) /65) * 100} %
+                            {nutrients.hasOwnProperty('Fat') ? Math.ceil((nutrients['Fat']/65) * 100) : 0 } %
                       </td>
                   </tr>
                   <tr>
@@ -76,7 +71,8 @@ class Nutritionalfacts extends Component{
                           Saturated Fat {nutrients.hasOwnProperty('Saturated Fat') ? nutrients['Saturated Fat'] : 0}g
                       </th>
                       <td>
-                         {Math.ceil((nutrients.hasOwnProperty('Saturated Fat') ? nutrients['Saturated Fat'] : 0) /20) * 100} %
+                         {nutrients.hasOwnProperty('Saturated Fat') ? Math.ceil((nutrients['Saturated Fat'] /20) * 100) : 0} %
+
                       </td>
                   </tr>
                   <tr>
@@ -86,7 +82,7 @@ class Nutritionalfacts extends Component{
                           Trans Fat {nutrients.hasOwnProperty('Trans fatty acids') ? nutrients['Trans fatty acids'] : 0}g
                       </th>
                       <td>
-                        {Math.ceil((nutrients.hasOwnProperty('Trans fatty acids') ? nutrients['Trans fatty acids'] : 0) /20) * 100} %
+                        {nutrients.hasOwnProperty('Trans fatty acids') ? Math.ceil((nutrients['Trans fatty acids']/20) * 100) : 0} %
                       </td>
                   </tr>
                   <tr>
@@ -94,7 +90,7 @@ class Nutritionalfacts extends Component{
                           <b>Cholesterol </b> {nutrients.hasOwnProperty('Cholesterol') ? nutrients['Cholesterol'] : 0}mg
                       </th>
                       <td>
-                          <b>{Math.ceil((nutrients.hasOwnProperty('Cholesterol') ? nutrients['Cholesterol'] : 0) /300) * 100} %</b>
+                          <b>{nutrients.hasOwnProperty('Cholesterol') ? Math.ceil((nutrients['Cholesterol']/300) * 100) : 0} %</b>
                       </td>
                   </tr>
                   <tr>
@@ -102,15 +98,15 @@ class Nutritionalfacts extends Component{
                           <b>Sodium</b> {nutrients.hasOwnProperty('Sodium') ? nutrients['Sodium'] : 0}mg
                       </th>
                       <td>
-                          <b>{Math.ceil((nutrients.hasOwnProperty('Sodium') ? nutrients ['Sodium'] : 0) /2400) * 100} %</b>
+                          <b>{nutrients.hasOwnProperty('Sodium') ? Math.ceil((nutrients['Sodium'] /2400) * 100) : 0} %</b>
                       </td>
                   </tr>
                   <tr>
                       <th colSpan="2">
-                          <b>Total Carbohydrate</b> {nutrients.hasOwnProperty('Carbonhydrates') ? nutrients['Carbohydrates'] : 0}g
+                          <b>Total Carbohydrate</b> {nutrients.hasOwnProperty('Carbohydrates') ? nutrients['Carbohydrates'] : 0}g
                       </th>
                       <td>
-                          <b>{Math.ceil((nutrients.hasOwnProperty('Carbonydrates') ? nutrients ['Carbohydrates'] : 0) /300) * 100} %</b>
+                          <b>{nutrients.hasOwnProperty('Carbohydrates') ? Math.ceil((nutrients['Carbohydrates']/300) * 100) : 0} %</b>
                       </td>
                   </tr>
                   <tr>
@@ -120,7 +116,7 @@ class Nutritionalfacts extends Component{
                           Dietary Fiber {nutrients.hasOwnProperty('Dietary Fiber') ? nutrients['Dietary Fiber'] : 0}g
                       </th>
                       <td>
-                          <b> {Math.ceil((nutrients.hasOwnProperty('Dietary Fiber') ? nutrients ['Dietary Fiber'] : 0) /25) * 100} %</b>
+                          <b> {nutrients.hasOwnProperty('Dietary Fiber') ? Math.ceil((nutrients['Dietary Fiber']/25) * 100) : 0} %</b>
                       </td>
                   </tr>
                   <tr>
@@ -130,7 +126,7 @@ class Nutritionalfacts extends Component{
                           Sugars {nutrients.hasOwnProperty('Sugar') ? nutrients['Sugar'] : 0}g
                       </th>
                       <td>
-                         {Math.ceil((nutrients.hasOwnProperty('Sugar') ? nutrients ['Dietary Fiber'] : 0)/50) * 100} %
+                         {nutrients.hasOwnProperty('Sugar') ? Math.ceil((nutrients ['Dietary Fiber']/50) * 100) : 0} %
                       </td>
                   </tr>
                   <tr className="thickEnd">
@@ -138,7 +134,7 @@ class Nutritionalfacts extends Component{
                           <b>Protein</b> {nutrients.hasOwnProperty('Protein') ? nutrients['Protein'] : 0}g
                       </th>
                       <td>
-                         {Math.ceil((nutrients.hasOwnProperty('Protein') ? nutrients ['Protein'] : 0) /56) * 100} %
+                         {nutrients.hasOwnProperty('Protein') ? Math.ceil((nutrients['Protein']/56) * 100) : 0} %
                       </td>
                   </tr>
                   </tbody>
@@ -164,65 +160,64 @@ class Nutritionalfacts extends Component{
                   </tr>
                   </tbody>
               </table>
-                {/*maybe delete from here*/}
-              {/*<p className="smallInfo">* Percent Daily Values are based on a 2,000 calorie diet. Your daily*/}
-                  {/*values may be higher or lower depending on your calorie needs:</p>*/}
+              <p className="smallInfo">* Percent Daily Values are based on a 2,000 calorie diet. Your daily
+                  values may be higher or lower depending on your calorie needs:</p>
 
-              {/*<table className="performanceFactsTableSmall smallInfo">*/}
-                  {/*<thead>*/}
-                  {/*<tr>*/}
-                      {/*<td colSpan="2"></td>*/}
-                      {/*<th>Calories:</th>*/}
-                      {/*<th>2,000</th>*/}
-                      {/*<th>2,500</th>*/}
-                  {/*</tr>*/}
-                  {/*</thead>*/}
-                  {/*<tbody>*/}
-                  {/*<tr>*/}
-                      {/*<th colSpan="2">Total Fat</th>*/}
-                      {/*<td>Less than</td>*/}
-                      {/*<td>65g</td>*/}
-                      {/*<td>80g</td>*/}
-                  {/*</tr>*/}
-                  {/*<tr>*/}
-                      {/*<td className="blankCell"></td>*/}
-                      {/*<th>Saturated Fat</th>*/}
-                      {/*<td>Less than</td>*/}
-                      {/*<td>20g</td>*/}
-                      {/*<td>25g</td>*/}
-                  {/*</tr>*/}
-                  {/*<tr>*/}
-                      {/*<th colSpan="2">Cholesterol</th>*/}
-                      {/*<td>Less than</td>*/}
-                      {/*<td>300mg</td>*/}
-                      {/*<td>300 mg</td>*/}
-                  {/*</tr>*/}
-                  {/*<tr>*/}
-                      {/*<th colSpan="2">Sodium</th>*/}
-                      {/*<td>Less than</td>*/}
-                      {/*<td>2,400mg</td>*/}
-                      {/*<td>2,400mg</td>*/}
-                  {/*</tr>*/}
-                  {/*<tr>*/}
-                      {/*<th colSpan="3">Total Carbohydrate</th>*/}
-                      {/*<td>300g</td>*/}
-                      {/*<td>375g</td>*/}
-                  {/*</tr>*/}
-                  {/*<tr>*/}
-                      {/*<td className="blankCell"></td>*/}
-                      {/*<th colSpan="2">Dietary Fiber</th>*/}
-                      {/*<td>25g</td>*/}
-                      {/*<td>30g</td>*/}
-                  {/*</tr>*/}
-                  {/*</tbody>*/}
-              {/*</table>*/}
+              <table className="performanceFactsTableSmall smallInfo">
+                  <thead>
+                  <tr>
+                      <td colSpan="2"></td>
+                      <th>Calories:</th>
+                      <th>2,000</th>
+                      <th>2,500</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                      <th colSpan="2">Total Fat</th>
+                      <td>Less than</td>
+                      <td>65g</td>
+                      <td>80g</td>
+                  </tr>
+                  <tr>
+                      <td className="blankCell"></td>
+                      <th>Saturated Fat</th>
+                      <td>Less than</td>
+                      <td>20g</td>
+                      <td>25g</td>
+                  </tr>
+                  <tr>
+                      <th colSpan="2">Cholesterol</th>
+                      <td>Less than</td>
+                      <td>300mg</td>
+                      <td>300 mg</td>
+                  </tr>
+                  <tr>
+                      <th colSpan="2">Sodium</th>
+                      <td>Less than</td>
+                      <td>2,400mg</td>
+                      <td>2,400mg</td>
+                  </tr>
+                  <tr>
+                      <th colSpan="3">Total Carbohydrate</th>
+                      <td>300g</td>
+                      <td>375g</td>
+                  </tr>
+                  <tr>
+                      <td className="blankCell"></td>
+                      <th colSpan="2">Dietary Fiber</th>
+                      <td>25g</td>
+                      <td>30g</td>
+                  </tr>
+                  </tbody>
+              </table>
 
-              {/*<p className="smallInfo">*/}
-                  {/*Calories per gram:*/}
-              {/*</p>*/}
-              {/*<p className="smallInfo textCenter">*/}
-                  {/*Fat 9 &bull; Carbohydrate 4 &bull; Protein 4*/}
-              {/*</p>*/}
+              <p className="smallInfo">
+                  Calories per gram:
+              </p>
+              <p className="smallInfo textCenter">
+                  Fat 9 &bull; Carbohydrate 4 &bull; Protein 4
+              </p>
         </section>
     </div>
         );
