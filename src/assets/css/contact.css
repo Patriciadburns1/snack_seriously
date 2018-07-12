@@ -1,3 +1,7 @@
-.contact{
+.contactForm{
     margin-top: 25vh;
+    border-color: black; 
+}
+.contactForm input{
+    border-color: black; 
 }
