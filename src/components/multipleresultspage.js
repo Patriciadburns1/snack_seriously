@@ -102,14 +102,7 @@ class MultipleResults extends Component {
         const params = this.props.match.params.term || '';
 
         return (
-            <div> 
-                 <div className="searchBarContainer">
-                    <div className="searchBarComp">
-                        <input autoFocus type="text" value={userInput}  onChange={this.handleInputChange} placeholder="Search snacks"/>
-                        <Link className="icon" to = {`/MultipleResults/${params}`}> <div> <i>&#x1F50D;</i> </div> </Link>   
-
-                    </div>
-                </div>
+                    
                 <div className="multipleResultsContainer">
                     <div className="searchBarFilter">
                         <div className="multipleResultsFilter">
@@ -119,7 +112,6 @@ class MultipleResults extends Component {
                         { displayedSnack }
                     </div>
                 </div>
-            </div> 
         )
     }
 }

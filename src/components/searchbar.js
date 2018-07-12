@@ -4,7 +4,7 @@ import snackvending from '../assets/images/snackvending.png';
 import { Link } from 'react-router-dom';
 
 
-class Search extends Component {
+class SearchBar extends Component {
     render(){
         return (
             <div className="searchBarComp">
@@ -13,8 +13,9 @@ class Search extends Component {
                     <i>&#x1F50D;</i>
                 </button>
             </div>
+            
         )
     }
 }
 
-export default Search;
+export default SearchBar;

@@ -6,7 +6,7 @@ import MultipleResults from './multipleresultspage';
 import SingleResult from './singleresultpage/singleresult';
 import About from './about';
 import Contact from './contact';
-
+import SearchBar from './searchbar'; 
 import Filters from './filters';
 import CategoryHome from './categoryhome';
 
@@ -14,6 +14,7 @@ const App = () => (
         <div>
         {/*<Filters /> */}
             <Nav/>
+            <SearchBar/> 
             <Route exact path='/' component= {Homepage}/>
             <Route path='/search/:term?' component= {Homepage}/>
             <Route path='/search/:term/MultipleResults/?' component={MultipleResults}/>
@@ -21,7 +22,6 @@ const App = () => (
             <Route path='/SingleResult/:product_id' component={SingleResult}/>
             <Route path='/About' component={About}/>
             <Route path='/Contact' component={Contact}/>
-
         </div> 
 
 );
