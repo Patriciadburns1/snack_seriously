@@ -10,15 +10,15 @@ import CategoryHome from './categoryhome';
 
 const App = () => (
         <div>
-            {/* <Filters /> */}
-            <Nav/>
+            <Filters />
+            {/* <Nav/> */}
              {/*<CategoryHome />*/}
-            <Route exact path='/' component= {Homepage}/>
+            {/* <Route exact path='/' component= {Homepage}/>
             <Route path='/search/:term?' component= {Homepage}/>
             <Route path='/search/:term/MultipleResults/?' component={MultipleResults}/>
             <Route path='/MultipleResults/:term?' component={MultipleResults}/>
             <Route path='/SingleResult/:product_id' component={SingleResult}/>
-            <Route path='/About' component={About}/>
+            <Route path='/About' component={About}/> */}
         </div> 
 
 );

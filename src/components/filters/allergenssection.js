@@ -16,7 +16,6 @@ class Allergens extends Component {
         this.state = {
             visible: false,
             strikethrough: false,
-            userInput: []
         }
 
         this.toggleMenu = this.toggleMenu.bind(this);
@@ -45,7 +44,6 @@ class Allergens extends Component {
         let value = event.target.attributes.value.nodeValue;
         this.setState({
             strikethrough: !strikethrough,
-            userInput: [...value, value]
         });  
         // this.props.history.push( '/search/'+value);
         //need to pass value to url
@@ -54,6 +52,7 @@ class Allergens extends Component {
     }
 
     render() {
+        console.log(this.props);
         const {visible, strikethrough} = this.state;
         const categoryArray = ["peanuts", "dairy", "egg", "corn", "nuts", "soy", "wheat", "sugar"];
         const Items = categoryArray.map((item, index) => {
