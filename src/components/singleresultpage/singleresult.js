@@ -8,6 +8,9 @@ import Search from '../searchbar';
 import axios from 'axios';
 import NotFound from './notfound';
 
+
+
+
 class SingleResult extends Component {
     constructor(props) {
         super(props);
@@ -18,6 +21,11 @@ class SingleResult extends Component {
             loading: true
         }
         this.handleInputChange = this.handleInputChange.bind(this);
+    }
+
+
+    onClickShowModal(){
+
     }
 
     componentDidMount() {
