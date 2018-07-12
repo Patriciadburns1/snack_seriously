@@ -23,8 +23,8 @@
 
 
 .snackImage {
-    height: 11vh;
-    width: 32vw;
+    /*height: 11vh;*/
+    width: 25vw;
     display: flex;
     justify-content: center;
     margin-right: 10%;
