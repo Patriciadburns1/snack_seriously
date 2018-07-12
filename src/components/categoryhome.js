@@ -21,7 +21,6 @@ class CategoryHome extends Component {
         return (
             <Fragment>
                 <div className='categoryHomepageContainer'>
-                    <h4 className='categoryHomepageTitle'>Pick a snack category</h4>
                     <div className='categoryHomepageGrid'>
                         { Items}
                 </div>

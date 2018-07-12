@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import Nutritionalfacts from './nutritionalfacts';
 import Ingredient from './ingredient';
 import SingleItem from './singleitem'
-import Search from '../searchbar';
 import axios from 'axios';
 import NotFound from './notfound';
 
@@ -79,7 +78,7 @@ class SingleResult extends Component {
                     <div>
                         <div className="searchBarComp">
                             <input type="text" placeholder="Search snacks" onChange={this.handleInputChange} />
-                            <Link to={`/MultipleResults/${params}`}> <span className="icon"> <i>&#x1F50D;</i> </span> </Link>
+                            <Link className="icon" to = {`/MultipleResults/${params}`}> <div> <i>&#x1F50D;</i> </div> </Link>   
                         </div>
                     </div>
                     <div className="singleResultContainer">

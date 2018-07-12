@@ -47,13 +47,15 @@ class Homepage extends Component {
         const userInput= this.state.userInput;  
         const params = this.props.match.params.term || '';
         return(
-            <div className="searchBarContainer">
-                 <div className="searchBarComp">
-                <input autoFocus type="text" value={userInput} onKeyUp={this.autocompleteFromUser}  onChange={this.handleInputChange} placeholder="Search snacks"/>
-               <Link to = {`/MultipleResults/${params}`}> <span className="icon"> <i>&#x1F50D;</i> </span> </Link>   
-               <CategoryHome />
-               <RandomSnack/>
+            <div>
+            {/* <div className="searchBarContainer"> */}
+                <div className="searchBarComp">
+                    <input autoFocus type="text" value={userInput} onKeyUp={this.autocompleteFromUser}  onChange={this.handleInputChange} placeholder="Search snacks"/>
+                    <Link className="icon" to = {`/MultipleResults/${params}`}> <div> <i>&#x1F50D;</i> </div> </Link>   
                 </div>
+            {/* </div> */}
+            <CategoryHome />
+            <RandomSnack/>
             </div>
         )
     }
