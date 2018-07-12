@@ -1,38 +1,47 @@
 .searchBarComp {
-    margin-top: 34%;
+    /* margin-top: 22%; */
     position: fixed;
     width: 100%;
+    top:13%;
     z-index: 1;
     display: flex;
     justify-content: center; 
+    height: 35px;
 }
 
 .searchBarComp input {
-    border: 3px solid #FF8C2D;
+    box-sizing: border-box;
+    border: 0 solid #FF8C2D;
     padding: 5px;
-    height: 20px;
+    height: 100%;
     width: 80%;
-    border-radius: 5px; 
+    border-radius: 5px 0 0 5px; 
     color: #000000;
-    z-index: 1;   
 }
 
 /* .searchBarComp input:focus {
     color: black;
 } */
 
-.searchBarComp button {
+/* .searchBarComp button {
     border: 1px solid #FF8C2D;
-    background: #FF8C2D;
+    background-color: grey;
     color: #fff;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     font-size: 20px;
     display: inline-block; 
-}
+} */
 
-.searchBarContainer{
+/* .searchBarComp{
     display: flex;
     justify-content: center; 
-}
+} */
 
+.searchBarComp .icon {
+    background-color: lightgray;
+    display: inline;
+    height: 100%;
+    width: 40px;
+    border-radius: 0 5px 5px 0; 
+}

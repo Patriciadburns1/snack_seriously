@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/css/multipleresultspage.css';
 import axios from 'axios';
-import Search from "./searchbar";
 import noImage from '../assets/images/imagenotfound.jpeg';
 
 class MultipleResults extends Component {
@@ -104,21 +103,21 @@ class MultipleResults extends Component {
 
         return (
             <div> 
-                 <div>
-                 <div className="searchBarComp">
-                <input autoFocus type="text" value={userInput}  onChange={this.handleInputChange} placeholder="Search snacks"/>
-              <Link to= {`/MultipleResults/${params}`} > <span className="icon" onClick={this.getSnackData}> <i>&#x1F50D;</i> </span> </Link>
-                </div>
-            </div>
-            <div className="multipleResultsContainer">
-                <div className="searchBarFilter">
-                    <div className="multipleResultsFilter">
+                 <div className="searchBarContainer">
+                    <div className="searchBarComp">
+                        <input autoFocus type="text" value={userInput}  onChange={this.handleInputChange} placeholder="Search snacks"/>
+                        <Link className="icon" to = {`/MultipleResults/${params}`}> <div> <i>&#x1F50D;</i> </div> </Link>   
                     </div>
                 </div>
-                <div className="multipleResultsItemsContainer">
-                    { displayedSnack }
+                <div className="multipleResultsContainer">
+                    <div className="searchBarFilter">
+                        <div className="multipleResultsFilter">
+                        </div>
+                    </div>
+                    <div className="multipleResultsItemsContainer">
+                        { displayedSnack }
+                    </div>
                 </div>
-            </div>
             </div> 
         )
     }

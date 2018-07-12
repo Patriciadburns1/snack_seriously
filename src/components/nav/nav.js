@@ -7,6 +7,7 @@ import Menu from './menu';
 // import Search from '../searchbar';
 import SnackSeriouslyLogo from '../../assets/images/logo/snackSeriouslyLogo.png';
 import {Link} from 'react-router-dom';
+import profileIcon from '../../assets/images/profileIcon.png';
 
 class Nav extends Component {
     constructor(props){
@@ -34,20 +35,18 @@ class Nav extends Component {
     render(){
         const {visible} = this.state;
         return (
-            <div> 
-                <div>  
-                    <MenuButton handleMenuClick={this.handleMenuClick} visible={visible}/>
-                    <Menu handleMenuClick={this.handleMenuClick} visible={visible}/> 
-                </div> 
-            <div className="navBar">
-                <div className="navSearch">
-                {/*<div className="logo">Logo</div>*/}
-                    <div className="navImage">
-                        <Link to="/"><div type="button"><img className="snackImage" src={SnackSeriouslyLogo}/></div></Link>
-                    </div>  
+                <div className="navBar">
+                    <div className="menu">  
+                        <MenuButton handleMenuClick={this.handleMenuClick} visible={visible}/>
+                        <Menu handleMenuClick={this.handleMenuClick} visible={visible}/> 
+                    </div> 
+                    <div className="navSearch">
+                            <Link to="/"><img className="snackImage" src={SnackSeriouslyLogo}/></Link>
+                    </div>
+                    <div className="profile">
+                        <img className="profileImage" src={profileIcon} />
+                    </div>
                 </div>
-            </div>
-            </div> 
         )
     }
 }
