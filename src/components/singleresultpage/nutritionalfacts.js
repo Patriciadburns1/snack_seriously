@@ -20,8 +20,7 @@ class Nutritionalfacts extends Component{
       const unit = this.props.unit;
       const weight = this.props.weight;
       const perContainer = this.props.per_container;
-        // {nutrients['Trans fatty acids']}
-        console.log(nutrients.hasOwnProperty('Trans fatty acids'));
+      console.log(nutrients);
 
         return(
       <div className="nutritionContainer">

@@ -107,7 +107,7 @@ class MultipleResults extends Component {
                  <div>
                  <div className="searchBarComp">
                 <input autoFocus type="text" value={userInput}  onChange={this.handleInputChange} placeholder="Search snacks"/>
-              <Link to= {`/MultipleResults/${params}`} > <span className="icon" onClick={this.getSnackData}> <i>&#x1F50D;</i> </span> </Link>
+              <Link to= {`/MultipleResults/${params}`}> <span className="icon" onClick={this.getSnackData}> <i>&#x1F50D;</i> </span> </Link>
                 </div>
             </div>
             <div className="multipleResultsContainer">
