@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../assets/css/multipleresultspage.css';
 import axios from 'axios';
 import Search from "./searchbar";
+import noImage from '../assets/images/imagenotfound.jpeg';
 
 class MultipleResults extends Component {
     constructor(props) {
@@ -89,7 +90,7 @@ class MultipleResults extends Component {
                     <Link key={index} to={`/singleresult/${item.ID}`}>
                         <div className="multipleResultsItem">
                             <span>{item.name}</span>
-                            <img className="multipleResultsImage" src={`${item.img_url}`} />
+                            <img className="multipleResultsImage"  src={!item.img_url ? noImage : item.img_url} />
                         </div>
                     </Link>
                 )
