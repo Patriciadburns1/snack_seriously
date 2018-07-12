@@ -4,42 +4,33 @@ import '../../assets/css/filters.css';
 import Allergens from './allergenssection';
 import Categories from './categoriessection';
 import Nutrients from './nutrientssection';
+import { Link } from 'react-router-dom';
 
 class Filters extends Component {
     
     constructor(props){
         super(props);
         this.state = {
-            // visible: false
-            // allergens: {
-            //     name: 'Allergens',
-            //     filterItems: ['cat', 'dog', 'mouse']
-            // }
-            // filterData: null
+            userChoices: null
             
         }
     }
 
     render() {
-        // const { filters } = this.state;
-        // console.log(FilterIcons);
-        // const sections = filters.map(function(section, index) {
-        //     debugger;
-        //     return <Section key={index} currentSection={{...section}} />
-        // });
-
+       
+        const userChoices = this.state;
         return (
             <div className="filtersContainer">
                 <div className="filtersHeaderContainer">
                     <div>Cancel</div>
                     <div>Filters</div>
-                    <div>Search</div>
+                    <Link to={`/MultipleResults/${userChoices}`}><div>Search</div></Link>
                 </div>
 
                 <div >
-                    <Allergens />
-                    <Categories />
-                    <Nutrients />
+                    <Allergens userChoices={userChoices}/>
+                    <Categories userChoices={userChoices}/>
+                    <Nutrients userChoices={userChoices}/>
                 </div>
             </div>
         )

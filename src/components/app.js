@@ -12,9 +12,9 @@ import CategoryHome from './categoryhome';
 
 const App = () => (
         <div>
-            {/* <Filters /> */}
+  {/*<Filters /> */}
             <Nav/>
-             {/*<CategoryHome />*/}
+             <CategoryHome />
             <Route exact path='/' component= {Homepage}/>
             <Route path='/search/:term?' component= {Homepage}/>
             <Route path='/search/:term/MultipleResults/?' component={MultipleResults}/>
@@ -22,6 +22,7 @@ const App = () => (
             <Route path='/SingleResult/:product_id' component={SingleResult}/>
             <Route path='/About' component={About}/>
             <Route path='/Contact' component={Contact}/>
+
         </div> 
 
 );
