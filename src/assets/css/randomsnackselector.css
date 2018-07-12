@@ -1,32 +1,48 @@
 .randomSnackContainer {
-    height: 100px;
-    width: 200px;
+    height: 30vh;
+    width: 60vw;
     position: absolute;
     margin-top: 83%;
-    left: 88px;
+    display: inline-block;
+    margin-bottom: 5vh;
+    left: 20%;
+    text-align: center;
+}
+
+#randomImage{
+    min-height: 100%;
+    max-height: 100%;
 }
 
 .leftRandomSnackBtn {
-    height: 200px;
-    width: 100px;
+    height: 100%;
+    width: 50%;
     display: inline-block;
-    font-size: 2em;
     transform: translateY(-102%);
 }
 
 .rightRandomSnackBtn {
-    height: 200px;
-    width: 100px;
+    height: 100%;
+    width: 50%;
     display: inline-block;
-    font-size: 1.5em;
-    transform: translateY(-105%);
+    transform: translateY(-102%);
 }
 
 .randomButtonContainers {
     position: absolute;
+    height: 100%;
+    width: 100%;
 }
 
+.randomLButtonSymbol {
+    right: 50%;
+    top: 43%;
+    position: relative;
+}
 
 .randomRButtonSymbol {
-    text-align: right;
+    color: black;
+    left: 50%;
+    top: 43%;
+    position: relative;
 }
