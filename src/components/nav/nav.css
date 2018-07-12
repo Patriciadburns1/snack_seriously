@@ -3,35 +3,39 @@
     top: 0;
     width: 100%;
     margin: 0px;
-    height: 25%;
+    height: 15%;
     z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color:  #FF8C2D;
     color: #ffffff;
     cursor: pointer;
+    padding: 3%;
 }
 
-.logo{
-    display: flex;
-    justify-content: center;
-    height: 18%;
-    margin-right: 10%;
+.navBar .menu {
+    display: inline-block;
+    /* background-color: #ac2424; */
+    width: 15%;
 }
 
+.navBar .profile {
+    vertical-align: top;
+    display: inline-block;
+    right: 0;
+    width: 15%;
+}
 
+.profile .profileImage {
+    width: 75%;
+    height: 75%;
+}
+
+.navSearch{
+    vertical-align: top;
+    display: inline-block;
+    width: 66%;
+    height: 100%;
+    text-align: center;
 
 .snackImage {
-    /*height: 11vh;*/
-    width: 25vw;
-    display: flex;
-    justify-content: center;
-    margin-right: 10%;
-}
-
-.navImage{
-    display: flex;
-    justify-content: center;
-    margin-right: 10%;
+    max-height: 10vh;
 }
