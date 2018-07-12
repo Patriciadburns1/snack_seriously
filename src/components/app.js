@@ -12,9 +12,8 @@ import CategoryHome from './categoryhome';
 
 const App = () => (
         <div>
-  {/*<Filters /> */}
+        {/*<Filters /> */}
             <Nav/>
-             <CategoryHome />
             <Route exact path='/' component= {Homepage}/>
             <Route path='/search/:term?' component= {Homepage}/>
             <Route path='/search/:term/MultipleResults/?' component={MultipleResults}/>
