@@ -11,6 +11,7 @@ class Menu extends Component {
                     <Link to="/"><div className="menuLinkStyle">Home</div></Link>
                     <Link to="/MultipleResults"><div className='menuLinkStyle'>Random Snack</div></Link>
                     <Link to="/About"><div className="menuLinkStyle">About</div></Link>
+                    <Link to="/Contact"><div className="menuLinkStyle">Contact</div></Link>
                 </div>
             </div>
         )

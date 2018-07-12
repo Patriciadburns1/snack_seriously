@@ -1,0 +1,32 @@
+.randomSnackContainer {
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    margin-top: 83%;
+    left: 88px;
+}
+
+.leftRandomSnackBtn {
+    height: 200px;
+    width: 100px;
+    display: inline-block;
+    font-size: 2em;
+    transform: translateY(-102%);
+}
+
+.rightRandomSnackBtn {
+    height: 200px;
+    width: 100px;
+    display: inline-block;
+    font-size: 1.5em;
+    transform: translateY(-105%);
+}
+
+.randomButtonContainers {
+    position: absolute;
+}
+
+
+.randomRButtonSymbol {
+    text-align: right;
+}

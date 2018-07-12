@@ -1,7 +1,6 @@
 <?php
 header('Access-Control-Allow-Origin: *');
 //stdObj access is obj->name
-//lamper demo
 
 $output = [
     'success' => false
@@ -33,11 +32,6 @@ if($method = 'GET'){
             $output['error'] = "unknown request";
     }
 }
-// if(is_file($path)){
-//     include_once($path);
-// }else{
-//     $output['error'] = "unknown action: $action";
-// }
 
 mysqli_close($conn);
 
