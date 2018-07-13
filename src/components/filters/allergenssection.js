@@ -12,9 +12,8 @@ import Strikethrough from './allergenicons/strikethrough.png';
 class Allergens extends Component {
     constructor(props){
         super(props);
-
         this.state = {
-            visible: false,
+            visible: props.visible,
             strikethrough: false,
         }
 
@@ -52,7 +51,6 @@ class Allergens extends Component {
     }
 
     render() {
-        console.log(this.props);
         const {visible, strikethrough} = this.state;
         const categoryArray = ["peanuts", "dairy", "egg", "corn", "nuts", "soy", "wheat", "sugar"];
         const Items = categoryArray.map((item, index) => {
@@ -65,38 +63,13 @@ class Allergens extends Component {
 
         return (
             <Fragment>
-                <div className={visible ? "filterMenu " : "filterMenu active"} onClick={this.toggleMenu}>Allergens</div>
-                <div className={visible ? "filterPanel active" : "filterPanel"}>
+                {/* <div className={visible ? "filterMenu " : "filterMenu active"} onClick={this.toggleMenu}>Allergens</div> */}
+                <div className={this.props.visible ? "filterPanel active" : "filterPanel"}>
         
                 <div className="allergyPageContainer"> 
                     <h4 className="allergyTitle"> Select all allergens to avoid </h4> 
                     <div className="allergyContainer">
-                        
                         {Items}
-                        {/* <div className="allergyItem" onClick={this.handleAllergenClick}>
-                            <img className="allergyImage" src={Peanuts} /> 
-                        </div> 
-                        <div className="allergyItem" onClick={this.handleAllergenClick}>
-                            <img className="allergyImage" src={Dairy}/> 
-                        </div> 
-                        <div className="allergyItem" onClick={this.handleAllergenClick}>
-                            <img className="allergyImage" src={Egg}/> 
-                        </div> 
-                        <div className="allergyItem">
-                            <img className="allergyImage" src={Corn}/>
-                        </div> 
-                        <div className="allergyItem">
-                                <img className="allergyImage" src={TreeNuts}/>
-                        </div>
-                        <div className="allergyItem">
-                                <img className="allergyImage" src={Soy}/>   
-                        </div>
-                        <div className="allergyItem">
-                                <img className="allergyImage" src={Wheat}/>   
-                        </div>
-                        <div className="allergyItem">
-                                <img className="allergyImage" src={Sugar}/> 
-                        </div> */}
                     </div>
                 </div>
 

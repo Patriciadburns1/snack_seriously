@@ -8,6 +8,15 @@
     background-color:  #FF8C2D;
     color: #ffffff;
     cursor: pointer;
+    /* padding: 3%; */
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.navBar .nav-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
     padding: 3%;
 }
 
@@ -22,6 +31,7 @@
     display: inline-block;
     right: 0;
     width: 15%;
+    text-align: center;
 }
 
 .profile .profileImage {
