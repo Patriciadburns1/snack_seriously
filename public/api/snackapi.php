@@ -25,6 +25,9 @@ if($method = 'GET'){
         case 'getcategory':
             include_once('apiActionCalls/getcategory.php');
             break;
+        case 'getfilter':
+            include_once('apiActionCalls/getfilter.php');
+            break;
         case 'getauto':
             include_once('apiActionCalls/getauto.php');
             break;
