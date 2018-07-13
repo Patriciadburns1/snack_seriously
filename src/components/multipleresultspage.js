@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import '../assets/css/multipleresultspage.css';
 import axios from 'axios';
 import noImage from '../assets/images/imagenotfound.jpeg';
@@ -14,24 +14,15 @@ class MultipleResults extends Component {
         }
 
         this.handleOnScroll = this.handleOnScroll.bind(this);
-        this.handleInputChange=this.handleInputChange.bind(this); 
         this.getSnackData=this.getSnackData.bind(this); 
+        this.onRouteChange=this.onRouteChange.bind(this); 
     }
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleOnScroll);
-        this.getSnackData();
+        this.getSnackData();   
     };
     
-
-    handleInputChange = (event) => {
-        const value = event.target.value;
-        this.setState({
-            userInput: value,
-
-        })  
-        this.props.history.push('/search/' + value);      
-     }
 
 
     async getSnackData() {
@@ -67,7 +58,26 @@ class MultipleResults extends Component {
         window.removeEventListener('scroll', this.handleOnScroll);
     }
 
+    onRouteChange(){
+        console.log("route changed, this is working!"); 
+        this.setState({
+            snackData:[],
+            offset:0
+        },
+        ()=>{
+            this.getSnackData(); 
+        }
+    )
+    }
 
+    componentDidUpdate(prevProps){
+        console.log(this.props.location); 
+        if(this.props.location !== prevProps.location){
+            console.log(prevProps.location)
+            this.onRouteChange(); 
+        
+        }
+    }
 
     handleOnScroll() {
         let scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;

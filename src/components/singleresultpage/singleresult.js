@@ -41,7 +41,7 @@ class SingleResult extends Component {
 
     async getSingleResult() {
         const { product_id } = this.props.match.params;
-        console.log(product_id);
+        // console.log(product_id);
         const response = await axios.get(`http://api.snackseriously.com/snackapi.php?action=getproduct&product_id=${product_id}`);
         this.setState({
             singleItem: response.data,
@@ -71,22 +71,14 @@ class SingleResult extends Component {
         } 
         else {
             const { nutrients, ingredients, img_url, name, manu, per_container, size, unit, weight } = this.state.singleItem.data;
-            console.log(ingredients);
+            // console.log(ingredients);
             const params = this.props.match.params.term || '';
             return (
-                <div>
-                    <div>
-                        <div className="searchBarComp">
-                            <input type="text" placeholder="Search snacks" onChange={this.handleInputChange} />
-                            <Link className="icon" to = {`/MultipleResults/${params}`}> <div> <i>&#x1F50D;</i> </div> </Link>   
-                        </div>
-                    </div>
                     <div className="singleResultContainer">
                         <SingleItem name={name} manu={manu} img={img_url} />
                         <Nutritionalfacts nutrition={nutrients} per_container={per_container} size={size} unit={unit} weight={weight} />
                         <Ingredient ingredients={ingredients} />
                     </div>
-                </div>
             )
         }
     }
