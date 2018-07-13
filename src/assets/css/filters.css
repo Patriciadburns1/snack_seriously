@@ -5,26 +5,16 @@
     top: 98%;
 }
 
-.filterTab{
-    background-color: gray;
-    width: 50%;
-    height: 3vh;
-    display: inline-block;
-}
-
-.filterTab.show{
-    background-color:lightgray;
-}
-
 .filtersHeaderContainer {
-    height: 3vh;
+    height: 5vh;
     width: 100vw;
     background-color: grey;
     /* align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-between; */
-    display: block;
+    display: flex;
+    align-items: center;
     /* transition: 0.5s ease-out; */
     max-height: 45vh;
 }
@@ -34,6 +24,7 @@
     margin-right: 3vw; */
     width: 100%;
     text-align: center;
+    /* vertical-align: center; */
 }
 
 .filterPanelContainer {
@@ -45,6 +36,20 @@
     -moz-transition: max-height 0.5s ease-in-out;
     -o-transition: max-height 0.5s ease-in-out;
     transition: max-height 0.5s ease-in-out; */
+ 
+}
+
+.filterTab{
+    background-color: gray;
+    width: 50%;
+    height: 5vh;
+    display: inline-block;
+    text-align: center;
+}
+
+.filterTab.show{
+    background-color:lightgray;
+    color: black;
 }
 
 /********** Filter Body Menu **********/
@@ -79,7 +84,7 @@
     /* transition: 0.25s ease-out; */
     max-height: 100%;
 }
-
+/* 
 .plus {
     content: '\02795'; 
     font-size: 13px;
@@ -95,17 +100,19 @@
     font-size: 13px;
     color: #ffffff;
     z-index: 3;
-}
+} */
 
 /********** Allergens Grid **********/
 
 .allergyPageContainer {
     height: 50vh;
+    color: black;
 }
 
 .allergyTitle{
     display: flex;
     justify-content: center;
+    margin-bottom: 5vh;
 }
 
 .allergyContainer{
@@ -139,7 +146,7 @@
 .strike{
     background-color: transparent;
     background-image: gradient(linear, 19.1% -7.9%, 81% 107.9%, color-stop(0, transparent), color-stop(.48, transparent), color-stop(.5, #000), color-stop(.52, transparent), color-stop(1, transparent));
-    background-image: repeating-linear-gradient(163deg, transparent 0%, transparent 48%, #fff 50%, transparent 52%, transparent 100%);
+    background-image: repeating-linear-gradient(163deg, transparent 0%, transparent 48%, #000 50%, transparent 52%, transparent 100%);
 }
 
 /* .strikethrough {
@@ -151,11 +158,13 @@
 
 .categoryPageContainer {
     height: 50vh;
+    color: black;
 }
 
 .categoryTitle{
     display: flex;
     justify-content: center;
+    margin-bottom: 5vh;
 }
 
 .categoryContainer{
@@ -189,7 +198,7 @@
 
 .categoryLabel{
     width: 100%;
-    font-size: 12px;
+    font-size: 10px;
     display: flex;
     justify-content: space-evenly;
     position: absolute;

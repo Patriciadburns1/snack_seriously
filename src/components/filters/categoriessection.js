@@ -31,12 +31,13 @@ class Categories extends Component {
         const {visible} = this.state;
         const {peanut} = this.state
 
-        const nameArray = ["Popcorn & Pretzels,", "Jerky & Rinds", "Snack Bars", "Nuts & Dried Fruit", "Candy & Chocolate"]
+        const nameArray = ["Popcorn & Pretzels", "Jerky & Rinds", "Chips & Crackers", "Snack Bars", "Nuts & Dried Fruit", "Candy & Chocolate"]
         const imageArray = ["popcornpretzel", "meat", "chipscrackers", "bar", "nutsdriedfruit", "candychocolate"];
         const Items = imageArray.map((item, index) => {
             return (
                 <div key={index} className="categoryItem">
                     <img  src={require(`./categoriesicons/${item}.png`)} className="categoryImage" />
+                    <p className="categoryLabel">{nameArray[index]}</p>
                 </div>
             )
         }); 
@@ -45,16 +46,12 @@ class Categories extends Component {
             <Fragment>
                 {/* <div className={visible ? "filterMenu " : "filterMenu active"} onClick={this.toggleMenu}>Categories</div> */}
                 <div className={this.props.visible ? "filterPanel active" : "filterPanel"}>
-
-
-                <div className='categoryPageContainer'>
-                    <h4 className='categoryTitle'>Pick a snack category</h4>
-                    <div className='categoryContainer'>
-                        { Items }
+                    <div className='categoryPageContainer'>
+                        <h4 className='categoryTitle'>Pick a snack category</h4>
+                        <div className='categoryContainer'>
+                            { Items }
+                        </div>
                     </div>
-                </div>
-        
-                    <div className="plus"></div>
                 </div>
             </Fragment>
         )

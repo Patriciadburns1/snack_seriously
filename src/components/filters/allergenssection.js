@@ -79,10 +79,6 @@ class Allergens extends Component {
                             {Items}
                         </div>
                     </div>
-
-
-
-                    <div className="plus"></div>
                 </div>
             </Fragment>
         )

@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-//className={strikethrough ? "allergyImage strike" : "allergyImage"}
 export default (props)=>{
     return (
         <div onClick={props.clickHandler} className="allergyItem">

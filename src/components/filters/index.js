@@ -54,8 +54,8 @@ class Filters extends Component {
                 </div>
                 
                 <div className={show ? "filterPanelContainer active" : "filterPanelContainer"}>
-                    <div className={allergenShow ? 'filterTab show' : 'filterTab'} name='allergenShow' onClick={this.toggleFilters.bind(this)}>allergen</div>
-                    <div className={categoryShow ? 'filterTab show' : 'filterTab'} name='categoryShow' onClick={this.toggleFilters.bind(this)}>category</div>
+                    <div className={allergenShow ? 'filterTab show' : 'filterTab'} name='allergenShow' onClick={this.toggleFilters.bind(this)}>Allergens</div>
+                    <div className={categoryShow ? 'filterTab show' : 'filterTab'} name='categoryShow' onClick={this.toggleFilters.bind(this)}>Category</div>
                     <Allergens visible={allergenShow} />
                     <Categories visible={categoryShow} />
                     {/* <Nutrients /> */}
