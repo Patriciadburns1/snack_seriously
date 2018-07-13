@@ -25,7 +25,6 @@ class App extends Component {
                         {(context)=>(
                             <div>
                                 <Nav />
-                                {/* <SearchBar /> */}
                                 <Route path='/' component={SearchBar} />
                                 <Route exact path='/' component={Homepage} />
                                 <Route path='/search/:term?' component={Homepage} />

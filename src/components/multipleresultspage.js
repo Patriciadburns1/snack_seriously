@@ -68,12 +68,15 @@ class MultipleResults extends Component {
             this.getSnackData(); 
         }
     )
-        // this.getSnackData();
     }
 
     componentDidUpdate(prevProps){
+        debugger; 
+        console.log(this.props.location); 
         if(this.props.location !== prevProps.location){
+            console.log(prevProps.location)
             this.onRouteChange(); 
+        
         }
     }
 
