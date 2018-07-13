@@ -12,33 +12,37 @@
     display: grid;
     height: 70vh;
     width: 80vw;
-    grid-template-columns: auto auto;
-    grid-row-gap: 3%;
-    grid-column-gap: 3%;
+    grid-template-columns: auto;
+    grid-row-gap: 1%;
     position: relative;
     margin: 0 auto;
+    justify-content: center; /*new*/
 }
 
 .multipleResultsItem {
     margin: 0;
     height: 21vh;
-    width: 37vw;
     display: flex;
-    flex-direction: column;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
+    /* flex-direction: column; */
+    border: 5px groove orange;
     cursor: pointer;
     position: relative;
 }
 
 /* Andy is thinking */
-.multipleResultsItem span {
+/* .multipleResultsItem span {
     opacity: 0;
     position: absolute;
-}
+} */
 
 .multipleResultsItem:hover span {
     opacity: 1;
+}
+
+.multipleResultsItem > div {
+    width: 50%;
+    display: flex;
+    box-shadow: 1px 0 5px orange inset;
 }
 
 
@@ -48,6 +52,12 @@
     max-width: 35vw;
     max-height: 20vh;
     margin: auto;
+}
+
+.multipleResultsDescription {
+    color: black;
+    padding: 5%;
+    overflow: hidden;
 }
 
 .multipleResultsLabel {
@@ -61,7 +71,7 @@
     font-size: small;
 }
 
-.multipleResultsFilter > div {
+/* .multipleResultsFilter > div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,18 +81,18 @@
     cursor: pointer;
     border-radius: 5px;
     height: 100%;
+} */
+
+
+@media only screen and (max-width: 480px) {
+    .container1 .container2 .container3 .multipleResultsContainer .multipleResultsFilter .multipleResultsImage .multipleResultsItemsContainer .multipleResultsLabel{
+        width: 100%;
+    }
 }
 
-.multipleResultsContainer .searchBarFilter {
-    display: flex;
+@media only screen and (min-width: 321px) {
+    .container1 .container2 .container3 .multipleResultsContainer .multipleResultsFilter .multipleResultsImage .multipleResultsItemsContainer .multipleResultsLabel{
+        width: 100%;
+    }
 }
 
-.multipleResultsContainer .searchBarFilter .multipleResultsFilter {
-    flex-grow: 1;
-}
-
-.multipleResultsContainer .searchBarComp {
-    margin: 0;
-    justify-content: center;
-    flex-grow: 1;
-}

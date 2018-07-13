@@ -17,7 +17,7 @@ class RandomSnack extends Component {
     }
 
     componentDidMount() {
-        console.log('component mounted:');
+        // console.log('component mounted:');
         this.getRandomData();
     }
 
@@ -38,7 +38,7 @@ class RandomSnack extends Component {
 
     handleNextPictureClick() {
 
-        console.log("next Picture:");
+        // console.log("next Picture:");
 
         let { counter } = this.state;
 
@@ -57,7 +57,7 @@ class RandomSnack extends Component {
             });
         }
 
-        console.log("counter:", this.state.counter);
+        // console.log("counter:", this.state.counter);
 
     }
 
@@ -70,13 +70,13 @@ class RandomSnack extends Component {
             return <div className="randomSnackContainer">Loading...</div>
         }
 
-        console.log("randomSnack:", randomSnack);
+        // console.log("randomSnack:", randomSnack);
 
         let random = null;
 
         if (counter < randomSnack.length){
             random = randomSnack[counter + 1];
-            console.log("random:", random);
+            // console.log("random:", random);
         }
 
         let image = random.img_url;
@@ -110,3 +110,21 @@ class RandomSnack extends Component {
 }
 
 export default RandomSnack;
+
+
+
+{/*<div>*/}
+    {/*<div className="randomSnackContainer">*/}
+        {/*<img src={image} id="randomImage" onClick={this.nextPicture} alt="Random Snack"/>*/}
+        {/*<div className="randomButtonContainers">*/}
+            {/*<div onClick={this.handleNextPictureClick.bind(this)} className="leftRandomSnackBtn">*/}
+                {/*<span className="randomLButtonSymbol">Try Again</span>*/}
+            {/*</div>*/}
+            {/*<Link to ={`/singleresult/${item_id}`} >*/}
+                {/*<div className="rightRandomSnackBtn">*/}
+                    {/*<span className="randomRButtonSymbol">Go to Snack</span>*/}
+                {/*</div>*/}
+            {/*</Link>*/}
+        {/*</div>*/}
+    {/*</div>*/}
+{/*</div>*/}

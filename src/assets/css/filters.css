@@ -1,21 +1,50 @@
 .filtersContainer {
-    height: 100vh;
     background-color: #d0d0d0;
+    position: absolute;
+    top: 98%;
 }
 
 .filtersHeaderContainer {
-    height: 8vh;
+    height: 5vh;
     width: 100vw;
-    background-color: #FF8C2D;
-    align-items: center;
+    background-color: grey;
+    /* align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between; */
+    display: flex;
+    align-items: center;
+    /* transition: 0.5s ease-out; */
+    max-height: 45vh;
 }
 
 .filtersHeaderContainer div {
-    margin-left: 3vw;
-    margin-right: 3vw;
+    width: 100%;
+    text-align: center;
+}
+
+.filterPanelContainer {
+    background-color: lightgray;
+    max-height: 0;            
+    overflow-y: hidden;
+    /* -webkit-transition: max-height 0.5s ease-in-out;
+    -moz-transition: max-height 0.5s ease-in-out;
+    -o-transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out; */
+ 
+}
+
+.filterTab{
+    background-color: gray;
+    width: 50%;
+    height: 5vh;
+    display: inline-block;
+    text-align: center;
+}
+
+.filterTab.show{
+    background-color:#C0C0C0;
+    color: black;
 }
 
 /********** Filter Body Menu **********/
@@ -36,47 +65,34 @@
 
 .filterPanel {
     padding: 0 18px;
-    background-color: #ffffff;
+    background-color: #C0C0C0;
     max-height: 0;            
     overflow-y: hidden;
-    -webkit-transition: max-height 0.5s ease-in-out;
-    -moz-transition: max-height 0.5s ease-in-out;
-    -o-transition: max-height 0.5s ease-in-out;
-    transition: max-height 0.5s ease-in-out;
+    /* -webkit-transition: max-height 0.25s ease-in-out;
+    -moz-transition: max-height 0.25s ease-in-out;
+    -o-transition: max-height 0.25s ease-in-out;
+    transition: max-height 0.25s ease-in-out; */
 }
 
 .active {
     display: block;
-    transition: 0.5s ease-out;
-    max-height: 45vh ; 
+    /* transition: 0.25s ease-out; */
+    max-height: 100%;
 }
+/* 
 
-.plus {
-    content: '\02795'; 
-    font-size: 13px;
-    color: #ffffff;
-    float: right;
-    margin-left: 5px;
-    z-index: 3;
-}
-
-.minus {
-    content: "\2796";
-    float: right;
-    font-size: 13px;
-    color: #ffffff;
-    z-index: 3;
-}
 
 /********** Allergens Grid **********/
 
 .allergyPageContainer {
-    height: 30vh;
+    height: 50vh;
+    color: black;
 }
 
 .allergyTitle{
     display: flex;
     justify-content: center;
+    margin-bottom: 5vh;
 }
 
 .allergyContainer{
@@ -110,23 +126,20 @@
 .strike{
     background-color: transparent;
     background-image: gradient(linear, 19.1% -7.9%, 81% 107.9%, color-stop(0, transparent), color-stop(.48, transparent), color-stop(.5, #000), color-stop(.52, transparent), color-stop(1, transparent));
-    background-image: repeating-linear-gradient(163deg, transparent 0%, transparent 48%, #fff 50%, transparent 52%, transparent 100%);
+    background-image: repeating-linear-gradient(163deg, transparent 0%, transparent 48%, #000 50%, transparent 52%, transparent 100%);
 }
-
-/* .strikethrough {
-    display: block;
-    z-index: 4;
-} */
 
 /********** Categories Grid **********/
 
 .categoryPageContainer {
-    height: 45vh;
+    height: 50vh;
+    color: black;
 }
 
 .categoryTitle{
     display: flex;
     justify-content: center;
+    margin-bottom: 5vh;
 }
 
 .categoryContainer{
@@ -160,7 +173,7 @@
 
 .categoryLabel{
     width: 100%;
-    font-size: 12px;
+    font-size: 10px;
     display: flex;
     justify-content: space-evenly;
     position: absolute;
@@ -181,13 +194,8 @@
 }
 
 .nutrientsContainer{
-    /* display: grid; */
     height: 30vh;
     width: 80vw;
-    /* grid-template-columns: auto auto auto auto; */
-    /* grid-row-gap: 1vh; */
-    /* grid-column-gap: 1vw; */
-    /* position: relative; */
     margin: auto;
 }
 
@@ -202,19 +210,3 @@
     margin: 0;
 }
 
-/* .nutrientsItem{
-    margin: 0;
-    height: 10vh;
-    width: 20vw;
-    display: flex;
-    cursor: pointer;
-    position: relative;
-} */
-
-/* .nutrientsImage {
-    display: block;
-    height: auto;
-    max-width: 20vw;
-    max-height: 10vh;
-    margin: 0 auto;
-} */
