@@ -71,7 +71,6 @@ class MultipleResults extends Component {
     }
 
     componentDidUpdate(prevProps){
-        debugger; 
         console.log(this.props.location); 
         if(this.props.location !== prevProps.location){
             console.log(prevProps.location)
