@@ -16,24 +16,11 @@ class Homepage extends Component {
         super(props);
 
         const { term } = props.match.params;
-
-        // this.state = {
-        //     userInput: term || ''
-        // };
-        // this.handleInputChange = this.handleInputChange.bind(this);
         this.autocompleteFromUser = debounce(this.autocompleteFromUser, 1000).bind(this);
 
     }
 
 
-    // handleInputChange = (event) => {
-    //     const value = event.target.value;
-    //     this.setState({
-    //         userInput: value,
-
-    //     })
-    //     this.props.history.push('/search/' + value);
-    // }
     autocompleteFromUser() {
         const { userInput } = this.state;
         axios.get(`http://api.snackseriously.com/snackapi.php?action=getauto&search=${userInput}`).then(function (response) {
@@ -43,8 +30,6 @@ class Homepage extends Component {
 
 
     render() {
-        // const userInput = this.state.userInput;
-        // const params = this.props.match.params.term || '';
         return (
             
             <div>
