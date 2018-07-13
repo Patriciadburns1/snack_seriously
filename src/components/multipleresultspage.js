@@ -28,16 +28,13 @@ class MultipleResults extends Component {
     async getSnackData() {
         let URL = 'http://api.snackseriously.com/snackapi.php?action=';
         let term = this.props.match.params.term; // '' || name || undefined
-        console.log(this.props);
         let querystring = null;
         let offset= this.state.offset; 
         const regex= /^[1-6]+$/;
-        console.log("term is equal", term);
         if (!term) {
             querystring = "getrandom";
         } else if (regex.test(term)) {
             querystring = `getcategory&categoryid=${term}&limit=12&offset=${offset}`;
-            // console.log(querystring);
         }
         else {
             querystring = `getname&search=${term}&offset=${offset}`;
@@ -59,7 +56,6 @@ class MultipleResults extends Component {
     }
 
     onRouteChange(){
-        console.log("route changed, this is working!"); 
         this.setState({
             snackData:[],
             offset:0
@@ -70,12 +66,9 @@ class MultipleResults extends Component {
     )
     }
 
-    componentDidUpdate(prevProps){
-        console.log(this.props.location); 
+    componentDidUpdate(prevProps){ 
         if(this.props.location !== prevProps.location){
-            console.log(prevProps.location)
             this.onRouteChange(); 
-        
         }
     }
 
@@ -92,7 +85,6 @@ class MultipleResults extends Component {
 
     render() {
         const snackData = this.state.snackData;
-        console.log(snackData); 
         if (snackData) {
             var displayedSnack = snackData.map((item, index) => {
                 return (
