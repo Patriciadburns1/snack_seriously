@@ -86,7 +86,7 @@ class RandomSnack extends Component {
             image = noImage
         }
 
-        console.log("image:", image);
+        // console.log("image:", image);
 
         return (
             <div>
