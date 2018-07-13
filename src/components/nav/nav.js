@@ -4,7 +4,6 @@ import './nav.css';
 import '../../assets/css/buttons.css';
 import MenuButton from './menubutton';
 import Menu from './menu';
-// import Search from '../searchbar';
 import SnackSeriouslyLogo from '../../assets/images/logo/snackSeriouslyLogo.png';
 import {Route, Link} from 'react-router-dom';
 import Filters from '../filters';

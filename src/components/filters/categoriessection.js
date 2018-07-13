@@ -1,10 +1,4 @@
 import React, {Component, Fragment} from 'react';
-import popcornpretzel from './categoriesicons/popcornpretzel.png';
-import meat from './categoriesicons/meat.png';
-import chipscrackers from './categoriesicons/chipscrackers.png';
-import bar from './categoriesicons/bar.png';
-import nutsdriedfruit from './categoriesicons/nutsdriedfruit.png';
-import candychocolate from './categoriesicons/candychocolate.png';
 
 class Categories extends Component {
     constructor(props){
@@ -29,7 +23,6 @@ class Categories extends Component {
     }
     render() {
         const {visible} = this.state;
-        const {peanut} = this.state
 
         const nameArray = ["Popcorn & Pretzels", "Jerky & Rinds", "Chips & Crackers", "Snack Bars", "Nuts & Dried Fruit", "Candy & Chocolate"]
         const imageArray = ["popcornpretzel", "meat", "chipscrackers", "bar", "nutsdriedfruit", "candychocolate"];

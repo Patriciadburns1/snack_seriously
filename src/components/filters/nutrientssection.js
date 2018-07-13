@@ -23,19 +23,7 @@ class Nutrients extends Component {
     }
     render() {
         const {visible} = this.state;
-        // const {peanut} = this.state
 
-        // const { filterItems } = this.props.currentSection;
-        // const Items = filterItems.map(function(item, index) {
-        //     return <Item key={index} image={item} label={item} />
-        // })
-
-
-
-        // const {allergens} = FilterIcons.filters;
-        // const allergensicons = allergens.map(function(allergenicons, index){
-        //     return <img key={index} src={allergenicons} />
-        // });
         return (
             <Fragment>
              

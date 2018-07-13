@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-// import Section from './section';
 import '../../assets/css/filters.css';
 import Allergens from './allergenssection';
 import Categories from './categoriessection';
@@ -28,13 +27,13 @@ class Filters extends Component {
     toggleFilters(event) {
         const visibleBoolean = event.target.attributes.name.nodeValue;
         const {allergenShow, categoryShow } = this.state;
-        if(visibleBoolean === 'allergenShow'){
+        if (visibleBoolean === 'allergenShow') {
             this.setState({
                 show:true,
                 allergenShow:!allergenShow,
                 categoryShow:false
             });
-        }else{
+        } else {
             this.setState({
                 show:true,
                 allergenShow:false,
@@ -48,7 +47,6 @@ class Filters extends Component {
         return (
             <div className="filtersContainer">
                 <div className="filtersHeaderContainer" name='show' onClick={this.toggleAllFilter.bind(this)} >
-                    {/* <div>Cancel</div> */}
                     <div>Filters</div>
                     {/* <Link to={`/MultipleResults/${userChoices}`}><div>Search</div></Link> */}
                 </div>
