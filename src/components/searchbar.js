@@ -16,7 +16,7 @@ class SearchBar extends Component {
         return <SearchDataContext.Consumer>{(context) => (
             <div className="searchBarComp">
                 <input type="text" placeholder="Search snacks" onChange={(event)=>this.handleInputChange(event, context)} />
-                <button type="submit">
+                <button type="submit" className="icon">
                     <Link to={`/MultipleResults/${context.userInput}`}> <i>&#x1F50D;</i></Link> 
                 </button>
             </div>
