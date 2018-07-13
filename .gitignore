@@ -3,4 +3,5 @@
 node_modules
 server/config/*.json
 server/config/*.php
+.vscode
 
