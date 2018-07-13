@@ -11,26 +11,54 @@ class Filters extends Component {
     constructor(props){
         super(props);
         this.state = {
-            userChoices: null
-            
+            show: false,
+            allergenShow: false,
+            categoryShow: false
+        }
+    }
+
+    toggleAllFilter() {
+        //const { show, allergenShow, categoryShow } = this.state;
+        const{show} = this.state;
+        this.setState({
+            show:!show
+        });
+    }
+
+    toggleFilters(event) {
+        const visibleBoolean = event.target.attributes.name.nodeValue;
+        const {allergenShow, categoryShow } = this.state;
+        if(visibleBoolean === 'allergenShow'){
+            this.setState({
+                show:true,
+                allergenShow:!allergenShow,
+                categoryShow:false
+            });
+        }else{
+            this.setState({
+                show:true,
+                allergenShow:false,
+                categoryShow:!categoryShow
+            });
         }
     }
 
     render() {
-       
-        const userChoices = this.state;
+        const {show, allergenShow, categoryShow} = this.state;
         return (
             <div className="filtersContainer">
-                <div className="filtersHeaderContainer">
-                    <div>Cancel</div>
+                <div className="filtersHeaderContainer" name='show' onClick={this.toggleAllFilter.bind(this)} >
+                    {/* <div>Cancel</div> */}
                     <div>Filters</div>
-                    <Link to={`/MultipleResults/${userChoices}`}><div>Search</div></Link>
+                    {/* <Link to={`/MultipleResults/${userChoices}`}><div>Search</div></Link> */}
                 </div>
-
-                <div >
-                    <Allergens userChoices={userChoices}/>
-                    <Categories userChoices={userChoices}/>
-                    <Nutrients userChoices={userChoices}/>
+                
+                <div className={show ? "filterPanelContainer active" : "filterPanelContainer"}>
+                    <div className={allergenShow ? 'filterTab show' : 'filterTab'} name='allergenShow' onClick={this.toggleFilters.bind(this)}>allergen</div>
+                    <div className={categoryShow ? 'filterTab show' : 'filterTab'} name='categoryShow' onClick={this.toggleFilters.bind(this)}>category</div>
+                    <Allergens visible={allergenShow} />
+                    <Categories visible={categoryShow} />
+                    {/* <Nutrients /> */}
                 </div>
             </div>
         )

@@ -7,12 +7,8 @@ import SingleResult from './singleresultpage/singleresult';
 import About from './about';
 import Contact from './contact';
 
-import Filters from './filters';
-import CategoryHome from './categoryhome';
-
 const App = () => (
         <div>
-        {/*<Filters /> */}
             <Nav/>
             <Route exact path='/' component= {Homepage}/>
             <Route path='/search/:term?' component= {Homepage}/>

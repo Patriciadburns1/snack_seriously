@@ -1,21 +1,50 @@
 .filtersContainer {
-    height: 100vh;
+    /* height: 100vh; */
     background-color: #d0d0d0;
+    position: absolute;
+    top: 98%;
+}
+
+.filterTab{
+    background-color: gray;
+    width: 50%;
+    height: 3vh;
+    display: inline-block;
+}
+
+.filterTab.show{
+    background-color:lightgray;
 }
 
 .filtersHeaderContainer {
-    height: 8vh;
+    height: 3vh;
     width: 100vw;
-    background-color: #FF8C2D;
-    align-items: center;
+    background-color: grey;
+    /* align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between; */
+    display: block;
+    /* transition: 0.5s ease-out; */
+    max-height: 45vh;
 }
 
 .filtersHeaderContainer div {
-    margin-left: 3vw;
-    margin-right: 3vw;
+    /* margin-left: 3vw;
+    margin-right: 3vw; */
+    width: 100%;
+    text-align: center;
+}
+
+.filterPanelContainer {
+    /* padding: 0 18px; */
+    background-color: lightgray;
+    max-height: 0;            
+    overflow-y: hidden;
+    /* -webkit-transition: max-height 0.5s ease-in-out;
+    -moz-transition: max-height 0.5s ease-in-out;
+    -o-transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out; */
 }
 
 /********** Filter Body Menu **********/
@@ -36,19 +65,19 @@
 
 .filterPanel {
     padding: 0 18px;
-    background-color: #ffffff;
+    background-color: lightgray;
     max-height: 0;            
     overflow-y: hidden;
-    -webkit-transition: max-height 0.5s ease-in-out;
-    -moz-transition: max-height 0.5s ease-in-out;
-    -o-transition: max-height 0.5s ease-in-out;
-    transition: max-height 0.5s ease-in-out;
+    /* -webkit-transition: max-height 0.25s ease-in-out;
+    -moz-transition: max-height 0.25s ease-in-out;
+    -o-transition: max-height 0.25s ease-in-out;
+    transition: max-height 0.25s ease-in-out; */
 }
 
 .active {
     display: block;
-    transition: 0.5s ease-out;
-    max-height: 45vh ; 
+    /* transition: 0.25s ease-out; */
+    max-height: 100%;
 }
 
 .plus {
@@ -71,7 +100,7 @@
 /********** Allergens Grid **********/
 
 .allergyPageContainer {
-    height: 30vh;
+    height: 50vh;
 }
 
 .allergyTitle{
@@ -121,7 +150,7 @@
 /********** Categories Grid **********/
 
 .categoryPageContainer {
-    height: 45vh;
+    height: 50vh;
 }
 
 .categoryTitle{

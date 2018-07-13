@@ -6,7 +6,8 @@ import MenuButton from './menubutton';
 import Menu from './menu';
 // import Search from '../searchbar';
 import SnackSeriouslyLogo from '../../assets/images/logo/snackSeriouslyLogo.png';
-import {Link} from 'react-router-dom';
+import {Route, Link} from 'react-router-dom';
+import Filters from '../filters';
 import profileIcon from '../../assets/images/profileIcon.png';
 
 class Nav extends Component {
@@ -36,16 +37,19 @@ class Nav extends Component {
         const {visible} = this.state;
         return (
                 <div className="navBar">
-                    <div className="menu">  
-                        <MenuButton handleMenuClick={this.handleMenuClick} visible={visible}/>
-                        <Menu handleMenuClick={this.handleMenuClick} visible={visible}/> 
-                    </div> 
-                    <div className="navSearch">
-                            <Link to="/"><img className="snackImage" src={SnackSeriouslyLogo}/></Link>
+                    <div className="nav-content">
+                        <div className="menu">  
+                            <MenuButton handleMenuClick={this.handleMenuClick} visible={visible}/>
+                            <Menu handleMenuClick={this.handleMenuClick} visible={visible}/> 
+                        </div> 
+                        <div className="navSearch">
+                                <Link to="/"><img className="snackImage" src={SnackSeriouslyLogo}/></Link>
+                        </div>
+                        <div className="profile">
+                            <img className="profileImage" src={profileIcon} />
+                        </div>    
                     </div>
-                    <div className="profile">
-                        <img className="profileImage" src={profileIcon} />
-                    </div>
+                    <Route path='/MultipleResults/:term?' component={Filters}/>
                 </div>
         )
     }
