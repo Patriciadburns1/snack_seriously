@@ -88,8 +88,12 @@ class MultipleResults extends Component {
                 return (
                     <Link key={index} to={`/singleresult/${item.ID}`}>
                         <div className="multipleResultsItem">
-                            <span>{item.name}</span>
-                            <img className="multipleResultsImage"  src={!item.img_url ? noImage : item.img_url} />
+                            <div>
+                                <img className="multipleResultsImage"  src={!item.img_url ? noImage : item.img_url} />
+                            </div>
+                            <div>
+                                <span className="multipleResultsDescription">{item.name}</span>
+                            </div>
                         </div>
                     </Link>
                 )
@@ -111,10 +115,6 @@ class MultipleResults extends Component {
                     </div>
                 </div>
                 <div className="multipleResultsContainer">
-                    <div className="searchBarFilter">
-                        <div className="multipleResultsFilter">
-                        </div>
-                    </div>
                     <div className="multipleResultsItemsContainer">
                         { displayedSnack }
                     </div>
