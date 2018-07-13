@@ -1,20 +1,35 @@
-import React, {Component, Fragment} from 'react';
-import Peanuts from './allergenicons/peanuts.png'; 
-import Dairy from './allergenicons/dairy.png';
-import Egg from './allergenicons/egg.png'; 
-import Corn from './allergenicons/corn.png'; 
-import TreeNuts from './allergenicons/nuts.png'; 
-import Soy from './allergenicons/soy.png'; 
-import Wheat from './allergenicons/wheat.png'; 
-import Sugar from './allergenicons/sugar.png'; 
-import Strikethrough from './allergenicons/strikethrough.png'; 
+import React, { Component, Fragment } from 'react';
+import AllergenIcon from './allergenIcon.js'
 
 class Allergens extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            visible: props.visible,
-            strikethrough: false,
+            allergenArray: [{
+                name: "peanuts",
+                strike: false
+            }, {
+                name: "dairy",
+                strike: false
+            }, {
+                name: "egg",
+                strike: false
+            }, {
+                name: "corn",
+                strike: false
+            }, {
+                name: "nuts",
+                strike: false
+            }, {
+                name: "soy",
+                strike: false
+            }, {
+                name: "wheat",
+                strike: false
+            }, {
+                name: "sugar",
+                strike: false
+            },]
         }
 
         this.toggleMenu = this.toggleMenu.bind(this);
@@ -23,58 +38,50 @@ class Allergens extends Component {
 
     toggleMenu() {
         event.stopPropagation();
-        const {visible} = this.state;
+        const { visible } = this.state;
         this.setState({
             visible: !visible
         });
     }
 
-    componentDidMount() {
-        // var foo = document.querySelector("img");
-        // foo.addEventListener("click", this.handleAllergenClick);
-    }
 
-    handleAllergenClick(event) {
-        event.stopPropagation();
-        console.log("The state is", this.state);
-        console.log("Event: ", event);
-        console.log("Current target: ", event.currentTarget);
-        let strikethrough = this.state.strikethrough;
-        let value = event.target.attributes.value.nodeValue;
+    handleAllergenClick(index) {
+
+        const {allergenArray} = this.state;
+        const newArray = [...allergenArray];
+        newArray[index].strike = !newArray[index].strike;
+
         this.setState({
-            strikethrough: !strikethrough,
-        });  
-        // this.props.history.push( '/search/'+value);
-        //need to pass value to url
-        console.log("the value is: ", value);
+            allergenArray: newArray,
+        });
+
 
     }
 
     render() {
-        const {visible, strikethrough} = this.state;
-        const categoryArray = ["peanuts", "dairy", "egg", "corn", "nuts", "soy", "wheat", "sugar"];
-        const Items = categoryArray.map((item, index) => {
+        const { allergenArray } = this.state;
+
+        const Items = allergenArray.map((item, index) => {
+
             return (
-                <div key={index} className="allergyItem" onClick={this.handleAllergenClick}>
-                    <img  src={require(`./allergenicons/${item}.png`)}  className={strikethrough ? "allergyImage strike" : "allergyImage"}  value={item}/>
-                </div>
+                <AllergenIcon key={index} clickHandler={()=>{this.handleAllergenClick(index)}} img={require(`./allergenicons/${item.name}.png`)} strike={item.strike} />
             )
-        }); 
+        });
 
         return (
             <Fragment>
                 {/* <div className={visible ? "filterMenu " : "filterMenu active"} onClick={this.toggleMenu}>Allergens</div> */}
                 <div className={this.props.visible ? "filterPanel active" : "filterPanel"}>
-        
-                <div className="allergyPageContainer"> 
-                    <h4 className="allergyTitle"> Select all allergens to avoid </h4> 
-                    <div className="allergyContainer">
-                        {Items}
+
+                    <div className="allergyPageContainer">
+                        <h4 className="allergyTitle"> Select all allergens to avoid </h4>
+                        <div className="allergyContainer">
+                            {Items}
+                        </div>
                     </div>
-                </div>
 
 
-        
+
                     <div className="plus"></div>
                 </div>
             </Fragment>
