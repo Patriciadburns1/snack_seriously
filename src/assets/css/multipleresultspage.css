@@ -83,3 +83,16 @@
     height: 100%;
 } */
 
+
+@media only screen and (max-width: 480px) {
+    .container1 .container2 .container3 .multipleResultsContainer .multipleResultsFilter .multipleResultsImage .multipleResultsItemsContainer .multipleResultsLabel{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 321px) {
+    .container1 .container2 .container3 .multipleResultsContainer .multipleResultsFilter .multipleResultsImage .multipleResultsItemsContainer .multipleResultsLabel{
+        width: 100%;
+    }
+}
+

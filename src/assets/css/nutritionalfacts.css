@@ -14,10 +14,10 @@
 .performanceFacts {
     border: 1px solid black;
     /* margin: 20px; */
-    margin: auto; 
+    margin: auto;
     /* float: left; */
     /* width: 290px; */
-    width:67%; 
+    width:75%;
     padding: 10%;
     -webkit-box-shadow: 0px 2px 10px -2px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 2px 10px -2px rgba(0,0,0,0.75);
@@ -110,7 +110,7 @@
 }
 
 .ingredientContainer{
-    width: 71%;
+    width: 75%;
     margin: 5% auto;
     padding: 8%; 
     border: 1px solid black;
@@ -122,24 +122,11 @@
     box-shadow: 0px 2px 10px -2px rgba(0,0,0,0.75);
 }
 
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
 
-@media only screen and (max-width: 1080px) {
-    /*for moblile phones*/
-    [class*="col-"]{
-        width: 100%;
-    }
+
+
+@media only screen and (max-width: 480px) {
+
     .singleResultContainer .singleItemContainer .nutritionContainer .performanceFacts .ingredientContainer{
         width: 100%;
     }
