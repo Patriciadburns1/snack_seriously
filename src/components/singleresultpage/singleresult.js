@@ -74,19 +74,11 @@ class SingleResult extends Component {
             // console.log(ingredients);
             const params = this.props.match.params.term || '';
             return (
-                <div>
-                    <div>
-                        <div className="searchBarComp">
-                            <input type="text" placeholder="Search snacks" onChange={this.handleInputChange} />
-                            <Link className="icon" to = {`/MultipleResults/${params}`}> <div> <i>&#x1F50D;</i> </div> </Link>   
-                        </div>
-                    </div>
                     <div className="singleResultContainer">
                         <SingleItem name={name} manu={manu} img={img_url} />
                         <Nutritionalfacts nutrition={nutrients} per_container={per_container} size={size} unit={unit} weight={weight} />
                         <Ingredient ingredients={ingredients} />
                     </div>
-                </div>
             )
         }
     }
