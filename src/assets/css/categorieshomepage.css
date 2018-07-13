@@ -1,6 +1,8 @@
 .categoryHomepageContainer {
     /* position: absolute; */
-    margin-top: 40%;
+    margin-top: 45%;
+
+
 }
 
 .categoryHomepageTitle{
@@ -11,7 +13,7 @@
 .categoryHomepageGrid{
     display: grid;
     height: 35%;
-    width: 100%;
+    width: 83%;
     grid-template-columns: auto auto auto;
     grid-row-gap: 1vh;
     grid-column-gap: 1vw;
