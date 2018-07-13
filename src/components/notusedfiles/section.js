@@ -1,21 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import '../../assets/css/filters.css';
-import popcornpretzel from './categoriesicons/popcornpretzel.png';
-import meat from './categoriesicons/meat.png';
-import chipscrackers from './categoriesicons/chipscrackers.png';
-import bar from './categoriesicons/bar.png';
-import nutsdriedfruit from './categoriesicons/nutsdriedfruit.png';
-import candychocolate from './categoriesicons/candychocolate.png';
-import Peanuts from './allergenicons/peanuts.png'; 
-import Dairy from './allergenicons/dairy.png';
-import Egg from './allergenicons/egg.png'; 
-import Corn from './allergenicons/corn.png'; 
-import TreeNuts from './allergenicons/nuts.png'; 
-import Soy from './allergenicons/soy.png'; 
-import Wheat from './allergenicons/wheat.png'; 
-import Sugar from './allergenicons/sugar.png'; 
-import Strikethrough from './allergenicons/strikethrough.png'; 
-import Item from './item';
+
 
 
 class Section extends Component {

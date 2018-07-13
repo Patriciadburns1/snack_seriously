@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-// import Section from './section';
 import '../../assets/css/filters.css';
 import Allergens from './allergenssection';
 import Categories from './categoriessection';
@@ -25,22 +24,19 @@ class Filters extends Component {
         });
     }
 
-    toggleFilters(event) {
-        const visibleBoolean = event.target.attributes.name.nodeValue;
-        const {allergenShow, categoryShow } = this.state;
-        if(visibleBoolean === 'allergenShow'){
-            this.setState({
-                show:true,
-                allergenShow:!allergenShow,
-                categoryShow:false
-            });
-        }else{
-            this.setState({
-                show:true,
-                allergenShow:false,
-                categoryShow:!categoryShow
-            });
-        }
+    toggleFilters( clickTab, oppositeTab) {
+
+        //clickTab is name of tab clicked
+        //oppositeTab is thee other tab not in use
+        const clickedTabBool = !this.state[clickTab];
+
+        //set key and value 
+        //[clickTab] is replaced with string of clickedTab and the value is opposite of original value
+        //set [oppositeTab] to false since no longer in use. 
+        this.setState({
+            [clickTab]:clickedTabBool,
+            [oppositeTab]:false
+        });
     }
 
     render() {
@@ -48,14 +44,13 @@ class Filters extends Component {
         return (
             <div className="filtersContainer">
                 <div className="filtersHeaderContainer" name='show' onClick={this.toggleAllFilter.bind(this)} >
-                    {/* <div>Cancel</div> */}
                     <div>Filters</div>
                     {/* <Link to={`/MultipleResults/${userChoices}`}><div>Search</div></Link> */}
                 </div>
                 
                 <div className={show ? "filterPanelContainer active" : "filterPanelContainer"}>
-                    <div className={allergenShow ? 'filterTab show' : 'filterTab'} name='allergenShow' onClick={this.toggleFilters.bind(this)}>allergen</div>
-                    <div className={categoryShow ? 'filterTab show' : 'filterTab'} name='categoryShow' onClick={this.toggleFilters.bind(this)}>category</div>
+                    <div className={allergenShow ? 'filterTab show' : 'filterTab'} onClick={()=>this.toggleFilters('allergenShow','categoryShow')}>Allergens</div>
+                    <div className={categoryShow ? 'filterTab show' : 'filterTab'} onClick={()=>this.toggleFilters('categoryShow','allergenShow')}>Category</div>
                     <Allergens visible={allergenShow} />
                     <Categories visible={categoryShow} />
                     {/* <Nutrients /> */}
