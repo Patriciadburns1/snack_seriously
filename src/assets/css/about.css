@@ -1,3 +1,23 @@
 .about{
     margin-top: 25vh;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    background-color: #FF8C2D;
+    padding: 10px;
+    height: 55vh;
+}
+.grid-container>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding:20px 0;
+    font-size: 16px;
+}
+
+.snacktitle{
+    text-align: center;
 }
