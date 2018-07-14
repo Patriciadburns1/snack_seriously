@@ -31,6 +31,9 @@ if($method = 'GET'){
         case 'getauto':
             include_once('apiActionCalls/getauto.php');
             break;
+        case 'getfavorites':
+            include_once('apiActionCalls/getfavorites.php');
+            break;
         default:
             $output['error'] = "unknown request";
     }
