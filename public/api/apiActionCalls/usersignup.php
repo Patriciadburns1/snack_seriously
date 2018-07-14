@@ -37,6 +37,9 @@ if($result){
     }
 }else{
     $output['error'] = 'cannot attempt login';
+    $output['msg1'] = $_NAME;
+    $output['msg1'] = $_PASS;
+    $output['msg1'] = $_EMAIL;
 }
 
 print( json_encode($output));
