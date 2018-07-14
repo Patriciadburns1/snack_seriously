@@ -1,11 +1,13 @@
 .filtersContainer {
     background-color: #d0d0d0;
-    position: absolute;
-    top: 98%;
+    /*position: absolute;*/
+    margin-top: 16vh;
+
+    /*top: 25%;*/
 }
 
 .filtersHeaderContainer {
-    height: 5vh;
+    height: 4vh;
     width: 100vw;
     background-color: grey;
     /* align-items: center;

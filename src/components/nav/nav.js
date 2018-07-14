@@ -38,6 +38,7 @@ class Nav extends Component {
         return (
                 <div className="navBar">
                     <div className="nav-content">
+                        <div>
                         <div className="menu">  
                             <MenuButton handleMenuClick={this.handleMenuClick} visible={visible}/>
                             <Menu handleMenuClick={this.handleMenuClick} visible={visible}/> 
@@ -47,9 +48,11 @@ class Nav extends Component {
                         </div>
                         <div className="profile">
                             <img className="profileImage" src={profileIcon} />
-                        </div>    
+                        </div>
+                        </div>
+                        <Route path='/' component={SearchBar} />
+
                     </div>
-                    <Route path='/' component={SearchBar} />
                     <Route path='/MultipleResults/:term?' component={Filters}/>
 
                 </div>
