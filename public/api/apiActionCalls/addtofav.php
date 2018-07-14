@@ -8,7 +8,7 @@ $output = [
 ];
 
 if(!isset($_SESSION['userID'])){
-    print('must log in to do that!');
+    $output['error'] = 'must log in to do that!';
     exit();
 }
 
