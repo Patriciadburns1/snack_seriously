@@ -1,7 +1,57 @@
 .contactForm{
-    margin-top: 25vh;
-    border-color: black; 
+    margin-top: 5vh;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 320px;
+    font-weight: 300; 
 }
+
+label{
+    margin-bottom: 8px;
+    display: block;
+    color:grey;
+  }
+  
 .contactForm input{
-    border-color: black; 
+  padding: 8px;
+  width: 100%;
+  border: 0;
+  margin: 2% 0; 
+  background-color: rgba(200,200,200,0.1); 
+  height: 2.5em; 
+  font-size: 14px; 
+  font-weight: 200; 
+  padding-left: 5%; 
+}
+
+.contactForm input:focus{
+    outline: 0; 
+}
+
+.contactFormEmail{
+    border-color: grey;
+    display: flex; 
+    justify-content: center;   
+}
+
+.submitButtonContactPage{
+    padding: 5px 16px;
+    font-size: 16px;
+    color: #fff;
+    background-color: turquoise; 
+    border: 0; 
+    margin: 2% 0; 
+    font-weight: 200;
+}
+
+.submitButtonDiv{
+    text-align: right;
+}
+
+.headerForContact{
+    margin-top: 25vh; 
+    display: flex; 
+    justify-content: center; 
+    color:turquoise; 
+    font-weight: 200; 
 }
