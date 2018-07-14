@@ -1,9 +1,9 @@
 .searchBarComp {
     /* margin-top: 22%; */
-    position: fixed;
+    /*position: fixed;*/
     width: 100%;
     top:13%;
-    z-index: 1;
+    /*z-index: 1;*/
     display: flex;
     justify-content: center; 
     height: 35px;

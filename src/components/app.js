@@ -25,7 +25,7 @@ class App extends Component {
                         {(context)=>(
                             <div>
                                 <Nav />
-                                <Route path='/' component={SearchBar} />
+                                {/*<Route path='/' component={SearchBar} />*/}
                                 <Route exact path='/' component={Homepage} />
                                 <Route path='/search/:term?' component={Homepage} />
                                 <Route path='/search/:term/MultipleResults/?' component={MultipleResults} />
