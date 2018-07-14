@@ -113,18 +113,3 @@ export default RandomSnack;
 
 
 
-{/*<div>*/}
-    {/*<div className="randomSnackContainer">*/}
-        {/*<img src={image} id="randomImage" onClick={this.nextPicture} alt="Random Snack"/>*/}
-        {/*<div className="randomButtonContainers">*/}
-            {/*<div onClick={this.handleNextPictureClick.bind(this)} className="leftRandomSnackBtn">*/}
-                {/*<span className="randomLButtonSymbol">Try Again</span>*/}
-            {/*</div>*/}
-            {/*<Link to ={`/singleresult/${item_id}`} >*/}
-                {/*<div className="rightRandomSnackBtn">*/}
-                    {/*<span className="randomRButtonSymbol">Go to Snack</span>*/}
-                {/*</div>*/}
-            {/*</Link>*/}
-        {/*</div>*/}
-    {/*</div>*/}
-{/*</div>*/}
