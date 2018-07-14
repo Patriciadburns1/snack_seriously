@@ -8,6 +8,7 @@ import SnackSeriouslyLogo from '../../assets/images/logo/snackSeriouslyLogo.png'
 import {Route, Link} from 'react-router-dom';
 import Filters from '../filters';
 import profileIcon from '../../assets/images/profileIcon.png';
+import SearchBar from "../searchbar";
 
 class Nav extends Component {
     constructor(props){
@@ -48,7 +49,9 @@ class Nav extends Component {
                             <img className="profileImage" src={profileIcon} />
                         </div>    
                     </div>
+                    <Route path='/' component={SearchBar} />
                     <Route path='/MultipleResults/:term?' component={Filters}/>
+
                 </div>
         )
     }
