@@ -1,19 +1,16 @@
 <?php
 session_start();
-require_once('../../server/db_connect.php');
 
 $output = [
     'success' => false
 ];
 
-// if(!isset($_SESSION['userID'])){
-//     print('must log in');
-//     exit();
-// }
-$_POST['password'] = sha1($_POST['password']);
+$_NAME = addslashes($_POST['username']);
+$_PASS = sha1($_POST['password']);
+$_EMAIL = addslashes($_POST['email']);
 
-
-$query = "SELECT * FROM `users` WHERE `name`='{$_POST['name']}' AND `password`='{$_POST['password']}'";
+$query = "INSERT INTO `users`(`ID`, `email`, `password`, `username`, `user_rights`) 
+VALUES ( 'null', $_EMAIL, $_PASS, $_NAME, 1)";
 
 $result = mysqli_query($conn, $query);
 
@@ -32,5 +29,3 @@ if($result){
 }
 
 print( json_encode($output));
-
-?>

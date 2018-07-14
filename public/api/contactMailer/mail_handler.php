@@ -1,6 +1,6 @@
 <?php
 header('Access-Control-Allow-Origin: *');
-require_once('email_config.php');
+require_once('../server/config/email_config.php');
 require('phpmailer/PHPMailerAutoload.php');
 
 //to break all <scripts> just in case.

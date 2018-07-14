@@ -31,6 +31,12 @@ if($method = 'GET'){
         case 'getauto':
             include_once('apiActionCalls/getauto.php');
             break;
+        case 'usersignup':
+            include_once('apiActionCalls/usersignup.php');
+            break;
+        case 'userlogin':
+            include_once('apiActionCalls/userlogin.php');
+            break;
         case 'getfavorites':
             include_once('apiActionCalls/getfavorites.php');
             break;
