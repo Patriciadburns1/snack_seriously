@@ -43,7 +43,8 @@ class Contact extends Component {
     sendContactForm(){
         const {form} = this.state;
         const data = this.formatPostData(form);
-        axios.post(`http://localhost:8000/api/contactMailer/mail_handler.php`,data).then(function(response){
+    
+        axios.post(`http://api.snackseriously.com/contactMailer/mail_handler.php`,data).then(function(response){
             console.log("server has sent email", response); 
         });
     }
@@ -51,29 +52,27 @@ class Contact extends Component {
 
     render() {
         const{name, email, body, subject } = this.state.form; 
-        console.log(this.state.form);
-        return (
-            <div className="contactForm">
-            {/* <form onSubmit={this.sendContactForm.bind(this)}>  */}
-                <div> 
-                <label htmlFor="name"> Name: </label>
-                <input type="text" value={name} name='name' onChange={this.handleInputChange}/>
+        return (     
+            <div> 
+            <h2 className='headerForContact'> Contact Snack Seriously </h2> 
+           <form className='contactForm'> 
+                <div className='contactFormEmail'> 
+                     <input placeholder='Name' type="text" value={name} name='name' onChange={this.handleInputChange}/>
                 </div> 
-                <div> 
-                <label htmlFor="email"> Email: </label> 
-                <input type="text" value={email} name='email' onChange={this.handleInputChange} /> 
+                <div className='contactFormEmail'> 
+                    <input placeholder="Email" type="text" value={email} name='email' onChange={this.handleInputChange} /> 
                 </div>
-                <div> 
-                <label htmlFor="subject"> Subject:  </label> 
-                <input type="text" name="subject" onChange={this.handleInputChange}/>
+                <div className='contactFormEmail'  > 
+                    <input placeholder="Subject" type="text" name="subject" onChange={this.handleInputChange}/>
                 </div>
-                <div> 
-                <label htmlFor="body"> Body: </label> 
-                <textarea name="body" name="body" onChange={this.handleInputChange} ></textarea> 
+                <div className='contactFormEmail'> 
+                    <input placeholder='Message' className='textArea' name="body" name="body" onChange={this.handleInputChange} ></input > 
                 </div> 
-                <button type="submit"  value="submit" onClick={this.sendContactForm.bind(this)}> BUTTON </button>
-            {/* </form>  */}
-            </div>
+                <div className="submitButtonDiv"> 
+                <button className="submitButtonContactPage"  type="submit" value="submit" onClick={this.sendContactForm.bind(this)}> Submit </button>
+                </div> 
+           </form> 
+           </div> 
         )
     }
 }

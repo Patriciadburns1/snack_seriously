@@ -8,15 +8,18 @@ class SearchData extends Component{
         super(props);
         this.state={
             userInput: "",
-            updateTermValue: (newTerm) => {
-                this.setState({
-                    userInput: newTerm
-                })
-            }
+            updateTermValue: this.updateTermValue.bind(this)
         }
-
-        
     }
+
+    updateTermValue(newTerm){
+        this.setState({
+            userInput: newTerm
+        });
+    }
+
+
+
     render(){
         return(
             <SearchDataContext.Provider value={this.state}>
