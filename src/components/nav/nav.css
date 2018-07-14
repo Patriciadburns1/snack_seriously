@@ -3,7 +3,7 @@
     top: 0;
     width: 100%;
     margin: 0px;
-    height: 20%;
+    height: 22%;
     z-index: 1;
     background-color:  #FF8C2D;
     color: #ffffff;
@@ -17,7 +17,8 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
-    padding: 3%;
+    padding: 5%;
+    flex-flow: row wrap;
 }
 
 .navBar .menu {
@@ -42,7 +43,7 @@
 .navSearch{
     vertical-align: top;
     display: inline-block;
-    width: 66%;
+    width: 70%;
     height: 100%;
     text-align: center;
 }

@@ -6,7 +6,7 @@
     /*z-index: 1;*/
     display: flex;
     justify-content: center; 
-    height: 35px;
+    height: 40px;
 }
 
 .searchBarComp input {
