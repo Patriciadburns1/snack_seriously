@@ -1,16 +1,15 @@
 <?php
 session_start();
-//$conn = mysqli_connect('localhost', 'root','root','todoexample');
 require_once('../../server/db_connect.php');
 
 $output = [
     'success' => false
 ];
 
-if(!isset($_SESSION['userID'])){
-    print('must log in');
-    exit();
-}
+// if(!isset($_SESSION['userID'])){
+//     print('must log in');
+//     exit();
+// }
 $_POST['password'] = sha1($_POST['password']);
 
 

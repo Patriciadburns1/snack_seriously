@@ -1,18 +1,24 @@
 <?php
 session_start();
 $productID = filter_var($_GET['product_id'],FILTER_VALIDATE_INT);
+$choice = filter_var($GET['choice'],FILTER_VALIDATE_BOOLEAN); //'true' or 'false'
 
 $output = [
     'success' => false
 ];
 
 if(!isset($_SESSION['userID'])){
-    print('must log in');
+    print('must log in to do that!');
     exit();
 }
 
 if($productID >= 0){
-    $query = "INSERT INTO `user_favorites`(`ID`, `user_id`, `product_id`) VALUES ( null, $_SESSION['userID'], $productID)";
+
+    if($choice){
+        $query = "INSERT INTO `user_favorites`(`ID`, `user_id`, `product_id`) VALUES ( null, $_SESSION[userID], $productID)";
+    }else{
+        $query = "SELECT * FROM `user_favorites` WHERE `product_id` = $productID AND `user_id` = $_SESSION[userID]";
+    }
 
     $result = mysqli_query($conn, $query);
 

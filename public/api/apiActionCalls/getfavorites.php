@@ -6,7 +6,7 @@ $output = [
 ];
 
 if(!isset($_SESSION['userID'])){
-    print('must log in');
+    print('must log in to do that!');
     exit();
 }
 
