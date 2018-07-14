@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import '../assets/css/multipleresultspage.css';
 import axios from 'axios';
 import noImage from '../assets/images/imagenotfound.jpeg';
+import Filters from './filters';
 
 class MultipleResults extends Component {
     constructor(props) {
@@ -108,10 +109,12 @@ class MultipleResults extends Component {
         const params = this.props.match.params.term || '';
 
         return (
-
-            <div className="multipleResultsContainer">
-                <div className="multipleResultsItemsContainer">
-                    { displayedSnack }
+            <div>
+                {/* <Filters /> */}
+                <div className="multipleResultsContainer">
+                    <div className="multipleResultsItemsContainer">
+                        { displayedSnack }
+                    </div>
                 </div>
             </div>
         )

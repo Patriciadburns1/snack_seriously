@@ -92,7 +92,7 @@ class RandomSnack extends Component {
             <div>
                 <div className="randomSnackContainer">
                     <img src={image} id="randomImage" onClick={this.nextPicture} alt="Random Snack"/>
-                    <div className="randomButtonContainers">
+                    {/* <div className="randomButtonContainers"> */}
                         <div onClick={this.handleNextPictureClick.bind(this)} className="leftRandomSnackBtn">
                             <span className="randomLButtonSymbol">Try Again</span>
                         </div>
@@ -101,7 +101,7 @@ class RandomSnack extends Component {
                                 <span className="randomRButtonSymbol">Go to Snack</span>
                             </div>
                         </Link>
-                    </div>
+                    {/* </div> */}
                 </div>
             </div>
         )

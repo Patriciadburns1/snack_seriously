@@ -28,11 +28,11 @@
     transform: translateY(-102%);
 }
 
-.randomButtonContainers {
+/* .randomButtonContainers {
     position: absolute;
     height: 100%;
     width: 100%;
-}
+} */
 
 .randomLButtonSymbol {
     right: 50%;

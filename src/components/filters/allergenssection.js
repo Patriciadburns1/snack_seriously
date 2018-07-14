@@ -32,39 +32,35 @@ class Allergens extends Component {
             },]
         }
 
-        this.toggleMenu = this.toggleMenu.bind(this);
+        // this.toggleMenu = this.toggleMenu.bind(this);
         this.handleAllergenClick = this.handleAllergenClick.bind(this);
     }
 
-    toggleMenu() {
-        event.stopPropagation();
-        const { visible } = this.state;
-        this.setState({
-            visible: !visible
-        });
-    }
+    // toggleMenu() {
+        // event.stopPropagation();
+        // const { visible } = this.state;
+        // this.setState({
+        //     visible: !visible
+        // });
+    // }
 
 
     handleAllergenClick(index) {
-
         const {allergenArray} = this.state;
         const newArray = [...allergenArray];
         newArray[index].strike = !newArray[index].strike;
-
         this.setState({
             allergenArray: newArray,
+            allergenIndex: index
         });
-
-
     }
 
     render() {
         const { allergenArray } = this.state;
 
         const Items = allergenArray.map((item, index) => {
-
             return (
-                <AllergenIcon key={index} clickHandler={()=>{this.handleAllergenClick(index)}} img={require(`./allergenicons/${item.name}.png`)} strike={item.strike} />
+                <AllergenIcon key={index} indexnum={index} clickHandler={()=>{this.handleAllergenClick(index)}} img={require(`./allergenicons/${item.name}.png`)} strike={item.strike} />
             )
         });
 
@@ -72,7 +68,6 @@ class Allergens extends Component {
             <Fragment>
                 {/* <div className={visible ? "filterMenu " : "filterMenu active"} onClick={this.toggleMenu}>Allergens</div> */}
                 <div className={this.props.visible ? "filterPanel active" : "filterPanel"}>
-
                     <div className="allergyPageContainer">
                         <h4 className="allergyTitle"> Select all allergens to avoid </h4>
                         <div className="allergyContainer">
