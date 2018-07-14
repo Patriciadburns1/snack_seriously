@@ -21,14 +21,15 @@
   }
 
   .menuLinkStyle {
-      margin-top: 15vh;
+      margin-top: 7vh;
       margin-left: 5%;
-      font-size: 30px;
+      font-size: 25px;
       border-bottom: 1px solid white;
       padding-bottom: 3%;
-      width: 80%;
+      width: 78%;
       color: #FFF;
       text-decoration: none;
+      font-weight: 200; 
   }
 
   .invisibleMenuContainer.show{

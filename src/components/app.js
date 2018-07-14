@@ -11,6 +11,8 @@ import Contact from './contact';
 import Filters from './filters';
 import CategoryHome from './categoryhome';
 import SearchBar from './searchbar';
+import LogIn from './login'; 
+import CreateAccount from './createaccount'; 
 
 class App extends Component {
     constructor(props) {
@@ -33,6 +35,8 @@ class App extends Component {
                                 <Route path='/SingleResult/:product_id' component={SingleResult} />
                                 <Route path='/About' component={About} />
                                 <Route path='/Contact' component={Contact} />
+                                <Route path='/LogIn' component={LogIn}/> 
+                                <Route path='/CreateAccount' component={CreateAccount}/> 
                             </div>
                         )}
                     </SearchDataContext.Consumer>
