@@ -9,9 +9,9 @@ $output = [
 //     print('must log in');
 //     exit();
 // }
-$_NAME = addslashes($_POST['username']);
+$_NAME = addslashes($_POST['name']);
 $_PASS = sha1($_POST['password']);
-$_EMAIL = addslashes($_POST['email']);
+$_EMAIL = addslashes($_POST['name']);
 
 $query = "SELECT * FROM `users` WHERE `username`=$_NAME OR `email`=$_EMAIL AND `password`=$_PASS";
 

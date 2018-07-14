@@ -37,8 +37,14 @@ if($method = 'GET'){
         case 'userlogin':
             include_once('apiActionCalls/userlogin.php');
             break;
+        case 'userlogout':
+            include_once('apiActionCalls/userlogout.php');
+            break;
         case 'getfavorites':
             include_once('apiActionCalls/getfavorites.php');
+            break;
+        case 'addtofav':
+            include_once('apiActionCalls/addtofav.php');
             break;
         default:
             $output['error'] = "unknown request";
