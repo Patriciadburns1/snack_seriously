@@ -10,7 +10,7 @@ $_PASS = sha1($_POST['password']);
 $_EMAIL = addslashes($_POST['email']);
 
 $queryexist = "SELECT `ID` FROM `users` WHERE `email`=$_EMAIL OR `username`=$_NAME";
-$result = mysqli_query($conn, $query);
+$result = mysqli_query($conn, $queryexist);
 
 if($result){
     if(mysqli_num_rows($result)>0){
