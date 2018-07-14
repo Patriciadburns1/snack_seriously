@@ -12,12 +12,14 @@ if(!isset($_SESSION['userID'])){
     exit();
 }
 
+$_sessID = $_SESSION['userID'];
+
 if($productID >= 0){
 
     if($choice){
-        $query = "INSERT INTO `user_favorites`(`ID`, `user_id`, `product_id`) VALUES ( null, $_SESSION[userID], $productID)";
+        $query = "INSERT INTO `user_favorites`(`ID`, `user_id`, `product_id`) VALUES ( 'null', $_sessID, $productID)";
     }else{
-        $query = "SELECT * FROM `user_favorites` WHERE `product_id` = $productID AND `user_id` = $_SESSION[userID]";
+        $query = "DELETE FROM `user_favorites` WHERE `product_id`= $productID AND `user_id`=$_sessID"
     }
 
     $result = mysqli_query($conn, $query);
