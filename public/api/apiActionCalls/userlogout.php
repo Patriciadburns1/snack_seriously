@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+//localhost:8000/public/api/snackapi.php?action=userlogout
+
 unset($_SESSION['userID']);
 unset($_SESSION['username']);
 session_destroy();

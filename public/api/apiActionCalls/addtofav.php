@@ -14,7 +14,17 @@ $_sessID = $_SESSION['userID'];
 if($productID >= 0){
 
     if($choice){
-        $query = "INSERT INTO `user_favorites`(`ID`, `user_id`, `product_id`) VALUES ( 'null', $_sessID, $productID)";
+        //make sure before adding that it does not exist.
+        $queryexist = "SELECT 'ID' FROM `user_favorites` WHERE `product_id` = $productID and `user_id` = $_sessID";
+        $result = mysqli_query($conn, $queryexist);
+
+        if(mysqli_num_rows($result)>0){
+            $output['msg'] = 'you already favorited this!';
+            print json_encode($output, JSON_UNESCAPED_SLASHES);
+            exit();
+        }else{
+            $query = "INSERT INTO `user_favorites`(`ID`, `user_id`, `product_id`) VALUES ( null, $_sessID, $productID)";
+        }
     }else{
         $query = "DELETE FROM `user_favorites` WHERE `product_id`= $productID AND `user_id`=$_sessID";
     }
@@ -23,23 +33,17 @@ if($productID >= 0){
 
     if ($result){
         //the query successfully ran
-        if(mysqli_num_rows($result)>0 ){
-            //there was data
-            while( $row = mysqli_fetch_assoc($result) ) {
-                //get all the data
-                $output['data'][] = $row;
-            }
+        //print_r(mysqli_affected_rows($conn)); //will give how many were affected.
+        if(mysqli_affected_rows($conn)>0){
             $output['success'] = true;
-            }
-            else{
-                //there was no data
-                $output['error'][] = 'no data avail';
-            }
-
+            $output['msg'] = 'request success';
+        }else{
+            $output['msg'] = 'unable to complete request';
+        }
 
     }else{
         //the query failed
-        $output['error'][] = mysqli_error($conn);
+        $output['error'] = 'unable to complete request';
     }
 
 }else{
