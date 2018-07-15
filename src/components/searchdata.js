@@ -12,11 +12,36 @@ class SearchData extends Component{
             show: false,
             allergenShow: false,
             categoryShow: false,
-            allegenIndex: null,
-            filterID: 3,
-            categoryID: 1,
+            filterID: null,
+            categoryID: null,
             toggleAllFilter: this.toggleAllFilter.bind(this),
-            toggleFilters: this.toggleFilters.bind(this)
+            toggleFilters: this.toggleFilters.bind(this),
+            allergenArray: [{
+                name: "peanuts",
+                strike: false
+            }, {
+                name: "dairy",
+                strike: false
+            }, {
+                name: "egg",
+                strike: false
+            }, {
+                name: "corn",
+                strike: false
+            }, {
+                name: "nuts",
+                strike: false
+            }, {
+                name: "soy",
+                strike: false
+            }, {
+                name: "wheat",
+                strike: false
+            }, {
+                name: "sugar",
+                strike: false
+            },],
+            handleAllergenClick: this.handleAllergenClick.bind(this),
        }
    }
 
@@ -44,6 +69,19 @@ class SearchData extends Component{
         this.setState({
             [clickTab]:clickedTabBool,
             [oppositeTab]:false
+        });
+    }
+
+    handleAllergenClick(index) {
+        console.log(index);
+        const {allergenArray} = this.state;
+        const newArray = [...allergenArray];
+        newArray[index].strike = !newArray[index].strike;
+        console.log(this.state);
+
+        this.setState({
+            allergenArray: newArray,
+            filterID: index
         });
     }
 

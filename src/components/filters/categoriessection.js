@@ -11,7 +11,7 @@ class Categories extends Component {
     }
 
     toggleMenu() {
-        event.stopPropagation();
+        // event.stopPropagation();
         const {visible} = this.state;
         this.setState({
             visible: !visible
