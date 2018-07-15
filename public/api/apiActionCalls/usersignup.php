@@ -14,7 +14,7 @@ if($result){
         print( json_encode($output));
         exit();
     }else{
-        $query = "INSERT INTO `users`(`ID`, `email`, `password`, `username`, `user_rights`) VALUES ( 'null', '$_EMAIL', '$_PASS', '$_NAME', 1)";
+        $query = "INSERT INTO `users`(`ID`, `email`, `password`, `username`, `user_rights`) VALUES ( null, '$_EMAIL', '$_PASS', '$_NAME', 1)";
 
         $result = mysqli_query($conn, $query);
         
