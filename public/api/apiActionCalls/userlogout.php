@@ -8,5 +8,3 @@ session_commit();
 
 $output['success'] = true;
 $output['msg'] = 'you are logged out!';
-
-print( json_encode($output));
