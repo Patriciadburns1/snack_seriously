@@ -67,7 +67,7 @@ class Allergens extends Component {
             });
 
         return( 
-            <div className={context.show ? "filterPanel active" : "filterPanel"}>
+            <div className={context.allergenShow ? "filterPanel active" : "filterPanel"}>
                     <div className="allergyPageContainer">
                         <h4 className="allergyTitle"> Select all allergens to avoid </h4>
                         <div className="allergyContainer">
@@ -75,7 +75,7 @@ class Allergens extends Component {
                         </div>
                     </div>
                 </div>
-        );  
+        )  
     }
 
     render() {

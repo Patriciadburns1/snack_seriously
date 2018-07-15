@@ -110,7 +110,7 @@ class MultipleResults extends Component {
 
         return (
             <div>
-                {/* <Filters /> */}
+                <Filters />
                 <div className="multipleResultsContainer">
                     <div className="multipleResultsItemsContainer">
                         { displayedSnack }

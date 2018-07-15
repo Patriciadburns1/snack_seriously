@@ -42,24 +42,24 @@ class Filters extends Component {
     //     });
     // }
 
-    handleFilterSearchClick(context){
-        console.log("This is working");
-        console.log(this.props);
-        console.log("context: ", context);
+    // handleFilterSearchClick(context){
+    //     console.log("This is working");
+    //     console.log(this.props);
+    //     console.log("context: ", context);
 
-        this.getFilterData(context);
-    }
+    //     this.getFilterData(context);
+    // }
 
-    async getFilterData(context){
-        let URL ='http://api.snackseriously.com/snackapi.php?action=';
-        debugger;
-        try {
-            const filterData = await axios.get(`${URL}getcategory&filterid=${context.filterID}&categoryid=${context.categoryID}&limit=12&offset=0`);
-            console.log(filterData);
-        } catch (err) {
-            console.log('Get Data Error:', err.message);
-        }
-    }
+    // async getFilterData(context){
+    //     let URL ='http://api.snackseriously.com/snackapi.php?action=';
+    //     // debugger;
+    //     try {
+    //         const filterData = await axios.get(`${URL}getcategory&filterid=${context.filterID}&categoryid=${context.categoryID}&limit=12&offset=0`);
+    //         console.log(filterData);
+    //     } catch (err) {
+    //         console.log('Get Data Error:', err.message);
+    //     }
+    // }
 
     render() {
         // const {show, allergenShow, categoryShow, allergenIndex, toggleAllFilter, toggleFilters} = context;
@@ -67,7 +67,7 @@ class Filters extends Component {
             <div className="filtersContainer">
                 <div className="filtersHeaderContainer" name='show' onClick={context.toggleAllFilter} >
                     <div>Filters</div>
-                    <button onClick={()=>this.handleFilterSearchClick(context)}>Search</button>
+                    <button onClick={()=>context.handleFilterSearchClick()}>Search</button>
                     {/* <Link to={`/MultipleResults/${userChoices}`}><div>Search</div></Link> */}
                 </div>
                 
@@ -75,8 +75,8 @@ class Filters extends Component {
                     <div className={context.allergenShow ? 'filterTab show' : 'filterTab'} onClick={()=>context.toggleFilters('allergenShow','categoryShow')}>Allergens</div>
                     <div className={context.categoryShow ? 'filterTab show' : 'filterTab'} onClick={()=>context.toggleFilters('categoryShow','allergenShow')}>Category</div>
                     {/* <Allergens visible={context.allergenShow} index={context.allergenIndex}/> */}
-                    <Allergens index={context.filterID}/>
-                    <Categories visible={context.categoryShow} />
+                    <Allergens />
+                    <Categories  />
                     {/* <Nutrients /> */}
                 </div>
             </div>

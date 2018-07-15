@@ -1,5 +1,5 @@
 import React, {Component, createContext} from "react";
-
+import axios from 'axios';
 
 export const SearchDataContext  = createContext();
 
@@ -42,6 +42,8 @@ class SearchData extends Component{
                 strike: false
             },],
             handleAllergenClick: this.handleAllergenClick.bind(this),
+            handleCategoryClick: this.handleCategoryClick.bind(this),
+            handleFilterSearchClick: this.handleFilterSearchClick.bind(this)         
        }
    }
 
@@ -70,19 +72,40 @@ class SearchData extends Component{
             [clickTab]:clickedTabBool,
             [oppositeTab]:false
         });
+        console.log("Toggle filter,", this.state);
+
     }
 
     handleAllergenClick(index) {
-        console.log(index);
         const {allergenArray} = this.state;
         const newArray = [...allergenArray];
         newArray[index].strike = !newArray[index].strike;
-        console.log(this.state);
 
         this.setState({
             allergenArray: newArray,
             filterID: index
         });
+    }
+
+    handleCategoryClick(index){
+        this.setState({
+            categoryID: index
+        });
+    }
+
+    handleFilterSearchClick(){
+        this.getFilterData();
+    }
+
+    async getFilterData(){
+        let URL ='http://api.snackseriously.com/snackapi.php?action=';
+        const { filterID, categoryID } = this.state;
+        try {
+            const filterData = await axios.get(`${URL}getcategory&filterid=${filterID}&categoryid=${categoryID}&limit=12&offset=0`);
+            console.log(filterData);
+        } catch (err) {
+            console.log('Get Data Error:', err.message);
+        }
     }
 
    render(){

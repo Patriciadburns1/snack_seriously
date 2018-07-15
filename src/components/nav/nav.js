@@ -48,7 +48,7 @@ class Nav extends Component {
                             <img className="profileImage" src={profileIcon} />
                         </div>    
                     </div>
-                    <Route path='/MultipleResults/:term?' component={Filters}/>
+                    {/* <Route path='/MultipleResults/:term?' component={Filters}/> */}
                 </div>
         )
     }

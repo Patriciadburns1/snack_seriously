@@ -1,4 +1,6 @@
 import React, {Component, Fragment} from 'react';
+import { SearchDataContext } from '../searchdata';
+
 
 class Categories extends Component {
     constructor(props){
@@ -21,24 +23,20 @@ class Categories extends Component {
     addStrikethrough(){
         // console.log("This is the value of this before binding", this);
     }
-    render() {
-        const {visible} = this.state;
 
+    renderItems(context){
         const nameArray = ["Popcorn & Pretzels", "Jerky & Rinds", "Chips & Crackers", "Snack Bars", "Nuts & Dried Fruit", "Candy & Chocolate"]
         const imageArray = ["popcornpretzel", "meat", "chipscrackers", "bar", "nutsdriedfruit", "candychocolate"];
         const Items = imageArray.map((item, index) => {
             return (
-                <div key={index} className="categoryItem">
+                <div key={index} className="categoryItem" onClick={() => context.handleCategoryClick(index)}>
                     <img  src={require(`./categoriesicons/${item}.png`)} className="categoryImage" />
                     <p className="categoryLabel">{nameArray[index]}</p>
                 </div>
             )
-        }); 
-
-        return (
-            <Fragment>
-                {/* <div className={visible ? "filterMenu " : "filterMenu active"} onClick={this.toggleMenu}>Categories</div> */}
-                <div className={this.props.visible ? "filterPanel active" : "filterPanel"}>
+        });
+        return(
+            <div className={context.categoryShow ? "filterPanel active" : "filterPanel"}>
                     <div className='categoryPageContainer'>
                         <h4 className='categoryTitle'>Pick a snack category</h4>
                         <div className='categoryContainer'>
@@ -46,7 +44,17 @@ class Categories extends Component {
                         </div>
                     </div>
                 </div>
-            </Fragment>
+        )
+    }
+    render() {
+        // const {visible} = this.state;
+        return (
+            <SearchDataContext.Consumer>
+            {/*  <Fragment> */}
+                {/* <div className={visible ? "filterMenu " : "filterMenu active"} onClick={this.toggleMenu}>Categories</div> */}
+                {this.renderItems}
+             {/* </Fragment> */}
+            </SearchDataContext.Consumer>
         )
     }
 }

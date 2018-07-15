@@ -1,7 +1,8 @@
 .filtersContainer {
     /* background-color: #F0F0F0; */
     position: absolute;
-    top: 98%;
+    top: 20%;
+    z-index: 1;
 }
 
 .filtersHeaderContainer {
