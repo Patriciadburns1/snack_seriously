@@ -13,6 +13,7 @@ import CategoryHome from './categoryhome';
 import SearchBar from './searchbar';
 import LogIn from './login'; 
 import CreateAccount from './createaccount'; 
+import UserFavorites from './userfavorites';
 
 class App extends Component {
     constructor(props) {
@@ -37,6 +38,7 @@ class App extends Component {
                                 <Route path='/Contact' component={Contact} />
                                 <Route path='/LogIn' component={LogIn}/> 
                                 <Route path='/CreateAccount' component={CreateAccount}/> 
+                                <Route path='/UserFavorites' component={UserFavorites}/> 
                             </div>
                         )}
                     </SearchDataContext.Consumer>
