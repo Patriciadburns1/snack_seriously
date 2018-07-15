@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+//localhost:8000/public/api/snackapi.php?action=usersignup
+//POST DATA: username , password, email
+
+
 $_NAME = addslashes($_POST['username']);
 $_PASS = sha1($_POST['password']);
 $_EMAIL = addslashes($_POST['email']);

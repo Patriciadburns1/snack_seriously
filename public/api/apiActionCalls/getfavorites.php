@@ -1,16 +1,18 @@
 <?php
 session_start();
 
-$output = [
-    'success' => false
-];
+//localhost:8000/public/api/snackapi.php?action=getfavorites&limit=12&offset=0
+
+$limit = filter_var( $_GET['limit'],FILTER_VALIDATE_INT);
+$offset = filter_var($_GET['offset'],FILTER_VALIDATE_INT);
 
 if(!isset($_SESSION['userID'])){
-    $output['error'] = 'must log in to do that!';
+    $output['msg'] = 'must log in to do that!';
+    print json_encode($output, JSON_UNESCAPED_SLASHES);
     exit();
 }
 
-if($categoryID && $limit && $offset >= 0){
+if($limit && $offset >= 0){
 
     $query = "SELECT `p`.`ID`, `p`.`name`, `d`.`img_url` FROM `products` AS `p` 
     JOIN `details` AS `d` 
@@ -40,7 +42,7 @@ if($categoryID && $limit && $offset >= 0){
 
     }else{
         //the query failed
-        $output['error'][] = mysqli_error($conn);
+        $output['error']= 'unable to make request';
     }
 
 }else{
