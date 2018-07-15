@@ -61,7 +61,7 @@ class LogIn extends Component {
                     <input placeholder="Password" type="text" value={email} name='email' onChange={this.handleInputChange} /> 
                 </div>
                 <div className="submitButtonDiv"> 
-                <button className="submitButtonContactPage"  type="submit" value="submit" onClick={this.sendContactForm.bind(this)}> Submit </button>
+               <Link to='/UserFavorites'> <button className="submitButtonContactPage"  type="submit" value="submit" onClick={this.sendContactForm.bind(this)}> Submit </button> </Link> 
                 </div> 
            </form> 
            </div> 
