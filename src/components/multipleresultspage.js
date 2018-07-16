@@ -5,6 +5,7 @@ import axios from 'axios';
 import noImage from '../assets/images/imagenotfound.jpeg';
 import Filters from './filters';
 
+
 class MultipleResults extends Component {
     constructor(props) {
         super(props);
@@ -24,20 +25,22 @@ class MultipleResults extends Component {
         this.getSnackData();   
     };
     
-
-
     async getSnackData() {
         let URL = 'http://api.snackseriously.com/snackapi.php?action=';
         let term = this.props.match.params.term; // '' || name || undefined
+        let filterID = this.props.match.params.filterID;
+        let categoryID = this.props.match.params.categoryID;
         let querystring = null;
         let offset= this.state.offset; 
         const regex= /^[1-6]+$/;
-        if (!term) {
+        console.log(this.props);
+        if(!term && filterID && categoryID){
+            querystring = `getcategory&filterid=${filterID}&categoryid=${categoryID}&limit=12&offset=0`;
+        } else if (!term && !filterID && !categoryID) {
             querystring = "getrandom";
         } else if (regex.test(term)) {
             querystring = `getcategory&categoryid=${term}&limit=12&offset=${offset}`;
-        }
-        else {
+        } else {
             querystring = `getname&search=${term}&offset=${offset}`;
         }
         URL += querystring;
@@ -47,6 +50,7 @@ class MultipleResults extends Component {
                 snackData: [...this.state.snackData, ...snackData.data.data],
                 offset: offset+12
             });
+            console.log(snackData);
         } catch (err) {
             console.log('Get Data Error:', err.message);
         }
@@ -64,11 +68,14 @@ class MultipleResults extends Component {
         ()=>{
             this.getSnackData(); 
         }
-    )
+        )
     }
 
     componentDidUpdate(prevProps){ 
         if(this.props.location !== prevProps.location){
+            console.log("Prev prop", prevProps.location);
+            console.log("Current prop", this.props.location);
+            // debugger;
             this.onRouteChange(); 
         }
     }
@@ -100,13 +107,11 @@ class MultipleResults extends Component {
                         </div>
                     </Link>
                 )
-
-
             });
         }
-        const { name } = this.state;
-        const userInput= this.state.userInput;  
-        const params = this.props.match.params.term || '';
+        // const { name } = this.state;
+        // const userInput= this.state.userInput;  
+        // const params = this.props.match.params.term || '';
 
         return (
             <div>

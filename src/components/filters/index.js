@@ -66,9 +66,8 @@ class Filters extends Component {
         return   <SearchDataContext.Consumer>{(context) => (
             <div className="filtersContainer">
                 <div className="filtersHeaderContainer" name='show' onClick={context.toggleAllFilter} >
-                    <div>Filters</div>
-                    <button onClick={()=>context.handleFilterSearchClick()}>Search</button>
-                    {/* <Link to={`/MultipleResults/${userChoices}`}><div>Search</div></Link> */}
+                    <div>Filters</div> <Link to={`/MultipleResults/${context.filterID}/${context.categoryID}`}>Search</Link>
+                   
                 </div>
                 
                 <div className={context.show ? "filterPanelContainer active" : "filterPanelContainer"}>
