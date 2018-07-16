@@ -1,9 +1,6 @@
 .searchBarComp {
-    /* margin-top: 22%; */
-    /*position: fixed;*/
     width: 100%;
     top:13%;
-    /*z-index: 1;*/
     display: flex;
     justify-content: center; 
     height: 40px;
@@ -19,24 +16,6 @@
     color: #000000;
 }
 
-/* .searchBarComp input:focus {
-    color: black;
-} */
-
-/* .searchBarComp button {
-    border: 1px solid #FF8C2D;
-    background-color: grey;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 20px;
-    display: inline-block; 
-} */
-
-/* .searchBarComp{
-    display: flex;
-    justify-content: center; 
-} */
 
 .searchBarComp .icon {
     background-color: lightgray;
@@ -44,4 +23,9 @@
     height: 100%;
     width: 40px;
     border-radius: 0 5px 5px 0; 
+}
+
+.searchIcon {
+    height: 80%; 
+    filter: invert(100%); 
 }
