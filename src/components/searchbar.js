@@ -10,12 +10,11 @@ class SearchBar extends Component {
     handleInputChange(event, context) {
         const value = event.target.value;
         context.updateTermValue(value);
-        console.log("value". value); 
         // this.props.history.push(`/search/${value}`);
     }
+
     render() {
         return <SearchDataContext.Consumer>{(context) => (
-        
             <div className="searchBarComp">
                 <input type="text" placeholder="Search snacks" onChange={(event)=>this.handleInputChange(event, context)} />
                 <button type="submit" className="icon">
