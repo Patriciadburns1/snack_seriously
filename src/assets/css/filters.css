@@ -1,9 +1,6 @@
 .filtersContainer {
     background-color: #d0d0d0;
-    /*position: absolute;*/
-    margin-top: 16vh;
-
-    /*top: 25%;*/
+    
 }
 
 .filtersHeaderContainer {
@@ -17,7 +14,6 @@
     display: flex;
     align-items: center;
     /* transition: 0.5s ease-out; */
-    max-height: 45vh;
 }
 
 .filtersHeaderContainer div {
