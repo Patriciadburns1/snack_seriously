@@ -1,12 +1,11 @@
 .filtersContainer {
     background-color: #d0d0d0;
-    
 }
 
 .filtersHeaderContainer {
     height: 4vh;
     width: 100vw;
-    background-color: grey;
+    background-color: #D0D0D0;
     /* align-items: center;
     display: flex;
     flex-direction: row;
@@ -19,10 +18,11 @@
 .filtersHeaderContainer div {
     width: 100%;
     text-align: center;
+
 }
 
 .filterPanelContainer {
-    background-color: lightgray;
+    background-color: #F0F0F0;
     max-height: 0;            
     overflow-y: hidden;
     /* -webkit-transition: max-height 0.5s ease-in-out;
@@ -33,7 +33,7 @@
 }
 
 .filterTab{
-    background-color: gray;
+    background-color: #D0D0D0;
     width: 50%;
     height: 5vh;
     display: inline-block;
@@ -41,7 +41,7 @@
 }
 
 .filterTab.show{
-    background-color:#C0C0C0;
+    background-color:#F0F0F0;
     color: black;
 }
 
@@ -49,7 +49,7 @@
 
 .filterMenu {
     background-color: #eee;
-    color: #444;
+    color: black;
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -58,12 +58,12 @@
 }
 
 .active:hover {
-    background-color: #ccc;
+    background-color: #F0F0F0;
 }
 
 .filterPanel {
     padding: 0 18px;
-    background-color: #C0C0C0;
+    background-color: #F0F0F0;
     max-height: 0;            
     overflow-y: hidden;
     /* -webkit-transition: max-height 0.25s ease-in-out;

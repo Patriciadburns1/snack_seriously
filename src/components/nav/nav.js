@@ -53,7 +53,7 @@ class Nav extends Component {
                         <Route path='/' component={SearchBar} />
 
                     </div>
-                    <Route path='/MultipleResults/:term?' component={Filters}/>
+                    {/* <Route path='/MultipleResults/:term?' component={Filters}/> */}
 
                 </div>
         )
