@@ -11,6 +11,9 @@ import Contact from './contact';
 import Filters from './filters';
 import CategoryHome from './categoryhome';
 import SearchBar from './searchbar';
+import LogIn from './login'; 
+import CreateAccount from './createaccount'; 
+import UserFavorites from './userfavorites';
 
 class App extends Component {
     constructor(props) {
@@ -25,7 +28,7 @@ class App extends Component {
                         {(context)=>(
                             <div>
                                 <Nav />
-                                <Route path='/' component={SearchBar} />
+                                {/*<Route path='/' component={SearchBar} />*/}
                                 <Route exact path='/' component={Homepage} />
                                 <Route path='/search/:term?' component={Homepage} />
                                 <Route path='/search/:term/MultipleResults/?' component={MultipleResults} />
@@ -34,6 +37,9 @@ class App extends Component {
                                 <Route path='/SingleResult/:product_id' component={SingleResult} />
                                 <Route path='/About' component={About} />
                                 <Route path='/Contact' component={Contact} />
+                                <Route path='/LogIn' component={LogIn}/> 
+                                <Route path='/CreateAccount' component={CreateAccount}/> 
+                                <Route path='/UserFavorites' component={UserFavorites}/> 
                             </div>
                         )}
                     </SearchDataContext.Consumer>

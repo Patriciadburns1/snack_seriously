@@ -7,6 +7,12 @@ if(empty($_GET['product_id'])){
     $productId = filter_var( $_GET['product_id'],FILTER_VALIDATE_INT);
     if($productId){
         // gets us id, name, manu, description, img_url, ingredeints , all serving info
+
+        //add in user note query as a if statement if $_SESSION EXIST.
+        // if(!isset($_SESSION['userID'])){
+        //     $productQuery
+        // }
+
         $productQuery = "SELECT `p`.`ID`,`p`.`name`, `b`.`name` as `manu`, `d`.`description`,`d`.`img_url`,`d`.`ingredients`,`s`.`per_container`,`s`.`size`,`s`.`unit`, `s`.`weight`, `r`.`name`AS `retail` FROM `products` AS `p` 
             LEFT JOIN `details` AS `d`
                 ON `d`.`product_id` = `p`.`ID`

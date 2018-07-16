@@ -5,6 +5,7 @@
     font-size: small;
     line-height: 1.4;
     margin: 5% auto;
+    /* font-weight: 200;  */
 }
 
 .nutritionalText{
@@ -12,6 +13,7 @@
 }
 
 .performanceFacts {
+    /* font-weight: 200;  */
     border: 1px solid black;
     /* margin: 20px; */
     margin: auto;
@@ -28,7 +30,7 @@
 }
 
 .performanceFactsTitle {
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 2rem;
     margin: 0 0 0.25rem 0;
 }
@@ -49,7 +51,7 @@
     border: 0;
 }
 .performanceFactsTable th, .performanceFactsTableSmall th, .performanceFactsTableGrid th, .performanceFactsTable td, .performanceFactsTableSmall td, .performanceFactsTableGrid td {
-    font-weight: normal;
+    /* font-weight: normal; */
     text-align: left;
     padding: 0.25rem 0;
     border-top: 1px solid black;
@@ -93,7 +95,7 @@
 }
 .performanceFactsTableGrid td:last-child::before {
     content: "•";
-    font-weight: bold;
+    /* font-weight: bold; */
     margin: 0 0.25rem 0 0;
 }
 
@@ -125,7 +127,6 @@
 
 
 @media only screen and (max-width: 480px) {
-
     .singleResultContainer .singleItemContainer .nutritionContainer .performanceFacts .ingredientContainer{
         width: 100%;
     }

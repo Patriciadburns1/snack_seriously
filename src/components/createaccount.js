@@ -4,23 +4,21 @@ import '../assets/css/contact.css';
 import axios from 'axios'; 
 
 
-class Contact extends Component {
+class CreateAccount extends Component {
     constructor(props) {
         super(props);
         this.state = {
             form:{
-                name: '',
-                email: '',
-                subject: '',
-                body: ''
+                username: '',
+                email:'',
+                password: ''
             }
            
         }
         this.handleInputChange = this.handleInputChange.bind(this);
     }
 
-    handleInputChange(event){
-       
+    handleInputChange(event){    
         const {value, name} = event.target; 
         console.log("name", name, "value", value); 
         const{form}= this.state; 
@@ -44,30 +42,27 @@ class Contact extends Component {
         const {form} = this.state;
         const data = this.formatPostData(form);
     
-        axios.post(`http://api.snackseriously.com/contactMailer/mail_handler.php`,data).then(function(response){
-            console.log("server has sent email", response); 
+        axios.post(`http://api.snackseriously.com/snackapi.php?action=usersignup`,data).then(function(response){
+            console.log("you have logged in!", response); 
         });
     }
 
 
     render() {
-        const{name, email, body, subject } = this.state.form; 
+        const{ username, email, password } = this.state.form; 
         return (     
             <div> 
-            <h2 className='headerForContact'> Contact Snack Seriously </h2> 
+            <h2 className='headerForContact'> Create an Account </h2> 
            <form className='contactForm'> 
                 <div className='contactFormEmail'> 
-                     <input placeholder='Name' type="text" value={name} name='name' onChange={this.handleInputChange}/>
+                     <input placeholder='UserName' type="text" value={username} name='username' onChange={this.handleInputChange}/>
                 </div> 
                 <div className='contactFormEmail'> 
                     <input placeholder="Email" type="text" value={email} name='email' onChange={this.handleInputChange} /> 
                 </div>
-                <div className='contactFormEmail'  > 
-                    <input placeholder="Subject" type="text" name="subject" onChange={this.handleInputChange}/>
-                </div>
                 <div className='contactFormEmail'> 
-                    <input placeholder='Message' className='textArea' name="body" name="body" onChange={this.handleInputChange} ></input > 
-                </div> 
+                    <input placeholder="Password" type="text" value={password} name='password' onChange={this.handleInputChange} /> 
+                </div>
                 <div className="submitButtonDiv"> 
                 <button className="submitButtonContactPage"  type="submit" value="submit" onClick={this.sendContactForm.bind(this)}> Submit </button>
                 </div> 
@@ -77,4 +72,4 @@ class Contact extends Component {
     }
 }
 
-export default Contact; 
+export default CreateAccount; 

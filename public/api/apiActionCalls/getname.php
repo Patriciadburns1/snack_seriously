@@ -1,5 +1,5 @@
 <?php
-//git 
+//http://api.snackseriously.com/snackapi.php?action=getname&search=pop&offset=0 
 $search = $_GET['search'];
 $offset = filter_var($_GET['offset'],FILTER_VALIDATE_INT);
 

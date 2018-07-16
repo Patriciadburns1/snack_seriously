@@ -1,55 +1,38 @@
-.container1, .container2, .container3 {
-    display: flex;
-}
-
 .multipleResultsContainer {
     top: 28%;
-    left: 10%;
+    left: 0;
     position: absolute;
 }
 
 .multipleResultsItemsContainer {
     display: grid;
-    height: 70vh;
-    width: 80vw;
-    grid-template-columns: auto;
-    grid-row-gap: 1%;
-    position: relative;
-    margin: 0 auto;
-    justify-content: center; 
+    grid-template-columns: auto; 
 }
 
 .multipleResultsItem {
-    margin: 0;
-    height: 21vh;
+    height: 100%;
     display: flex;
     border: 1px solid lightgray;
     cursor: pointer;
-    position: relative;
 }
 
 .multipleResultsItem:hover span {
-    opacity: 1;
+    opacity: .8;
+    color: orange;
 }
 
 .multipleResultsItem > div {
     width: 50%;
-    display: flex;
-    /* box-shadow: 1px 0 5px orange inset; */
+    padding: 0 5%;
 }
 
 
 .multipleResultsImage {
-    display: block;
-    height: auto;
-    max-width: 35vw;
-    max-height: 20vh;
-    margin: auto;
+    width: 100%;
 }
 
 .multipleResultsDescription {
     color: black;
-    padding: 10%;
     overflow: hidden;
     font-size: 12px;
 }
@@ -75,5 +58,27 @@
     .container1 .container2 .container3 .multipleResultsContainer .multipleResultsFilter .multipleResultsImage .multipleResultsItemsContainer .multipleResultsLabel{
         width: 100%;
     }
+}
+
+@media only screen and (min-width: 700px) {
+
+    .multipleResultsContainer {
+        left: 3%;
+    }
+
+    .multipleResultsItemsContainer {
+        grid-template-columns: auto auto auto;
+        grid-gap: 10px 0;
+    }
+
+    .multipleResultsItem {
+        height: 100%;
+        width: 90%;
+    }
+
+    .multipleResultsDescription {
+        font-size: 16px;
+    }
+
 }
 

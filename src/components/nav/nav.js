@@ -8,6 +8,7 @@ import SnackSeriouslyLogo from '../../assets/images/logo/snackSeriouslyLogo.png'
 import {Route, Link} from 'react-router-dom';
 import Filters from '../filters';
 import profileIcon from '../../assets/images/profileIcon.png';
+import SearchBar from "../searchbar";
 
 class Nav extends Component {
     constructor(props){
@@ -37,6 +38,7 @@ class Nav extends Component {
         return (
                 <div className="navBar">
                     <div className="nav-content">
+                        <div>
                         <div className="menu">  
                             <MenuButton handleMenuClick={this.handleMenuClick} visible={visible}/>
                             <Menu handleMenuClick={this.handleMenuClick} visible={visible}/> 
@@ -46,9 +48,13 @@ class Nav extends Component {
                         </div>
                         <div className="profile">
                             <img className="profileImage" src={profileIcon} />
-                        </div>    
+                        </div>
+                        </div>
+                        <Route path='/' component={SearchBar} />
+
                     </div>
                     {/* <Route path='/MultipleResults/:term?' component={Filters}/> */}
+
                 </div>
         )
     }

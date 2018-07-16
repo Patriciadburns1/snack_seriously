@@ -91,22 +91,6 @@ class SearchData extends Component{
         this.setState({
             categoryID: index
         });
-    }
-
-    // handleFilterSearchClick(){
-    //     this.getFilterData();
-    // }
-
-    // async getFilterData(){
-    //     let URL ='http://api.snackseriously.com/snackapi.php?action=';
-    //     const { filterID, categoryID } = this.state;
-    //     try {
-    //         const filterData = await axios.get(`${URL}getcategory&filterid=${filterID}&categoryid=${categoryID}&limit=12&offset=0`);
-    //         console.log(filterData);
-    //     } catch (err) {
-    //         console.log('Get Data Error:', err.message);
-    //     }
-    // }
 
    render(){
        return(

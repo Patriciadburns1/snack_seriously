@@ -1,4 +1,7 @@
 <?php
+session_start();
+//loop through sessions and addslashes.
+
 header('Access-Control-Allow-Origin: *');
 //stdObj access is obj->name
 
@@ -25,8 +28,26 @@ if($method = 'GET'){
         case 'getcategory':
             include_once('apiActionCalls/getcategory.php');
             break;
+        case 'getfilter':
+            include_once('apiActionCalls/getfilter.php');
+            break;
         case 'getauto':
             include_once('apiActionCalls/getauto.php');
+            break;
+        case 'usersignup':
+            include_once('apiActionCalls/usersignup.php');
+            break;
+        case 'userlogin':
+            include_once('apiActionCalls/userlogin.php');
+            break;
+        case 'userlogout':
+            include_once('apiActionCalls/userlogout.php');
+            break;
+        case 'getfavorites':
+            include_once('apiActionCalls/getfavorites.php');
+            break;
+        case 'addtofav':
+            include_once('apiActionCalls/addtofav.php');
             break;
         default:
             $output['error'] = "unknown request";
