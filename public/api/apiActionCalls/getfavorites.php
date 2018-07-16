@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin: *");
 session_start();
 
 //localhost:8000/public/api/snackapi.php?action=getfavorites&limit=12&offset=0
@@ -8,9 +9,12 @@ $offset = filter_var($_GET['offset'],FILTER_VALIDATE_INT);
 
 if(!isset($_SESSION['userID'])){
     $output['msg'] = 'must log in to do that!';
+    print_r($_SESSION);
     print json_encode($output, JSON_UNESCAPED_SLASHES);
     exit();
 }
+
+$_userID = $_SESSION['userID'];
 
 if($limit && $offset >= 0){
 
@@ -19,7 +23,7 @@ if($limit && $offset >= 0){
     ON `d`.`product_id` = `p`.`ID`
     JOIN `user_favorites` AS `u_f`
     ON `u_f`.`product_id` = `p`.`ID`
-    WHERE `u_f`.`user_id` = $_SESSION[userID]
+    WHERE `u_f`.`user_id` = $_userID
     ORDER BY `p`.`ID` ASC LIMIT $limit OFFSET $offset";
 
     $result = mysqli_query($conn, $query);

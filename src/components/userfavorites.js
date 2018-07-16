@@ -13,43 +13,38 @@ class UserFavorites extends Component {
             offset: 0
         }
 
-        // this.handleOnScroll = this.handleOnScroll.bind(this);
-        // this.getSnackData=this.getSnackData.bind(this); 
-        // this.onRouteChange=this.onRouteChange.bind(this); 
+        this.handleOnScroll = this.handleOnScroll.bind(this);
+        this.getSnackData=this.getSnackData.bind(this); 
+        this.onRouteChange=this.onRouteChange.bind(this); 
     }
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleOnScroll);
-        // this.getSnackData();   
+        this.getSnackData();   
     };
     
 
-
-    // async getSnackData() {
-    //     let URL = 'http://api.snackseriously.com/snackapi.php?action=';
-    //     let term = this.props.match.params.term; // '' || name || undefined
-    //     let querystring = null;
-    //     let offset= this.state.offset; 
-    //     const regex= /^[1-6]+$/;
-    //     if (!term) {
-    //         querystring = "getrandom";
-    //     } else if (regex.test(term)) {
-    //         querystring = `getcategory&categoryid=${term}&limit=12&offset=${offset}`;
-    //     }
-    //     else {
-    //         querystring = `getname&search=${term}&offset=${offset}`;
-    //     }
-    //     URL += querystring;
-    //     try {
-    //         const snackData = await axios.get(URL);
-    //         this.setState({
-    //             snackData: [...this.state.snackData, ...snackData.data.data],
-    //             offset: offset+12
-    //         });
-    //     } catch (err) {
-    //         console.log('Get Data Error:', err.message);
-    //     }
-    // };
+    //http://api.snackseriously.com/snackapi.php?action=
+    //localhost:8000/public/api/snackapi.php?action=getfavorites&limit=12&offset=0
+    async getSnackData() {
+        let URL = 'http://localhost:8000/public/api/snackapi.php?action=getfavorites&limit=12';
+        //let term = this.props.match.params.term; // '' || name || undefined
+        let querystring = null;
+        let offset= this.state.offset; 
+        
+        querystring = `&offset=${offset}`;
+        
+        URL += querystring;
+        try {
+            const snackData = await axios(URL, {method: 'get', withCredentials: true });
+            this.setState({
+                snackData: [...this.state.snackData, ...snackData.data.data],
+                offset: offset+12
+            });
+        } catch (err) {
+            console.log('Get Data Error:', err.message);
+        }
+    };
 
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleOnScroll);
@@ -61,7 +56,7 @@ class UserFavorites extends Component {
             offset:0
         },
         ()=>{
-            // this.getSnackData(); 
+            this.getSnackData(); 
         }
     )
     }
@@ -86,6 +81,7 @@ class UserFavorites extends Component {
     render() {
         const snackData = this.state.snackData;
         if (snackData) {
+            debugger;
             var displayedSnack = snackData.map((item, index) => {
                 return (
                     <Link key={index} to={`/singleresult/${item.ID}`}>

@@ -42,29 +42,37 @@ class LogIn extends Component {
         const {form} = this.state;
         const data = this.formatPostData(form);
     
-        axios.post(`http://api.snackseriously.com/snackapi.php?action=userlogin`,data).then(function(response){
+        //localhost:8000/public/api/snackapi.php?action=userlogin
+        //http://api.snackseriously.com/snackapi.php?action=userlogin
+        // axios.post(`http://localhost:8000/public/api/snackapi.php?action=userlogin`,data).then(function(response){
+        //     console.log("server call Success", response); 
+        // });
+
+        axios(`http://localhost:8000/public/api/snackapi.php?action=userlogin`,{method: 'post', data:data, withCredentials: true}).then(function(response){
             console.log("you have logged in!", response); 
         });
     }
 
 
     render() {
-        const{name, email } = this.state.form; 
+        const{name, password } = this.state.form; 
         return (     
             <div> 
             <h2 className='headerForContact'> Log In </h2> 
-           <form className='contactForm'> 
+           {/* <form className='contactForm'>  */}
+           <div  className='contactForm'>
                 <div className='contactFormEmail'> 
                      <input placeholder='Name or Email' type="text" value={name} name='name' onChange={this.handleInputChange}/>
                 </div> 
                 <div className='contactFormEmail'> 
-                    <input placeholder="Password" type="text" value={email} name='email' onChange={this.handleInputChange} /> 
+                    <input placeholder="Password" type="text" value={password} name='password' onChange={this.handleInputChange} /> 
                 </div>
                 <div className="submitButtonDiv"> 
                <Link to='/UserFavorites'> <button className="submitButtonContactPage"  type="submit" value="submit" onClick={this.sendContactForm.bind(this)}> Submit </button> </Link> 
                 </div> 
-           </form> 
+           {/* </form>  */}
            </div> 
+           </div>
         )
     }
 }
