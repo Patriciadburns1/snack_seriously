@@ -29,8 +29,8 @@ class App extends Component {
                                 <Route exact path='/' component={Homepage} />
                                 <Route path='/search/:term?' component={Homepage} />
                                 <Route path='/search/:term/MultipleResults/?' component={MultipleResults} />
-                                <Route path='/MultipleResults/:term?' component={MultipleResults} />
-                                <Route path='/MultipleResults/:filterID/:categoryID' component={MultipleResults} />
+                                <Route exact path='/MultipleResults/:term?' component={MultipleResults} />
+                                <Route path='/MultipleResults/filter/:filterID/category/:categoryID' component={MultipleResults} />
                                 <Route path='/SingleResult/:product_id' component={SingleResult} />
                                 <Route path='/About' component={About} />
                                 <Route path='/Contact' component={Contact} />

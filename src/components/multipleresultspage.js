@@ -28,19 +28,20 @@ class MultipleResults extends Component {
     async getSnackData() {
         let URL = 'http://api.snackseriously.com/snackapi.php?action=';
         let term = this.props.match.params.term; // '' || name || undefined
+        let querystring = null;
         let filterID = this.props.match.params.filterID;
         let categoryID = this.props.match.params.categoryID;
-        let querystring = null;
+        console.log(this.props.match.params.filterID);
         let offset= this.state.offset; 
         const regex= /^[1-6]+$/;
-        console.log(this.props);
+        // debugger;
         if(!term && filterID && categoryID){
-            querystring = `getcategory&filterid=${filterID}&categoryid=${categoryID}&limit=12&offset=0`;
-        } else if (!term && !filterID && !categoryID) {
+            querystring = `getcategory&filterid=${filterID}&categoryid=${categoryID}&limit=12&offset=${offset}`;
+        } else if (!term) {
             querystring = "getrandom";
         } else if (regex.test(term)) {
             querystring = `getcategory&categoryid=${term}&limit=12&offset=${offset}`;
-        } else {
+        } else  {
             querystring = `getname&search=${term}&offset=${offset}`;
         }
         URL += querystring;
@@ -72,6 +73,8 @@ class MultipleResults extends Component {
     }
 
     componentDidUpdate(prevProps){ 
+        // console.log("prev props", prevProps.location);
+        // console.log("current props", this.props.location);
         if(this.props.location !== prevProps.location){
             console.log("Prev prop", prevProps.location);
             console.log("Current prop", this.props.location);
@@ -79,6 +82,7 @@ class MultipleResults extends Component {
             this.onRouteChange(); 
         }
     }
+    
 
     handleOnScroll() {
         let scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;

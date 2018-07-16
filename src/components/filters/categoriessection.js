@@ -5,24 +5,24 @@ import { SearchDataContext } from '../searchdata';
 class Categories extends Component {
     constructor(props){
         super(props);
-        this.state = {
-            visible: props.visible,
-        }
+        // this.state = {
+        //     visible: props.visible,
+        // }
 
-        this.toggleMenu = this.toggleMenu.bind(this);
+        // this.toggleMenu = this.toggleMenu.bind(this);
     }
 
-    toggleMenu() {
-        // event.stopPropagation();
-        const {visible} = this.state;
-        this.setState({
-            visible: !visible
-        });
-    }
+    // toggleMenu() {
+    //     // event.stopPropagation();
+    //     const {visible} = this.state;
+    //     this.setState({
+    //         visible: !visible
+    //     });
+    // }
 
-    addStrikethrough(){
-        // console.log("This is the value of this before binding", this);
-    }
+    // addStrikethrough(){
+    //     // console.log("This is the value of this before binding", this);
+    // }
 
     renderItems(context){
         const nameArray = ["Popcorn & Pretzels", "Jerky & Rinds", "Chips & Crackers", "Snack Bars", "Nuts & Dried Fruit", "Candy & Chocolate"]

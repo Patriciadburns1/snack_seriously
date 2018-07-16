@@ -66,7 +66,7 @@ class Filters extends Component {
         return   <SearchDataContext.Consumer>{(context) => (
             <div className="filtersContainer">
                 <div className="filtersHeaderContainer" name='show' onClick={context.toggleAllFilter} >
-                    <div>Filters</div> <Link to={`/MultipleResults/${context.filterID}/${context.categoryID}`}>Search</Link>
+                    <div>Filters</div> <Link to={`/MultipleResults/filter/${context.filterID}/category/${context.categoryID}`}>Search</Link>
                    
                 </div>
                 
