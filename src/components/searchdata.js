@@ -91,6 +91,7 @@ class SearchData extends Component{
         this.setState({
             categoryID: index
         });
+    }
 
    render(){
        return(
