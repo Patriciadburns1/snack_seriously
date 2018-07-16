@@ -1,5 +1,4 @@
 <?php
-session_start();
 $productID = filter_var($_GET['product_id'],FILTER_VALIDATE_INT);
 $choice = filter_var($_GET['choice'],FILTER_VALIDATE_BOOLEAN); //'true' or 'false'
 
