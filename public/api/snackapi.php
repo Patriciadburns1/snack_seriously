@@ -1,4 +1,7 @@
 <?php
+session_start();
+//loop through sessions and addslashes.
+
 header('Access-Control-Allow-Origin: *');
 //stdObj access is obj->name
 

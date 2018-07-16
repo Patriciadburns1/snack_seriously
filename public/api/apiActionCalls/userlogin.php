@@ -1,10 +1,10 @@
 <?php
-session_start();
+header("Access-Control-Allow-Origin: *");
 
 //localhost:8000/public/api/snackapi.php?action=userlogin
 //POST with name and password
 
-if($_SESSION['userID']){
+if(isset($_SESSION['userID'])){
     $output['success'] = true;
     $output['username'] = $_SESSION['username'];
     $output['msg'] = 'your already logged in';
