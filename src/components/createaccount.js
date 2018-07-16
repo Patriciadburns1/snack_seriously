@@ -53,7 +53,7 @@ class CreateAccount extends Component {
         return (     
             <div> 
             <h2 className='headerForContact'> Create an Account </h2> 
-           {/* <form className='contactForm'>  */}
+           <form className='contactForm'> 
                 <div className='contactFormEmail'> 
                      <input placeholder='UserName' type="text" value={username} name='username' onChange={this.handleInputChange}/>
                 </div> 
@@ -63,11 +63,10 @@ class CreateAccount extends Component {
                 <div className='contactFormEmail'> 
                     <input placeholder="Password" type="text" value={password} name='password' onChange={this.handleInputChange} /> 
                 </div>
-
                 <div className="submitButtonDiv"> 
                 <button className="submitButtonContactPage"  type="submit" value="submit" onClick={this.sendContactForm.bind(this)}> Submit </button>
                 </div> 
-           {/* </form>  */}
+           </form> 
            </div> 
         )
     }

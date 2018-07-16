@@ -63,6 +63,9 @@ class LogIn extends Component {
                 <div className="submitButtonDiv"> 
                <Link to='/UserFavorites'> <button className="submitButtonContactPage"  type="submit" value="submit" onClick={this.sendContactForm.bind(this)}> Submit </button> </Link> 
                 </div> 
+                <div className="createAccount"> 
+                <p> Need an account?  <Link to='/CreateAccount'> Sign up </Link>  </p> 
+                </div>  
            </form> 
            </div> 
         )
