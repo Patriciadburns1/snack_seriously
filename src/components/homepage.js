@@ -14,7 +14,6 @@ import { SearchDataContext } from './searchdata';
 class Homepage extends Component {
     constructor(props) {
         super(props);
-
         const { term } = props.match.params;
         this.autocompleteFromUser = debounce(this.autocompleteFromUser, 1000).bind(this);
 
