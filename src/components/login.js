@@ -48,7 +48,11 @@ class LogIn extends Component {
         //     console.log("server call Success", response); 
         // });
 
-        axios(`http://localhost:8000/public/api/snackapi.php?action=userlogin`,{method: 'post', data:data, withCredentials: true}).then(function(response){
+        axios(`http://localhost:3000/public/api/snackapi.php?action=userlogin`,{
+            method: 'POST', 
+            data:data, 
+            withCredentials: true
+        }).then(function(response){
             console.log("you have logged in!", response); 
         });
     }

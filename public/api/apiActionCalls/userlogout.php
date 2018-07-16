@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 //localhost:8000/public/api/snackapi.php?action=userlogout
 

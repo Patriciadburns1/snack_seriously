@@ -1,6 +1,5 @@
 <?php
 header("Access-Control-Allow-Origin: *");
-session_start();
 
 //localhost:8000/public/api/snackapi.php?action=getfavorites&limit=12&offset=0
 

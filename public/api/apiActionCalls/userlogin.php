@@ -1,6 +1,5 @@
 <?php
 header("Access-Control-Allow-Origin: *");
-session_start();
 
 //localhost:8000/public/api/snackapi.php?action=userlogin
 //POST with name and password

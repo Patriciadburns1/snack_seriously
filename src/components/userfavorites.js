@@ -26,8 +26,10 @@ class UserFavorites extends Component {
 
     //http://api.snackseriously.com/snackapi.php?action=
     //localhost:8000/public/api/snackapi.php?action=getfavorites&limit=12&offset=0
+
+    
     async getSnackData() {
-        let URL = 'http://localhost:8000/public/api/snackapi.php?action=getfavorites&limit=12';
+        let URL = 'http://localhost:3000/public/api/snackapi.php?action=getfavorites&limit=12';
         //let term = this.props.match.params.term; // '' || name || undefined
         let querystring = null;
         let offset= this.state.offset; 
@@ -36,7 +38,11 @@ class UserFavorites extends Component {
         
         URL += querystring;
         try {
-            const snackData = await axios(URL, {method: 'get', withCredentials: true });
+            const snackData = await axios(URL, {
+                method: 'GET', 
+                withCredentials: true 
+            
+            });
             this.setState({
                 snackData: [...this.state.snackData, ...snackData.data.data],
                 offset: offset+12
@@ -81,7 +87,6 @@ class UserFavorites extends Component {
     render() {
         const snackData = this.state.snackData;
         if (snackData) {
-            debugger;
             var displayedSnack = snackData.map((item, index) => {
                 return (
                     <Link key={index} to={`/singleresult/${item.ID}`}>
