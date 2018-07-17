@@ -14,6 +14,7 @@ class SearchData extends Component{
             categoryShow: false,
             filterID: null,
             categoryID: null,
+            categoryChosen: false,
             toggleAllFilter: this.toggleAllFilter.bind(this),
             toggleFilters: this.toggleFilters.bind(this),
             allergenArray: [{
@@ -70,24 +71,39 @@ class SearchData extends Component{
             [clickTab]:clickedTabBool,
             [oppositeTab]:false
         });
-        console.log("Toggle filter,", this.state);
 
     }
 
     handleAllergenClick(index) {
-        const {allergenArray} = this.state;
-        const newArray = [...allergenArray];
-        newArray[index].strike = !newArray[index].strike;
+        let {allergenArray, filterID} = this.state;
+        allergenArray[index].strike = !allergenArray[index].strike;
+        if(allergenArray[index].strike){
+            if(filterID == null){
+                filterID = filterID + (index+1);
+            }else{
+                filterID = filterID + ','+ (index+1);
+            }
 
+        }else{
+            let checkarray = filterID.split(',');
+            let allergenIndex = checkarray.indexOf(''+(index+1));
+            checkarray.splice(allergenIndex,1)
+            filterID = checkarray.join(',');
+        }
+        
         this.setState({
-            allergenArray: newArray,
-            filterID: index
+            allergenArray: [...allergenArray],
+            filterID: filterID
         });
+
     }
 
     handleCategoryClick(index){
+        const {categoryChosen} = this.state;
+        // categoryChosen = !categoryChosen;
         this.setState({
-            categoryID: index
+            categoryID: index,
+            categoryChosen: !categoryChosen
         });
     }
 

@@ -65,7 +65,7 @@ class Allergens extends Component {
                 <AllergenIcon key={index}  clickHandler={()=>{context.handleAllergenClick(index)}} img={require(`./allergenicons/${item.name}.png`)} strike={item.strike} />
                 )
             });
-
+        
         return( 
             <div className={context.allergenShow ? "filterPanel active" : "filterPanel"}>
                     <div className="allergyPageContainer">
