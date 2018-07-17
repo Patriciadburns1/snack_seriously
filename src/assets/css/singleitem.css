@@ -63,3 +63,13 @@
 
   /*}*/
 /*}*/
+
+@media only screen and (min-width: 700px) {
+
+    .singleItemContainer {
+        margin: initial;
+        width: initial;
+        grid-column: 1;
+        grid-row: 1
+    }
+}
