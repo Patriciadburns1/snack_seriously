@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Link} from 'react-router-dom';
 import '../assets/css/multipleresultspage.css';
 import axios from 'axios';
@@ -85,7 +85,13 @@ class UserFavorites extends Component {
 
 
     render() {
+       
         const snackData = this.state.snackData;
+        //  if (snackData ){
+        //     return(
+        //         <div> You can add your favorite snacks! </div> 
+        //     )
+        // }
         if (snackData) {
             var displayedSnack = snackData.map((item, index) => {
                 return (
@@ -107,15 +113,18 @@ class UserFavorites extends Component {
         const { name } = this.state;
         const userInput= this.state.userInput;  
         const params = this.props.match.params.term || '';
-
+        
         return (
-
+            <Fragment> 
+            <div className="logOutButtonDiv"> 
+            <Link to='/'> <button className='logOutButton' type='button'> Logout </button> </Link> 
+            </div>
             <div className="multipleResultsContainer">
                 <div className="multipleResultsItemsContainer">
                     { displayedSnack }
-                    <h1> placeholder for favorites </h1> 
                 </div>
             </div>
+            </Fragment> 
         )
     }
 }
