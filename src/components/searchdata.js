@@ -134,6 +134,26 @@ class SearchData extends Component{
         });
     }
 
+    handleFilterClick(){
+        const {categoryArray, allergenArray} = this.state;
+        debugger;
+        for (let eachItem in categoryArray){
+            categoryArray[eachItem].selected = false;
+        }
+        for (let eachItem in allergenArray){
+            allergenArray[eachItem].strike = false;
+        }
+        this.setState({
+            show: false,
+            allergenShow: false,
+            categoryShow: false,
+            filterID: null,
+            categoryID: null,
+            allergenArray: [...allergenArray],
+            categoryArray: [...categoryArray]
+        });
+    }
+
    render(){
        return(
            <SearchDataContext.Provider value={this.state}>
