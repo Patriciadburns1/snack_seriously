@@ -35,7 +35,7 @@ class MultipleResults extends Component {
         let offset= this.state.offset; 
         const regex= /^[1-6]+$/;
         if(!term && filterID && categoryID){
-            querystring = `getcategory&filterid=${filterID}&categoryid=${categoryID}&limit=12&offset=${offset}`;
+            querystring = `getfilter&filterid=${filterID}&categoryid=${categoryID}&limit=12&offset=${offset}`;
         } else if (!term) {
             querystring = "getrandom";
         } else if (regex.test(term)) {
