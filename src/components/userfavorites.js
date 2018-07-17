@@ -1,8 +1,9 @@
 import React, { Component, Fragment } from 'react';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../assets/css/multipleresultspage.css';
 import axios from 'axios';
 import noImage from '../assets/images/imagenotfound.jpeg';
+import { SearchDataContext } from './searchdata';
 
 class UserFavorites extends Component {
     constructor(props) {
@@ -14,38 +15,38 @@ class UserFavorites extends Component {
         }
 
         this.handleOnScroll = this.handleOnScroll.bind(this);
-        this.getSnackData=this.getSnackData.bind(this); 
-        this.onRouteChange=this.onRouteChange.bind(this); 
+        this.getSnackData = this.getSnackData.bind(this);
+        this.onRouteChange = this.onRouteChange.bind(this);
     }
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleOnScroll);
-        this.getSnackData();   
+        this.getSnackData();
     };
-    
+
 
     //http://api.snackseriously.com/snackapi.php?action=
     //localhost:8000/public/api/snackapi.php?action=getfavorites&limit=12&offset=0
 
-    
+
     async getSnackData() {
         let URL = 'http://localhost:3000/public/api/snackapi.php?action=getfavorites&limit=12';
         //let term = this.props.match.params.term; // '' || name || undefined
         let querystring = null;
-        let offset= this.state.offset; 
-        
+        let offset = this.state.offset;
+
         querystring = `&offset=${offset}`;
-        
+
         URL += querystring;
         try {
             const snackData = await axios(URL, {
-                method: 'GET', 
-                withCredentials: true 
-            
+                method: 'GET',
+                withCredentials: true
+
             });
             this.setState({
                 snackData: [...this.state.snackData, ...snackData.data.data],
-                offset: offset+12
+                offset: offset + 12
             });
         } catch (err) {
             console.log('Get Data Error:', err.message);
@@ -56,20 +57,20 @@ class UserFavorites extends Component {
         window.removeEventListener('scroll', this.handleOnScroll);
     }
 
-    onRouteChange(){
+    onRouteChange() {
         this.setState({
-            snackData:[],
-            offset:0
+            snackData: [],
+            offset: 0
         },
-        ()=>{
-            this.getSnackData(); 
-        }
-    )
+            () => {
+                this.getSnackData();
+            }
+        )
     }
 
-    componentDidUpdate(prevProps){ 
-        if(this.props.location !== prevProps.location){
-            this.onRouteChange(); 
+    componentDidUpdate(prevProps) {
+        if (this.props.location !== prevProps.location) {
+            this.onRouteChange();
         }
     }
 
@@ -83,22 +84,37 @@ class UserFavorites extends Component {
         }
     }
 
+    logOut() {
+        axios(`http://localhost:3000/public/api/snackapi.php?action=userlogout`, {
+            method: 'POST',
+            withCredentials: true
+        }).then(function (response) {
+            console.log("you have logged out!", response);
+        });
+    }
+
 
     render() {
-       
-        const snackData = this.state.snackData;
-        //  if (snackData ){
-        //     return(
-        //         <div> You can add your favorite snacks! </div> 
-        //     )
-        // }
+        const { snackData, offset } = this.state;
+
+        if (offset === 0) {
+            return (
+                <Fragment>
+                    <div className="logOutButtonDiv">
+                        <Link to='/'> <button className='logOutButton' type='button' onClick={this.logOut}> Logout </button> </Link>
+                    </div>
+                    <div className="addSnacks"> You can add your favorite snacks! </div>
+                </Fragment>
+            )
+        }
+
         if (snackData) {
             var displayedSnack = snackData.map((item, index) => {
                 return (
                     <Link key={index} to={`/singleresult/${item.ID}`}>
                         <div className="multipleResultsItem">
                             <div>
-                                <img className="multipleResultsImage"  src={!item.img_url ? noImage : item.img_url} />
+                                <img className="multipleResultsImage" src={!item.img_url ? noImage : item.img_url} />
                             </div>
                             <div>
                                 <span className="multipleResultsDescription">{item.name}</span>
@@ -111,20 +127,24 @@ class UserFavorites extends Component {
             });
         }
         const { name } = this.state;
-        const userInput= this.state.userInput;  
+        const userInput = this.state.userInput;
         const params = this.props.match.params.term || '';
-        
+
         return (
-            <Fragment> 
-            <div className="logOutButtonDiv"> 
-            <Link to='/'> <button className='logOutButton' type='button'> Logout </button> </Link> 
-            </div>
-            <div className="multipleResultsContainer">
-                <div className="multipleResultsItemsContainer">
-                    { displayedSnack }
-                </div>
-            </div>
-            </Fragment> 
+            <SearchDataContext.Consumer>{(context) => (
+                <Fragment>
+                    <div className="logOutButtonDiv">
+                        <Link to='/'> <button className='logOutButton' type='button' onClick={this.logOut}> Logout </button> </Link>
+                    </div>
+                    <div className="multipleResultsContainer">
+                        <div className="multipleResultsItemsContainer">
+                            {displayedSnack}
+                        </div>
+                    </div>
+                </Fragment>
+            )
+            }
+            </SearchDataContext.Consumer>
         )
     }
 }
