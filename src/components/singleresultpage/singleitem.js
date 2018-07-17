@@ -16,7 +16,7 @@ class SingleItem extends Component{
     }
 
     handleBuy(){
-        window.open('https://www.amazon.com','_blank');
+        window.open(this.props.amazon_url,'_blank');
     }
 
     handleLike(){
@@ -39,12 +39,11 @@ class SingleItem extends Component{
 
         return(
         <div className="singleItemContainer">
-
             <h2>{this.props.name}</h2>
             <p>{this.props.manu}</p>
             <img src={!this.props.img ? noImage : this.props.img} className="singleItemImage"/>
             <img onClick={this.handleLike.bind(this)} className={`likeItem ${this.state.rotate}`} src={this.state.like}/>
-            <img onClick={this.handleBuy} className='buyFromAmazon' src={buyFromAmazon}/>
+            <img onClick={this.handleBuy.bind(this)} className='buyFromAmazon' src={buyFromAmazon}/>
         </div>
         )
     }
