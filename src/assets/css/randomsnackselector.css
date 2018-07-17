@@ -4,6 +4,13 @@
     display: inline-block;
 }
 
+.loadingRandom {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .randomButtonContainers {
     position: relative;
     height: 90%;

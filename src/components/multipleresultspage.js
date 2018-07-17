@@ -31,7 +31,7 @@ class MultipleResults extends Component {
         let querystring = null;
         let filterID = this.props.match.params.filterID;
         let categoryID = this.props.match.params.categoryID;
-        console.log(this.props.match.params.filterID);
+        // console.log(this.props.match.params.filterID);
         let offset= this.state.offset; 
         const regex= /^[1-6]+$/;
         if(!term && filterID && categoryID){
