@@ -131,7 +131,7 @@
     }
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 576px) {
 
     .nutritionContainer {
         grid-row: 1 / span 2;
