@@ -28,8 +28,8 @@ class Categories extends Component {
         const nameArray = ["Popcorn & Pretzels", "Jerky & Rinds", "Chips & Crackers", "Snack Bars", "Nuts & Dried Fruit", "Candy & Chocolate"]
         const imageArray = ["popcornpretzel", "meat", "chipscrackers", "bar", "nutsdriedfruit", "candychocolate"];
         const Items = imageArray.map((item, index) => {
-            return (
-                <div key={index} className="categoryItem" onClick={() => context.handleCategoryClick(index)}>
+            return ( //className={props.strike ? "allergyImage strike" : "allergyImage"}
+                <div key={index} className={context.categoryChosen ? "categoryItem strike" : "categoryItem"} onClick={() => context.handleCategoryClick(index)}>
                     <img  src={require(`./categoriesicons/${item}.png`)} className="categoryImage" />
                     <p className="categoryLabel">{nameArray[index]}</p>
                 </div>
