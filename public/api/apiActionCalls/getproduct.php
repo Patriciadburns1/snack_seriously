@@ -13,7 +13,7 @@ if(empty($_GET['product_id'])){
         //     $productQuery
         // }
 
-        $productQuery = "SELECT `p`.`ID`,`p`.`name`, `b`.`name` as `manu`, `d`.`description`,`d`.`img_url`,`d`.`ingredients`,`s`.`per_container`,`s`.`size`,`s`.`unit`, `s`.`weight`, `r`.`name`AS `retail` FROM `products` AS `p` 
+        $productQuery = "SELECT `p`.`ID`,`p`.`name`, `b`.`name` as `manu`, `d`.`description`,`d`.`img_url`, `d`.`amazon_url`,`d`.`ingredients`,`s`.`per_container`,`s`.`size`,`s`.`unit`, `s`.`weight`, `r`.`name`AS `retail` FROM `products` AS `p` 
             LEFT JOIN `details` AS `d`
                 ON `d`.`product_id` = `p`.`ID`
             LEFT JOIN `brand` AS `b`
