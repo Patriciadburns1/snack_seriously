@@ -17,7 +17,6 @@ class RandomSnack extends Component {
     }
 
     componentDidMount() {
-        // console.log('component mounted:');
         this.getRandomData();
     }
 
@@ -29,7 +28,6 @@ class RandomSnack extends Component {
             const snackData = await axios.get(URL);
             this.setState({
                 snackData: snackData.data.data,
-                // offset: offset+12
             });
         } catch (err) {
             console.log('Get Data Error:', err.message);
@@ -37,9 +35,6 @@ class RandomSnack extends Component {
     }
 
     handleNextPictureClick() {
-
-        // console.log("next Picture:");
-
         let { counter } = this.state;
 
         this.setState({
@@ -57,26 +52,20 @@ class RandomSnack extends Component {
             });
         }
 
-        // console.log("counter:", this.state.counter);
-
     }
 
     render() {
         const randomSnack = this.state.snackData;
-
         const { counter } = this.state;
 
         if(!randomSnack){
             return <div className="randomSnackContainer">Loading...</div>
         }
 
-        // console.log("randomSnack:", randomSnack);
-
         let random = null;
 
         if (counter < randomSnack.length){
             random = randomSnack[counter + 1];
-            // console.log("random:", random);
         }
 
         let image = random.img_url;
@@ -85,8 +74,6 @@ class RandomSnack extends Component {
         if(!image){
             image = noImage
         }
-
-        // console.log("image:", image);
 
         return (
             <div className="randomSnackContainer">

@@ -34,7 +34,6 @@ class MultipleResults extends Component {
         console.log(this.props.match.params.filterID);
         let offset= this.state.offset; 
         const regex= /^[1-6]+$/;
-        // debugger;
         if(!term && filterID && categoryID){
             querystring = `getcategory&filterid=${filterID}&categoryid=${categoryID}&limit=12&offset=${offset}`;
         } else if (!term) {
@@ -51,7 +50,7 @@ class MultipleResults extends Component {
                 snackData: [...this.state.snackData, ...snackData.data.data],
                 offset: offset+12
             });
-            console.log(snackData);
+            // console.log(snackData);
         } catch (err) {
             console.log('Get Data Error:', err.message);
         }
@@ -73,12 +72,8 @@ class MultipleResults extends Component {
     }
 
     componentDidUpdate(prevProps){ 
-        // console.log("prev props", prevProps.location);
-        // console.log("current props", this.props.location);
         if(this.props.location !== prevProps.location){
-            console.log("Prev prop", prevProps.location);
-            console.log("Current prop", this.props.location);
-            // debugger;
+
             this.onRouteChange(); 
         }
     }
@@ -113,9 +108,6 @@ class MultipleResults extends Component {
                 )
             });
         }
-        // const { name } = this.state;
-        // const userInput= this.state.userInput;  
-        // const params = this.props.match.params.term || '';
 
         return (
             <div>
