@@ -15,7 +15,43 @@
     text-align: center;
 }
 
+.likeItem{
+    width: 100px;
+}
 
+.buyFromAmazon{
+    width: 150px;
+}
+
+.rotateUP{
+    animation-name: rotateUP;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.rotateDown{
+    animation-name: rotateDown;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotateUP {
+    from {-ms-transform: rotate(90deg); /* IE 9 */
+        -webkit-transform: rotate(90deg); /* Safari 3-8 */
+        transform: rotate(90deg);}
+    to {-ms-transform: rotate(0deg); /* IE 9 */
+        -webkit-transform: rotate(0deg); /* Safari 3-8 */
+        transform: rotate(0deg);}
+}
+
+@keyframes rotateDown {
+    from {-ms-transform: rotate(90deg); /* IE 9 */
+        -webkit-transform: rotate(90deg); /* Safari 3-8 */
+        transform: rotate(90deg);}
+    to {-ms-transform: rotate(0deg); /* IE 9 */
+        -webkit-transform: rotate(0deg); /* Safari 3-8 */
+        transform: rotate(0deg);}
+}
 
 @media only screen and (max-width: 480px) {
     .singleItemImage {

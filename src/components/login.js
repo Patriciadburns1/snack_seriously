@@ -20,9 +20,11 @@ class LogIn extends Component {
     handleInputChange(event){
        
         const {value, name} = event.target; 
-        console.log("name", name, "value", value); 
-        const{form}= this.state; 
-        form[name]= value; 
+        console.log("name", name, "value", value);
+        const regexChecker = new RegExp("^[a-zA-Z0-9_]*","gi");
+        console.log("regex result name=", value.match(regexChecker)[0]);
+        const{form}= this.state;
+        form[name]= value.match(regexChecker)[0];
         this.setState({
            form: {...form},
         })
