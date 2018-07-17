@@ -42,8 +42,7 @@ class SearchData extends Component{
                 strike: false
             },],
             handleAllergenClick: this.handleAllergenClick.bind(this),
-            handleCategoryClick: this.handleCategoryClick.bind(this),
-            // handleFilterSearchClick: this.handleFilterSearchClick.bind(this)         
+            handleCategoryClick: this.handleCategoryClick.bind(this),        
        }
    }
 
@@ -54,7 +53,6 @@ class SearchData extends Component{
    }
   
    toggleAllFilter() {
-        //const { show, allergenShow, categoryShow } = this.state;
         const{show} = this.state;
         this.setState({
             show:!show
