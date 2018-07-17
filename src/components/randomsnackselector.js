@@ -13,7 +13,6 @@ class RandomSnack extends Component {
             image: null,
             counter: 0
         };
-
     }
 
     componentDidMount() {
@@ -38,20 +37,15 @@ class RandomSnack extends Component {
         let { counter } = this.state;
 
         this.setState({
-
             counter: this.state.counter + 1
-
         });
 
-        if(counter === 10){
-
+        if(counter === 10) {
             this.getRandomData();
-
             this.setState({
                 counter: 0
             });
         }
-
     }
 
     render() {
@@ -59,7 +53,7 @@ class RandomSnack extends Component {
         const { counter } = this.state;
 
         if(!randomSnack){
-            return <div className="randomSnackContainer">Loading...</div>
+            return <div className="randomSnackContainer loadingRandom">Loading snack...</div>
         }
 
         let random = null;
