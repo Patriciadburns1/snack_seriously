@@ -181,6 +181,11 @@
     margin: 0;
 }
 
+.circled {
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
 /********** Nutrients **********/
 
 .nutrientsPageContainer {

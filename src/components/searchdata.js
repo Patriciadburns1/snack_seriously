@@ -1,5 +1,6 @@
 import React, {Component, createContext} from "react";
 import axios from 'axios';
+import { ifError } from "assert";
 
 export const SearchDataContext  = createContext();
 
@@ -14,7 +15,6 @@ class SearchData extends Component{
             categoryShow: false,
             filterID: null,
             categoryID: null,
-            categoryChosen: false,
             toggleAllFilter: this.toggleAllFilter.bind(this),
             toggleFilters: this.toggleFilters.bind(this),
             allergenArray: [{
@@ -43,7 +43,32 @@ class SearchData extends Component{
                 strike: false
             },],
             handleAllergenClick: this.handleAllergenClick.bind(this),
-            handleCategoryClick: this.handleCategoryClick.bind(this),        
+            handleCategoryClick: this.handleCategoryClick.bind(this),
+            categoryArray: [{
+                name: "Popcorn & Pretzels",
+                image: "popcornpretzel",
+                selected: false
+            }, {
+                name: "Chips & Crisps",
+                image: "chipscrackers",
+                selected: false
+            }, {
+                name: "Nuts, Seeds & Dried Fruit",
+                image: "nutsdriedfruit",
+                selected: false
+            }, {
+                name: "Bars",
+                image: "bar",
+                selected: false
+            }, {
+                name: "Cookies",
+                image: "meat",
+                selected: false
+            }, {
+                name: "Chocolate",
+                image: "candychocolate",
+                selected: false
+            }]   
        }
    }
 
@@ -77,14 +102,13 @@ class SearchData extends Component{
     handleAllergenClick(index) {
         let {allergenArray, filterID} = this.state;
         allergenArray[index].strike = !allergenArray[index].strike;
-        if(allergenArray[index].strike){
-            if(filterID == null){
+        if (allergenArray[index].strike){
+            if (filterID == null){
                 filterID = filterID + (index+1);
-            }else{
+            } else {
                 filterID = filterID + ','+ (index+1);
             }
-
-        }else{
+        } else {
             let checkarray = filterID.split(',');
             let allergenIndex = checkarray.indexOf(''+(index+1));
             checkarray.splice(allergenIndex,1)
@@ -99,11 +123,14 @@ class SearchData extends Component{
     }
 
     handleCategoryClick(index){
-        const {categoryChosen} = this.state;
-        // categoryChosen = !categoryChosen;
+        const {categoryArray} = this.state;
+        for (let eachItem in categoryArray){
+            categoryArray[eachItem].selected = false;
+        }
+        categoryArray[index].selected = !categoryArray[index].selected;
         this.setState({
-            categoryID: index,
-            categoryChosen: !categoryChosen
+            categoryID: index+1,
+            categoryArray: [...categoryArray]
         });
     }
 
