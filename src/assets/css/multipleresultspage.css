@@ -69,6 +69,8 @@
 
     .multipleResultsItemsContainer {
         grid-template-columns: auto auto;
+        width: 95%;
+        margin: 0 auto;
     }
 
 }
