@@ -44,7 +44,7 @@ class Contact extends Component {
         const {form} = this.state;
         const data = this.formatPostData(form);
     
-        axios.post(`http://api.snackseriously.com/contactMailer/mail_handler.php`,data).then(function(response){
+        axios.post(`/api/contactMailer/mail_handler.php`,data).then(function(response){
             console.log("server has sent email", response); 
         });
     }

@@ -42,7 +42,7 @@ class CreateAccount extends Component {
         const {form} = this.state;
         const data = this.formatPostData(form);
     
-        axios(`http://localhost:3000/public/api/snackapi.php?action=usersignup`,{
+        axios(`/api/snackapi.php?action=usersignup`,{
             method: 'POST', 
             data: data, 
             withCredentials: true

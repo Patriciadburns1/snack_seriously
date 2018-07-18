@@ -20,7 +20,7 @@ class RandomSnack extends Component {
     }
 
     async getRandomData() {
-        let URL = 'http://api.snackseriously.com/snackapi.php?action=';
+        let URL = '/api/snackapi.php?action=';
         let querystring = "getrandom";
         URL += querystring;
         try {

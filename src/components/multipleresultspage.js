@@ -27,7 +27,7 @@ class MultipleResults extends Component {
     };
     
     async getSnackData() {
-        let URL = 'http://api.snackseriously.com/snackapi.php?action=';
+        let URL = '/api/snackapi.php?action=';
         let term = this.props.match.params.term; // '' || name || undefined
         let querystring = null;
         let filterID = this.props.match.params.filterID;

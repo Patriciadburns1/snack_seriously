@@ -1,4 +1,7 @@
 <?php
+//http://localhost:8000/public/api/snackapi.php?action=addtofav&product_id=1&choice=true
+
+
 $productID = filter_var($_GET['product_id'],FILTER_VALIDATE_INT);
 $choice = filter_var($_GET['choice'],FILTER_VALIDATE_BOOLEAN); //'true' or 'false'
 

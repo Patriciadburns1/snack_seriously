@@ -26,7 +26,7 @@ class UserFavorites extends Component {
 
 
     async getSnackData() {
-        let URL = 'http://localhost:3000/public/api/snackapi.php?action=getfavorites&limit=12';
+        let URL = '/api/snackapi.php?action=getfavorites&limit=12';
         let querystring = null;
         let offset = this.state.offset;
 
