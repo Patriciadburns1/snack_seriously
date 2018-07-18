@@ -13,7 +13,6 @@ class RandomSnack extends Component {
             image: null,
             counter: 0
         };
-
     }
 
     componentDidMount() {
@@ -38,20 +37,15 @@ class RandomSnack extends Component {
         let { counter } = this.state;
 
         this.setState({
-
             counter: this.state.counter + 1
-
         });
 
-        if(counter === 10){
-
+        if(counter === 10) {
             this.getRandomData();
-
             this.setState({
                 counter: 0
             });
         }
-
     }
 
     render() {
@@ -59,7 +53,7 @@ class RandomSnack extends Component {
         const { counter } = this.state;
 
         if(!randomSnack){
-            return <div className="randomSnackContainer">Loading...</div>
+            return <div className="randomSnackContainer loadingRandom">Loading snack...</div>
         }
 
         let random = null;
@@ -81,7 +75,9 @@ class RandomSnack extends Component {
                     <div onClick={this.handleNextPictureClick.bind(this)} className="leftRandomSnackBtn">
                         <span className="randomLButtonSymbol">Try Again</span>
                     </div>
-                    <img src={image} id="randomImage" onClick={this.nextPicture} alt="Random Snack"/>
+
+                        <img src={image} id="randomImage" onClick={this.nextPicture} alt="Random Snack"/>
+
                     <Link to ={`/singleresult/${item_id}`} >
                         <div className="rightRandomSnackBtn">
                             <span className="randomRButtonSymbol">Go to Snack</span>

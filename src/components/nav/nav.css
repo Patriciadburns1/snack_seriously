@@ -1,5 +1,5 @@
 .navBar{
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
     margin: 0px;
@@ -16,7 +16,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
-    padding: 5%;
+    padding: 2%;
     flex-flow: row wrap;
 }
 
@@ -35,8 +35,8 @@
 }
 
 .profile .profileImage {
-    width: 75%;
-    height: 75%;
+    width: 50px;
+    height: 50px;
 }
 
 .navSearch{
@@ -49,4 +49,9 @@
 
 .snackImage {
     max-height: 10vh;
+}
+
+
+.nav-content > div{
+     width: 100vw;
 }

@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import AllergenIcon from './allergenIcon.js'
 import { SearchDataContext } from '../searchdata';
 
@@ -65,16 +65,16 @@ class Allergens extends Component {
                 <AllergenIcon key={index}  clickHandler={()=>{context.handleAllergenClick(index)}} img={require(`./allergenicons/${item.name}.png`)} strike={item.strike} />
                 )
             });
-
+        
         return( 
             <div className={context.allergenShow ? "filterPanel active" : "filterPanel"}>
-                    <div className="allergyPageContainer">
-                        <h4 className="allergyTitle"> Select all allergens to avoid </h4>
-                        <div className="allergyContainer">
-                            {Items}
-                        </div>
+                <div className="allergyPageContainer">
+                    <h4 className="allergyTitle"> Select all allergens to avoid </h4>
+                    <div className="allergyContainer">
+                        {Items}
                     </div>
                 </div>
+            </div>
         )  
     }
 
@@ -88,21 +88,21 @@ class Allergens extends Component {
         // });
 
         // return <SearchDataContext.Consumer>{(context) => (
-            return  (
-                <SearchDataContext.Consumer>
-                    {/* <Fragment> */}
-                        {/* <div className={visible ? "filterMenu " : "filterMenu active"} onClick={this.toggleMenu}>Allergens</div> */}
-                        {/* <div className={this.props.visible ? "filterPanel active" : "filterPanel"}> */}
-                        {/* <div className={context.visible ? "filterPanel active" : "filterPanel"}>
-                            <div className="allergyPageContainer">
-                                <h4 className="allergyTitle"> Select all allergens to avoid </h4>
-                                <div className="allergyContainer">
-                                    {Items}
-                                </div>
+        return (
+            <SearchDataContext.Consumer>
+                {/* <Fragment> */}
+                    {/* <div className={visible ? "filterMenu " : "filterMenu active"} onClick={this.toggleMenu}>Allergens</div> */}
+                    {/* <div className={this.props.visible ? "filterPanel active" : "filterPanel"}> */}
+                    {/* <div className={context.visible ? "filterPanel active" : "filterPanel"}>
+                        <div className="allergyPageContainer">
+                            <h4 className="allergyTitle"> Select all allergens to avoid </h4>
+                            <div className="allergyContainer">
+                                {Items}
                             </div>
-                        </div> */}
-                        {this.renderItems}
-                    {/* </Fragment> */}
+                        </div>
+                    </div> */}
+                {this.renderItems}
+                {/* </Fragment> */}
             </SearchDataContext.Consumer> )
     }
 }

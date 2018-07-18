@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import { SearchDataContext } from '../searchdata';
-
+import CategoryIcon from './categoryIcon';
 
 class Categories extends Component {
     constructor(props){
@@ -25,14 +25,10 @@ class Categories extends Component {
     // }
 
     renderItems(context){
-        const nameArray = ["Popcorn & Pretzels", "Jerky & Rinds", "Chips & Crackers", "Snack Bars", "Nuts & Dried Fruit", "Candy & Chocolate"]
-        const imageArray = ["popcornpretzel", "meat", "chipscrackers", "bar", "nutsdriedfruit", "candychocolate"];
-        const Items = imageArray.map((item, index) => {
-            return (
-                <div key={index} className="categoryItem" onClick={() => context.handleCategoryClick(index)}>
-                    <img  src={require(`./categoriesicons/${item}.png`)} className="categoryImage" />
-                    <p className="categoryLabel">{nameArray[index]}</p>
-                </div>
+        const { categoryArray } = context;
+        const Items = categoryArray.map((item, index) => {
+            return ( 
+                <CategoryIcon image={require(`./categoriesicons/${item.image}.png`)} name={item.name} key={index} clickHandler={() => {context.handleCategoryClick(index)}} selected={item.selected}/>
             )
         });
         return(

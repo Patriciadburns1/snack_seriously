@@ -18,6 +18,7 @@ class LogIn extends Component {
         this.handleInputChange = this.handleInputChange.bind(this);
     }
 
+
     handleInputChange(event) {
         const { value, name } = event.target;
         const { form } = this.state;

@@ -1,6 +1,6 @@
 .filtersContainer {
     background-color: #d0d0d0;
-    margin-top: 40%;
+    /*margin-top: 40%;*/
 }
 
 .filtersHeaderContainer {
@@ -181,6 +181,11 @@
     margin: 0;
 }
 
+.circled {
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
 /********** Nutrients **********/
 
 .nutrientsPageContainer {
@@ -208,4 +213,43 @@
     vertical-align: text-bottom;
     margin: 0;
 }
+
+/********** Arrow **********/
+
+.arrow-down {
+    width: 50px;
+    height: 50px;
+    position: relative;
+  }
+  
+  .arrow-down:before, .arrow-down:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 5px;
+    background: white;
+    position: absolute;
+    top: 20px;
+    transition: transform .5s;
+  }
+  
+  .arrow-down:before {
+    right: 21px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transform: rotate(45deg);
+  }
+  
+  .arrow-down:after {
+    right: 10px;
+    transform: rotate(-45deg);
+  }
+  
+  .arrow-down.move:before {
+    transform: rotate(-45deg);
+  }
+  
+  .arrow-down.move:after {
+    transform: rotate(45deg);
+  }
 

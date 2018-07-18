@@ -42,8 +42,12 @@ class CreateAccount extends Component {
         const {form} = this.state;
         const data = this.formatPostData(form);
     
-        axios.post(`http://api.snackseriously.com/snackapi.php?action=usersignup`,data).then(function(response){
-            console.log("you have logged in!", response); 
+        axios(`http://localhost:3000/public/api/snackapi.php?action=usersignup`,{
+            method: 'POST', 
+            data: data, 
+            withCredentials: true
+        }).then(function(response){
+            console.log("Signup", response); 
         });
     }
 
@@ -53,7 +57,7 @@ class CreateAccount extends Component {
         return (     
             <div> 
             <h2 className='headerForContact'> Create an Account </h2> 
-           <form className='contactForm'> 
+           {/* <form className='contactForm'>  */}
                 <div className='contactFormEmail'> 
                      <input placeholder='UserName' type="text" value={username} name='username' onChange={this.handleInputChange}/>
                 </div> 
@@ -66,7 +70,7 @@ class CreateAccount extends Component {
                 <div className="submitButtonDiv"> 
                 <button className="submitButtonContactPage"  type="submit" value="submit" onClick={this.sendContactForm.bind(this)}> Submit </button>
                 </div> 
-           </form> 
+           {/* </form>  */}
            </div> 
         )
     }

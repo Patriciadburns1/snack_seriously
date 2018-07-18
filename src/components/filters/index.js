@@ -4,7 +4,6 @@ import Allergens from './allergenssection';
 import Categories from './categoriessection';
 import Nutrients from './nutrientssection';
 import { Link } from 'react-router-dom';
-import axios from '../../../node_modules/axios';
 import { SearchDataContext } from '../searchdata';
 
 class Filters extends Component {
@@ -62,18 +61,16 @@ class Filters extends Component {
     // }
 
     render() {
-        // const {show, allergenShow, categoryShow, allergenIndex, toggleAllFilter, toggleFilters} = context;
         return   <SearchDataContext.Consumer>{(context) => (
             <div className="filtersContainer">
                 <div className="filtersHeaderContainer" name='show' onClick={context.toggleAllFilter} >
-                    <div>Filters</div> <Link to={`/MultipleResults/filter/${context.filterID}/category/${context.categoryID}`}>Search</Link>
-                   
+                    <div>Filters</div>
+                    <div  className={context.show ? "arrow-down move" : "arrow-down"}></div>
+                    <Link to={`/MultipleResults/filter/${context.filterID}/category/${context.categoryID}`} onClick={()=>context.handleFilterClick()}>Search</Link>
                 </div>
-                
                 <div className={context.show ? "filterPanelContainer active" : "filterPanelContainer"}>
                     <div className={context.allergenShow ? 'filterTab show' : 'filterTab'} onClick={()=>context.toggleFilters('allergenShow','categoryShow')}>Allergens</div>
                     <div className={context.categoryShow ? 'filterTab show' : 'filterTab'} onClick={()=>context.toggleFilters('categoryShow','allergenShow')}>Category</div>
-                    {/* <Allergens visible={context.allergenShow} index={context.allergenIndex}/> */}
                     <Allergens />
                     <Categories  />
                     {/* <Nutrients /> */}

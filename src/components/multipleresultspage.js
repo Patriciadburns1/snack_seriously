@@ -23,6 +23,7 @@ class MultipleResults extends Component {
     componentDidMount() {
         window.addEventListener('scroll', this.handleOnScroll);
         this.getSnackData();   
+
     };
     
     async getSnackData() {
@@ -31,11 +32,10 @@ class MultipleResults extends Component {
         let querystring = null;
         let filterID = this.props.match.params.filterID;
         let categoryID = this.props.match.params.categoryID;
-        console.log(this.props.match.params.filterID);
         let offset= this.state.offset; 
         const regex= /^[1-6]+$/;
         if(!term && filterID && categoryID){
-            querystring = `getcategory&filterid=${filterID}&categoryid=${categoryID}&limit=12&offset=${offset}`;
+            querystring = `getfilter&filterid=${filterID}&categoryid=${categoryID}&limit=12&offset=${offset}`;
         } else if (!term) {
             querystring = "getrandom";
         } else if (regex.test(term)) {
@@ -50,7 +50,6 @@ class MultipleResults extends Component {
                 snackData: [...this.state.snackData, ...snackData.data.data],
                 offset: offset+12
             });
-            // console.log(snackData);
         } catch (err) {
             console.log('Get Data Error:', err.message);
         }

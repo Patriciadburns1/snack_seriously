@@ -1,5 +1,6 @@
 import React, { Component, createContext } from "react";
 import axios from 'axios';
+import { ifError } from "assert";
 
 export const SearchDataContext = createContext();
 
@@ -49,6 +50,7 @@ class SearchData extends Component {
             },],
             handleAllergenClick: this.handleAllergenClick.bind(this),
             handleCategoryClick: this.handleCategoryClick.bind(this),
+
         }
     }
 
@@ -65,6 +67,7 @@ class SearchData extends Component {
         });
     }
 
+
     toggleFilters(clickTab, oppositeTab) {
         const clickedTabBool = !this.state[clickTab];
         this.setState({
@@ -74,19 +77,57 @@ class SearchData extends Component {
     }
 
     handleAllergenClick(index) {
-        const { allergenArray } = this.state;
-        const newArray = [...allergenArray];
-        newArray[index].strike = !newArray[index].strike;
-
+        let {allergenArray, filterID} = this.state;
+        allergenArray[index].strike = !allergenArray[index].strike;
+        if (allergenArray[index].strike){
+            if (filterID == null){
+                filterID = filterID + (index+1);
+            } else {
+                filterID = filterID + ','+ (index+1);
+            }
+        } else {
+            let checkarray = filterID.split(',');
+            let allergenIndex = checkarray.indexOf(''+(index+1));
+            checkarray.splice(allergenIndex,1)
+            filterID = checkarray.join(',');
+        }
+        
         this.setState({
-            allergenArray: newArray,
-            filterID: index
+            allergenArray: [...allergenArray],
+            filterID: filterID
+        });
+
+    }
+
+    handleCategoryClick(index){
+        const {categoryArray} = this.state;
+        for (let eachItem in categoryArray){
+            categoryArray[eachItem].selected = false;
+        }
+        categoryArray[index].selected = !categoryArray[index].selected;
+        this.setState({
+            categoryID: index+1,
+            categoryArray: [...categoryArray]
         });
     }
 
-    handleCategoryClick(index) {
+    handleFilterClick(){
+        const {categoryArray, allergenArray} = this.state;
+        debugger;
+        for (let eachItem in categoryArray){
+            categoryArray[eachItem].selected = false;
+        }
+        for (let eachItem in allergenArray){
+            allergenArray[eachItem].strike = false;
+        }
         this.setState({
-            categoryID: index
+            show: false,
+            allergenShow: false,
+            categoryShow: false,
+            filterID: null,
+            categoryID: null,
+            allergenArray: [...allergenArray],
+            categoryArray: [...categoryArray]
         });
     }
 
