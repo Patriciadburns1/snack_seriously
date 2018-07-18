@@ -10,11 +10,6 @@ import lou from '../assets/images/profilepics/lou.jpg';
 import githublogo from '../assets/images/icons/githublogo.png';
 import linkedinlogo from '../assets/images/icons/linkedinlogo.png';
 
-
-
-
-
-
 export default () =>{
     return(
         <div>
@@ -23,7 +18,8 @@ export default () =>{
                     We are SNACKING SERIOUSLY!
                 </div>
             </Link>
-            <div className="grid-container">
+            <div className="aboutGridContainer">
+
                 <div className="item1">
                     <img className="profileImage" src={vikki} />
                     <h2>Vikki Okamura</h2>
@@ -37,7 +33,6 @@ export default () =>{
                         </a>
                     </div>
                     <a href="http://www.vikkiokamura.com" target="_blank">Portfolio</a>
-
                 </div>
 
                 <div className="item2">
@@ -53,10 +48,8 @@ export default () =>{
                         </a>
                     </div>
                     <a href="http://www.codelikeagirlpatriciaburns.com" target="_blank">Portfolio</a>
-
-
-
                 </div>
+
                 <div className="item3">
                     <img className="profileImage" src={peter} />
                     <h2>Peter Nguyen</h2>
@@ -70,10 +63,8 @@ export default () =>{
                         </a>
                     </div>
                     <a href="http://peteranguyen.com" target="_blank">Portfolio</a>
-
-
-
                 </div>
+
                 <div className="item4">
                     <img className="profileImage" src={james} />
                     <h2>James Wang</h2>
@@ -87,10 +78,8 @@ export default () =>{
                         </a>
                     </div>
                     <a href="http://jameswww.com" target="_blank">Portfolio</a>
-
-
-
                 </div>
+
                 <div className="item5">
                     <img className="profileImage" src={jeff} />
                     <h2>Jeff Lieu</h2>
@@ -104,9 +93,8 @@ export default () =>{
                         </a>
                     </div>
                     <a href="http://jefflieu.com" target="_blank">Portfolio</a>
-
-
                 </div>
+
                 <div className="item6">
                     <img className="profileImage" src={lou} />
                     <h2>Lou Pruitt</h2>
@@ -120,8 +108,8 @@ export default () =>{
                         </a>
                     </div>
                     <a href="http://www.herbertluispruitt.com" target="_blank">Portfolio</a>
-
                 </div>
+
             </div>
             <div className="mentors">
                 Special thanks to our mentors: <br></br>
