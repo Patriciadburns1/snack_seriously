@@ -50,6 +50,31 @@ class SearchData extends Component {
             },],
             handleAllergenClick: this.handleAllergenClick.bind(this),
             handleCategoryClick: this.handleCategoryClick.bind(this),
+            categoryArray: [{
+                name: "Popcorn & Pretzels",
+                image: "popcornpretzel",
+                selected: false
+            }, {
+                name: "Chips & Crisps",
+                image: "chipscrackers",
+                selected: false
+            }, {
+                name: "Nuts, Seeds & Dried Fruit",
+                image: "nutsdriedfruit",
+                selected: false
+            }, {
+                name: "Bars",
+                image: "bar",
+                selected: false
+            }, {
+                name: "Cookies",
+                image: "meat",
+                selected: false
+            }, {
+                name: "Chocolate",
+                image: "candychocolate",
+                selected: false
+            }]  
 
         }
     }
