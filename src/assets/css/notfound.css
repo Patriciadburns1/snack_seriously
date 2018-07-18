@@ -21,3 +21,9 @@ h3{
     width: 100%;
     text-align: center;
 }
+
+.pageNotFound {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+}
