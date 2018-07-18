@@ -7,10 +7,7 @@
     height: 4vh;
     width: 100vw;
     background-color: #D0D0D0;
-    /* align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; */
+    cursor: pointer;
     display: flex;
     align-items: center;
     /* transition: 0.5s ease-out; */
@@ -39,6 +36,7 @@
     height: 5vh;
     display: inline-block;
     text-align: center;
+    cursor: pointer;
 }
 
 .filterTab.show{
@@ -216,7 +214,7 @@
 /********** Arrow **********/
 
 .arrow-down {
-    width: 50px;
+    /* width: 50px; */
     height: 50px;
     position: relative;
 
