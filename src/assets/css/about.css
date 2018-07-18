@@ -1,5 +1,4 @@
 .about{
-    margin-top: 25vh;
     text-align: center;
 }
 
@@ -33,3 +32,27 @@
 .profileImage{
     height: 13vh;
 }
+
+
+.logoImage {
+    width: 36px;
+}
+
+@media only screen and (min-width: 576px) {
+    .grid-container {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    
+}
+
+@media only screen and (min-width: 992px) {
+    
+}
+
+@media only screen and (min-width: 1200px) {
+    
+}
+
