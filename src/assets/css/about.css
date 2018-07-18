@@ -1,15 +1,16 @@
 .about{
     text-align: center;
+    color: turquoise;
+    font-weight: 800;
 }
 
-.grid-container {
+.aboutGridContainer {
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 3px;
-    /*background-color: #FF8C2D;*/
     padding: 2px;
 }
-.grid-container>div {
+.aboutGridContainer>div {
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     padding:15px 0;
@@ -20,11 +21,14 @@
     text-align: center;
 }
 
+.aboutGridContainer p {
+    color: turquoise;
+    font-weight: 700;
+}
 
 .mentors{
     display: grid;
     grid-template-columns: auto;
-
     text-align: center;
     padding:30px;
 }
@@ -35,24 +39,58 @@
 
 
 .logoImage {
-    width: 36px;
+    width: 30px;
 }
 
 @media only screen and (min-width: 576px) {
-    .grid-container {
+    .aboutGridContainer {
         grid-template-columns: auto auto auto;
+        margin-top: 5vh;
+    }
+    .about {
+        margin-top: 4vh;
+    }
+    .profileImage{
+        height: 20vh;
     }
 }
 
 @media only screen and (min-width: 768px) {
-    
+    .aboutGridContainer {
+        grid-template-columns: auto auto auto;
+        margin-top: 5vh;
+    }
+    .about {
+        margin-top: 4vh;
+    }
+    .profileImage{
+        height: 20vh;
+    }
 }
 
 @media only screen and (min-width: 992px) {
-    
+    .aboutGridContainer {
+        grid-template-columns: auto auto auto auto auto auto;
+        margin-top: 8vh;
+    }
+    .about {
+        margin-top: 54h;
+    }
+    .profileImage{
+        height: 20vh;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
-    
+    .aboutGridContainer {
+        grid-template-columns: auto auto auto auto auto auto;
+        margin-top: 8h;
+    }
+    .about {
+        margin-top: 4vh;
+    }
+    .profileImage{
+        height: 20vh;
+    }
 }
 
