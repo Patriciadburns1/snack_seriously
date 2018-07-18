@@ -186,7 +186,7 @@ class SearchData extends Component {
 
         const postData = this.formatPostData(dataToSend);
 
-        const { data, data: { success, error, name }} = await axios(`http://localhost:3000/public/api/snackapi.php?action=userlogin`, {
+        const { data, data: { success, error, name }} = await axios(`/api/snackapi.php?action=userlogin`, {
             method: 'POST',
             data: postData,
             withCredentials: true
@@ -201,7 +201,7 @@ class SearchData extends Component {
 
 
     logOut() {
-        axios(`http://localhost:3000/public/api/snackapi.php?action=userlogout`, {
+        axios(`/api/snackapi.php?action=userlogout`, {
             method: 'POST',
             withCredentials: true
         }).then( (response)=> {
