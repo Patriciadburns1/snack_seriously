@@ -69,8 +69,8 @@ class Filters extends Component {
                     <Link to={`/MultipleResults/filter/${context.filterID}/category/${context.categoryID}`} onClick={()=>context.handleFilterClick()}>Search</Link>
                 </div>
                 <div className={context.show ? "filterPanelContainer active" : "filterPanelContainer"}>
-                    <div className={context.allergenShow ? 'filterTab show' : 'filterTab'} onClick={()=>context.toggleFilters('allergenShow','categoryShow')}>Allergens</div>
-                    <div className={context.categoryShow ? 'filterTab show' : 'filterTab'} onClick={()=>context.toggleFilters('categoryShow','allergenShow')}>Category</div>
+                    <div className={context.allergenShow ? 'filterTab show' : 'filterTab'} onClick={()=>context.toggleFilters('allergenShow','categoryShow')}><div  className={context.allergenShow ? "arrow-down move" : "arrow-down"}>Allergens</div></div>
+                    <div className={context.categoryShow ? 'filterTab show' : 'filterTab'} onClick={()=>context.toggleFilters('categoryShow','allergenShow')}><div  className={context.categoryShow? "arrow-down move" : "arrow-down"}>Category</div></div>
                     <Allergens />
                     <Categories  />
                     {/* <Nutrients /> */}
