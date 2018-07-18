@@ -1,4 +1,4 @@
-.aboutPageContainer h3, th {
+.aboutPageContainer .aboutHeader, .aboutTechHeader {
     color: turquoise;
     font-weight: 600;
     text-align: center;
