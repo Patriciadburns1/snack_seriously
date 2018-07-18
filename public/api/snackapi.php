@@ -49,6 +49,9 @@ if($method = 'GET'){
         case 'addtofav':
             include_once('apiActionCalls/addtofav.php');
             break;
+        case 'getfavcheck':
+            include_once('apiActionCalls/getfavcheck.php');
+            break;
         default:
             $output['error'] = "unknown request";
     }

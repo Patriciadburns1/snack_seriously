@@ -66,11 +66,11 @@ class SingleResult extends Component {
             return <h1>Loading...</h1>;
         } 
         else {
-            const { nutrients, ingredients, img_url, name, manu, per_container, size, unit, weight, amazon_url } = this.state.singleItem.data;
+            const { nutrients, ingredients, img_url, name, manu, per_container, size, unit, weight, amazon_url} = this.state.singleItem.data;
             const params = this.props.match.params.term || '';
             return (
                     <div className="singleResultContainer">
-                        <SingleItem name={name} manu={manu} img={img_url} amazon_url={amazon_url}/>
+                        <SingleItem name={name} manu={manu} img={img_url} amazon_url={amazon_url} product_id={this.props.match.params.product_id}/>
                         <Nutritionalfacts nutrition={nutrients} per_container={per_container} size={size} unit={unit} weight={weight} />
                         <Ingredient ingredients={ingredients} />
                     </div>
