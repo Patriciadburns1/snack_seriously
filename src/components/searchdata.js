@@ -1,15 +1,18 @@
-import React, {Component, createContext} from "react";
+import React, { Component, createContext } from "react";
 import axios from 'axios';
 import { ifError } from "assert";
 
-export const SearchDataContext  = createContext();
+export const SearchDataContext = createContext();
 
-class SearchData extends Component{
-   constructor(props){
-       super(props);
-       this.state={
-           userInput: "",
-           updateTermValue: this.updateTermValue.bind(this),
+class SearchData extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            appstart:false,
+            userInput: "",
+            userLoggedIn: false,
+            userName: '',
+            updateTermValue: this.updateTermValue.bind(this),
             show: false,
             allergenShow: false,
             categoryShow: false,
@@ -17,6 +20,9 @@ class SearchData extends Component{
             categoryID: null,
             toggleAllFilter: this.toggleAllFilter.bind(this),
             toggleFilters: this.toggleFilters.bind(this),
+            getUserLogIn: this.getUserLogIn.bind(this),
+            dataFromServer: this.dataFromServer.bind(this),
+            logOut: this.logOut.bind(this),
             allergenArray: [{
                 name: "peanuts",
                 strike: false
@@ -44,59 +50,30 @@ class SearchData extends Component{
             },],
             handleAllergenClick: this.handleAllergenClick.bind(this),
             handleCategoryClick: this.handleCategoryClick.bind(this),
-            categoryArray: [{
-                name: "Popcorn & Pretzels",
-                image: "popcornpretzel",
-                selected: false
-            }, {
-                name: "Chips & Crisps",
-                image: "chipscrackers",
-                selected: false
-            }, {
-                name: "Nuts, Seeds & Dried Fruit",
-                image: "nutsdriedfruit",
-                selected: false
-            }, {
-                name: "Bars",
-                image: "bar",
-                selected: false
-            }, {
-                name: "Cookies",
-                image: "meat",
-                selected: false
-            }, {
-                name: "Chocolate",
-                image: "candychocolate",
-                selected: false
-            }]   
-       }
-   }
 
-   updateTermValue(newTerm){
-       this.setState({
-           userInput: newTerm
-       });
-   }
-  
-   toggleAllFilter() {
-        const{show} = this.state;
+        }
+    }
+
+    updateTermValue(newTerm) {
         this.setState({
-            show:!show
+            userInput: newTerm
         });
     }
 
-    toggleFilters( clickTab, oppositeTab) {
-        //clickTab is name of tab clicked
-        //oppositeTab is thee other tab not in use
-        const clickedTabBool = !this.state[clickTab];
-        //set key and value 
-        //[clickTab] is replaced with string of clickedTab and the value is opposite of original value
-        //set [oppositeTab] to false since no longer in use. 
+    toggleAllFilter() {
+        const { show } = this.state;
         this.setState({
-            [clickTab]:clickedTabBool,
-            [oppositeTab]:false
+            show: !show
         });
+    }
 
+
+    toggleFilters(clickTab, oppositeTab) {
+        const clickedTabBool = !this.state[clickTab];
+        this.setState({
+            [clickTab]: clickedTabBool,
+            [oppositeTab]: false
+        });
     }
 
     handleAllergenClick(index) {
@@ -154,13 +131,70 @@ class SearchData extends Component{
         });
     }
 
-   render(){
-       return(
-           <SearchDataContext.Provider value={this.state}>
-               {this.props.children}
-           </SearchDataContext.Provider>  
-       )
-   }
+    formatPostData(data) {
+        const params = new URLSearchParams();
+
+        for (let [k, v] of Object.entries(data)) {
+            params.append(k, v);
+        }
+
+        return params;
+    }
+
+    dataFromServer(response) {
+        this.setState({
+            appstart: true,
+            userLoggedIn: response.success,
+            userName: response.name,
+        })
+    }
+
+
+    async getUserLogIn(userData = null) {
+        if(this.state.appstart && !userData) return;
+
+        if(userData && (!userData.name || !userData.password)){
+            throw new Error('Missing user data');
+        }
+
+        const dataToSend = userData || { name: '', password: ''};
+
+        const postData = this.formatPostData(dataToSend);
+
+        const { data, data: { success, error, name }} = await axios(`http://localhost:3000/public/api/snackapi.php?action=userlogin`, {
+            method: 'POST',
+            data: postData,
+            withCredentials: true
+        });
+
+        if(!success && name){
+            throw new Error(error);
+        }
+
+        this.dataFromServer(data); 
+    }
+
+
+    logOut() {
+        axios(`http://localhost:3000/public/api/snackapi.php?action=userlogout`, {
+            method: 'POST',
+            withCredentials: true
+        }).then( (response)=> {
+            this.setState({
+                userLoggedIn: false,
+                userName: ''
+            })
+        });
+    }
+
+
+    render() {
+        return (
+            <SearchDataContext.Provider value={this.state}>
+                {this.props.children}
+            </SearchDataContext.Provider>
+        )
+    }
 }
 
 export default SearchData;

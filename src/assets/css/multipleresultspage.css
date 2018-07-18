@@ -101,3 +101,8 @@
   position: relative; 
 }
 
+.addSnacks{
+ margin-top: 50%; 
+display: flex; 
+justify-content: center; 
+}
