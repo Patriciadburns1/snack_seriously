@@ -1,96 +1,26 @@
-.about{
-    text-align: center;
+.aboutPageContainer h3, th {
     color: turquoise;
-    font-weight: 800;
-}
-
-.aboutGridContainer {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 3px;
-    padding: 2px;
-}
-.aboutGridContainer>div {
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    padding:15px 0;
-    font-size: 12px;
-}
-
-.snacktitle{
+    font-weight: 600;
     text-align: center;
 }
 
-.aboutGridContainer p {
-    color: turquoise;
-    font-weight: 700;
-}
-
-.mentors{
-    display: grid;
-    grid-template-columns: auto;
+.aboutPageContainer table {
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    padding:30px;
+    border-spacing: 10px;
 }
 
-.profileImage{
-    height: 13vh;
+.aboutPageContainer div {
+    text-align: center;
+}
+
+.aboutPageContainer ul {
+    display: table;
+    margin: 0 auto;
+    list-style-type: none;
 }
 
 
-.logoImage {
-    width: 30px;
-}
-
-@media only screen and (min-width: 576px) {
-    .aboutGridContainer {
-        grid-template-columns: auto auto auto;
-        margin-top: 5vh;
-    }
-    .about {
-        margin-top: 4vh;
-    }
-    .profileImage{
-        height: 20vh;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    .aboutGridContainer {
-        grid-template-columns: auto auto auto;
-        margin-top: 5vh;
-    }
-    .about {
-        margin-top: 4vh;
-    }
-    .profileImage{
-        height: 20vh;
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    .aboutGridContainer {
-        grid-template-columns: auto auto auto auto auto auto;
-        margin-top: 8vh;
-    }
-    .about {
-        margin-top: 54h;
-    }
-    .profileImage{
-        height: 20vh;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    .aboutGridContainer {
-        grid-template-columns: auto auto auto auto auto auto;
-        margin-top: 8h;
-    }
-    .about {
-        margin-top: 4vh;
-    }
-    .profileImage{
-        height: 20vh;
-    }
-}
 

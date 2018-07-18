@@ -28,6 +28,9 @@
     position: relative;
     background-color: lightgray;
     border-radius: 5px;
+    border-style: outset;
+    border-width: 1px;
+    border-color: lightgray;
 }
 
 .categoryHomepageImage{
@@ -38,7 +41,7 @@
     padding-top: 5%;
 }
 
-.categoryHomepageItem p{
+.categoryHomepageItem p {
     width: 100%;
     font-size: 0.8rem;
     display: flex;
