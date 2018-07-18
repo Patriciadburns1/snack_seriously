@@ -45,3 +45,7 @@
 .randomRButtonSymbol {
     color: black;
 }
+
+#randomImage{
+    max-height: 80%;
+}
