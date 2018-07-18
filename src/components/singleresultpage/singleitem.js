@@ -21,7 +21,7 @@ class SingleItem extends Component{
     };
 
     async checkApi(){
-        const checkfav = await axios.get(`http://localhost:3000/public/api/snackapi.php?action=getfavcheck&id=${this.props.product_id}`);
+        const checkfav = await axios.get(`/api/snackapi.php?action=getfavcheck&id=${this.props.product_id}`);
         this.favorite = checkfav.data.data;
         if(this.favorite){
             this.setState({
@@ -35,11 +35,11 @@ class SingleItem extends Component{
     }
 
     likeItem(product_id){
-        const response = axios.get(`http://localhost:3000/public/api/snackapi.php?action=addtofav&product_id=${product_id}&choice=true`);
+        const response = axios.get(`/api/snackapi.php?action=addtofav&product_id=${product_id}&choice=true`);
     }
 
     dontCareItem(product_id){
-        const response = axios.get(`http://localhost:3000/public/api/snackapi.php?action=addtofav&product_id=${product_id}&choice=false`);
+        const response = axios.get(`/api/snackapi.php?action=addtofav&product_id=${product_id}&choice=false`);
     }
 
     handleLike(){
