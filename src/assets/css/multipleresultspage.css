@@ -1,19 +1,20 @@
 .multipleResultsContainer {
-    top: 28%;
-    left: 0;
-    /*position: absolute;*/
+    margin-top: 16px;
 }
 
 .multipleResultsItemsContainer {
     display: grid;
-    grid-template-columns: auto; 
+    grid-template-columns: auto;  /* TAKE OUT IF  NO CHANGES */
+}
+
+.multipleResultsItemsContainer > a {
+    border: 1px solid black;
 }
 
 .multipleResultsItem {
-    height: 100%;
     display: flex;
-    border: 1px solid lightgray;
     cursor: pointer;
+    align-items: center;
 }
 
 .multipleResultsItem:hover span {
@@ -23,18 +24,22 @@
 
 .multipleResultsItem > div {
     width: 50%;
-    padding: 0 5%;
+    /* padding: 0 5%; */
+    text-align: center;
 }
 
 
 .multipleResultsImage {
-    width: 100%;
+    max-height: 30vh;
+    min-height: 100%;
+    max-width: 100%;
 }
 
 .multipleResultsDescription {
     color: black;
     overflow: hidden;
-    font-size: 12px;
+    font-size: 16px;
+    font-weight: 800;
 }
 
 .multipleResultsLabel {
@@ -49,35 +54,29 @@
 }
 
 @media only screen and (max-width: 480px) {
-    .container1 .container2 .container3 .multipleResultsContainer .multipleResultsFilter .multipleResultsImage .multipleResultsItemsContainer .multipleResultsLabel{
+    .multipleResultsContainer .multipleResultsFilter .multipleResultsImage .multipleResultsItemsContainer .multipleResultsLabel{
         width: 100%;
     }
 }
 
 @media only screen and (min-width: 321px) {
-    .container1 .container2 .container3 .multipleResultsContainer .multipleResultsFilter .multipleResultsImage .multipleResultsItemsContainer .multipleResultsLabel{
+    .multipleResultsContainer .multipleResultsFilter .multipleResultsImage .multipleResultsItemsContainer .multipleResultsLabel{
         width: 100%;
     }
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 576px) {
 
-    .multipleResultsContainer {
-        left: 3%;
+    .multipleResultsItemsContainer {
+        grid-template-columns: auto auto;
     }
+
+}
+
+@media only screen and (min-width: 768px) {
 
     .multipleResultsItemsContainer {
         grid-template-columns: auto auto auto;
-        grid-gap: 10px 0;
-    }
-
-    .multipleResultsItem {
-        height: 100%;
-        width: 90%;
-    }
-
-    .multipleResultsDescription {
-        font-size: 16px;
     }
 
 }
