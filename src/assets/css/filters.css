@@ -91,7 +91,7 @@
 .allergyTitle{
     display: flex;
     justify-content: center;
-    margin-bottom: 5vh;
+    margin-bottom: 15%;
 }
 
 .allergyContainer{
@@ -143,19 +143,18 @@
 
 .categoryContainer{
     display: grid;
-    height: 40vh;
-    width: 80vw;
+    height: 65%;
+    width: 90%;
     grid-template-columns: auto auto auto;
-    grid-row-gap: 1vh;
-    grid-column-gap: 1vw;
+    grid-row-gap: 10%;
+    grid-column-gap: 5%;
     position: relative;
     margin: 0 auto;
 }
 
 .categoryItem{
     margin: 0;
-    height: 15vh;
-    width: 25vw;
+    height: 100%;
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -168,6 +167,7 @@
     max-width: 20vw;
     max-height: 10vh;
     margin: 0 auto;
+    padding: 10%;
 }
 
 .categoryLabel{
@@ -183,8 +183,7 @@
 
 .circled {
     border-radius: 5px;
-    box-sizing: border-box;
-    border: 1px solid black;
+    background-color: #FF8C2D;
 }
 /********** Nutrients **********/
 
@@ -220,6 +219,7 @@
     width: 50px;
     height: 50px;
     position: relative;
+
   }
   
   .arrow-down:before, .arrow-down:after {
@@ -227,7 +227,7 @@
     display: block;
     width: 20px;
     height: 5px;
-    background: white;
+    background: grey;
     position: absolute;
     top: 20px;
     transition: transform .5s;
