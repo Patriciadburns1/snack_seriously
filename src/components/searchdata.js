@@ -7,6 +7,7 @@ class SearchData extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            appstart:false,
             userInput: "",
             userLoggedIn: false,
             userName: '',
@@ -20,6 +21,7 @@ class SearchData extends Component {
             toggleFilters: this.toggleFilters.bind(this),
             getUserLogIn: this.getUserLogIn.bind(this),
             dataFromServer: this.dataFromServer.bind(this),
+            logOut: this.logOut.bind(this),
             allergenArray: [{
                 name: "peanuts",
                 strike: false
@@ -64,18 +66,11 @@ class SearchData extends Component {
     }
 
     toggleFilters(clickTab, oppositeTab) {
-        //clickTab is name of tab clicked
-        //oppositeTab is thee other tab not in use
         const clickedTabBool = !this.state[clickTab];
-        //set key and value 
-        //[clickTab] is replaced with string of clickedTab and the value is opposite of original value
-        //set [oppositeTab] to false since no longer in use. 
         this.setState({
             [clickTab]: clickedTabBool,
             [oppositeTab]: false
         });
-        console.log("Toggle filter,", this.state);
-
     }
 
     handleAllergenClick(index) {
@@ -107,34 +102,52 @@ class SearchData extends Component {
 
     dataFromServer(response) {
         this.setState({
-            userLoggedIn: true,
-            userName: response.data.username,
+            appstart: true,
+            userLoggedIn: response.success,
+            userName: response.name,
         })
-        console.log("data from server is being called"); 
     }
 
-    // user LOG IN FUNCTION TO MAKE AXIOS CALL 
-    getUserLogIn() {
-        // this needs to be fixed / bandaid 
-        if(this.state.userLoggedIn) return;
 
-        console.log('this is axios call on login');
-        const data = this.formatPostData({
-            name: '',
-            password: ''
-        });
-        axios(`http://localhost:3000/public/api/snackapi.php?action=userlogin`, {
+    async getUserLogIn(userData = null) {
+        if(this.state.appstart && !userData) return;
+
+        if(userData && (!userData.name || !userData.password)){
+            throw new Error('Missing user data');
+        }
+
+        const dataToSend = userData || { name: '', password: ''};
+
+        const postData = this.formatPostData(dataToSend);
+
+        const { data, data: { success, error, name }} = await axios(`http://localhost:3000/public/api/snackapi.php?action=userlogin`, {
             method: 'POST',
-            data: data,
+            data: postData,
             withCredentials: true
-        }).then( (response) => {
-            console.log("you have logged in!", response);
-            this.dataFromServer(response); 
+        });
+
+        if(!success && name){
+            throw new Error(error);
+        }
+
+        this.dataFromServer(data); 
+    }
+
+
+    logOut() {
+        axios(`http://localhost:3000/public/api/snackapi.php?action=userlogout`, {
+            method: 'POST',
+            withCredentials: true
+        }).then( (response)=> {
+            this.setState({
+                userLoggedIn: false,
+                userName: ''
+            })
         });
     }
+
 
     render() {
-        console.log('STATE:', this.state);
         return (
             <SearchDataContext.Provider value={this.state}>
                 {this.props.children}

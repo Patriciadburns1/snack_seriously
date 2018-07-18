@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../assets/css/multipleresultspage.css';
 import axios from 'axios';
 import noImage from '../assets/images/imagenotfound.jpeg';
-import { SearchDataContext } from './searchdata';
+import SearchData, { SearchDataContext } from './searchdata';
 
 class UserFavorites extends Component {
     constructor(props) {
@@ -25,13 +25,8 @@ class UserFavorites extends Component {
     };
 
 
-    //http://api.snackseriously.com/snackapi.php?action=
-    //localhost:8000/public/api/snackapi.php?action=getfavorites&limit=12&offset=0
-
-
     async getSnackData() {
         let URL = 'http://localhost:3000/public/api/snackapi.php?action=getfavorites&limit=12';
-        //let term = this.props.match.params.term; // '' || name || undefined
         let querystring = null;
         let offset = this.state.offset;
 
@@ -84,27 +79,19 @@ class UserFavorites extends Component {
         }
     }
 
-    logOut() {
-        axios(`http://localhost:3000/public/api/snackapi.php?action=userlogout`, {
-            method: 'POST',
-            withCredentials: true
-        }).then(function (response) {
-            console.log("you have logged out!", response);
-        });
-    }
-
-
     render() {
         const { snackData, offset } = this.state;
-
         if (offset === 0) {
             return (
-                <Fragment>
-                    <div className="logOutButtonDiv">
-                        <Link to='/'> <button className='logOutButton' type='button' onClick={this.logOut}> Logout </button> </Link>
-                    </div>
-                    <div className="addSnacks"> You can add your favorite snacks! </div>
-                </Fragment>
+                <SearchDataContext.Consumer>{(context) => (
+                    <Fragment>
+                        <div className="logOutButtonDiv">
+                            <Link to='/'> <button className='logOutButton' type='button' onClick={context.logOut}> Logout </button> </Link>
+                        </div>
+                        <div className="addSnacks"> You can add your favorite snacks! </div>
+                    </Fragment>
+                )}
+                </SearchDataContext.Consumer>
             )
         }
 
@@ -134,7 +121,7 @@ class UserFavorites extends Component {
             <SearchDataContext.Consumer>{(context) => (
                 <Fragment>
                     <div className="logOutButtonDiv">
-                        <Link to='/'> <button className='logOutButton' type='button' onClick={this.logOut}> Logout </button> </Link>
+                        <Link to='/'> <button className='logOutButton' type='button' onClick={context.logOut}> Logout </button> </Link>
                     </div>
                     <div className="multipleResultsContainer">
                         <div className="multipleResultsItemsContainer">
@@ -142,8 +129,7 @@ class UserFavorites extends Component {
                         </div>
                     </div>
                 </Fragment>
-            )
-            }
+            )}
             </SearchDataContext.Consumer>
         )
     }

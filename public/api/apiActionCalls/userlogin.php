@@ -6,7 +6,7 @@ header("Access-Control-Allow-Origin: *");
 
 if(isset($_SESSION['userID'])){
     $output['success'] = true;
-    $output['username'] = $_SESSION['username'];
+    $output['name'] = $_SESSION['username'];
     $output['msg'] = 'your already logged in';
     print json_encode($output, JSON_UNESCAPED_SLASHES);
     exit();
@@ -17,7 +17,6 @@ $_PASS = sha1($_POST['password']);
 $_EMAIL = addslashes($_POST['name']);
 
 $query = "SELECT * FROM `users` WHERE (`username`='$_NAME' OR `email`='$_EMAIL') AND `password`='$_PASS'";
-
 $result = mysqli_query($conn, $query);
 
 if($result){
@@ -29,6 +28,7 @@ if($result){
         $_SESSION['username'] = $userData['username'];
     }else{
         $output['error'] = 'invalid user name or password';
+        $output['name'] = $_NAME;
     }
 }else{
     $output['error'] = 'cannot attempt login';

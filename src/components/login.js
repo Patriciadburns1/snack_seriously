@@ -19,9 +19,7 @@ class LogIn extends Component {
     }
 
     handleInputChange(event) {
-
         const { value, name } = event.target;
-        console.log("name", name, "value", value);
         const { form } = this.state;
         form[name] = value;
         this.setState({
@@ -39,33 +37,24 @@ class LogIn extends Component {
         return params;
     }
 
-    sendContactForm() {
+    async sendContactForm(context) {
         const { form } = this.state;
-        const data = this.formatPostData(form);
+        
+        try {
+            await context.getUserLogIn(form);
 
-        //localhost:8000/public/api/snackapi.php?action=userlogin
-        //http://api.snackseriously.com/snackapi.php?action=userlogin
-        // axios.post(`http://localhost:8000/public/api/snackapi.php?action=userlogin`,data).then(function(response){
-        //     console.log("server call Success", response); 
-        // });
-
-        axios(`http://localhost:3000/public/api/snackapi.php?action=userlogin`, {
-            method: 'POST',
-            data: data,
-            withCredentials: true
-        }).then(function (response) {
-            console.log("you have logged in!", response);
-        });
+            this.props.history.push('/');
+        } catch (err){
+            console.warn('Invalid email and/or password');
+        }
     }
     
     renderName(){
         let userName = this.state.userName;  
-        console.log("username", userName); 
     }
 
 
     render() {
-        console.log(this.state.userName); 
         const { name, password } = this.state.form;
         if(this.state.userName != undefined){
             return(
@@ -79,23 +68,33 @@ class LogIn extends Component {
         }
 
         return (
+            <SearchDataContext.Consumer>{(context) => (
                 <div>
-                <h2 className='headerForContact'> Log In </h2>
-                <form className='contactForm'>
-                    <div className='contactFormEmail'>
-                        <input placeholder='Name or Email' type="text" value={name} name='name' onChange={this.handleInputChange} />
-                    </div>
-                    <div className='contactFormEmail'>
-                        <input placeholder="Password" type="text" value={password} name='password' onChange={this.handleInputChange} />
-                    </div>
-                    <div className="submitButtonDiv">
-                        <Link to='/UserFavorites'> <button className="submitButtonContactPage" type="submit" value="submit" onClick={this.sendContactForm.bind(this)}> Submit </button> </Link>
-                    </div>
-                    <div className="createAccount">
-                        <p> Need an account?  <Link to='/CreateAccount'> Sign up </Link></p>
-                    </div>
-                </form>
-            </div>
+                    <h2 className='headerForContact'> Log In </h2>
+                    <form className='contactForm'>
+                        <div className='contactFormEmail'>
+                            <input placeholder='Name or Email' type="text" value={name} name='name' onChange={this.handleInputChange} />
+                        </div>
+                        <div className='contactFormEmail'>
+                            <input placeholder="Password" type="password" value={password} name='password' onChange={this.handleInputChange} />
+                        </div>
+                        <div className="submitButtonDiv">
+                            <button
+                                className="submitButtonContactPage"
+                                type="button"
+                                value="submit" 
+                                onClick={this.sendContactForm.bind(this, context)}
+                            > 
+                                Submit 
+                            </button>
+                        </div>
+                        <div className="createAccount">
+                            <p> Need an account?  <Link to='/CreateAccount'> Sign up </Link></p>
+                        </div>
+                    </form>
+                </div>
+            )}
+            </SearchDataContext.Consumer>
         )
     }
 }
