@@ -22,6 +22,7 @@ class SearchData extends Component {
             toggleFilters: this.toggleFilters.bind(this),
             getUserLogIn: this.getUserLogIn.bind(this),
             dataFromServer: this.dataFromServer.bind(this),
+            sendNewUsertoServer: this.sendNewUsertoServer.bind(this),
             logOut: this.logOut.bind(this),
             allergenArray: [{
                 name: "peanuts",
@@ -197,6 +198,18 @@ class SearchData extends Component {
         }
 
         this.dataFromServer(data); 
+    }
+
+    async sendNewUsertoServer(form){
+
+        const postData = this.formatPostData(form);    
+        console.log(form);
+        const {data} = await axios(`/api/snackapi.php?action=usersignup`,{
+            method: 'POST', 
+            data: postData, 
+            withCredentials: true
+        }); 
+        this.dataFromServer(data)
     }
 
 
