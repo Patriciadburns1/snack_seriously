@@ -75,7 +75,9 @@ class RandomSnack extends Component {
                     <div onClick={this.handleNextPictureClick.bind(this)} className="leftRandomSnackBtn">
                         <span className="randomLButtonSymbol">Try Again</span>
                     </div>
-                    <img src={image} id="randomImage" onClick={this.nextPicture} alt="Random Snack"/>
+
+                        <img src={image} id="randomImage" onClick={this.nextPicture} alt="Random Snack"/>
+
                     <Link to ={`/singleresult/${item_id}`} >
                         <div className="rightRandomSnackBtn">
                             <span className="randomRButtonSymbol">Go to Snack</span>
