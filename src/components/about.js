@@ -8,6 +8,7 @@ export default () => {
             <div>
                 Snack Seriously was created by six amazing and hard-working developers as a student project, to help others discover snacks to eat.
             </div>
+
             <table>
                 <tbody>
                     <tr>
@@ -27,6 +28,7 @@ export default () => {
                     </tr>
                 </tbody>
             </table>
+            
             <h3 className="aboutHeader">Snack Disclaimer</h3>
             <div>Snack Seriously is not responsibly for any snacks that is eaten due to any discoveries made on snackseriously.com</div>
             <h3 className="aboutHeader">Amazon Affiliate Disclosure</h3>
