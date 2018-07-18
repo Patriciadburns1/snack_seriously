@@ -57,16 +57,17 @@ class LogIn extends Component {
 
     render() {
         const { name, password } = this.state.form;
-        if(this.state.userName != undefined){
-            return(
-                <SearchDataContext.Consumer>{(context) => (
-                    <div>
-                        {this.renderName()}
-                    </div>
-                )}
-                </SearchDataContext.Consumer>
-            )
-        }
+        //PATRICIA DO THIS 
+        // if(this.state.userName != undefined){
+        //     return(
+        //         <SearchDataContext.Consumer>{(context) => (
+        //             <div>
+        //                 {this.renderName()}
+        //             </div>
+        //         )}
+        //         </SearchDataContext.Consumer>
+        //     )
+        // }
 
         return (
             <SearchDataContext.Consumer>{(context) => (
