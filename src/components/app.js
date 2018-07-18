@@ -7,6 +7,7 @@ import Homepage from './homepage';
 import MultipleResults from './multipleresultspage';
 import SingleResult from './singleresultpage/singleresult';
 import About from './about';
+import Team from './team';
 import Contact from './contact';
 import Filters from './filters';
 import CategoryHome from './categoryhome';
@@ -37,6 +38,7 @@ class App extends Component {
                                 <Route path='/MultipleResults/filter/:filterID/category/:categoryID' component={MultipleResults} />
                                 <Route path='/SingleResult/:product_id' component={SingleResult} />
                                 <Route path='/About' component={About} />
+                                <Route path='/Team' component={Team} />
                                 <Route path='/Contact' component={Contact} />
                                 <Route path='/LogIn' component={LogIn}/> 
                                 <Route path='/CreateAccount' component={CreateAccount}/> 
