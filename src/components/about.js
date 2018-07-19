@@ -1,5 +1,11 @@
 import React from 'react';
 import '../assets/css/about.css';
+import frontend from '../assets/images/tech_logo/front_end.jpeg';
+import react from '../assets/images/tech_logo/react.png';
+import php from '../assets/images/tech_logo/php.png';
+import aws from '../assets/images/tech_logo/aws.png';
+import mysql from '../assets/images/tech_logo/mysql.png';
+
 
 export default () => {
     return (
@@ -8,28 +14,13 @@ export default () => {
             <div>
                 Snack Seriously was created by six amazing and hard-working developers as a student project, to help others discover snacks to eat.
             </div>
-
-            <table>
-                <tbody>
-                    <tr>
-                        <th className="aboutTechHeader">Front-End Tech</th>
-                        <th className="aboutTechHeader">Back-End Tech</th>
-                    </tr>
-                    <tr>
-                        <td>ReactJS</td>
-                        <td>PHP</td>
-                    </tr>
-                    <tr>
-                        <td>React context API</td>
-                        <td>MySQL</td>
-                    </tr>
-                    <tr>
-                        <td>CSS3</td>
-                        <td>AWS</td>
-                    </tr>
-                </tbody>
-            </table>
-            
+            <div>
+                <img className="techlogo" src={frontend}/>
+                <img className="techlogo" src={react}/>
+                <img className="techlogo" src={php}/>
+                <img className="techlogo" src={mysql}/>
+                <img className="techlogo" src={aws}/>
+            </div>
             <h3 className="aboutHeader">Snack Disclaimer</h3>
             <div>Snack Seriously is not responsibly for any snacks that is eaten due to any discoveries made on snackseriously.com</div>
             <h3 className="aboutHeader">Amazon Affiliate Disclosure</h3>
