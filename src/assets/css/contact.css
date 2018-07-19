@@ -60,3 +60,11 @@ label{
 .createAccount{
     text-align: right;
 }
+
+.warning{
+    color: red;
+}
+
+.regularMsg{
+    color: green;
+}
