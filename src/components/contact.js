@@ -19,7 +19,7 @@ class Contact extends Component {
                 valid: false
             },
             subjectCheck:{
-                msg: "Subject",
+                msg: "subject",
                 msgClass: "regularMsg",
                 valid: false
             },
