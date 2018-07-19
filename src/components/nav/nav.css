@@ -23,14 +23,14 @@
 .navBar .menu {
     display: inline-block;
     /* background-color: #ac2424; */
-    width: 15%;
+    width: 20%;
 }
 
 .navBar .profile {
     vertical-align: top;
     display: inline-block;
     right: 0;
-    width: 15%;
+    width: 19%;
     text-align: center;
 }
 
@@ -42,7 +42,7 @@
 .navSearch{
     vertical-align: top;
     display: inline-block;
-    width: 70%;
+    width: 60%;
     height: 100%;
     text-align: center;
 }

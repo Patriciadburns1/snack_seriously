@@ -41,7 +41,6 @@ class CreateAccount extends Component {
     async sendContactForm(context){
         const { form } = this.state;
         try {
-            debugger;
             await context.sendNewUsertoServer(form);
 
             this.props.history.push('/');
