@@ -92,7 +92,7 @@ class CreateAccount extends Component {
         form[name]= value; 
         this.setState({
            form: {...form},
-        })
+        })  
     }
 
     formatPostData(data){
@@ -132,9 +132,10 @@ class CreateAccount extends Component {
 
     render() {
         const{ username, email, password } = this.state.form; 
+        
+
         return(
             <SearchDataContext.Consumer>{(context) => (
-          
                 <div> 
                 <h2 className='headerForContact'> Create an Account </h2> 
                <form className='contactForm'> 
@@ -158,6 +159,7 @@ class CreateAccount extends Component {
                     </div>
                     <div className="warning">{this.state.submitMsg}</div>
                </form> 
+            { !context.userLoggedIn ? context.validUser ? null :<div className="divCheck"> Username or email already in use </div>  :this.props.history.push('/')}
                </div> 
     
             )}
@@ -167,3 +169,5 @@ class CreateAccount extends Component {
 }
 
 export default CreateAccount; 
+
+

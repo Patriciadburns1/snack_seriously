@@ -58,7 +58,11 @@ label{
 }
 
 .createAccount{
-    text-align: right;
+    text-align: center;
+}
+
+.invalidName{
+    text-align: center; 
 }
 
 .warning{
@@ -67,4 +71,8 @@ label{
 
 .regularMsg{
     color: green;
+}
+
+.divCheck{
+    text-align: center; 
 }
