@@ -20,11 +20,12 @@ export default () => {
                         <td>PHP</td>
                     </tr>
                     <tr>
-                        <td>Context API</td>
+                        <td>React context API</td>
                         <td>MySQL</td>
                     </tr>
                     <tr>
                         <td>CSS3</td>
+                        <td>AWS</td>
                     </tr>
                 </tbody>
             </table>
