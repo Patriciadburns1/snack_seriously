@@ -17,6 +17,10 @@
     align-items: center;
 }
 
+.multipleResultsDescriptionContainer {
+    align-items: center;
+}
+
 .multipleResultsItem:hover span {
     opacity: .8;
     color: orange;
