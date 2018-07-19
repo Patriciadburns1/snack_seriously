@@ -47,7 +47,6 @@
     text-align: left;
     padding: 0.25rem 0;
     border-top: 1px solid black;
-    white-space: nowrap;
 }
 .performanceFactsTable td:last-child, .performanceFactsTableSmall td:last-child, .performanceFactsTableGrid td:last-child {
     text-align: right;
@@ -67,6 +66,7 @@
 .performanceFactsTableSmall {
     border-bottom: 1px solid #999;
     margin: 0 0 0.5rem 0;
+    word-break: break-word;
 }
 .performanceFactsTableSmall thead tr {
     border-bottom: 1px solid black;
@@ -127,13 +127,14 @@
 
     .nutritionContainer {
         margin: initial;
-        grid-area: nutrition;
+        /* grid-area: nutrition; */
     }
 
     .ingredientContainer {
         width: initial;
         margin: initial;
-        grid-area: ingredient;
+        /* grid-area: ingredient; */
+        grid-column: 1 / span 2;
     }
 }
 
