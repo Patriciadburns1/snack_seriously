@@ -5,7 +5,8 @@ import axios from 'axios';
 import noImage from '../assets/images/imagenotfound.jpeg';
 import Filters from './filters';
 import Homepage from "./homepage";
-
+import uparrow from '../assets/images/arrowup.png';
+import backarrow from '../assets/images/arrowback.png';
 
 class MultipleResults extends Component {
     constructor(props) {
@@ -122,8 +123,8 @@ class MultipleResults extends Component {
                     <div className="multipleResultsItemsContainer">
                         { displayedSnack }
                     </div>
-                    <div className="toTopButton" onClick={this.topFunction}></div>
-                    <Link to="/" className="backButton">hello</Link>
+                    <img src={uparrow} className="toTopButton" onClick={this.topFunction}/>
+                    <Link to="/" className="backButton"><img src={backarrow}/></Link>
 
                 </div>
             </div>

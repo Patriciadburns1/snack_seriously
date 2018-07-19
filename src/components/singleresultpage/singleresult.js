@@ -6,6 +6,7 @@ import Ingredient from './ingredient';
 import SingleItem from './singleitem'
 import axios from 'axios';
 import NotFound from './notfound';
+import backarrow from '../../assets/images/arrowback.png';
 
 class SingleResult extends Component {
     constructor(props) {
@@ -73,7 +74,7 @@ class SingleResult extends Component {
                         <SingleItem name={name} manu={manu} img={img_url} amazon_url={amazon_url} product_id={this.props.match.params.product_id}/>
                         <Nutritionalfacts nutrition={nutrients} per_container={per_container} size={size} unit={unit} weight={weight} />
                         <Ingredient ingredients={ingredients} />
-                        <Link to="/MultipleResults" className="backButton">hello</Link>
+                        <Link to="/MultipleResults" className="backButton"><img src={backarrow}/></Link>
                     </div>
 
             )
