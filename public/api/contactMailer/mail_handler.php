@@ -30,17 +30,10 @@ $options = array(
 $mail->smtpConnect($options);
 $mail->From = 'snackseriously@gmail.com';  // sender's email address (shows in "From" field)
 $mail->FromName = 'SnackSeriously';   // sender's name (shows in "From" field)
-$mail->addAddress($_POST['email'], $_POST['name']);  // Add a recipient
-//$mail->addAddress('ellen@example.com');                        // Name is optional
+$mail->addAddress('snackseriously@gmail.com', $_POST['name']);  // Add a recipient
 $mail->addReplyTo('panguyenuwm@gmail.com');                          // Add a reply-to address
-//$mail->addCC('cc@example.com');
-//$mail->addBCC('bcc@example.com');
 
-//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
-
-
 
 $mail->Subject = 'message from '.$_POST['name'].' on '.date('Y-m-d H:i:s').' at '.$_SERVER['REMOTE_ADDR'];
 $mail->Body    = "
