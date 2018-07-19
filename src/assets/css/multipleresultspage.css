@@ -103,7 +103,17 @@
 }
 
 .addSnacks{
- margin-top: 50%; 
-display: flex; 
-justify-content: center; 
+    margin-top: 50%; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.toTopButton {
+    background-color: blue;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    border-radius: 50%;
+    bottom: 2%;
+    right: 4%;
 }

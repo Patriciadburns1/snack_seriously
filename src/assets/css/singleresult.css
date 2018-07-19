@@ -10,18 +10,12 @@
     justify-content: center;
 } */
 
-
-.singleResultContainer {
-    position: absolute;     /* remove this position if not needed */
-    top: 13%;
-}
-
 @media only screen and (min-width: 576px) {
 
     .singleResultContainer {
-        grid-gap: 2vh;
         display: grid;
         padding: 1%;
         position: initial;
+        grid-template-areas: 'item item nutrition' 'item item nutrition' 'ingredient ingredient ingredient';
     }
 }

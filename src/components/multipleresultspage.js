@@ -17,7 +17,7 @@ class MultipleResults extends Component {
 
         this.handleOnScroll = this.handleOnScroll.bind(this);
         this.getSnackData=this.getSnackData.bind(this); 
-        this.onRouteChange=this.onRouteChange.bind(this); 
+        this.onRouteChange=this.onRouteChange.bind(this);
     }
 
     componentDidMount() {
@@ -87,6 +87,11 @@ class MultipleResults extends Component {
             this.getSnackData();
         }
     }
+    
+    topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
 
 
     render() {
@@ -111,10 +116,11 @@ class MultipleResults extends Component {
         return (
             <div>
                 <Filters />
-                <div className="multipleResultsContainer">
+                <div className="multipleResultsContainer" id="multiplePageTop">
                     <div className="multipleResultsItemsContainer">
                         { displayedSnack }
                     </div>
+                    <div className="toTopButton" onClick={this.topFunction}></div>
                 </div>
             </div>
         )

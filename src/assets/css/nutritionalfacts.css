@@ -3,9 +3,7 @@
 
 .nutritionContainer{
     font-size: small;
-    line-height: 1.4;
     margin: 5% auto;
-    /* font-weight: 200;  */
 }
 
 .nutritionalText{
@@ -13,14 +11,8 @@
 }
 
 .performanceFacts {
-    /* font-weight: 200;  */
     border: 1px solid black;
-    /* margin: 20px; */
-    margin: auto;
-    /* float: left; */
-    /* width: 290px; */
-    width:75%;
-    padding: 10%;
+    padding: 5%;
     -webkit-box-shadow: 0px 2px 10px -2px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 2px 10px -2px rgba(0,0,0,0.75);
     box-shadow: 0px 2px 10px -2px rgba(0,0,0,0.75);
@@ -134,12 +126,13 @@
 @media only screen and (min-width: 576px) {
 
     .nutritionContainer {
-        grid-row: 1 / span 2;
         margin: initial;
+        grid-area: nutrition;
     }
 
     .ingredientContainer {
         width: initial;
         margin: initial;
+        grid-area: ingredient;
     }
 }
