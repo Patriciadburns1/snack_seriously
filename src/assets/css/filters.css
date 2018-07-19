@@ -5,7 +5,6 @@
 
 .filtersHeaderContainer {
     height: 6vh;
-    width: 100vw;
     background-color: darkgray;
     cursor: pointer;
     display: flex;
