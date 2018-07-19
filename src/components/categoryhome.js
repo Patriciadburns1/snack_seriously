@@ -4,7 +4,7 @@ import '../assets/css/categorieshomepage.css';
 
 class CategoryHome extends Component {
     render() {
-        const nameArray = ["Popcorn & Pretzels", "Chips & Crisps", "Nuts, Seeds & Dried Fruit", "Bars", "Cookies", "Candy & Chocolate"]
+        // const nameArray = ["Popcorn & Pretzels", "Chips & Crisps", "Nuts, Seeds & Dried Fruit", "Bars", "Cookies", "Candy & Chocolate"]
         const imageArray = ["popcornpretzel", "chipscrackers", "nutsdriedfruit", "bar", "cookies", "candychocolate"];
         const valueArray = [1, 2, 3, 4, 5, 6]
         const Items = imageArray.map((item, index) => {
@@ -12,7 +12,7 @@ class CategoryHome extends Component {
                 <Link key={index} to= {`/MultipleResults/${valueArray[index]}`}>
                 <div  className="categoryHomepageItem" >
                     <img src={require(`./filters/categoriesicons/${item}.png`)} className="categoryHomepageImage" />
-                    <p>{nameArray[index]}</p>
+                    {/* <p>{nameArray[index]}</p> */}
                 </div>
                 </Link>
             )
