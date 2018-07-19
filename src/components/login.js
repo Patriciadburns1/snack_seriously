@@ -11,9 +11,10 @@ class LogIn extends Component {
         this.state = {
             form: {
                 name: '',
-                password: ''
-            }
-
+                password: '',
+                
+            },
+            error: false
         }
         this.handleInputChange = this.handleInputChange.bind(this);
     }
@@ -47,27 +48,49 @@ class LogIn extends Component {
             this.props.history.push('/');
         } catch (err){
             console.warn('Invalid email and/or password');
+            this.setState({
+                    error:true            
+            })
         }
     }
     
-    renderName(){
-        let userName = this.state.userName;  
-    }
-
 
     render() {
         const { name, password } = this.state.form;
-      
-        // if(this.state.userName != undefined){
-        //     return(
-        //         <SearchDataContext.Consumer>{(context) => (
-        //             <div>
-        //                 {this.renderName()}
-        //             </div>
-        //         )}
-        //         </SearchDataContext.Consumer>
-        //     )
-        // }
+        const{error} = this.state; 
+
+        if(error){
+            return(
+                <SearchDataContext.Consumer>{(context) => (
+                    <div>
+                        <h2 className='headerForContact'> Log In </h2>
+                        <form className='contactForm'>
+                            <div className='contactFormEmail'>
+                                <input placeholder='Name or Email' type="text" value={name} name='name' onChange={this.handleInputChange} />
+                            </div>
+                            <div className='contactFormEmail'>
+                                <input placeholder="Password" type="password" value={password} name='password' onChange={this.handleInputChange} />
+                            </div>
+                            <div className="submitButtonDiv">
+                                <button
+                                    className="submitButtonContactPage"
+                                    type="button"
+                                    value="submit" 
+                                    onClick={this.sendContactForm.bind(this, context)}> 
+                                    Submit 
+                                </button>
+                            </div>
+                            
+                            <div className="createAccount">
+                                <p> Need an account?  <Link to='/CreateAccount'> Sign up </Link></p>
+                            </div>
+                        </form>
+                        <div className="invalidName"> Invalid username and/or password </div> 
+                    </div>
+                )}
+                </SearchDataContext.Consumer>
+            )           
+        }
 
         return (
             <SearchDataContext.Consumer>{(context) => (
@@ -85,11 +108,11 @@ class LogIn extends Component {
                                 className="submitButtonContactPage"
                                 type="button"
                                 value="submit" 
-                                onClick={this.sendContactForm.bind(this, context)}
-                            > 
+                                onClick={this.sendContactForm.bind(this, context)}> 
                                 Submit 
                             </button>
                         </div>
+
                         <div className="createAccount">
                             <p> Need an account?  <Link to='/CreateAccount'> Sign up </Link></p>
                         </div>
