@@ -65,6 +65,14 @@ label{
     text-align: center; 
 }
 
+.warning{
+    color: red;
+}
+
+.regularMsg{
+    color: green;
+}
+
 .divCheck{
     text-align: center; 
 }
