@@ -150,7 +150,7 @@
 /********** Categories Grid **********/
 
 .categoryPageContainer {
-    height: 40vh;
+    height: 43vh;
     color: black;
 }
 
@@ -162,8 +162,8 @@
 
 .categoryContainer{
     display: grid;
-    height: 65%;
-    width: 90%;
+    height: 44%;
+    width: 96%;
     grid-template-columns: auto auto auto;
     grid-row-gap: 4%;
     position: relative;
@@ -197,6 +197,25 @@
     bottom: 0;
     margin: 0;
 }
+
+@media only screen and (min-width: 768px) {
+
+    .categoryContainer{
+        height: 30vh;
+        grid-template-columns: auto auto auto auto auto auto;
+
+    }
+    .allergyContainer{
+        margin-bottom: 6%;
+        grid-template-columns: auto auto auto auto auto auto auto;
+    }
+    .categoryPageContainer{
+        height: 33vh;
+    }
+
+}
+
+
 
 .circled {
     /* border-radius: 50%; */
