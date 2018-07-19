@@ -4,6 +4,7 @@ import '../assets/css/multipleresultspage.css';
 import axios from 'axios';
 import noImage from '../assets/images/imagenotfound.jpeg';
 import SearchData, { SearchDataContext } from './searchdata';
+import emptyFav from '../assets/images/emptyFav.png';
 
 class UserFavorites extends Component {
     constructor(props) {
@@ -84,6 +85,13 @@ class UserFavorites extends Component {
         if (offset === 0) {
             return (
                 <SearchDataContext.Consumer>{(context) => (
+                    <Fragment>
+                        <div className="logOutButtonDiv">
+                            <Link to='/'> <button className='logOutButton' type='button' onClick={context.logOut}> Logout </button> </Link>
+                        </div>
+                        <div className='emptySnack'>
+                            <img src={emptyFav}/>
+                        </div>
                         <div className="addSnacks"> You can add your favorite snacks! </div>
                 )}
                 </SearchDataContext.Consumer>

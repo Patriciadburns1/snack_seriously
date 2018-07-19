@@ -5,7 +5,7 @@ import '../assets/css/categorieshomepage.css';
 class CategoryHome extends Component {
     render() {
         const nameArray = ["Popcorn & Pretzels", "Chips & Crisps", "Nuts, Seeds & Dried Fruit", "Bars", "Cookies", "Candy & Chocolate"]
-        const imageArray = ["popcornpretzel", "meat", "chipscrackers", "bar", "nutsdriedfruit", "candychocolate"];
+        const imageArray = ["popcornpretzel", "chipscrackers", "nutsdriedfruit", "bar", "cookies", "candychocolate"];
         const valueArray = [1, 2, 3, 4, 5, 6]
         const Items = imageArray.map((item, index) => {
             return (
