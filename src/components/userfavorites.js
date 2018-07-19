@@ -93,6 +93,7 @@ class UserFavorites extends Component {
                             <img src={emptyFav}/>
                         </div>
                         <div className="addSnacks"> You can add your favorite snacks! </div>
+                    </Fragment>
                 )}
                 </SearchDataContext.Consumer>
             )

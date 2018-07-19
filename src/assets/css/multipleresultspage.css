@@ -99,13 +99,6 @@
 
 }
 
-.addSnacks{
-    margin-top: 50%; 
-    display: flex; 
-    justify-content: center; 
-}
-
-
 .logOutButtonDiv{
     width: 100%; 
     text-align: right; 
@@ -126,6 +119,7 @@
 
 .emptySnack img{
     height: 100%;
+}
 
 .toTopButton {
     background-color: blue;
