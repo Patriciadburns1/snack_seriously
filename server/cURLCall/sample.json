@@ -1,0 +1,738 @@
+{
+	"OperationRequest": {
+		"RequestId": "2168ca63-cd0e-4ac6-af2d-29cf0892501f",
+		"Arguments": {
+			"Argument": [{
+				"@attributes": {
+					"Name": "AWSAccessKeyId",
+					"Value": "AKIAJB5TA23FPMPS7KAQ"
+				}
+			}, {
+				"@attributes": {
+					"Name": "AssociateTag",
+					"Value": "mobilea000317-20"
+				}
+			}, {
+				"@attributes": {
+					"Name": "IdType",
+					"Value": "UPC"
+				}
+			}, {
+				"@attributes": {
+					"Name": "IncludeReviewsSummary",
+					"Value": "true"
+				}
+			}, {
+				"@attributes": {
+					"Name": "ItemId",
+					"Value": "071146000148"
+				}
+			}, {
+				"@attributes": {
+					"Name": "Operation",
+					"Value": "ItemLookup"
+				}
+			}, {
+				"@attributes": {
+					"Name": "ResponseGroup",
+					"Value": "Images, ItemAttributes, Reviews, ItemIds"
+				}
+			}, {
+				"@attributes": {
+					"Name": "SearchIndex",
+					"Value": "Pantry"
+				}
+			}, {
+				"@attributes": {
+					"Name": "Service",
+					"Value": "AWSECommerceService"
+				}
+			}, {
+				"@attributes": {
+					"Name": "Timestamp",
+					"Value": "2018-07-09T19:02:05Z"
+				}
+			}, {
+				"@attributes": {
+					"Name": "Signature",
+					"Value": "dguUWD3+9eswYQYnoJsA6+FoSDGUSnDAWWhrngfElTo="
+				}
+			}]
+		},
+		"RequestProcessingTime": "0.0744421680000000"
+	},
+	"Items": {
+		"Request": {
+			"IsValid": "True",
+			"ItemLookupRequest": {
+				"IdType": "UPC",
+				"ItemId": "071146000148",
+				"ResponseGroup": ["Images", "ItemAttributes", "Reviews", "ItemIds"],
+				"SearchIndex": "Pantry",
+				"VariationPage": "All",
+				"IncludeReviewsSummary": "true"
+			}
+		},
+		"Item": [{
+			"ASIN": "B000SRHHM4",
+			"DetailPageURL": "https:\/\/www.amazon.com\/Calbee-071146000148-Shrimp-Flavored-Chips\/dp\/B000SRHHM4?SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B000SRHHM4",
+			"ItemLinks": {
+				"ItemLink": [{
+					"Description": "Technical Details",
+					"URL": "https:\/\/www.amazon.com\/Calbee-071146000148-Shrimp-Flavored-Chips\/dp\/tech-data\/B000SRHHM4?SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B000SRHHM4"
+				}, {
+					"Description": "Add To Baby Registry",
+					"URL": "https:\/\/www.amazon.com\/gp\/registry\/baby\/add-item.html?asin.0=B000SRHHM4&SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B000SRHHM4"
+				}, {
+					"Description": "Add To Wedding Registry",
+					"URL": "https:\/\/www.amazon.com\/gp\/registry\/wedding\/add-item.html?asin.0=B000SRHHM4&SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B000SRHHM4"
+				}, {
+					"Description": "Add To Wishlist",
+					"URL": "https:\/\/www.amazon.com\/gp\/registry\/wishlist\/add-item.html?asin.0=B000SRHHM4&SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B000SRHHM4"
+				}, {
+					"Description": "Tell A Friend",
+					"URL": "https:\/\/www.amazon.com\/gp\/pdp\/taf\/B000SRHHM4?SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B000SRHHM4"
+				}, {
+					"Description": "All Customer Reviews",
+					"URL": "https:\/\/www.amazon.com\/review\/product\/B000SRHHM4?SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B000SRHHM4"
+				}, {
+					"Description": "All Offers",
+					"URL": "https:\/\/www.amazon.com\/gp\/offer-listing\/B000SRHHM4?SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B000SRHHM4"
+				}]
+			},
+			"SmallImage": {
+				"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/61ZM9i29UwL._SL75_.jpg",
+				"Height": "75",
+				"Width": "75"
+			},
+			"MediumImage": {
+				"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/61ZM9i29UwL._SL160_.jpg",
+				"Height": "160",
+				"Width": "160"
+			},
+			"LargeImage": {
+				"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/61ZM9i29UwL.jpg",
+				"Height": "500",
+				"Width": "500"
+			},
+			"ImageSets": {
+				"ImageSet": [{
+					"@attributes": {
+						"Category": "variant"
+					},
+					"SwatchImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51w0EBni4eL._SL30_.jpg",
+						"Height": "30",
+						"Width": "13"
+					},
+					"SmallImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51w0EBni4eL._SL75_.jpg",
+						"Height": "75",
+						"Width": "31"
+					},
+					"ThumbnailImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51w0EBni4eL._SL75_.jpg",
+						"Height": "75",
+						"Width": "31"
+					},
+					"TinyImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51w0EBni4eL._SL110_.jpg",
+						"Height": "110",
+						"Width": "46"
+					},
+					"MediumImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51w0EBni4eL._SL160_.jpg",
+						"Height": "160",
+						"Width": "67"
+					},
+					"LargeImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51w0EBni4eL.jpg",
+						"Height": "500",
+						"Width": "209"
+					}
+				}, {
+					"@attributes": {
+						"Category": "variant"
+					},
+					"SwatchImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51On9NnRiVL._SL30_.jpg",
+						"Height": "27",
+						"Width": "30"
+					},
+					"SmallImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51On9NnRiVL._SL75_.jpg",
+						"Height": "67",
+						"Width": "75"
+					},
+					"ThumbnailImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51On9NnRiVL._SL75_.jpg",
+						"Height": "67",
+						"Width": "75"
+					},
+					"TinyImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51On9NnRiVL._SL110_.jpg",
+						"Height": "99",
+						"Width": "110"
+					},
+					"MediumImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51On9NnRiVL._SL160_.jpg",
+						"Height": "143",
+						"Width": "160"
+					},
+					"LargeImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51On9NnRiVL.jpg",
+						"Height": "448",
+						"Width": "500"
+					}
+				}, {
+					"@attributes": {
+						"Category": "variant"
+					},
+					"SwatchImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51JwhFuy4PL._SL30_.jpg",
+						"Height": "30",
+						"Width": "30"
+					},
+					"SmallImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51JwhFuy4PL._SL75_.jpg",
+						"Height": "75",
+						"Width": "75"
+					},
+					"ThumbnailImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51JwhFuy4PL._SL75_.jpg",
+						"Height": "75",
+						"Width": "75"
+					},
+					"TinyImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51JwhFuy4PL._SL110_.jpg",
+						"Height": "110",
+						"Width": "110"
+					},
+					"MediumImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51JwhFuy4PL._SL160_.jpg",
+						"Height": "160",
+						"Width": "160"
+					},
+					"LargeImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51JwhFuy4PL.jpg",
+						"Height": "500",
+						"Width": "500"
+					}
+				}, {
+					"@attributes": {
+						"Category": "variant"
+					},
+					"SwatchImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/41gYJPp8K2L._SL30_.jpg",
+						"Height": "30",
+						"Width": "22"
+					},
+					"SmallImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/41gYJPp8K2L._SL75_.jpg",
+						"Height": "75",
+						"Width": "56"
+					},
+					"ThumbnailImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/41gYJPp8K2L._SL75_.jpg",
+						"Height": "75",
+						"Width": "56"
+					},
+					"TinyImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/41gYJPp8K2L._SL110_.jpg",
+						"Height": "110",
+						"Width": "82"
+					},
+					"MediumImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/41gYJPp8K2L._SL160_.jpg",
+						"Height": "160",
+						"Width": "120"
+					},
+					"LargeImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/41gYJPp8K2L.jpg",
+						"Height": "500",
+						"Width": "375"
+					}
+				}, {
+					"@attributes": {
+						"Category": "primary"
+					},
+					"SwatchImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/61ZM9i29UwL._SL30_.jpg",
+						"Height": "30",
+						"Width": "30"
+					},
+					"SmallImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/61ZM9i29UwL._SL75_.jpg",
+						"Height": "75",
+						"Width": "75"
+					},
+					"ThumbnailImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/61ZM9i29UwL._SL75_.jpg",
+						"Height": "75",
+						"Width": "75"
+					},
+					"TinyImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/61ZM9i29UwL._SL110_.jpg",
+						"Height": "110",
+						"Width": "110"
+					},
+					"MediumImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/61ZM9i29UwL._SL160_.jpg",
+						"Height": "160",
+						"Width": "160"
+					},
+					"LargeImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/61ZM9i29UwL.jpg",
+						"Height": "500",
+						"Width": "500"
+					}
+				}]
+			},
+			"ItemAttributes": {
+				"Binding": "Grocery",
+				"Brand": "Calbee",
+				"CatalogNumberList": {
+					"CatalogNumberListElement": "3625275"
+				},
+				"EAN": "0071146000148",
+				"EANList": {
+					"EANListElement": "0071146000148"
+				},
+				"Feature": ["Made with fresh whole shrimps", "Rich in calcium, animal fiber", "Roasted to reduce caloric value", "Gives a pleasant feeling and is easily digestable"],
+				"IsAdultProduct": "0",
+				"ItemDimensions": {
+					"Height": "320",
+					"Length": "780",
+					"Weight": "10",
+					"Width": "660"
+				},
+				"Label": "Calbee",
+				"Manufacturer": "Calbee",
+				"Model": "071146000148",
+				"MPN": "00003394",
+				"NumberOfItems": "1",
+				"PackageDimensions": {
+					"Height": "170",
+					"Length": "980",
+					"Weight": "25",
+					"Width": "580"
+				},
+				"PackageQuantity": "1",
+				"PartNumber": "00003394",
+				"ProductGroup": "Grocery",
+				"ProductTypeName": "GROCERY",
+				"Publisher": "Calbee",
+				"ReleaseDate": "2018-01-01",
+				"Size": "4 oz",
+				"Studio": "Calbee",
+				"Title": "Calbee Shrimp Flavored Chips, 4 oz",
+				"UPC": "071146000148",
+				"UPCList": {
+					"UPCListElement": "071146000148"
+				}
+			},
+			"CustomerReviews": {
+				"IFrameURL": "https:\/\/www.amazon.com\/reviews\/iframe?akid=AKIAJB5TA23FPMPS7KAQ&alinkCode=xm2&asin=B000SRHHM4&atag=mobilea000317-20&exp=2018-07-10T19%3A02%3A06Z&summary=1&v=2&sig=aFNzyzZjwuHGW5GSjSH%252FJzDzp%252Fpomp5yQXfCuL76%252F%252BM%253D",
+				"HasReviews": "true"
+			}
+		}, {
+			"ASIN": "B0055WGRCI",
+			"DetailPageURL": "https:\/\/www.amazon.com\/La-Mer-Calbee-Chip-Shrimp\/dp\/B0055WGRCI?SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B0055WGRCI",
+			"ItemLinks": {
+				"ItemLink": [{
+					"Description": "Technical Details",
+					"URL": "https:\/\/www.amazon.com\/La-Mer-Calbee-Chip-Shrimp\/dp\/tech-data\/B0055WGRCI?SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B0055WGRCI"
+				}, {
+					"Description": "Add To Baby Registry",
+					"URL": "https:\/\/www.amazon.com\/gp\/registry\/baby\/add-item.html?asin.0=B0055WGRCI&SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B0055WGRCI"
+				}, {
+					"Description": "Add To Wedding Registry",
+					"URL": "https:\/\/www.amazon.com\/gp\/registry\/wedding\/add-item.html?asin.0=B0055WGRCI&SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B0055WGRCI"
+				}, {
+					"Description": "Add To Wishlist",
+					"URL": "https:\/\/www.amazon.com\/gp\/registry\/wishlist\/add-item.html?asin.0=B0055WGRCI&SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B0055WGRCI"
+				}, {
+					"Description": "Tell A Friend",
+					"URL": "https:\/\/www.amazon.com\/gp\/pdp\/taf\/B0055WGRCI?SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B0055WGRCI"
+				}, {
+					"Description": "All Customer Reviews",
+					"URL": "https:\/\/www.amazon.com\/review\/product\/B0055WGRCI?SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B0055WGRCI"
+				}, {
+					"Description": "All Offers",
+					"URL": "https:\/\/www.amazon.com\/gp\/offer-listing\/B0055WGRCI?SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B0055WGRCI"
+				}]
+			},
+			"SmallImage": {
+				"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/41g8PSIGSyL._SL75_.jpg",
+				"Height": "45",
+				"Width": "75"
+			},
+			"MediumImage": {
+				"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/41g8PSIGSyL._SL160_.jpg",
+				"Height": "96",
+				"Width": "160"
+			},
+			"LargeImage": {
+				"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/41g8PSIGSyL.jpg",
+				"Height": "300",
+				"Width": "500"
+			},
+			"ImageSets": {
+				"ImageSet": {
+					"@attributes": {
+						"Category": "primary"
+					},
+					"SwatchImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/41g8PSIGSyL._SL30_.jpg",
+						"Height": "18",
+						"Width": "30"
+					},
+					"SmallImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/41g8PSIGSyL._SL75_.jpg",
+						"Height": "45",
+						"Width": "75"
+					},
+					"ThumbnailImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/41g8PSIGSyL._SL75_.jpg",
+						"Height": "45",
+						"Width": "75"
+					},
+					"TinyImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/41g8PSIGSyL._SL110_.jpg",
+						"Height": "66",
+						"Width": "110"
+					},
+					"MediumImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/41g8PSIGSyL._SL160_.jpg",
+						"Height": "96",
+						"Width": "160"
+					},
+					"LargeImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/41g8PSIGSyL.jpg",
+						"Height": "300",
+						"Width": "500"
+					}
+				}
+			},
+			"ItemAttributes": {
+				"Binding": "Misc.",
+				"Brand": "La Mer",
+				"EAN": "0071146000148",
+				"EANList": {
+					"EANListElement": "0071146000148"
+				},
+				"Feature": ["La Mer The Regenerating Serum.", "Size: .1 oz \/3ml Tube.", "Qty: 5 Tubes = .5 oz\/15ml", "Condition Fresh Brand New Unboxd.", "Fast Shipping&Email Response."],
+				"Label": "Calbee",
+				"ListPrice": {
+					"Amount": "5295",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$52.95"
+				},
+				"Manufacturer": "Calbee",
+				"MPN": "00024454",
+				"PackageDimensions": {
+					"Height": "70",
+					"Length": "400",
+					"Weight": "3",
+					"Width": "290"
+				},
+				"PackageQuantity": "5",
+				"PartNumber": "00024454",
+				"ProductGroup": "Beauty",
+				"ProductTypeName": "BEAUTY",
+				"Publisher": "Calbee",
+				"Studio": "Calbee",
+				"Title": "Calbee Chip Shrimp",
+				"UPC": "071146000148",
+				"UPCList": {
+					"UPCListElement": "071146000148"
+				}
+			},
+			"CustomerReviews": {
+				"IFrameURL": "https:\/\/www.amazon.com\/reviews\/iframe?akid=AKIAJB5TA23FPMPS7KAQ&alinkCode=xm2&asin=B0055WGRCI&atag=mobilea000317-20&exp=2018-07-10T19%3A02%3A06Z&summary=1&v=2&sig=ZOU6FO9clJBvRnScRNld%252F%252BzdvHXob8ICwK7OLhtIYOI%253D",
+				"HasReviews": "true"
+			}
+		}, {
+			"ASIN": "B0028P8FJS",
+			"DetailPageURL": "https:\/\/www.amazon.com\/Calbee-Shrimp-Flavored-Chips-4-Ounce\/dp\/B0028P8FJS?SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B0028P8FJS",
+			"ItemLinks": {
+				"ItemLink": [{
+					"Description": "Technical Details",
+					"URL": "https:\/\/www.amazon.com\/Calbee-Shrimp-Flavored-Chips-4-Ounce\/dp\/tech-data\/B0028P8FJS?SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B0028P8FJS"
+				}, {
+					"Description": "Add To Baby Registry",
+					"URL": "https:\/\/www.amazon.com\/gp\/registry\/baby\/add-item.html?asin.0=B0028P8FJS&SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B0028P8FJS"
+				}, {
+					"Description": "Add To Wedding Registry",
+					"URL": "https:\/\/www.amazon.com\/gp\/registry\/wedding\/add-item.html?asin.0=B0028P8FJS&SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B0028P8FJS"
+				}, {
+					"Description": "Add To Wishlist",
+					"URL": "https:\/\/www.amazon.com\/gp\/registry\/wishlist\/add-item.html?asin.0=B0028P8FJS&SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B0028P8FJS"
+				}, {
+					"Description": "Tell A Friend",
+					"URL": "https:\/\/www.amazon.com\/gp\/pdp\/taf\/B0028P8FJS?SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B0028P8FJS"
+				}, {
+					"Description": "All Customer Reviews",
+					"URL": "https:\/\/www.amazon.com\/review\/product\/B0028P8FJS?SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B0028P8FJS"
+				}, {
+					"Description": "All Offers",
+					"URL": "https:\/\/www.amazon.com\/gp\/offer-listing\/B0028P8FJS?SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B0028P8FJS"
+				}]
+			},
+			"SmallImage": {
+				"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51oUu20Rr2L._SL75_.jpg",
+				"Height": "75",
+				"Width": "58"
+			},
+			"MediumImage": {
+				"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51oUu20Rr2L._SL160_.jpg",
+				"Height": "160",
+				"Width": "124"
+			},
+			"LargeImage": {
+				"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51oUu20Rr2L.jpg",
+				"Height": "500",
+				"Width": "386"
+			},
+			"ImageSets": {
+				"ImageSet": [{
+					"@attributes": {
+						"Category": "swatch"
+					},
+					"SwatchImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51oUu20Rr2L._SL30_.jpg",
+						"Height": "30",
+						"Width": "23"
+					},
+					"SmallImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51oUu20Rr2L._SL75_.jpg",
+						"Height": "75",
+						"Width": "58"
+					},
+					"ThumbnailImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51oUu20Rr2L._SL75_.jpg",
+						"Height": "75",
+						"Width": "58"
+					},
+					"TinyImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51oUu20Rr2L._SL110_.jpg",
+						"Height": "110",
+						"Width": "85"
+					},
+					"MediumImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51oUu20Rr2L._SL160_.jpg",
+						"Height": "160",
+						"Width": "124"
+					},
+					"LargeImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51oUu20Rr2L.jpg",
+						"Height": "500",
+						"Width": "386"
+					}
+				}, {
+					"@attributes": {
+						"Category": "primary"
+					},
+					"SwatchImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51oUu20Rr2L._SL30_.jpg",
+						"Height": "30",
+						"Width": "23"
+					},
+					"SmallImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51oUu20Rr2L._SL75_.jpg",
+						"Height": "75",
+						"Width": "58"
+					},
+					"ThumbnailImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51oUu20Rr2L._SL75_.jpg",
+						"Height": "75",
+						"Width": "58"
+					},
+					"TinyImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51oUu20Rr2L._SL110_.jpg",
+						"Height": "110",
+						"Width": "85"
+					},
+					"MediumImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51oUu20Rr2L._SL160_.jpg",
+						"Height": "160",
+						"Width": "124"
+					},
+					"LargeImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51oUu20Rr2L.jpg",
+						"Height": "500",
+						"Width": "386"
+					}
+				}]
+			},
+			"ItemAttributes": {
+				"Binding": "Grocery",
+				"Brand": "Calbee",
+				"EAN": "0071146000148",
+				"EANList": {
+					"EANListElement": "0071146000148"
+				},
+				"Feature": ["Made with fresh whole shrimps", "Rich in calcium, animal fiber", "Roasted to reduce caloric value", "Mild flavor and smooth texture", "Ships in Certified Frustration-Free Packaging"],
+				"IsAdultProduct": "0",
+				"ItemDimensions": {
+					"Height": "940",
+					"Length": "1580",
+					"Weight": "445",
+					"Width": "1030"
+				},
+				"Label": "Calbee",
+				"ListPrice": {
+					"Amount": "1776",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$17.76"
+				},
+				"Manufacturer": "Calbee",
+				"Model": "29219",
+				"MPN": "00024454",
+				"NumberOfItems": "12",
+				"PackageDimensions": {
+					"Height": "940",
+					"Length": "1580",
+					"Weight": "445",
+					"Width": "1030"
+				},
+				"PackageQuantity": "12",
+				"PartNumber": "00024454",
+				"ProductGroup": "Grocery",
+				"ProductTypeName": "GROCERY",
+				"Publisher": "Calbee",
+				"Studio": "Calbee",
+				"Title": "Calbee Shrimp Flavored Chips, 4-Ounce Bags (Pack of 12)",
+				"UPC": "071146000148",
+				"UPCList": {
+					"UPCListElement": "071146000148"
+				}
+			},
+			"CustomerReviews": {
+				"IFrameURL": "https:\/\/www.amazon.com\/reviews\/iframe?akid=AKIAJB5TA23FPMPS7KAQ&alinkCode=xm2&asin=B0028P8FJS&atag=mobilea000317-20&exp=2018-07-10T19%3A02%3A06Z&summary=1&v=2&sig=ds5Ln2HpogX%252Bz5gCjLNotEYdlAJhD1mqQjwAz9k%252FcR8%253D",
+				"HasReviews": "true"
+			}
+		}, {
+			"ASIN": "B0082ATRFE",
+			"DetailPageURL": "https:\/\/www.amazon.com\/Calbee-SPK-24454-Chip-Shrimp\/dp\/B0082ATRFE?SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B0082ATRFE",
+			"ItemLinks": {
+				"ItemLink": [{
+					"Description": "Technical Details",
+					"URL": "https:\/\/www.amazon.com\/Calbee-SPK-24454-Chip-Shrimp\/dp\/tech-data\/B0082ATRFE?SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B0082ATRFE"
+				}, {
+					"Description": "Add To Baby Registry",
+					"URL": "https:\/\/www.amazon.com\/gp\/registry\/baby\/add-item.html?asin.0=B0082ATRFE&SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B0082ATRFE"
+				}, {
+					"Description": "Add To Wedding Registry",
+					"URL": "https:\/\/www.amazon.com\/gp\/registry\/wedding\/add-item.html?asin.0=B0082ATRFE&SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B0082ATRFE"
+				}, {
+					"Description": "Add To Wishlist",
+					"URL": "https:\/\/www.amazon.com\/gp\/registry\/wishlist\/add-item.html?asin.0=B0082ATRFE&SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B0082ATRFE"
+				}, {
+					"Description": "Tell A Friend",
+					"URL": "https:\/\/www.amazon.com\/gp\/pdp\/taf\/B0082ATRFE?SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B0082ATRFE"
+				}, {
+					"Description": "All Customer Reviews",
+					"URL": "https:\/\/www.amazon.com\/review\/product\/B0082ATRFE?SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B0082ATRFE"
+				}, {
+					"Description": "All Offers",
+					"URL": "https:\/\/www.amazon.com\/gp\/offer-listing\/B0082ATRFE?SubscriptionId=AKIAJB5TA23FPMPS7KAQ&tag=mobilea000317-20&linkCode=xm2&camp=2025&creative=386001&creativeASIN=B0082ATRFE"
+				}]
+			},
+			"SmallImage": {
+				"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51kOqfV0QhL._SL75_.jpg",
+				"Height": "75",
+				"Width": "51"
+			},
+			"MediumImage": {
+				"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51kOqfV0QhL._SL160_.jpg",
+				"Height": "160",
+				"Width": "110"
+			},
+			"LargeImage": {
+				"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51kOqfV0QhL.jpg",
+				"Height": "478",
+				"Width": "328"
+			},
+			"ImageSets": {
+				"ImageSet": {
+					"@attributes": {
+						"Category": "primary"
+					},
+					"SwatchImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51kOqfV0QhL._SL30_.jpg",
+						"Height": "30",
+						"Width": "21"
+					},
+					"SmallImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51kOqfV0QhL._SL75_.jpg",
+						"Height": "75",
+						"Width": "51"
+					},
+					"ThumbnailImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51kOqfV0QhL._SL75_.jpg",
+						"Height": "75",
+						"Width": "51"
+					},
+					"TinyImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51kOqfV0QhL._SL110_.jpg",
+						"Height": "110",
+						"Width": "75"
+					},
+					"MediumImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51kOqfV0QhL._SL160_.jpg",
+						"Height": "160",
+						"Width": "110"
+					},
+					"LargeImage": {
+						"URL": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51kOqfV0QhL.jpg",
+						"Height": "478",
+						"Width": "328"
+					}
+				}
+			},
+			"ItemAttributes": {
+				"Binding": "Misc.",
+				"Brand": "Calbee",
+				"EAN": "0071146000148",
+				"EANList": {
+					"EANListElement": "0071146000148"
+				},
+				"Feature": ["Chip Shrimp (Pack of 12)", "Grocery > Specialty Grocery", "Thank you for supporting your local economy"],
+				"ItemDimensions": {
+					"Weight": "25"
+				},
+				"Label": "CALBEE",
+				"ListPrice": {
+					"Amount": "2965",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$29.65"
+				},
+				"Manufacturer": "CALBEE",
+				"Model": "SPK-24454",
+				"MPN": "00003394",
+				"PackageDimensions": {
+					"Height": "200",
+					"Length": "1000",
+					"Weight": "25",
+					"Width": "600"
+				},
+				"PackageQuantity": "1",
+				"PartNumber": "00003394",
+				"ProductGroup": "Grocery",
+				"ProductTypeName": "GROCERY",
+				"Publisher": "CALBEE",
+				"Studio": "CALBEE",
+				"Title": "Calbee Chip Shrimp",
+				"UPC": "071146000148",
+				"UPCList": {
+					"UPCListElement": "071146000148"
+				}
+			},
+			"CustomerReviews": {
+				"IFrameURL": "https:\/\/www.amazon.com\/reviews\/iframe?akid=AKIAJB5TA23FPMPS7KAQ&alinkCode=xm2&asin=B0082ATRFE&atag=mobilea000317-20&exp=2018-07-10T19%3A02%3A06Z&summary=1&v=2&sig=64LkeQwaxdBmqb4YneK5lbFrpJwKJwU2e1KUdy2eZCQ%253D",
+				"HasReviews": "false"
+			}
+		}]
+	}
+}

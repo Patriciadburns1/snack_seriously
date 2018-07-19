@@ -1,0 +1,254 @@
+.filtersContainer {
+    background-color: #d0d0d0;
+    /*margin-top: 40%;*/
+}
+
+.filtersHeaderContainer {
+    height: 4vh;
+    width: 100vw;
+    background-color: #D0D0D0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    /* transition: 0.5s ease-out; */
+    border-bottom: 1px solid gray;
+}
+
+.filtersHeaderContainer div {
+    width: 100%;
+    text-align: center;
+
+}
+
+.filterPanelContainer {
+    background-color: #F0F0F0;
+    max-height: 0;            
+    overflow-y: hidden;
+    /* -webkit-transition: max-height 0.5s ease-in-out;
+    -moz-transition: max-height 0.5s ease-in-out;
+    -o-transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out; */
+ 
+}
+
+.filterTab{
+    background-color: #D0D0D0;
+    width: 50%;
+    height: 5vh;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.filterTab.show{
+    background-color:#F0F0F0;
+    color: black;
+}
+
+/********** Filter Body Menu **********/
+
+.filterMenu {
+    background-color: #eee;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid  #ffffff;
+}
+
+.active:hover {
+    background-color: #F0F0F0;
+}
+
+.filterPanel {
+    padding: 0 18px;
+    background-color: #F0F0F0;
+    max-height: 0;            
+    overflow-y: hidden;
+    /* -webkit-transition: max-height 0.25s ease-in-out;
+    -moz-transition: max-height 0.25s ease-in-out;
+    -o-transition: max-height 0.25s ease-in-out;
+    transition: max-height 0.25s ease-in-out; */
+}
+
+.active {
+    display: block;
+    /* transition: 0.25s ease-out; */
+    max-height: 100%;
+}
+/* 
+
+
+/********** Allergens Grid **********/
+
+.allergyPageContainer {
+    height: 50vh;
+    color: black;
+}
+
+.allergyTitle{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15%;
+}
+
+.allergyContainer{
+    display: grid;
+    height: 25vh;
+    width: 80vw;
+    grid-template-columns: auto auto auto auto;
+    grid-row-gap: 1vh;
+    grid-column-gap: 1vw;
+    position: relative;
+    margin: 0 auto;
+}
+
+.allergyItem{
+    margin: 0;
+    height: 10vh;
+    width: 20vw;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+}
+
+.allergyImage{
+    display: block;
+    height: auto;
+    max-width: 20vw;
+    max-height: 10vh;
+    margin: 0 auto;
+}
+
+.strike{
+    background-color: transparent;
+    background-image: gradient(linear, 19.1% -7.9%, 81% 107.9%, color-stop(0, transparent), color-stop(.48, transparent), color-stop(.5, #000), color-stop(.52, transparent), color-stop(1, transparent));
+    background-image: repeating-linear-gradient(163deg, transparent 0%, transparent 48%, #000 50%, transparent 52%, transparent 100%);
+}
+
+/********** Categories Grid **********/
+
+.categoryPageContainer {
+    height: 50vh;
+    color: black;
+}
+
+.categoryTitle{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vh;
+}
+
+.categoryContainer{
+    display: grid;
+    height: 65%;
+    width: 90%;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 10%;
+    grid-column-gap: 5%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.categoryItem{
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+}
+
+.categoryImage{
+    display: block;
+    height: auto;
+    max-width: 20vw;
+    max-height: 10vh;
+    margin: 0 auto;
+    padding: 10%;
+}
+
+.categoryLabel{
+    width: 100%;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    margin: 0;
+}
+
+.circled {
+    border-radius: 5px;
+    background-color: #FF8C2D;
+}
+/********** Nutrients **********/
+
+.nutrientsPageContainer {
+    height: 38vh;
+}
+
+.nutrientsTitle{
+    display: flex;
+    justify-content: center;
+}
+
+.nutrientsContainer{
+    height: 30vh;
+    width: 80vw;
+    margin: auto;
+}
+
+.nutrientsLabel {
+    display: inline-block;
+}
+
+.nutrientsContainer input {
+    border: 1px solid black;
+    float:right;
+    vertical-align: text-bottom;
+    margin: 0;
+}
+
+/********** Arrow **********/
+
+.arrow-down {
+    /* width: 50px; */
+    height: 50px;
+    position: relative;
+
+  }
+  
+  .arrow-down:before, .arrow-down:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 5px;
+    background: grey;
+    position: absolute;
+    top: 20px;
+    transition: transform .5s;
+  }
+  
+  .arrow-down:before {
+    right: 21px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transform: rotate(45deg);
+  }
+  
+  .arrow-down:after {
+    right: 10px;
+    transform: rotate(-45deg);
+  }
+  
+  .arrow-down.move:before {
+    transform: rotate(-45deg);
+  }
+  
+  .arrow-down.move:after {
+    transform: rotate(45deg);
+  }
+

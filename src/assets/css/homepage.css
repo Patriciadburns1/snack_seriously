@@ -1,0 +1,10 @@
+.pageNotFound{
+   margin-top: 40%;
+   display: flex;
+   justify-content: center;  
+}
+
+.returnHomePage{
+    display: flex;
+    justify-content: center; 
+}

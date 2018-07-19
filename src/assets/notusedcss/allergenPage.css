@@ -1,0 +1,32 @@
+
+.mainAllergenDiv{
+    height: 91vh; 
+}
+
+
+.allergenGridContainer{
+    height: 71%;
+    width:90%; 
+    display:grid; 
+    grid-template-columns: auto auto auto;
+    margin: auto; 
+}
+
+.allergyImage{
+    display: flex; 
+    align-items: center; 
+    width:100%; 
+}
+
+.allergyImage>img{
+    display: flex; 
+    align-items: center; 
+    width: 100%; 
+}
+
+.allergenHeader{
+    display: flex;
+    justify-content: center;
+    font-family:'Montserrat', Arial, Helvetica, sans-serif;
+}
+
