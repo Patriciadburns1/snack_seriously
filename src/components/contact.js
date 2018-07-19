@@ -9,12 +9,12 @@ class Contact extends Component {
         super(props);
         this.state = {
             nameCheck:{
-                msg: "Your name",
+                msg: "name",
                 msgClass: "regularMsg",
                 valid: false
             },
             emailCheck:{
-                msg: "Your email address",
+                msg: "email address",
                 msgClass: "regularMsg",
                 valid: false
             },
@@ -24,7 +24,7 @@ class Contact extends Component {
                 valid: false
             },
             bodyCheck:{
-                msg: "Your message",
+                msg: "message",
                 msgClass: "regularMsg",
                 valid: false
             },
@@ -137,22 +137,22 @@ class Contact extends Component {
             axios.post(`/api/contactMailer/mail_handler.php`, data).then( (response) => {
                 this.setState({
                     nameCheck:{
-                        msg: "Your name",
+                        msg: "name",
                         msgClass: "regularMsg",
                         valid: false
                     },
                     emailCheck:{
-                        msg: "Your email address",
+                        msg: "email address",
                         msgClass: "regularMsg",
                         valid: false
                     },
                     subjectCheck:{
-                        msg: "Subject",
+                        msg: "subject",
                         msgClass: "regularMsg",
                         valid: false
                     },
                     bodyCheck:{
-                        msg: "Your message",
+                        msg: "message",
                         msgClass: "regularMsg",
                         valid: false
                     },
@@ -183,22 +183,22 @@ class Contact extends Component {
             <h2 className='headerForContact'> Contact Snack Seriously </h2> 
            <form className='contactForm'> 
                 <div className='contactFormEmail'> 
-                     <input placeholder='Name' type="text" value={name} name='name' onChange={this.handleInputChange}/>
+                     <input type="text" value={name} name='name' onChange={this.handleInputChange}/>
                 </div>
                 <div className={this.state.nameCheck.msgClass}>{this.state.nameCheck.msg}</div>
 
                 <div className='contactFormEmail'> 
-                    <input placeholder="Email" type="text" value={email} name='email' onChange={this.handleInputChange} /> 
+                    <input type="text" value={email} name='email' onChange={this.handleInputChange} /> 
                 </div>
                 <div className={this.state.emailCheck.msgClass}>{this.state.emailCheck.msg}</div>
 
                 <div className='contactFormEmail'  > 
-                    <input placeholder="Subject" type="text" value={subject} name="subject" onChange={this.handleInputChange}/>
+                    <input type="text" value={subject} name="subject" onChange={this.handleInputChange}/>
                 </div>
                 <div className={this.state.subjectCheck.msgClass}>{this.state.subjectCheck.msg}</div>
 
                 <div className='contactFormEmail'> 
-                    <input placeholder='Message' className='textArea' value={body} name="body" onChange={this.handleInputChange} ></input >
+                    <input className='textArea' value={body} name="body" onChange={this.handleInputChange} ></input >
                 </div>
                <div className={this.state.bodyCheck.msgClass}>{this.state.bodyCheck.msg}</div>
 
