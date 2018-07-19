@@ -9,36 +9,29 @@
 
 .categoryHomepageGrid{
     display: grid;
-    height: 35%;
-    width: 83%;
+    height: auto;
+    width: 75%;
     grid-template-columns: auto auto auto;
-    grid-row-gap: 1vh;
-    grid-column-gap: 1vw;
-    position: relative;
-    margin: 0 auto;
+    grid-row-gap: 2vh;
+    grid-column-gap: 2vw;
+    margin: auto;
+    margin-top: 8%
 }
 
 .categoryHomepageItem{
     margin: 0;
-    height: 13vh;
+    height: 14vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    position: relative;
-    background-color: lightgray;
-    border-radius: 5px;
-    border-style: outset;
-    border-width: 1px;
-    border-color: lightgray;
+    background-color: rgb(184, 182, 182, 0.19);  
 }
 
 .categoryHomepageImage{
-    display: block;
     height: auto;
-    max-height: 70%;
-    margin: 0 auto;
-    padding-top: 5%;
+    max-height: 80%;
+    padding-top: 13%;
 }
 
 .categoryHomepageItem p {
