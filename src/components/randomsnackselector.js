@@ -4,6 +4,9 @@ import '../assets/css/randomsnackselector.css';
 import { Link } from 'react-router-dom';
 import noImage from '../assets/images/imagenotfound.jpeg';
 import loadingGIF from '../assets/images/loadingLogo.gif';
+import arrowGo from '../assets/images/arrowsGo.png';
+import arrowRefresh from '../assets/images/arrowsRefresh.png';
+
 
 class RandomSnack extends Component {
     constructor(props){
@@ -76,14 +79,14 @@ class RandomSnack extends Component {
             <div className="randomSnackContainer">
                 <div className="randomButtonContainers">
                     <div onClick={this.handleNextPictureClick.bind(this)} className="leftRandomSnackBtn">
-                        <span className="randomLButtonSymbol">Try Again</span>
+                        <img className="randomLButtonSymbol" src={arrowRefresh}/>
                     </div>
                     <div className="randomImageContainer">
                         <img src={image} id="randomImage" onClick={this.nextPicture} height="300" width="300" alt="Random Snack"/>
                     </div>
                     <Link to ={`/singleresult/${item_id}`} >
                         <div className="rightRandomSnackBtn">
-                            <span className="randomRButtonSymbol">Go to Snack</span>
+                            <img className="randomRButtonSymbol" src={arrowGo}/>
                         </div>
                     </Link>
                 </div>
