@@ -22,27 +22,36 @@
 
 .leftRandomSnackBtn {
     height: 100%;
-    left: 0;
-    width: 50%;
+    left: 15%;
+    width: 20%;
     position: absolute;
     display: inline-block;
     cursor: pointer;
 }
 
+.randomImageContainer{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 
 .randomLButtonSymbol, .randomRButtonSymbol {
     position: relative;
-    top: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 50px;
 }
+
 
 .rightRandomSnackBtn {
     height: 100%;
-    width: 50%;
-    right: 0;
+    width: 20%;
+    right: 15%;
     top: 0;
     display: inline-block;
     position: absolute;
-
+    /* background-color: rgba(100,100,100,0.10); */
 }
 
 .randomRButtonSymbol {
@@ -50,7 +59,7 @@
 }
 
 #randomImage{
-    width: 50%;
+    width:50%;
     max-width: 300px;
     min-width: 190px;
     height: auto;

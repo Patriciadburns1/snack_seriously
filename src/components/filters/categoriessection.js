@@ -1,28 +1,8 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import { SearchDataContext } from '../searchdata';
 import CategoryIcon from './categoryIcon';
 
 class Categories extends Component {
-    constructor(props){
-        super(props);
-        // this.state = {
-        //     visible: props.visible,
-        // }
-
-        // this.toggleMenu = this.toggleMenu.bind(this);
-    }
-
-    // toggleMenu() {
-    //     // event.stopPropagation();
-    //     const {visible} = this.state;
-    //     this.setState({
-    //         visible: !visible
-    //     });
-    // }
-
-    // addStrikethrough(){
-    //     // console.log("This is the value of this before binding", this);
-    // }
 
     renderItems(context){
         const { categoryArray } = context;
@@ -43,13 +23,9 @@ class Categories extends Component {
         )
     }
     render() {
-        // const {visible} = this.state;
         return (
             <SearchDataContext.Consumer>
-            {/*  <Fragment> */}
-                {/* <div className={visible ? "filterMenu " : "filterMenu active"} onClick={this.toggleMenu}>Categories</div> */}
                 {this.renderItems}
-             {/* </Fragment> */}
             </SearchDataContext.Consumer>
         )
     }
