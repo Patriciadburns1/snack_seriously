@@ -67,7 +67,7 @@ class Filters extends Component {
                     <div className="filterBar">Filters</div>
                     <div  className={context.show ? "arrow-down move" : "arrow-down"}></div>
                     <div className="searchButton">
-                        <Link className="submitFilter" to={`/MultipleResults/filter/${context.filterID}/category/${context.categoryID}`} onClick={()=>context.handleFilterClick()}>Submit Filter</Link>
+                        <Link className="submitFilter" to={`/MultipleResults/filter/${context.filterID}/category/${context.categoryID}`} onClick={()=>context.handleFilterClick()}> Filter</Link>
                     </div>
                 </div>
                 <div className={context.show ? "filterPanelContainer active" : "filterPanelContainer"}>
