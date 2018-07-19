@@ -13,15 +13,13 @@ class CreateAccount extends Component {
                 username: '',
                 email:'',
                 password: ''
-            }
-           
+            },  
         }
         this.handleInputChange = this.handleInputChange.bind(this);
     }
 
     handleInputChange(event){    
         const {value, name} = event.target; 
-        //console.log("name", name, "value", value); 
         const{form}= this.state; 
         form[name]= value; 
         this.setState({
@@ -42,10 +40,11 @@ class CreateAccount extends Component {
         const { form } = this.state;
         try {
             await context.sendNewUsertoServer(form);
-
-            this.props.history.push('/');
+          
+            //this.props.history.push('/');
         } catch (err){
-            console.warn('Did not create a new user');
+            console.warn('username or email already in use');
+         
         }
         
     }
@@ -53,9 +52,10 @@ class CreateAccount extends Component {
 
     render() {
         const{ username, email, password } = this.state.form; 
+        
+
         return(
             <SearchDataContext.Consumer>{(context) => (
-          
                 <div> 
                 <h2 className='headerForContact'> Create an Account </h2> 
                <form className='contactForm'> 
@@ -72,6 +72,8 @@ class CreateAccount extends Component {
                     <button className="submitButtonContactPage"  type="button" value="submit" onClick={this.sendContactForm.bind(this,context)}> Submit </button>
                     </div> 
                </form> 
+            { !context.userLoggedIn ? context.validUser ? null :<div> Username or email already in use </div>  :this.props.history.push('/')}
+            {/* { context.userLoggedIn ? this.props.history.push('/') : <div> Username or email already in use </div>} */}
                </div> 
     
             )}
@@ -81,3 +83,15 @@ class CreateAccount extends Component {
 }
 
 export default CreateAccount; 
+
+
+// if(!context.userLogin){
+//     if(context.username !== null){
+//         show me null
+//     }else{
+//         username or email already in use
+//     }
+
+// }else{
+//     kick me out.
+// }
