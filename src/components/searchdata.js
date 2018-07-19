@@ -12,6 +12,7 @@ class SearchData extends Component {
             userInput: "",
             userLoggedIn: false,
             userName: '',
+            validUser: true,
             updateTermValue: this.updateTermValue.bind(this),
             show: false,
             allergenShow: false,
@@ -168,10 +169,16 @@ class SearchData extends Component {
     }
 
     dataFromServer(response) {
+        let validUserCheck = true;
+        if(!response.success){
+            validUserCheck = false;    
+        }
+
         this.setState({
             appstart: true,
             userLoggedIn: response.success,
             userName: response.name,
+            validUser: validUserCheck
         })
     }
 
@@ -203,7 +210,6 @@ class SearchData extends Component {
     async sendNewUsertoServer(form){
 
         const postData = this.formatPostData(form);    
-        console.log(form);
         const {data} = await axios(`/api/snackapi.php?action=usersignup`,{
             method: 'POST', 
             data: postData, 
