@@ -44,10 +44,7 @@ class SingleItem extends Component {
     }
 
     handleLike(context) {
-        if(context.userLoggedIn === false){
-            console.log("nope"); 
-        }
-        else{
+        if(context.userLoggedIn){
             if (this.state.like === empty_like) {
                 this.likeItem(this.props.product_id);
                 this.setState({
@@ -61,8 +58,9 @@ class SingleItem extends Component {
             }
 
         }
+     }
       
-    }
+    
 
     render() {
         console.log(this.props); 
