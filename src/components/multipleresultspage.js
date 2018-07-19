@@ -4,6 +4,7 @@ import '../assets/css/multipleresultspage.css';
 import axios from 'axios';
 import noImage from '../assets/images/imagenotfound.jpeg';
 import Filters from './filters';
+import Homepage from "./homepage";
 
 
 class MultipleResults extends Component {
@@ -17,7 +18,7 @@ class MultipleResults extends Component {
 
         this.handleOnScroll = this.handleOnScroll.bind(this);
         this.getSnackData=this.getSnackData.bind(this); 
-        this.onRouteChange=this.onRouteChange.bind(this); 
+        this.onRouteChange=this.onRouteChange.bind(this);
     }
 
     componentDidMount() {
@@ -79,13 +80,19 @@ class MultipleResults extends Component {
     
 
     handleOnScroll() {
+        // debugger;
         let scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
         let scrollHeight = (document.documentElement && document.documentElement.scrollHeight) || document.body.scrollHeight;
-        let clientHeight = document.documentElement.clientHeight || window.innerHeight;
+        let clientHeight = document.documentElement.clientHeight + 1 || window.innerHeight; // changed client height to + 1
         let scrolledToBottom = (parseInt(scrollTop + clientHeight)) >= scrollHeight;
         if (scrolledToBottom) {
             this.getSnackData();
         }
+    }
+    
+    topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }
 
 
@@ -99,7 +106,7 @@ class MultipleResults extends Component {
                             <div>
                                 <img className="multipleResultsImage"  src={!item.img_url ? noImage : item.img_url} />
                             </div>
-                            <div>
+                            <div className="multipleResultsDescriptionContainer">
                                 <span className="multipleResultsDescription">{item.name}</span>
                             </div>
                         </div>
@@ -111,10 +118,13 @@ class MultipleResults extends Component {
         return (
             <div>
                 <Filters />
-                <div className="multipleResultsContainer">
+                <div className="multipleResultsContainer" id="multiplePageTop">
                     <div className="multipleResultsItemsContainer">
                         { displayedSnack }
                     </div>
+                    <div className="toTopButton" onClick={this.topFunction}></div>
+                    <Link to="/" className="backButton">hello</Link>
+
                 </div>
             </div>
         )

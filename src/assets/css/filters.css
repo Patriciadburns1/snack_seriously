@@ -4,9 +4,8 @@
 }
 
 .filtersHeaderContainer {
-    height: 4vh;
-    width: 100vw;
-    background-color: #D0D0D0;
+    height: 6vh;
+    background-color: darkgray;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -14,10 +13,17 @@
     border-bottom: 1px solid gray;
 }
 
-.filtersHeaderContainer div {
-    width: 100%;
+.filtersHeaderContainer {
+    /*width: 100%;*/
     text-align: center;
 
+}
+.filterBar{
+    display: flex;
+    justify-content: center;
+    color: white;
+    width: 19vw;
+    font-weight: bold;
 }
 
 .filterPanelContainer {
@@ -34,7 +40,7 @@
 .filterTab{
     background-color: #D0D0D0;
     width: 50%;
-    height: 5vh;
+    height: 6vh;
     display: inline-block;
     text-align: center;
     cursor: pointer;
@@ -77,6 +83,25 @@
     /* transition: 0.25s ease-out; */
     max-height: 100%;
 }
+
+.searchButton {
+    background-color: slategray;
+    border: 1px solid #ccc!important;
+    width: 18%;
+
+
+}
+
+.searchButton:hover {
+    background-color: #e7e7e7;
+
+}
+
+.submitFilter{
+    color: white;
+}
+
+
 /* 
 
 
@@ -90,7 +115,7 @@
 .allergyTitle{
     display: flex;
     justify-content: center;
-    margin-bottom: 15%;
+    margin-bottom: 2%;
 }
 
 .allergyContainer{
@@ -106,7 +131,7 @@
 
 .allergyItem{
     margin: 0;
-    height: 10vh;
+    height: 16vh;
     width: 20vw;
     display: flex;
     cursor: pointer;
@@ -116,8 +141,8 @@
 .allergyImage{
     display: block;
     height: auto;
-    max-width: 20vw;
-    max-height: 10vh;
+    max-width: 23vw;
+    max-height: 12vh;
     margin: 0 auto;
 }
 
@@ -215,7 +240,7 @@
 /********** Arrow **********/
 
 .arrow-down {
-    /* width: 50px; */
+    width: 66%;
     height: 50px;
     position: relative;
 

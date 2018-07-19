@@ -53,10 +53,26 @@ label{
     display: flex; 
     justify-content: center; 
     color:turquoise; 
-    font-weight: 200; 
+    font-weight: 500; 
     
 }
 
 .createAccount{
-    text-align: right;
+    text-align: center;
+}
+
+.invalidName{
+    text-align: center; 
+}
+
+.warning{
+    color: red;
+}
+
+.regularMsg{
+    color: green;
+}
+
+.divCheck{
+    text-align: center; 
 }

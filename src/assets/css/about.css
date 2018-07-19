@@ -1,58 +1,26 @@
-.about{
+.aboutPageContainer .aboutHeader, .aboutTechHeader {
+    color: turquoise;
+    font-weight: 600;
     text-align: center;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 3px;
-    /*background-color: #FF8C2D;*/
-    padding: 2px;
-}
-.grid-container>div {
-    background-color: rgba(255, 255, 255, 0.8);
+.aboutPageContainer table {
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    padding:15px 0;
-    font-size: 12px;
+    border-spacing: 10px;
 }
 
-.snacktitle{
+.aboutPageContainer div {
     text-align: center;
 }
 
-
-.mentors{
-    display: grid;
-    grid-template-columns: auto;
-
-    text-align: center;
-    padding:30px;
-}
-
-.profileImage{
-    height: 13vh;
+.aboutPageContainer ul {
+    display: table;
+    margin: 0 auto;
+    list-style-type: none;
 }
 
 
-.logoImage {
-    width: 36px;
-}
-
-@media only screen and (min-width: 576px) {
-    .grid-container {
-        grid-template-columns: auto auto auto;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    
-}
-
-@media only screen and (min-width: 992px) {
-    
-}
-
-@media only screen and (min-width: 1200px) {
-    
-}
 

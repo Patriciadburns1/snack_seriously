@@ -12,6 +12,7 @@ class SearchData extends Component {
             userInput: "",
             userLoggedIn: false,
             userName: '',
+            validUser: true,
             updateTermValue: this.updateTermValue.bind(this),
             show: false,
             allergenShow: false,
@@ -22,6 +23,7 @@ class SearchData extends Component {
             toggleFilters: this.toggleFilters.bind(this),
             getUserLogIn: this.getUserLogIn.bind(this),
             dataFromServer: this.dataFromServer.bind(this),
+            sendNewUsertoServer: this.sendNewUsertoServer.bind(this),
             logOut: this.logOut.bind(this),
             allergenArray: [{
                 name: "peanuts",
@@ -164,10 +166,16 @@ class SearchData extends Component {
     }
 
     dataFromServer(response) {
+        let validUserCheck = true;
+        if(!response.success){
+            validUserCheck = false;    
+        }
+
         this.setState({
             appstart: true,
             userLoggedIn: response.success,
             userName: response.name,
+            validUser: validUserCheck
         })
     }
 
@@ -194,6 +202,17 @@ class SearchData extends Component {
         }
 
         this.dataFromServer(data); 
+    }
+
+    async sendNewUsertoServer(form){
+
+        const postData = this.formatPostData(form);    
+        const {data} = await axios(`/api/snackapi.php?action=usersignup`,{
+            method: 'POST', 
+            data: postData, 
+            withCredentials: true
+        }); 
+        this.dataFromServer(data)
     }
 
 

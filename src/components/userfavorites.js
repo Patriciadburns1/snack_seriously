@@ -93,7 +93,6 @@ class UserFavorites extends Component {
                             <img src={emptyFav}/>
                         </div>
                         <div className="addSnacks"> You can add your favorite snacks! </div>
-                    </Fragment>
                 )}
                 </SearchDataContext.Consumer>
             )
@@ -124,9 +123,6 @@ class UserFavorites extends Component {
         return (
             <SearchDataContext.Consumer>{(context) => (
                 <Fragment>
-                    <div className="logOutButtonDiv">
-                        <Link to='/'> <button className='logOutButton' type='button' onClick={context.logOut}> Logout </button> </Link>
-                    </div>
                     <div className="multipleResultsContainer">
                         <div className="multipleResultsItemsContainer">
                             {displayedSnack}

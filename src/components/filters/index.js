@@ -64,9 +64,11 @@ class Filters extends Component {
         return   <SearchDataContext.Consumer>{(context) => (
             <div className="filtersContainer">
                 <div className="filtersHeaderContainer" name='show' onClick={context.toggleAllFilter} >
-                    <div>Filters</div>
+                    <div className="filterBar">Filters</div>
                     <div  className={context.show ? "arrow-down move" : "arrow-down"}></div>
-                    <Link to={`/MultipleResults/filter/${context.filterID}/category/${context.categoryID}`} onClick={()=>context.handleFilterClick()}>Search</Link>
+                    <div className="searchButton">
+                        <Link className="submitFilter" to={`/MultipleResults/filter/${context.filterID}/category/${context.categoryID}`} onClick={()=>context.handleFilterClick()}>Submit Filter</Link>
+                    </div>
                 </div>
                 <div className={context.show ? "filterPanelContainer active" : "filterPanelContainer"}>
                     <div className={context.allergenShow ? 'filterTab show' : 'filterTab'} onClick={()=>context.toggleFilters('allergenShow','categoryShow')}><div  className={context.allergenShow ? "arrow-down move" : "arrow-down"}>Allergens</div></div>

@@ -3,6 +3,7 @@ import axios from 'axios';
 import '../assets/css/randomsnackselector.css';
 import { Link } from 'react-router-dom';
 import noImage from '../assets/images/imagenotfound.jpeg';
+import loadingGIF from '../assets/images/loadingLogo.gif';
 
 class RandomSnack extends Component {
     constructor(props){
@@ -53,7 +54,9 @@ class RandomSnack extends Component {
         const { counter } = this.state;
 
         if(!randomSnack){
-            return <div className="randomSnackContainer loadingRandom">Loading snack...</div>
+            return <div className="randomSnackContainer loadingRandom">
+                    <img src={loadingGIF}/>
+                </div>
         }
 
         let random = null;
@@ -75,9 +78,7 @@ class RandomSnack extends Component {
                     <div onClick={this.handleNextPictureClick.bind(this)} className="leftRandomSnackBtn">
                         <span className="randomLButtonSymbol">Try Again</span>
                     </div>
-
-                        <img src={image} id="randomImage" onClick={this.nextPicture} alt="Random Snack"/>
-
+                    <img src={image} id="randomImage" onClick={this.nextPicture} alt="Random Snack"/>
                     <Link to ={`/singleresult/${item_id}`} >
                         <div className="rightRandomSnackBtn">
                             <span className="randomRButtonSymbol">Go to Snack</span>

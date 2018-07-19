@@ -2,7 +2,7 @@ img.snacker{
     height: 56vh;
 }
 
-h3{
+.notFoundTitle{
     margin-top: 6vh;
     display: flex;
     justify-content: center;
