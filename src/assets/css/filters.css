@@ -88,7 +88,7 @@
     background-color: slategray;
     border: 1px solid #ccc!important;
     width: 18%;
-
+    margin-right: 9px;
 
 }
 
@@ -240,7 +240,7 @@
 /********** Arrow **********/
 
 .arrow-down {
-    width: 66%;
+    width: 76%;
     height: 50px;
     position: relative;
 

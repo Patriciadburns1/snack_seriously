@@ -8,7 +8,9 @@
 }
 
 .multipleResultsItemsContainer > a {
-    border: 1px solid black;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+
 }
 
 .multipleResultsItem {
@@ -61,12 +63,14 @@
     .multipleResultsContainer .multipleResultsFilter .multipleResultsImage .multipleResultsItemsContainer .multipleResultsLabel{
         width: 100%;
     }
+
 }
 
 @media only screen and (min-width: 321px) {
     .multipleResultsContainer .multipleResultsFilter .multipleResultsImage .multipleResultsItemsContainer .multipleResultsLabel{
         width: 100%;
     }
+
 }
 
 @media only screen and (min-width: 576px) {
@@ -76,6 +80,10 @@
         width: 95%;
         margin: 0 auto;
     }
+    .multipleResultsItemsContainer > a {
+        border: 1px solid lightgrey;
+
+    }
 
 }
 
@@ -83,6 +91,10 @@
 
     .multipleResultsItemsContainer {
         grid-template-columns: auto auto auto;
+    }
+    .multipleResultsItemsContainer > a {
+        border: 1px solid lightgrey;
+
     }
 
 }
