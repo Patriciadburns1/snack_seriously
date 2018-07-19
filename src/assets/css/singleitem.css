@@ -14,7 +14,11 @@
 }
 
 .singleItemImage {
-    max-width: 90%;
+    width: auto;
+    max-width: 300px;
+    min-width: 190px;
+    height: auto;
+    max-height: 400px;
 }
 
 .likeItem{
@@ -30,7 +34,7 @@
     .singleItemContainer {
         margin: initial;
         width: initial;
-        grid-area: item;
+        /* grid-area: item; */
     }
 }
 

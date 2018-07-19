@@ -69,7 +69,7 @@ class SingleItem extends Component {
                 <div className="singleItemContainer">
                     <h2>{this.props.name}</h2>
                     <p>{this.props.manu}</p>
-                    <img src={!this.props.img ? noImage : this.props.img} className="singleItemImage" />
+                    <img src={!this.props.img ? noImage : this.props.img} className="singleItemImage" height="300" width="300" />
                     <img onClick={this.handleLike.bind(this,context)} className={`likeItem`} src={this.state.like} />
                     {context.userLoggedIn ? null : <p> Log in to add to favorites </p> }
                     <img onClick={this.handleBuy.bind(this)} className='buyFromAmazon' src={buyFromAmazon} />

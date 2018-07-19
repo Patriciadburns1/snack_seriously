@@ -21,13 +21,14 @@
         display: grid;
         padding: 1%;
         position: initial;
-        grid-template-areas: 'item item nutrition' 'item item nutrition' 'ingredient ingredient ingredient';
+        grid-template-columns: 60% 40%;
+        /* grid-template-areas: 'item item nutrition' 'item item nutrition' 'ingredient ingredient ingredient'; */
     }
 }
 
 @media screen and (min-width: 992px) {
     .singleResultContainer {
         grid-template-areas: none;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: 40% 35% 25%;
     }
 }
