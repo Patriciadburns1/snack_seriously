@@ -72,8 +72,7 @@ class CreateAccount extends Component {
                     <button className="submitButtonContactPage"  type="button" value="submit" onClick={this.sendContactForm.bind(this,context)}> Submit </button>
                     </div> 
                </form> 
-            { !context.userLoggedIn ? context.validUser ? null :<div> Username or email already in use </div>  :this.props.history.push('/')}
-            {/* { context.userLoggedIn ? this.props.history.push('/') : <div> Username or email already in use </div>} */}
+            { !context.userLoggedIn ? context.validUser ? null :<div className="divCheck"> Username or email already in use </div>  :this.props.history.push('/')}
                </div> 
     
             )}
@@ -85,13 +84,3 @@ class CreateAccount extends Component {
 export default CreateAccount; 
 
 
-// if(!context.userLogin){
-//     if(context.username !== null){
-//         show me null
-//     }else{
-//         username or email already in use
-//     }
-
-// }else{
-//     kick me out.
-// }
