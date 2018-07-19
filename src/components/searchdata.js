@@ -44,10 +44,7 @@ class SearchData extends Component {
             }, {
                 name: "wheat",
                 strike: false
-            }, {
-                name: "sugar",
-                strike: false
-            },],
+            }],
             handleAllergenClick: this.handleAllergenClick.bind(this),
             handleCategoryClick: this.handleCategoryClick.bind(this),
             categoryArray: [{
@@ -68,7 +65,7 @@ class SearchData extends Component {
                 selected: false
             }, {
                 name: "Cookies",
-                image: "meat",
+                image: "cookies",
                 selected: false
             }, {
                 name: "Chocolate",
