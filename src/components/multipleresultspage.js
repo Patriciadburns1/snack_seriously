@@ -4,6 +4,7 @@ import '../assets/css/multipleresultspage.css';
 import axios from 'axios';
 import noImage from '../assets/images/imagenotfound.jpeg';
 import Filters from './filters';
+import Homepage from "./homepage";
 
 
 class MultipleResults extends Component {
@@ -121,6 +122,8 @@ class MultipleResults extends Component {
                         { displayedSnack }
                     </div>
                     <div className="toTopButton" onClick={this.topFunction}></div>
+                    <Link to="/" className="backButton">hello</Link>
+
                 </div>
             </div>
         )

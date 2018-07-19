@@ -98,3 +98,13 @@
     bottom: 2%;
     right: 4%;
 }
+
+.backButton{
+    background-color: blue;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    border-radius: 50%;
+    bottom: 2%;
+    left: 4%;
+}
