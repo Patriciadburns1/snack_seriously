@@ -1,6 +1,5 @@
 .filtersContainer {
     background-color: #d0d0d0;
-    /*margin-top: 40%;*/
 }
 
 .filtersHeaderContainer {
@@ -14,7 +13,6 @@
 }
 
 .filtersHeaderContainer {
-    /*width: 100%;*/
     text-align: center;
 
 }
@@ -102,37 +100,34 @@
 }
 
 
-/* 
+
 
 
 /********** Allergens Grid **********/
 
 .allergyPageContainer {
-    height: 50vh;
+    height: 40vh;
     color: black;
 }
 
 .allergyTitle{
     display: flex;
     justify-content: center;
-    margin-bottom: 2%;
+    margin-bottom: 10%;
 }
 
 .allergyContainer{
     display: grid;
-    height: 25vh;
-    width: 80vw;
+    height: 65%;
+    width: 96%;
     grid-template-columns: auto auto auto auto;
-    grid-row-gap: 1vh;
-    grid-column-gap: 1vw;
     position: relative;
     margin: 0 auto;
 }
 
 .allergyItem{
     margin: 0;
-    height: 16vh;
-    width: 20vw;
+    height: 100%;
     display: flex;
     cursor: pointer;
     position: relative;
@@ -155,14 +150,14 @@
 /********** Categories Grid **********/
 
 .categoryPageContainer {
-    height: 50vh;
+    height: 40vh;
     color: black;
 }
 
 .categoryTitle{
     display: flex;
     justify-content: center;
-    margin-bottom: 5vh;
+    margin-bottom: 5%;
 }
 
 .categoryContainer{
@@ -170,8 +165,7 @@
     height: 65%;
     width: 90%;
     grid-template-columns: auto auto auto;
-    grid-row-gap: 10%;
-    grid-column-gap: 5%;
+    grid-row-gap: 4%;
     position: relative;
     margin: 0 auto;
 }
@@ -188,8 +182,7 @@
 .categoryImage{
     display: block;
     height: auto;
-    max-width: 20vw;
-    max-height: 10vh;
+    max-height: 13vh;
     margin: 0 auto;
     padding: 10%;
 }
@@ -206,8 +199,8 @@
 }
 
 .circled {
-    border-radius: 5px;
-    background-color: #FF8C2D;
+    /* border-radius: 50%; */
+    background-color: lightgray;
 }
 /********** Nutrients **********/
 
