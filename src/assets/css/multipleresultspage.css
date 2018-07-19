@@ -124,8 +124,8 @@
 
 .toTopButton {
     background-color: turquoise;
-    height: 50px;
-    width: 50px;
+    max-height:6%;
+    max-width: 11%;
     position: fixed;
     border-radius: 50%;
     bottom: 2%;
@@ -134,13 +134,12 @@
 
 .backButton{
     background-color: turquoise;
-    height: 50px;
-    width: 50px;
+    max-height: 6%;
+    max-width: 11%;
     position: fixed;
     border-radius: 50%;
     bottom: 2%;
     left: 4%;
-
 }
 
 .backButton img{

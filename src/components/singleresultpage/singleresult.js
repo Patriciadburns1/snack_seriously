@@ -62,7 +62,7 @@ class SingleResult extends Component {
                         <SingleItem name={name} manu={manu} img={img_url} amazon_url={amazon_url} product_id={this.props.match.params.product_id}/>
                         <Nutritionalfacts nutrition={nutrients} per_container={per_container} size={size} unit={unit} weight={weight} />
                         <Ingredient ingredients={ingredients} />
-                        <Link to="/MultipleResults" className="backButton"><img src={backarrow}/></Link>
+                        <Link to="/MultipleResults" ><img src={backarrow} className="backButton"/></Link>
                     </div>
 
             )

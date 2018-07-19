@@ -27,7 +27,6 @@
     position: absolute;
     display: inline-block;
     /* background-color: rgba(100,100,100,0.10); */
-
 }
 
 .randomImageContainer{
@@ -38,10 +37,10 @@
 
 
 .randomLButtonSymbol, .randomRButtonSymbol {
-    width: 100%;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    max-width: 50px;
 }
 
 
@@ -53,8 +52,6 @@
     display: inline-block;
     position: absolute;
     /* background-color: rgba(100,100,100,0.10); */
-
-
 }
 
 .randomRButtonSymbol {
