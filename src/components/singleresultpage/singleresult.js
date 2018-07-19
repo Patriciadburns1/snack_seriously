@@ -5,8 +5,8 @@ import Nutritionalfacts from './nutritionalfacts';
 import Ingredient from './ingredient';
 import SingleItem from './singleitem'
 import axios from 'axios';
-import NotFound from './notfound';
 import backarrow from '../../assets/images/arrowback.png';
+
 
 class SingleResult extends Component {
     constructor(props) {
@@ -18,11 +18,6 @@ class SingleResult extends Component {
             loading: true
         }
         this.handleInputChange = this.handleInputChange.bind(this);
-    }
-
-
-    onClickShowModal(){
-
     }
 
     componentDidMount() {
@@ -56,13 +51,6 @@ class SingleResult extends Component {
 
     render() {
         const { singleItem, error, loading } = this.state;
-
-        if (!loading && error) {
-            return (
-                <div> <NotFound /> </div>
-            )
-        }
-
         if (loading && !singleItem || !singleItem.success) {
             return <h1>Loading...</h1>;
         } 

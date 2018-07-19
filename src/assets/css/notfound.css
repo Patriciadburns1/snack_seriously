@@ -1,9 +1,10 @@
 img.snacker{
-    height: 56vh;
+    height: auto;
+    width: 85%; 
 }
 
 .notFoundTitle{
-    margin-top: 6vh;
+    margin-top: 5vh;
     display: flex;
     justify-content: center;
     color:turquoise;
@@ -23,7 +24,7 @@ img.snacker{
 }
 
 .pageNotFound {
-    margin-top: 2%;
+    margin-top: -2%;
     display: flex;
     justify-content: center;
 }
