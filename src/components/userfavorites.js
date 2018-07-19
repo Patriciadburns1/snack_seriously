@@ -84,7 +84,7 @@ class UserFavorites extends Component {
         if (offset === 0) {
             return (
                 <SearchDataContext.Consumer>{(context) => (
-                        <div className="addSnacks"> You can add your favorite snacks! </div>
+                      <div className="addSnacks"> You can add your favorite snacks! </div> 
                 )}
                 </SearchDataContext.Consumer>
             )
