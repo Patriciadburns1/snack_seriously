@@ -49,6 +49,7 @@
 
 .snackImage {
     max-height: 10vh;
+    min-height: 70px;
 }
 
 
