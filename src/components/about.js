@@ -22,7 +22,7 @@ export default () => {
                 <img className="techlogo" src={aws}/>
             </div>
             <h3 className="aboutHeader">Snack Disclaimer</h3>
-            <div>Snack Seriously is not responsibly for any snacks that is eaten due to any discoveries made on snackseriously.com</div>
+            <div>Snack Seriously CANNOT guarantee the the validity of the information found on snackseriously.com.  Please check products and ingredients before purchasing.</div>
             <h3 className="aboutHeader">Amazon Affiliate Disclosure</h3>
             <div>Snack Seriously is a participant in the Amazon Services LLS Associates Program, an affiliate advertising program designed to provide a means for website owners to earn advertising fees by advertising and linking to amazon.com, audible.com, and any other website that may be affiliated with Amazon Service LLC Associates Program.</div>
         </div>

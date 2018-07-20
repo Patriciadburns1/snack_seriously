@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import {Link} from 'react-router-dom';
 import '../assets/css/multipleresultspage.css';
 import axios from 'axios';
@@ -7,6 +7,7 @@ import Filters from './filters';
 import Homepage from "./homepage";
 import uparrow from '../assets/images/arrowup.png';
 import backarrow from '../assets/images/arrowback.png';
+import emptyFav from '../assets/images/emptyFav.png';
 
 class MultipleResults extends Component {
     constructor(props) {
@@ -14,7 +15,8 @@ class MultipleResults extends Component {
 
         this.state = {
             snackData: [],
-            offset: 0
+            offset: 0,
+            error: null
         }
 
         this.handleOnScroll = this.handleOnScroll.bind(this);
@@ -50,10 +52,14 @@ class MultipleResults extends Component {
             const snackData = await axios.get(URL);
             this.setState({
                 snackData: [...this.state.snackData, ...snackData.data.data],
-                offset: offset+12
+                offset: offset+12,
+                error: null
             });
         } catch (err) {
             console.log(err.message);
+            this.setState({
+                error: "Please try again"
+            })
         }
     };
 
@@ -99,6 +105,17 @@ class MultipleResults extends Component {
 
     render() {
         const snackData = this.state.snackData;
+        const error = this.state.error;
+        if (error) {
+            return(
+                <Fragment>
+                    <div className="addSnacks">  Snack Not Found. Try again! </div>
+                    <div className='emptySnack'>
+                        <img src={emptyFav}/>
+                    </div>
+                </Fragment>
+            )
+        }
         if (snackData) {
             var displayedSnack = snackData.map((item, index) => {
                 return (
@@ -124,7 +141,7 @@ class MultipleResults extends Component {
                         { displayedSnack }
                     </div>
                     <img src={uparrow} className="toTopButton" onClick={this.topFunction}/>
-                    <Link to="/" ><img src={backarrow} className="backButton"/></Link>
+
 
                 </div>
             </div>

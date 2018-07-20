@@ -19,8 +19,8 @@
 }
 
 .categoryHomepageItem{
-    margin: 0;
-    height: 14vh;
+    margin: auto;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -30,8 +30,8 @@
 
 .categoryHomepageImage{
     height: auto;
-    max-height: 88%;
-    padding-top: 13%;
+    width: 100%;
+    padding: 5% 0;
 }
 
 /* .categoryHomepageItem p {
@@ -48,12 +48,12 @@
 
 @media only screen and (min-width: 850px) {
     .categoryHomepageGrid{
-        grid-template-columns: auto auto auto auto auto auto; 
+        grid-template-columns: auto auto auto auto auto auto;
     }
     .categoryHomepageImage{
-        height: auto; 
-        max-height: 75%; 
-        padding-top: 13%; 
+        height: auto;
+        max-height: 75%;
+        padding-top: 13%;
     }
 
 }

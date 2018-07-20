@@ -117,7 +117,6 @@ class CreateAccount extends Component {
             const {form} = this.state;
             try {
                 await context.sendNewUsertoServer(form);
-
                 this.props.history.push('/');
             } catch (err) {
                 console.warn('Did not create a new user');
@@ -159,7 +158,7 @@ class CreateAccount extends Component {
                     </div>
                     <div className="warning">{this.state.submitMsg}</div>
                </form> 
-            { !context.userLoggedIn ? context.validUser ? null :<div className="divCheck"> Username or email already in use </div>  :this.props.history.push('/')}
+            {/* { !context.userLoggedIn ? context.validUser ? null :<div className="divCheck"> Username or email already in use </div>  :this.props.history.push('/')} */}
                </div> 
     
             )}
