@@ -33,7 +33,7 @@ class RandomSnack extends Component {
                 snackData: snackData.data.data,
             });
         } catch (err) {
-            console.log('Get Data Error:', err.message);
+            console.log( err.message);
         }
     }
 

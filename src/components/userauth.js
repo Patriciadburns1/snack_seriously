@@ -5,9 +5,7 @@ export default (WrappedComponent, context) => {
         componentDidMount() {
             if (!context.userLoggedIn) {
                 this.props.history.push('/')
-                console.log('component did mount on userAuth page'); 
-            } else {
-                console.log("user logged in"); 
+
             }
         }
        

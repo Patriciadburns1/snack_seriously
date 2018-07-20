@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react'
 import '../assets/css/searchbar.css';
-import snackvending from '../assets/images/snackvending.png';
 import { Link } from 'react-router-dom';
 import { SearchDataContext } from './searchdata';
 import Icon from '../assets/images/searchicon.png'

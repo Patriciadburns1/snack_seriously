@@ -45,7 +45,7 @@ class UserFavorites extends Component {
                 offset: offset + 12
             });
         } catch (err) {
-            console.log('Get Data Error:', err.message);
+            console.log(err.message);
         }
     };
 
