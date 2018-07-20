@@ -105,8 +105,9 @@ class MultipleResults extends Component {
 
     render() {
         const snackData = this.state.snackData;
+        const offset = this.state.offset;
         const error = this.state.error;
-        if (error) {
+        if (error && offset === 0) {
             return(
                 <Fragment>
                     <div className="addSnacks">  Snack Not Found. Try again! </div>
