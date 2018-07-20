@@ -5,9 +5,9 @@
 
 > 1. Fork this repo
 > 1. Clone your forked copy of this repo
->    - `git clone https://github.com/[Your Username]/snackItOff.git`
+>    - `git clone https://github.com/[Your Username]/snack_seriously.git`
 > 1. Change directory into the newly cloned repo
->    - `cd snackItOff`
+>    - `cd snack_seriously`
 > 1. Install dependencies 
 >    - `npm install`
 > 1. Start dev server
