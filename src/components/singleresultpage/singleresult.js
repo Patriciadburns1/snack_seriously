@@ -6,7 +6,7 @@ import Ingredient from './ingredient';
 import SingleItem from './singleitem'
 import axios from 'axios';
 import backarrow from '../../assets/images/arrowback.png';
-
+import NotFound from './notfound'; 
 
 class SingleResult extends Component {
     constructor(props) {
@@ -51,6 +51,13 @@ class SingleResult extends Component {
 
     render() {
         const { singleItem, error, loading } = this.state;
+
+        if (!loading && error) {
+            return (
+                <div> <NotFound /> </div>
+            )
+        }
+
         if (loading && !singleItem || !singleItem.success) {
             return <h1>Loading...</h1>;
         } 
