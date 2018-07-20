@@ -63,7 +63,6 @@ class SingleItem extends Component {
     
 
     render() {
-        console.log(this.props); 
         return (
         <SearchDataContext.Consumer>{(context) => (
                 <div className="singleItemContainer">
