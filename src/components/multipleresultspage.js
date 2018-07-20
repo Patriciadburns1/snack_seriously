@@ -141,7 +141,7 @@ class MultipleResults extends Component {
                         { displayedSnack }
                     </div>
                     <img src={uparrow} className="toTopButton" onClick={this.topFunction}/>
-                    <Link to="/" ><img src={backarrow} className="backButton"/></Link>
+
 
                 </div>
             </div>
