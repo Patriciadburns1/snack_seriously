@@ -183,22 +183,22 @@ class Contact extends Component {
             <h2 className='headerForContact'> Contact Snack Seriously </h2> 
            <form className='contactForm'> 
                 <div className='contactFormEmail'> 
-                     <input type="text" value={name} name='name' onChange={this.handleInputChange}/>
+                     <input type="text" value={name} autoComplete="off"   name='name' onChange={this.handleInputChange}/>
                 </div>
                 <div className={this.state.nameCheck.msgClass}>{this.state.nameCheck.msg}</div>
 
                 <div className='contactFormEmail'> 
-                    <input type="text" value={email} name='email' onChange={this.handleInputChange} /> 
+                    <input type="text" value={email} autoComplete="off" name='email' onChange={this.handleInputChange} /> 
                 </div>
                 <div className={this.state.emailCheck.msgClass}>{this.state.emailCheck.msg}</div>
 
                 <div className='contactFormEmail'  > 
-                    <input type="text" value={subject} name="subject" onChange={this.handleInputChange}/>
+                    <input type="text" value={subject} autoComplete="off"  name="subject" onChange={this.handleInputChange}/>
                 </div>
                 <div className={this.state.subjectCheck.msgClass}>{this.state.subjectCheck.msg}</div>
 
                 <div className='contactFormEmail'> 
-                    <input className='textArea' value={body} name="body" onChange={this.handleInputChange} ></input >
+                    <input className='textArea' value={body} autoComplete="off"  name="body" onChange={this.handleInputChange} ></input >
                 </div>
                <div className={this.state.bodyCheck.msgClass}>{this.state.bodyCheck.msg}</div>
 

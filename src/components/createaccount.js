@@ -140,17 +140,17 @@ class CreateAccount extends Component {
                 <h2 className='headerForContact'> Create an Account </h2> 
                <form className='contactForm'> 
                     <div className='contactFormEmail'> 
-                         <input placeholder='UserName' type="text" value={username} name='username' onChange={this.handleInputChange}/>
+                         <input placeholder='UserName' autoComplete="off" type="text" value={username} name='username' onChange={this.handleInputChange}/>
                     </div>
                     <div className={this.state.userCheck.msgClass}>{this.state.userCheck.msg}</div>
 
                     <div className='contactFormEmail'> 
-                        <input placeholder="Email" type="text" value={email} name='email' onChange={this.handleInputChange} /> 
+                        <input placeholder="Email" type="text" autoComplete="off" value={email} name='email' onChange={this.handleInputChange} /> 
                     </div>
                     <div className={this.state.emailCheck.msgClass}>{this.state.emailCheck.msg}</div>
 
                     <div className='contactFormEmail'> 
-                        <input placeholder="Password" type="password" value={password} name='password' onChange={this.handleInputChange} />
+                        <input placeholder="Password" type="password" autoComplete="off" value={password} name='password' onChange={this.handleInputChange} />
                     </div>
                     <div className={this.state.passwordCheck.msgClass}>{this.state.passwordCheck.msg}</div>
 
