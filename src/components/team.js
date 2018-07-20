@@ -113,7 +113,9 @@ export default () =>{
             </div>
             <div className="mentors">
                 Special thanks to our mentors: <br></br>
-                Andy Ong, <br></br>Tim Horist, <br></br>and Randy Gonzalez!!
+                Andy Ong, <br></br>Tim Horist, <br></br>and Randy Gonzalez!!<br/>
+                <br/>and of course Daniel Paschal, Scott Bowler, Collette Tamez, and Cody Miller!
+
             </div>
         </div>
 
