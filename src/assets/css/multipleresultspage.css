@@ -106,9 +106,10 @@
 }
 
 .addSnacks{
-    margin-top: 15%; 
-    display: flex; 
-    justify-content: center; 
+    margin: 8% auto 0;
+    /* display: flex;  */
+    text-align: center; 
+    width:80%; 
 }
 
 .emptySnack{
