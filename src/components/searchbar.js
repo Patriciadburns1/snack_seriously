@@ -1,36 +1,28 @@
-import React, { Component } from 'react'
-import snackvending from '../assets/images/snackvending.png'
+import React, { Component, Fragment } from 'react'
+import '../assets/css/searchbar.css';
+import { Link } from 'react-router-dom';
+import { SearchDataContext } from './searchdata';
+import Icon from '../assets/images/searchicon.png'
 
-class Search extends Component {
-    state = {
-        query: '',
-    }
 
-    handleInputChange = () => {
-        this.setState({
-            query: this.search.value
-        })
+class SearchBar extends Component {
+    handleInputChange(event, context) {
+        const value = event.target.value;
+        context.updateTermValue(value);
+        // this.props.history.push(`/search/${value}`);
     }
 
     render() {
-        return (
-            <div>
-                <h3 className="searchTitle">Search by brand or type of snack<img src={snackvending}/></h3>
-
-                <div className="searchBar">
-                <input className="searchArea"
-                    placeholder="Search for My Snacks..."
-                    ref={input => this.search = input}
-                    onChange={this.handleInputChange}
-                />
-                <p>{this.state.query}</p>
-
-                    <button className="buttonSearch" onClick={this.handleInputChange}>Submit</button>
-
-            </div>
+        return <SearchDataContext.Consumer>{(context) => (
+            <div className="searchBarComp">
+                <input type="text" placeholder="Search snacks" onChange={(event)=>this.handleInputChange(event, context)} />
+                <button type="submit" className="icon">
+                    <Link to={`/MultipleResults/${context.userInput}`}> <img className='searchIcon' src={Icon}/> </Link> 
+                </button>
             </div>
         )
+        }</SearchDataContext.Consumer>
     }
 }
 
-export default Search;
+export default SearchBar;

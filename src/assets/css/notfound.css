@@ -1,0 +1,30 @@
+img.snacker{
+    height: auto;
+    width: 85%; 
+}
+
+.notFoundTitle{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    color:turquoise;
+    font-weight: 200;
+}
+
+/*@media only screen and (max-width: 1200px){*/
+    /*.pageNotFoundContainer {*/
+        /*width: 100%;*/
+        /*text-align: center;*/
+    /*}*/
+/*}*/
+
+.pageNotFoundContainer {
+    width: 100%;
+    text-align: center;
+}
+
+.pageNotFound {
+    margin-top: -2%;
+    display: flex;
+    justify-content: center;
+}

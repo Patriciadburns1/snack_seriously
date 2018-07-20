@@ -1,0 +1,30 @@
+.aboutPageContainer .aboutHeader, .aboutTechHeader {
+    color: turquoise;
+    font-weight: 600;
+    text-align: center;
+}
+
+.aboutPageContainer table {
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-spacing: 10px;
+}
+
+.aboutPageContainer div {
+    text-align: center;
+}
+
+.aboutPageContainer ul {
+    display: table;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+.techlogo {
+    width: 16%;
+    margin-right: 2%;
+}
+
+

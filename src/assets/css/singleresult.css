@@ -1,0 +1,34 @@
+.singleResultContainer {
+    width: 94%;
+    margin: 10px auto;
+}
+
+.singleResultImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+/* .singleResultButtonContainer {
+    display: flex;
+    justify-content: center;
+} */
+
+@media only screen and (min-width: 576px) {
+
+    .singleResultContainer {
+        display: grid;
+        padding: 1%;
+        position: initial;
+        grid-template-columns: 60% 40%;
+        /* grid-template-areas: 'item item nutrition' 'item item nutrition' 'ingredient ingredient ingredient'; */
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .singleResultContainer {
+        grid-template-areas: none;
+        grid-template-columns: 40% 35% 25%;
+    }
+}

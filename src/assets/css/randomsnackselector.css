@@ -1,0 +1,65 @@
+.randomSnackContainer {
+    margin-top: 5%;
+    height: 47vh;
+    width: 100%;
+    display: inline-block;
+}
+
+.loadingRandom {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.randomButtonContainers {
+    position: relative;
+    height: 90%;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+.leftRandomSnackBtn {
+    height: 100%;
+    left: 15%;
+    width: 20%;
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.randomImageContainer{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.randomLButtonSymbol, .randomRButtonSymbol {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 50px;
+}
+
+
+.rightRandomSnackBtn {
+    height: 100%;
+    width: 20%;
+    right: 15%;
+    top: 0;
+    display: inline-block;
+    position: absolute;
+    /* background-color: rgba(100,100,100,0.10); */
+}
+
+.randomRButtonSymbol {
+    color: black;
+}
+
+#randomImage{
+    max-width: 300px;
+    min-width: 190px;
+    height: auto;
+}

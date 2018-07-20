@@ -1,0 +1,147 @@
+.multipleResultsContainer {
+    margin-top: 16px;
+}
+
+.multipleResultsItemsContainer {
+    display: grid;
+    grid-template-columns: auto;  /* TAKE OUT IF  NO CHANGES */
+}
+
+.multipleResultsItemsContainer > a {
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+
+}
+
+.multipleResultsItem {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+.multipleResultsDescriptionContainer {
+    align-items: center;
+}
+
+.multipleResultsItem:hover span {
+    opacity: .8;
+    color: orange;
+}
+
+.multipleResultsItem > div {
+    width: 50%;
+    /* padding: 0 5%; */
+    text-align: center;
+}
+
+
+.multipleResultsImage {
+    max-height: 30vh;
+    min-height: 100%;
+    max-width: 100%;
+}
+
+.multipleResultsDescription {
+    color: black;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.multipleResultsLabel {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    margin: 0;
+    font-size: small;
+}
+
+@media only screen and (max-width: 480px) {
+    .multipleResultsContainer .multipleResultsFilter .multipleResultsImage .multipleResultsItemsContainer .multipleResultsLabel{
+        width: 100%;
+    }
+
+}
+
+@media only screen and (min-width: 321px) {
+    .multipleResultsContainer .multipleResultsFilter .multipleResultsImage .multipleResultsItemsContainer .multipleResultsLabel{
+        width: 100%;
+    }
+
+}
+
+@media only screen and (min-width: 576px) {
+
+    .multipleResultsItemsContainer {
+        grid-template-columns: auto auto;
+        width: 95%;
+        margin: 0 auto;
+    }
+    .multipleResultsItemsContainer > a {
+        border: 1px solid lightgrey;
+
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    .multipleResultsItemsContainer {
+        grid-template-columns: auto auto auto;
+    }
+    .multipleResultsItemsContainer > a {
+        border: 1px solid lightgrey;
+
+    }
+
+}
+
+.logOutButtonDiv{
+    width: 100%; 
+    text-align: right; 
+    position: relative; 
+}
+
+.addSnacks{
+    margin-top: 15%; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.emptySnack{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+}
+
+.emptySnack img{
+    height: 100%;
+}
+
+.toTopButton {
+    background-color: turquoise;
+    max-height:6%;
+    max-width: 11%;
+    position: fixed;
+    border-radius: 50%;
+    bottom: 2%;
+    right: 4%;
+}
+
+.backButton{
+    background-color: turquoise;
+    max-height: 6%;
+    max-width: 11%;
+    position: fixed;
+    border-radius: 50%;
+    bottom: 2%;
+    left: 4%;
+}
+
+.backButton img{
+    width: 100%;
+}

@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+
+.nutritionContainer{
+    font-size: small;
+    margin: 5% auto;
+}
+
+.nutritionalText{
+    margin: 0;
+}
+
+.performanceFacts {
+    border: 1px solid black;
+    padding: 5%;
+    -webkit-box-shadow: 0px 2px 10px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 10px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 10px -2px rgba(0,0,0,0.75);
+}
+.performanceFacts table {
+    border-collapse: collapse;
+}
+
+.performanceFactsTitle {
+    /* font-weight: bold; */
+    font-size: 2rem;
+    margin: 0 0 0.25rem 0;
+}
+
+.performanceFactsHeader {
+    border-bottom: 10px solid black;
+    padding: 0 0 0.25rem 0;
+    margin: 0 0 0.5rem 0;
+}
+.performanceFactsHeader p {
+    margin: 0;
+}
+
+.performanceFactsTable, .performanceFactsTableSmall, .performanceFactsTableGrid {
+    width: 100%;
+}
+.performanceFactsTable thead tr th, .performanceFactsTableSmall thead tr th, .performanceFactsTableGrid thead tr th, .performanceFactsTable thead tr td, .performanceFactsTableSmall thead tr td, .performanceFactsTableGrid thead tr td {
+    border: 0;
+}
+.performanceFactsTable th, .performanceFactsTableSmall th, .performanceFactsTableGrid th, .performanceFactsTable td, .performanceFactsTableSmall td, .performanceFactsTableGrid td {
+    /* font-weight: normal; */
+    text-align: left;
+    padding: 0.25rem 0;
+    border-top: 1px solid black;
+}
+.performanceFactsTable td:last-child, .performanceFactsTableSmall td:last-child, .performanceFactsTableGrid td:last-child {
+    text-align: right;
+}
+.performanceFactsTable .blank-cell, .performanceFactsTableSmall .blank-cell, .performanceFactsTableGrid .blank-cell {
+    width: 1rem;
+    border-top: 0;
+}
+.performanceFactsTable .thick-row th, .performanceFactsTableSmall .thick-row th, .performanceFactsTableGrid .thick-row th, .performanceFactsTable .thick-row td, .performanceFactsTableSmall .thick-row td, .performanceFactsTableGrid .thick-row td {
+    border-top-width: 5px;
+}
+
+.smallInfo {
+    font-size: 0.7rem;
+}
+
+.performanceFactsTableSmall {
+    border-bottom: 1px solid #999;
+    margin: 0 0 0.5rem 0;
+    word-break: break-word;
+}
+.performanceFactsTableSmall thead tr {
+    border-bottom: 1px solid black;
+}
+.performanceFactsTableSmall td:last-child {
+    text-align: left;
+}
+.performanceFactsTableSmall th, .performanceFactsTableSmall td {
+    border: 0;
+    padding: 0;
+}
+
+.performanceFactsTableGrid {
+    margin: 0 0 0.5rem 0;
+}
+.performanceFactsTableGrid td:last-child {
+    text-align: left;
+}
+.performanceFactsTableGrid td:last-child::before {
+    content: "•";
+    /* font-weight: bold; */
+    margin: 0 0.25rem 0 0;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.thick-end {
+    border-bottom: 10px solid black;
+}
+
+.thin-end {
+    border-bottom: 1px solid black;
+}
+
+.ingredientContainer{
+    width: 75%;
+    margin: 5% auto;
+    padding: 8%; 
+    border: 1px solid black;
+    line-height: 1.6;
+    -webkit-box-shadow: 0px 2px 10px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 10px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 10px -2px rgba(0,0,0,0.75);
+}
+
+
+
+
+@media only screen and (max-width: 480px) {
+    .singleResultContainer .singleItemContainer .nutritionContainer .performanceFacts .ingredientContainer{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+
+    .nutritionContainer {
+        margin: initial;
+        /* grid-area: nutrition; */
+    }
+
+    .ingredientContainer {
+        width: initial;
+        margin: initial;
+        /* grid-area: ingredient; */
+        grid-column: 1 / span 2;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+
+    .nutritionContainer {
+        grid-area: initial;
+    }
+
+    .ingredientContainer {
+        grid-area: initial;
+    }
+
+}
