@@ -35,7 +35,7 @@ class CreateAccount extends Component {
     }
 
     handleInputChange(event){
-        const regexUser = /^[a-z0-9_-]{3,15}$/;
+        const regexUser = /^[a-z0-9_-]{3,15}$/ig;
         const regexEmail = /(.+)@(.+){2,}\.(.+){2,}/;
         const regexPassword = /(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,15})$/;
 
