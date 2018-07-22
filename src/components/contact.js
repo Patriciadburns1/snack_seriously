@@ -44,8 +44,8 @@ class Contact extends Component {
     }
 
     handleInputChange(event){
-        const regexEmail = /(.+)@(.+){2,}\.(.+){2,}/;
-        const regexName = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
+        const regexEmail = /^[A-Z0-9._%+-]{2,15}@[A-Z0-9.-]{2,15}\.[A-Z]{2,5}$/ig;
+        const regexName = /^[A-Z0-9\-_. ]{4,25}$/ig;
         const regexSubject = /^[a-zA-Z0-9_!'@#$%^&*(),?. ]{4,40}$/;
         const regexBody = /^[a-zA-Z0-9-_!'@#$%^&*(),?. ]{4,1000}/;
 

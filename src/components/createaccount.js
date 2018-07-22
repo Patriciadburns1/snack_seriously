@@ -36,7 +36,7 @@ class CreateAccount extends Component {
 
     handleInputChange(event){
         const regexUser = /^[a-z0-9_-]{3,15}$/ig;
-        const regexEmail = /(.+)@(.+){2,}\.(.+){2,}/;
+        const regexEmail = /^[A-Z0-9._%+-]{2,15}@[A-Z0-9.-]{2,15}\.[A-Z]{2,5}$/ig;
         const regexPassword = /(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,15})$/;
 
         if(regexUser.test( this.state.form.username)){
@@ -120,6 +120,9 @@ class CreateAccount extends Component {
                 this.props.history.push('/');
             } catch (err) {
                 console.warn('Did not create a new user');
+                this.setState({
+                    submitMsg : "Sorry, please try again later. Error code 504."
+                })
             }
         } else {
             this.setState({
