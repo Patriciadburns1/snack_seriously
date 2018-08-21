@@ -47,3 +47,46 @@
         width: 23vw;
     }
 }
+
+@media screen and (min-width: 992px){
+    #menuButtonContainer{
+        display: none;
+    }
+
+
+    #menuContainer{
+        width: 100%;
+        top: 20%;
+        height: initial;
+        display: inline-flex;
+        justify-content: space-around;
+        background-color: #707070;
+        cursor: pointer;
+    }
+
+    .menuLinkStyle{
+    font-size: 25px;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 200;
+    display: inline-block;
+    margin-top: initial;
+    margin-left: initial;
+    width: initial;
+    border-bottom: initial;
+    }
+
+    .invisiblMenuContainer.hide {
+        width: 100%;
+        height: 100%;
+        top: 14%;
+        left: 0;
+        position: fixed;
+        z-index: 2;
+    }
+
+    #menuContainer.hide{
+        transform: translate3d(0vw, 0, 0);
+        overflow: hidden;
+    }
+}
