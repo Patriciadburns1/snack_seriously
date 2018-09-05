@@ -34,17 +34,16 @@
     padding: 5% 0;
 }
 
-/* .categoryHomepageItem p {
-    width: 100%;
-    font-size: 0.8rem;
-    display: flex;
-    justify-content: space-evenly;
-    position: absolute;
-    text-align: center;
-    bottom: 0;
-    margin: 0;
-    color: black;
-} */
+
+@media screen and (min-width: 992px){
+    .categoryImage{
+        max-height: 18vh;
+    }
+    .categoryTitle{
+        margin-bottom: 2%;
+    }
+}
+
 
 @media only screen and (min-width: 850px) {
     .categoryHomepageGrid{
@@ -55,6 +54,8 @@
         max-height: 75%;
         padding-top: 13%;
     }
+
+
 
 }
 
