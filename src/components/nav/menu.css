@@ -56,7 +56,7 @@
 
     #menuContainer{
         width: 100%;
-        top: 85%;
+        /* top: 85%; */
         height: initial;
         display: inline-flex;
         justify-content: space-around;
@@ -76,19 +76,18 @@
     border-bottom: initial;
     }
 
-    .invisiblMenuContainer.hide {
+    .invisibleMenuContainer.hide, .invisibleMenuContainer.show {
         width: 100%;
         height: 100%;
-        top: 14%;
         left: 0;
-        position: fixed;
+        position: relative;
         z-index: 2;
     }
 
-    #menuContainer.hide{
+    #menuContainer.hide, #menuContainer.show{
         transform: translate3d(0vw, 0, 0);
         overflow: hidden;
-        position: absolute;
-        bottom: -12px;
+        position: relative;
+        /* bottom: -12px; */
     }
 }
