@@ -28,11 +28,7 @@
     background-color: #F0F0F0;
     max-height: 0;            
     overflow-y: hidden;
-    /* -webkit-transition: max-height 0.5s ease-in-out;
-    -moz-transition: max-height 0.5s ease-in-out;
-    -o-transition: max-height 0.5s ease-in-out;
-    transition: max-height 0.5s ease-in-out; */
- 
+
 }
 
 .filterTab{
@@ -199,6 +195,23 @@
     margin: 0;
 }
 
+
+@media screen and (min-width: 992px){
+    .allergyPageContainer{
+        height: 33vh; 
+    }
+
+    .allergyTitle{
+        margin-bottom: 4%; 
+    }
+
+    .allergyImage{
+        max-width: 22vw;
+        max-height: 16vh;
+    }
+}
+
+
 @media only screen and (min-width: 768px) {
 
     .categoryContainer{
@@ -253,7 +266,7 @@
 /********** Arrow **********/
 
 .arrow-down {
-    width: 76%;
+    width: 98%;
     height: 50px;
     position: relative;
 
