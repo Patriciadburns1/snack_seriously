@@ -42,7 +42,6 @@ class Nav extends Component {
                         <div>
                             <div className="menu">
                                 <MenuButton handleMenuClick={this.handleMenuClick} visible={visible} />
-                                <Menu handleMenuClick={this.handleMenuClick} visible={visible} />
                             </div>
                             <div className="navSearch">
                                 <Link to="/"><img className="snackImage" src={SnackSeriouslyLogo} /></Link>
@@ -52,7 +51,9 @@ class Nav extends Component {
                             </div>
                         </div>
                         <Route path='/' component={SearchBar} />
-
+                    </div>
+                    <div>
+                        <Menu handleMenuClick={this.handleMenuClick} visible={visible} />
                     </div>
                 </div>
             )}

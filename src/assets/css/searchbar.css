@@ -29,3 +29,20 @@
     height: 80%; 
     filter: invert(100%);
 }
+
+@media screen and (min-width: 992px){
+    .nav-content .searchBarComp{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .navBar .nav-content {
+        align-items: center;
+        display : flex;
+        justify-content:center;
+    }
+    #menuContainer{
+        height:60px; 
+    }
+}

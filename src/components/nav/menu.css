@@ -47,3 +47,47 @@
         width: 23vw;
     }
 }
+
+@media screen and (min-width: 992px){
+    #menuButtonContainer{
+        display: none;
+    }
+
+
+    #menuContainer{
+        width: 100%;
+        /* top: 85%; */
+        height: initial;
+        display: inline-flex;
+        justify-content: space-around;
+        background-color: #707070;
+        cursor: pointer;
+    }
+
+    .menuLinkStyle{
+    font-size: 25px;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 200;
+    display: inline-block;
+    margin-top: initial;
+    margin-left: initial;
+    width: initial;
+    border-bottom: initial;
+    }
+
+    .invisibleMenuContainer.hide, .invisibleMenuContainer.show {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    #menuContainer.hide, #menuContainer.show{
+        transform: translate3d(0vw, 0, 0);
+        overflow: hidden;
+        position: relative;
+        /* bottom: -12px; */
+    }
+}

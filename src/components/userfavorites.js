@@ -86,10 +86,10 @@ class UserFavorites extends Component {
             return (
                 <SearchDataContext.Consumer>{(context) => (
                     <Fragment>
+                        <div className="addSnacks">  {`Search to find your favorite snacks & add them here!`} </div>
                         <div className='emptySnack'>
                             <img src={emptyFav}/>
                         </div>
-                        <div className="addSnacks"> You can add your favorite snacks! </div>
                     </Fragment>
 
                 )}
