@@ -44,6 +44,10 @@ label{
     font-weight: 200;
 }
 
+.submitButtonContactPage:hover{
+    color: black;
+}
+
 .submitButtonDiv{
     text-align: right;
 }
