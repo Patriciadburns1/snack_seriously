@@ -81,10 +81,12 @@ class RandomSnack extends Component {
                     <div onClick={this.handleNextPictureClick.bind(this)} className="leftRandomSnackBtn">
                         <img className="randomLButtonSymbol" src={arrowRefresh}/>
                     </div>
-                    <div className="randomImageContainer">
-                        <img src={image} id="randomImage" onClick={this.nextPicture} height="300" width="300" alt="Random Snack"/>
-                    </div>
+
                     <Link to ={`/singleresult/${item_id}`} >
+                        <div className="randomImageContainer">
+                            <img src={image} id="randomImage" onClick={this.nextPicture} height="300" width="300" alt="Random Snack"/>
+                        </div>
+
                         <div className="rightRandomSnackBtn">
                             <img className="randomRButtonSymbol" src={arrowGo}/>
                         </div>

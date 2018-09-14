@@ -11,6 +11,9 @@
 .singleItemContainer h2 {
     text-align: center;
     font-size: larger;
+    padding-left: 15px;
+    padding-right: 15px;
+
 }
 
 .singleItemImage {
