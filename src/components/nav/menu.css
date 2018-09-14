@@ -1,49 +1,93 @@
 #menuContainer {
-    width: 81vw;
-    height: 100vh;
-    background-color: #707070;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transition: transform .3s cubic-bezier(0, .52, 0, 1);
-    overflow: scroll;
-    cursor: pointer;
-  }
-   
-  #menuContainer.hide {
-    transform: translate3d(-100vw, 0, 0);
+  width: 81vw;
+  height: 100vh;
+  background-color: #707070;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+  overflow: scroll;
+  cursor: pointer;
+}
 
+#menuContainer.hide {
+  transform: translate3d(-100vw, 0, 0);
+}
+
+#menuContainer.show {
+  transform: translate3d(0vw, 0, 0);
+  overflow: hidden;
+}
+
+.menuLinkStyle {
+  margin-top: 8vh;
+  margin-left: 5%;
+  font-size: 25px;
+  border-bottom: 1px solid white;
+  padding-bottom: 1%;
+  width: 75%;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 200;
+}
+
+.invisibleMenuContainer.show {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 2;
+}
+
+@media screen and (min-width: 576px) {
+  #menuContainer {
+    width: 23vw;
   }
-   
-  #menuContainer.show {
-    transform: translate3d(0vw, 0, 0);
-    overflow: hidden;
+}
+
+@media screen and (min-width: 992px) {
+  #menuButtonContainer {
+    display: none;
+  }
+
+  #menuContainer {
+    width: 100%;
+    height: 60px;
+    height: initial;
+    display: flex;
+    justify-content: center;
+    background-color: #ff8c2d;
+    cursor: pointer;
   }
 
   .menuLinkStyle {
-      margin-top: 8vh;
-      margin-left: 5%;
-      font-size: 25px;
-      border-bottom: 1px solid white;
-      padding-bottom: 1%;
-      width: 75%;
-      color: #FFF;
-      text-decoration: none;
-      font-weight: 200; 
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 200;
+    display: inline-block;
+    margin-top: initial;
+    margin-left: initial;
+    width: initial;
+    border-bottom: initial;
+    padding-right: 5px; 
+    padding-left: 5px; 
   }
 
-  .invisibleMenuContainer.show{
-      width: 100vw;
-      height: 100vh;
-      top: 0;
-      left: 0;
-      position: fixed;
-      z-index: 2;
+  .invisibleMenuContainer.hide,
+  .invisibleMenuContainer.show {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    position: relative;
+    z-index: 2;
   }
 
-  
-@media screen and (min-width: 576px){
-    #menuContainer{
-        width: 23vw;
-    }
+  #menuContainer.hide,
+  #menuContainer.show {
+    transform: translate3d(0vw, 0, 0);
+    overflow: hidden;
+    position: relative;
+  }
 }

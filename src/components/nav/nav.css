@@ -18,11 +18,11 @@
     justify-content: space-evenly;
     padding: 2%;
     flex-flow: row wrap;
+    position: relative;
 }
 
 .navBar .menu {
     display: inline-block;
-    /* background-color: #ac2424; */
     width: 20%;
 }
 
@@ -55,4 +55,23 @@
 
 .nav-content > div{
      width: 100vw;
+}
+
+@media screen and (min-width: 992px){
+    .navBar .nav-content{
+        align-items: center;
+        justify-content: initial;
+    }
+
+    .navBar .profile{
+        position: absolute;
+    }
+
+    .navSearch{
+        text-align: initial;
+    }
+
+    .nav-content > div:first-child{
+        width: initial;
+    }
 }
