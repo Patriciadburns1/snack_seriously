@@ -169,9 +169,10 @@ class Contact extends Component {
             });
         } else {
             this.setState({submitMsg:{
-                msg: "Invalid form",
+                msg: "Sorry, can not submit invalid form",
                 msgClass: "warning"
                 }});
+            this.handleInputChange(event);
         }
     }
 
