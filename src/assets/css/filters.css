@@ -269,14 +269,14 @@
     width: 98%;
     height: 50px;
     position: relative;
-
+    padding-top: 7px;
   }
   
   .arrow-down:before, .arrow-down:after {
     content: "";
     display: block;
-    width: 20px;
-    height: 5px;
+    width: 17px;
+    height: 4px;
     background: grey;
     position: absolute;
     top: 20px;
