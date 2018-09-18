@@ -30,6 +30,11 @@
     filter: invert(100%);
 }
 
+
+#menuContainer>a>div:hover{
+    color:black;
+}
+
 @media screen and (min-width: 992px){
     .nav-content .searchBarComp{
         width: 50%;
@@ -44,5 +49,8 @@
     }
     #menuContainer{
         height:60px; 
+    }
+    #menuContainer>a>div:hover{
+        color:black;
     }
 }

@@ -59,6 +59,12 @@
     justify-content: center;
     background-color: #ff8c2d;
     cursor: pointer;
+
+
+  }
+
+  #menuContainer>a>div:hover{
+    color:black;
   }
 
   .menuLinkStyle {
