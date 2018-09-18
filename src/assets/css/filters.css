@@ -45,6 +45,10 @@
     color: black;
 }
 
+.filterText{
+    padding-top: 1%;
+}
+
 /********** Filter Body Menu **********/
 
 .filterMenu {

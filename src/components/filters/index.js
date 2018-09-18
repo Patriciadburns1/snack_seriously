@@ -71,8 +71,8 @@ class Filters extends Component {
                     </div>
                 </div>
                 <div className={context.show ? "filterPanelContainer active" : "filterPanelContainer"}>
-                    <div className={context.allergenShow ? 'filterTab show' : 'filterTab'} onClick={()=>context.toggleFilters('allergenShow','categoryShow')}><div  className={context.allergenShow ? "arrow-down move" : "arrow-down"}>Allergens</div></div>
-                    <div className={context.categoryShow ? 'filterTab show' : 'filterTab'} onClick={()=>context.toggleFilters('categoryShow','allergenShow')}><div  className={context.categoryShow? "arrow-down move" : "arrow-down"}>Category</div></div>
+                    <div className={context.allergenShow ? 'filterTab show' : 'filterTab'} onClick={()=>context.toggleFilters('allergenShow','categoryShow')}><div  className={context.allergenShow ? "arrow-down move" : "arrow-down"}><div className={"filterText"}>Allergens</div></div></div>
+                    <div className={context.categoryShow ? 'filterTab show' : 'filterTab'} onClick={()=>context.toggleFilters('categoryShow','allergenShow')}><div  className={context.categoryShow? "arrow-down move" : "arrow-down"}><div className={"filterText"}>Category</div></div></div>
                     <Allergens />
                     <Categories  />
                     {/* <Nutrients /> */}
