@@ -114,7 +114,7 @@
 .allergyTitle{
     display: flex;
     justify-content: center;
-    margin-bottom: 10%;
+    /* margin-bottom: 10%; */
 }
 
 .allergyContainer{
@@ -158,7 +158,7 @@
 .categoryTitle{
     display: flex;
     justify-content: center;
-    margin-bottom: 5%;
+    /* margin-bottom: 5%; */
 }
 
 .categoryContainer{
@@ -185,7 +185,7 @@
     height: auto;
     max-height: 13vh;
     margin: 0 auto;
-    padding: 10%;
+    /* padding: 10%; */
 }
 
 .categoryLabel{
@@ -199,6 +199,15 @@
     margin: 0;
 }
 
+@media screen and (min-width: 450px){
+    .allergyImage{
+        max-width: 22vw;
+        max-height: 16vh;
+    }
+    .categoryImage{
+        max-height: 16vh;
+    }
+}
 
 @media screen and (min-width: 992px){
     .allergyPageContainer{
@@ -227,10 +236,11 @@
         margin-bottom: 6%;
         grid-template-columns: auto auto auto auto auto auto auto;
     }
-    .categoryPageContainer{
+    .categoryPageContainer, .allergyPageContainer{
         height: 33vh;
     }
 
+    
 }
 
 
